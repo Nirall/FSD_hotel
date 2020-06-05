@@ -1,0 +1,21 @@
+@import "__menu-elem/navbar__menu-elem.scss";
+@import "__menu-elem/_marginR0-inline/navbar__menu-elem_marginR0-inline.scss";
+@import "__menu-elem-dropdown/navbar__menu-elem-dropdown.scss";
+@import "__button/navbar__button.scss";
+@import "__button/_violet/navbar__button_violet.scss";
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 70px;    
+    margin-right: auto;
+    margin-left: auto;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}

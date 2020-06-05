@@ -1,0 +1,32 @@
+.footer-large__inf-elem-email {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.footer-large__inf-elem-email form {
+    display: inline-block;
+}
+
+.footer-large__inf-elem-email input[type="email"]{
+    width: 220px;
+    height: 44px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: none;
+    outline: none;    
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;    
+}
+
+.footer-large__inf-elem-email input::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+}
+
+.footer-large__inf-elem-email span {
+    margin: 8px;
+    color: #8BA4F9;
+}

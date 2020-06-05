@@ -6,9 +6,8 @@
 // Использование: node createBlock.js [имя блока] [доп. расширения через пробел]
 
 const fs = require('fs');
-const projectConfig = require('./config.js');
 
-const dir = projectConfig.dir;
+const dir = "src/blocks/";
 const mkdirp = require('mkdirp');
 
 let blockName = process.argv[2];
@@ -18,7 +17,7 @@ const extensions = uniqueArray(defaultExtensions.concat(process.argv.slice(3)));
 
 // Если есть имя блока
 if (blockName) {
-  const dirPath = `${dir.blocks}${blockName}/`; // полный путь к создаваемой папке блока
+  const dirPath = `${dir}${blockName}/`; // полный путь к создаваемой папке блока
 
   const made = mkdirp.sync(dirPath);
   console.log(`[NTH] Создание папки: ${made}`);
@@ -30,12 +29,12 @@ if (blockName) {
     let fileCreateMsg = '';                                 // будущее сообщение в консоли при создании файла
 
     if (extension === 'scss') {
-      fileContent = `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов,\n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName} {\n\n  $block-name:                &; // #{$block-name}__element\n}\n`;
+      //fileContent = `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов,\n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName} {\n\n  $block-name:                &; // #{$block-name}__element\n}\n`;
       // fileCreateMsg = '';
     }
 
     else if (extension === 'js') {
-      fileContent = `/* global document */\n\n// const ready = require('../../js/utils/documentReady.js');\n\n// ready(function(){\n//   \n// });\n`;
+      //fileContent = `/* global document */\n\n// const ready = require('../../js/utils/documentReady.js');\n\n// ready(function(){\n//   \n// });\n`;
     }
 
     else if (extension === 'md') {
@@ -43,8 +42,10 @@ if (blockName) {
     }
 
     else if (extension === 'pug') {
-      fileContent = `//- Все примеси в этом файле должны начинаться c имени блока (${blockName})\n\nmixin ${blockName}(text, mods)\n\n  //- Принимает:\n  //-   text    {string} - текст\n  //-   mods    {string} - список модификаторов\n  //- Вызов:\n        +${blockName}('Текст', 'some-mod')\n\n  -\n    // список модификаторов\n    var allMods = '';\n    if(typeof(mods) !== 'undefined' && mods) {\n      var modsList = mods.split(',');\n      for (var i = 0; i < modsList.length; i++) {\n        allMods = allMods + ' ${blockName}--' + modsList[i].trim();\n      }\n    }\n\n  .${blockName}(class=allMods)&attributes(attributes)\n    .${blockName}__inner\n      block\n`;
+      //fileContent = `//- Все примеси в этом файле должны начинаться c имени блока (${blockName})\n\nmixin ${blockName}(text, mods)\n\n  //- Принимает:\n  //-   text    {string} - текст\n  //-   mods    {string} - список модификаторов\n  //- Вызов:\n        +${blockName}('Текст', 'some-mod')\n\n  -\n    // список модификаторов\n    var allMods = '';\n    if(typeof(mods) !== 'undefined' && mods) {\n      var modsList = mods.split(',');\n      for (var i = 0; i < modsList.length; i++) {\n        allMods = allMods + ' ${blockName}--' + modsList[i].trim();\n      }\n    }\n\n  .${blockName}(class=allMods)&attributes(attributes)\n    .${blockName}__inner\n      block\n`;
+      //fileContent = "include E:/Development/FSD/hotel/src/bemto";
     }
+
 
     else if (extension === 'img') {
       const imgFolder = `${dirPath}img/`;

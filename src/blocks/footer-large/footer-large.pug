@@ -1,0 +1,13 @@
+include __inf-elem-list/footer-large__inf-elem-list
+include __inf-elem-subcribe/footer-large__inf-elem-subcribe
+include __inf-elem-email/footer-large__inf-elem-email
+include __inf-elem-logo/footer-large__inf-elem-logo
+
+
+mixin footer-large
+    .footer-large
+        +footer-large__inf-elem-logo 
+        +footer-large__inf-elem-list("Навигация", ["О нас", "Новости", "Служба поддержки", "Услуги"])
+        +footer-large__inf-elem-list("О нас", ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"])
+        +footer-large__inf-elem-list("Служба поддержки", ["Соглашения", "Сообщества", "Связь с нами"])
+        +footer-large__inf-elem-subcribe              

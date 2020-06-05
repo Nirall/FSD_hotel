@@ -1,0 +1,25 @@
+include blocks/navbar/navbar
+include blocks/logo-toxin/logo-toxin
+include blocks/footer-large/footer-large
+include blocks/footer-small/footer-small
+
+doctype html
+head
+    meta(charset = "ut8")
+    meta(name = "keywords" content = "Отель")
+    meta(name = "description" content = "Бронирование номеров")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    link(rel="stylesheet" href="./style.css")
+    title Pug-test
+body
+    header
+        +navbar
+    .content    
+    +footer-large
+    +footer-small
+    
+    
+
+
+
+

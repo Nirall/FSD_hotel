@@ -1,0 +1,7 @@
+mixin navbar__button(text, modifer="")
+    if modifer
+        div(class="navbar__button " + "navbar__button" + modifer)
+            =text
+    else 
+        div(class="navbar__button")
+            =text
