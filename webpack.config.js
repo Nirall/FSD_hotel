@@ -17,7 +17,7 @@ module.exports = {
         }),
         new cssExtract({
             filename: "style.css",
-        }),
+        }),        
     ],
     module: {
         rules: [
