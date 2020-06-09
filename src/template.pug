@@ -2,7 +2,8 @@ include blocks/navbar/navbar
 include blocks/logo-toxin/logo-toxin
 include blocks/footer-large/footer-large
 include blocks/footer-small/footer-small
-include blocks/datepicker-2f/datepicker
+include blocks/datepicker-2f/datepicker-2f
+include blocks/dropdown/dropdown
 
 doctype html
 head
@@ -16,7 +17,9 @@ body
     header
         +navbar
     .content
-        +datepicker
+        +datepicker-2f
+        +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+        +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
     +footer-large
     +footer-small
     script(src="https://code.jquery.com/jquery-3.5.1.min.js"

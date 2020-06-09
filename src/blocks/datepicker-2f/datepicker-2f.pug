@@ -1,0 +1,14 @@
+mixin datepicker-2f
+    .datepicker-2f
+        .datepicker-2f__input-col
+            div= "ПРИБЫТИЕ"        
+            .datepicker-2f__input-field
+                input(class = "datepicker-here" id = "inDateField" inline = "true" type="text"
+                data-range="true" data-multiple-dates-separator = " - " dateFormat = "dd.mm.yyyy" clearButton = "true")
+                span.material-icons= "expand_more"
+        .datepicker-2f__input-col
+            div= "ВЫЕЗД"
+            .datepicker-2f__input-field                
+                input(id = "outDateField")
+                span.material-icons= "expand_more"              
+        

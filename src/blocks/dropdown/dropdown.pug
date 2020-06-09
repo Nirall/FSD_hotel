@@ -1,0 +1,13 @@
+mixin dropdown(title, placeholder, ...args)
+    .dropdown
+        div= title        
+            .dropdown__field
+                = placeholder
+            ul          
+                each val in args
+                    li.dropdown__list-elem
+                        span.dropdown__item= val
+                        span.dropdown__butt.dropdown__minus
+                            = "-"
+                        span.dropdown__quantity.dropdown__butt= "0"
+                        span.dropdown__butt.dropdown__plus= "+"

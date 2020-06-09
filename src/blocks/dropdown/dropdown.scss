@@ -1,0 +1,32 @@
+.dropdown {    
+    font: 12px/15px 'Montserrat-Bold';
+    background: white;
+    width: 320px;    
+}
+.dropdown li {
+    height: 37px;
+    
+}
+
+.dropdown__item {
+    display: inline-block;
+    padding: 0 15px;
+    vertical-align: middle;
+    width: 190px;
+}
+.dropdown__butt {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    font: 18px/30px 'Montserrat';
+    cursor: pointer;
+}
+.dropdown__quantity {
+    font: 12px/30px 'Montserrat-Bold';
+    padding: 0 1px;
+    border: 0;
+}

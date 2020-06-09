@@ -42,14 +42,6 @@ table {
 	border-spacing: 0;
 }
 
-@import "./blocks/navbar/navbar.scss";
-@import "./blocks/logo-toxin/logo-toxin.scss";
-@import "./blocks/footer-large/footer-large.scss";
-@import "./blocks/footer-small/footer-small.scss";
-@import "./blocks/datepicker-2f/datepicker.css";
-@import "./blocks/datepicker-2f/controller.css";
-
-
 @font-face {
 	font-family: 'Montserrat';
 	src: url('fonts/Montserrat-Regular.eot');
@@ -82,9 +74,6 @@ table {
 	font-weight: normal;
 	font-style: normal;
 }
-
-
-
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
@@ -113,6 +102,13 @@ table {
 	/* Support for IE. */
 	font-feature-settings: 'liga';
 }
+
+@import "./blocks/navbar/navbar.scss";
+@import "./blocks/logo-toxin/logo-toxin.scss";
+@import "./blocks/footer-large/footer-large.scss";
+@import "./blocks/footer-small/footer-small.scss";
+@import "./blocks/datepicker-2f/datepicker-2f.scss";
+@import "./blocks/dropdown/dropdown.scss";
 
 body {
 	margin: 0px;

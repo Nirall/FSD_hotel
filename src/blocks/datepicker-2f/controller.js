@@ -14,8 +14,8 @@ inDateField.datepicker({
 
 $('#inDateField').datepicker({clearButton: true});
 $('#inDateField').datepicker({todayButton: true});
-$('#inDateField').datepicker({prevHtml: '<i class = "material-icons db-arrow">arrow_back</i>'});
-$('#inDateField').datepicker({nextHtml: '<i class = "material-icons db-arrow">arrow_forward</i>'});
+$('#inDateField').datepicker({prevHtml: '<i class = "db-arrow material-icons">arrow_back</i>'});
+$('#inDateField').datepicker({nextHtml: '<i class = "db-arrow material-icons">arrow_forward</i>'});
 
 let applyButt = $(".datepicker--button[data-action='today']");
 applyButt.html("Применить");

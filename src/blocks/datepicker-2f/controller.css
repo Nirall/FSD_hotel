@@ -1,6 +1,10 @@
 .datepicker {    
     font: 12px/15px 'Montserrat';
-    width: 320px;
+    width: 320px;    
+}
+.datepicker.-from-bottom- {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
 }
 .datepicker--body.active {
     width: 280px;
@@ -35,14 +39,14 @@
     vertical-align: middle;
     color: #BC9CFF;
 	height: 40px;
-	text-transform: capitalize;    
+	text-transform: capitalize;
 }
 .datepicker--days-names {
-    font-family: "Montserrat-Bold";
+    font: 12px/15px "Montserrat-Bold";
 	margin: 0;	
 }
 .datepicker--nav {
-    padding: 0px 16px 20px 16px;
+    padding: 15px 15px 20px 15px;
     border: 0;
 }
 .datepicker--nav-title, .datepicker--nav-title i {
