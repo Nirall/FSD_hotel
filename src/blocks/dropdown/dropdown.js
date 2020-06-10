@@ -1,28 +1,3 @@
-/*const listNodes = document.getElementsByClassName("dropdown__list-elem");
-for (let list of listNodes) {
-    for (let child of list.childNodes) {
-        let dropdown__minus;
-        let dropdown__plus;
-        let dropdown__item;
-        for (let i of child.classList) {
-            switch(i) {
-                case "dropdown__minus":
-                    dropdown__minus = i;
-                    break;
-                case "dropdown__plus":
-                    dropdown__plus = i;
-                    break;
-                case "dropdown__item":
-                    dropdown__item = i;
-                    break;
-                default: null;                  
-            }
-        }
-        dropdown__minus.onclick = () => {
-
-        }
-    }
-}*/
 const listMinus = document.getElementsByClassName("dropdown__minus");
 for (let item of listMinus) {
     item.onclick = () => {
@@ -33,14 +8,44 @@ for (let item of listMinus) {
         }        
     }
 }
-
 const listPlus = document.getElementsByClassName("dropdown__plus");
 for (let item of listPlus) {
     item.onclick = () => {
-        let content = item.previousSibling.innerHTML;
-        let newContent = parseInt(content) + 1;
-        item.previousSibling.innerHTML = newContent.toString();                
+        let content = item.previousSibling.previousSibling.innerHTML;
+        let newContent = parseInt(content) + 1;        
+        item.previousSibling.previousSibling.innerHTML = newContent.toString();                
     }
 }
+const listClear = document.getElementsByClassName("dropdown__clear");
+for (let item of listClear) {
+    item.onclick = () => {
+        for (let quan of item.parentNode.parentNode.querySelectorAll(".dropdown__quantity")) {
+            quan.innerHTML = "0";
+        }        
+    }           
+}
+const listApply = document.getElementsByClassName("dropdown__apply");
+for (let item of listApply) {
+    item.onclick = () => {
+        let quanList = item.parentNode.parentNode.querySelectorAll(".dropdown__quantity");              
+        let quanPeople = parseInt(quanList.item(0).innerHTML) + parseInt(quanList.item(1).innerHTML);
+        let quanBaby = parseInt(quanList.item(2).innerHTML);
+        if (quanBaby !=0) {
+            item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = `${quanPeople.toString()} гостя, ${quanBaby.toString()} младенца`;
+        } else {
+            item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = `${quanPeople.toString()} гостя`;
+        }       
+        item.parentNode.parentNode.querySelector("ul").setAttribute("style", "display: none");
+        item.parentNode.parentNode.querySelector(".dropdown__buttons").setAttribute("style", "display: none");
+    }           
+}
+const listField = document.getElementsByClassName("dropdown__field");
+for (let item of listField) {
+    item.onclick = () => {
+        item.parentNode.querySelector("ul").setAttribute("style", "display: block");
+        item.parentNode.querySelector(".dropdown__buttons").setAttribute("style", "display: flex");
+    }        
+}           
+
 
 

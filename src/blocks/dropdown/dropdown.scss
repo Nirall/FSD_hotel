@@ -5,16 +5,18 @@
 }
 .dropdown li {
     height: 37px;
-    
+    padding-right: 5px;    
 }
 
 .dropdown__item {
     display: inline-block;
-    padding: 0 15px;
+    padding-left: 15px;
     vertical-align: middle;
-    width: 190px;
+    width: 203px;
 }
 .dropdown__butt {
+    margin: 0;
+    padding: 0;
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -22,11 +24,24 @@
     border-radius: 50%;
     vertical-align: middle;
     text-align: center;
+    background: white;
     font: 18px/30px 'Montserrat';
     cursor: pointer;
+    outline: none;
 }
 .dropdown__quantity {
-    font: 12px/30px 'Montserrat-Bold';
-    padding: 0 1px;
+    font: 12px/30px 'Montserrat-Bold';    
     border: 0;
+}
+.dropdown__buttons {
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 7px 0px 15px;
+}
+.dropdown__clear, .dropdown__apply {   
+    cursor: pointer;
+}
+.dropdown__apply {
+    color: #BC9CFF;
 }
