@@ -1,0 +1,9 @@
+mixin button-with-arrow(text, modifer="")
+    if modifer
+        div(class="button-with-arrow " + "button-with-arrow" + modifer)
+            span.button-with-arrow__text= text
+            span.material-icons= "arrow_forward"
+    else 
+        div(class="button-with-arrow")
+            span.button-with-arrow__text= text
+            span.material-icons= "arrow_forward"

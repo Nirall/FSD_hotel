@@ -4,6 +4,8 @@ include blocks/footer-large/footer-large
 include blocks/footer-small/footer-small
 include blocks/datepicker-2f/datepicker-2f
 include blocks/dropdown/dropdown
+include blocks/appartments-finder/appartments-finder
+include blocks/button-with-arrow/button-with-arrow
 
 doctype html
 head
@@ -16,10 +18,12 @@ head
 body
     header
         +navbar
-    .content
-        +datepicker-2f
-        +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-        +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")        
+    block content
+        .content
+            +appartments-finder
+            .phrase-of-day= "Лучшие номера для вашей работы, отдыха и просто вдохновения"
+        
+                        
     +footer-large
     +footer-small
     script(src="https://code.jquery.com/jquery-3.5.1.min.js"

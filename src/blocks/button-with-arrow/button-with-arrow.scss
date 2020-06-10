@@ -1,0 +1,19 @@
+.button-with-arrow {    
+    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+    width: 302px;
+    padding: 0 9px;
+    height: 44px;  
+    color: #FFFFFF;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 22px;
+    font: 12px/15px 'Montserrat-Bold';
+    margin-top: 32px;        
+}
+.button-with-arrow span.material-icons {    
+    color: white;
+}
+.button-with-arrow span.button-with-arrow__text {    
+    padding-left: 82px;
+}

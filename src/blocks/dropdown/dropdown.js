@@ -30,10 +30,14 @@ for (let item of listApply) {
         let quanList = item.parentNode.parentNode.querySelectorAll(".dropdown__quantity");              
         let quanPeople = parseInt(quanList.item(0).innerHTML) + parseInt(quanList.item(1).innerHTML);
         let quanBaby = parseInt(quanList.item(2).innerHTML);
-        if (quanBaby !=0) {
-            item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = `${quanPeople.toString()} гостя, ${quanBaby.toString()} младенца`;
+        if (quanBaby !=0) {            
+            item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}`;
         } else {
-            item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = `${quanPeople.toString()} гостя`;
+            if (quanPeople ==0) {
+                item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = "";
+            } else {
+                item.parentNode.parentNode.querySelector(".dropdown__field").innerHTML = `Гостей - ${quanPeople.toString()}`;
+            }            
         }       
         item.parentNode.parentNode.querySelector("ul").setAttribute("style", "display: none");
         item.parentNode.parentNode.querySelector(".dropdown__buttons").setAttribute("style", "display: none");

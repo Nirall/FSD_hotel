@@ -21,4 +21,4 @@ let applyButt = $(".datepicker--button[data-action='today']");
 applyButt.html("Применить");
 applyButt.click(() => datepickerApi.hide());
 
-outDateField.click(() => datepickerApi.show());
+$('.datepicker-2f__input-field').click(() => datepickerApi.show());

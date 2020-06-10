@@ -1,6 +1,6 @@
 .datepicker {    
     font: 12px/15px 'Montserrat';
-    width: 320px;    
+    width: 320px;       
 }
 .datepicker.-from-bottom- {
     -webkit-transform: translateY(5px);

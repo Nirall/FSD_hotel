@@ -109,13 +109,22 @@ table {
 @import "./blocks/footer-small/footer-small.scss";
 @import "./blocks/datepicker-2f/datepicker-2f.scss";
 @import "./blocks/dropdown/dropdown.scss";
-
-body {
-	margin: 0px;
-    background: no-repeat url("images/landingpage-bg.jpg") ;
-}
+@import "./blocks/appartments-finder/appartments-finder.scss";
+@import "./blocks/button-with-arrow/button-with-arrow.scss";
 
 .content {
-	height: 900px;
-	margin-top: 150px;
+	margin: 0 auto;
+	height: 830px;
+	max-width: 1440px;
+	background: no-repeat url("images/landingpage-bg.jpg");
+	padding-top: 70px;	
+}
+
+.phrase-of-day {
+	width: 297px;
+	position: absolute;
+	text-align: right;
+	left: 1008px;
+	bottom: -55px;	
+	font: 14px/24px 'Montserrat';
 }

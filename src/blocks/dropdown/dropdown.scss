@@ -1,11 +1,14 @@
 .dropdown {    
     font: 12px/15px 'Montserrat-Bold';
     background: white;
-    width: 320px;    
+    width: 320px;
+    padding-top: 20px;
+    transform: translateY(0.1px);    
 }
 .dropdown li {
     height: 37px;
-    padding-right: 5px;    
+    padding-right: 5px;
+    background: white;    
 }
 
 .dropdown__item {
@@ -34,14 +37,36 @@
     border: 0;
 }
 .dropdown__buttons {
+    box-sizing: border-box;
     height: 28px;
-    display: flex;
+    width: 320px;
     justify-content: space-between;
-    padding: 15px 7px 0px 15px;
+    padding: 15px 7px 27px 15px;
+    display: none;
+    background: white;
+    position: absolute;
+    top: 198px;
 }
-.dropdown__clear, .dropdown__apply {   
-    cursor: pointer;
+.dropdown ul {
+    display: none;
+    position: absolute;
+}
+.dropdown__clear, .dropdown__apply {
+    display: inline-block;   
+    cursor: pointer;    
 }
 .dropdown__apply {
     color: #BC9CFF;
+}
+.dropdown__field {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 14px/15px 'Montserrat';
+    color: rgba(31, 32, 65, 0.75); 
+    padding: 0 7px 0 15px; 
+    margin: 5px 0;   
+    height: 43px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
 }
