@@ -111,20 +111,27 @@ table {
 @import "./blocks/dropdown/dropdown.scss";
 @import "./blocks/appartments-finder/appartments-finder.scss";
 @import "./blocks/button-with-arrow/button-with-arrow.scss";
+@import "./blocks/appartment-card/appartment-card.scss";
+@import "./search-room.scss";
 
-.content {
+.content-landing-page {
 	margin: 0 auto;
 	height: 830px;
 	max-width: 1440px;
 	background: no-repeat url("images/landingpage-bg.jpg");
 	padding-top: 70px;	
 }
-
+.content {
+	margin: 0 auto;
+	height: 830px;
+	max-width: 1440px;	
+	padding-top: 70px;	
+}
 .phrase-of-day {
 	width: 297px;
 	position: absolute;
 	text-align: right;
 	left: 1008px;
-	bottom: -55px;	
+	bottom: -5px;	
 	font: 14px/24px 'Montserrat';
 }

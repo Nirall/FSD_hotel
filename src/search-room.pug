@@ -1,0 +1,40 @@
+extends template.pug
+block content
+    .content-search-room
+        -
+            const cards = [
+                ["images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145],
+                ["images/cards/840.jpg", "840", "", "9 900", 4, 65],
+                ["images/cards/980.jpg", "980", "ЛЮКС", "8 500", 3, 35],
+                ["images/cards/856.jpg", "856", "", "7 300", 5, 19],
+                ["images/cards/740.jpg", "740", "", "6 000", 4, 44],
+                ["images/cards/982.jpg", "982", "", "5 800", 3, 56],
+                ["images/cards/678.jpg", "678", "", "5 500", 5, 45],
+                ["images/cards/450.jpg", "450", "", "5 300", 4, 39],
+                ["images/cards/350.jpg", "350", "", "5 000", 3, 77],
+                ["images/cards/666.jpg", "666", "", "5 000", 5, 25],
+                ["images/cards/444.jpg", "444", "", "5 000", 3, 15],
+                ["images/cards/352.jpg", "352", "", "5 000", 3, 55],
+            ]            
+        .left-col
+        .right-col
+            .search-room__title= "Номера, которые мы для вас подобрали"
+            .search-room__cards
+                each val in cards
+                    +appartment-card(...val)
+            .search-room__pages
+                button.search-room__button.search-room__button_violet= 1
+                button.search-room__button= 2
+                button.search-room__button= 3
+                button.search-room__button= "..."
+                button.search-room__button= 15                
+                button.material-icons.search-room__button.search-room__button_green= "arrow_forward"
+            .search-room__pages-comment= "1 – 12 из 100+ вариантов аренды"
+            
+            
+
+
+
+
+
+

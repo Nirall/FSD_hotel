@@ -1,0 +1,42 @@
+mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
+    .appartment-card
+        .appartment-card__img(style = `background: url(${img}) no-repeat;`)
+            .appartment-card__img__arrows
+                span.material-icons.appartment-card__img__l-arrow= "expand_more"
+                span.material-icons.appartment-card__img__r-arrow= "expand_more"
+            .appartment-card__img__spots
+                .appartment-card__img__spot.appartment-card__img__spot_fill
+                .appartment-card__img__spot
+                .appartment-card__img__spot   
+                .appartment-card__img__spot            
+        .appartment-card__info
+            .appartment-card__info__part
+                span.appartment-card__info__number
+                    = "№"
+                    span= ` ${number}`
+                span.appartment-card__info__luxury= ` ${luxury}`
+            .appartment-card__info__part
+                span.appartment-card__info__price= `${price}₽`
+                span.appartment-card__info__price__dimension= " в сутки"
+        .appartment-card__rating
+            .appartment-card__rating__stars
+                if stars > 6
+                    - stars = 5                    
+                if stars < 0
+                    - stars = 0                
+                - let n = 0                
+                while n < stars
+                    - n++
+                    span.material-icons.appartment-card__rating__star= "star"
+                - let k = 5 - n
+                    while k > 0                            
+                        span.material-icons.appartment-card__rating__star= "star_border"
+                        - k--
+            .appartment-card__rating__reviews
+                span= reviews
+                span.appartment-card__rating__review= " Отзывов"
+
+
+            
+
+

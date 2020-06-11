@@ -1,0 +1,58 @@
+.content-search-room {
+	margin: 100px auto 0 auto;
+	max-width: 1165px;		
+    display: flex;
+    justify-content: space-between;    	
+}
+.left-col {
+    width: 266px;
+    min-width: 266px;
+    height: 1300px;
+    padding: 0 1px;
+    border: 1px solid black;
+}
+.right-col {
+    margin-left: 50px;
+}
+.search-room__cards {
+    width: 850px;       
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+}
+.search-room__title {
+    padding: 0 0 9px 7px;
+    font: 24px/30px 'Montserrat-Bold';
+    letter-spacing: -0.45px;    
+}
+.search-room__pages {
+    margin: 30px 14px 0 0;
+    display: flex;
+    justify-content: center;
+}
+.search-room__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background: white;    
+    color: rgba(31, 32, 65, 0.5);
+}
+.search-room__button_violet {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: white;
+    font-family: 'Montserrat-Bold';
+}
+.search-room__button_green {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    color: white;    
+}
+.search-room__pages-comment {
+    width: 230px;
+    margin: 6px auto;
+    padding-right: 14px;
+    font: 14px/24px 'Montserrat';
+    color: rgba(31, 32, 65, 0.75);
+}
+

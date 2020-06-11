@@ -1,0 +1,89 @@
+.appartment-card {
+    margin: 10.4px 6px;    
+    width: 270px;
+    height: 257px;
+    background: white;
+    font: 14px/18px 'Montserrat-Bold';
+    color: rgba(31, 32, 65, 0.5);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;    
+}
+.appartment-card__img {       
+    color: white;
+    height: 151px;
+    border-radius: 4px 4px 0 0;     
+    box-shadow: inset -30px 0px 30px 0px rgba(0, 0, 0, 0.4), 
+                inset 30px 0px 30px 0px rgba(0, 0, 0, 0.4);    
+}
+.appartment-card__img__arrows {
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 53px;
+}
+.appartment-card__img span {    
+    width: 22px;
+    height: 22px;
+    margin: 10px;    
+    color: white;      
+}
+.appartment-card__img__spots {
+    padding: 29px 0 0 212px;
+}
+.appartment-card__img__spot {
+    box-sizing: border-box;    
+    margin: 2px;
+    padding: 0;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: transparent;
+}
+.appartment-card__img__spot_fill {
+    background: white;
+}
+.appartment-card__img__l-arrow {
+    transform: rotate(90deg);
+}
+.appartment-card__img__r-arrow {
+    transform: rotate(-90deg);
+}
+.appartment-card__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 19px 0px 19px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+.appartment-card__info__number {    
+    color: black;    
+}
+.appartment-card__info__number > span {
+    font-size: 18px;
+}
+.appartment-card__info__luxury {
+    color: #BC9CFF;
+    font: 12px/15px 'Montserrat';
+}
+.appartment-card__info__price__dimension {
+    font-size: 12px;
+    font-family: 'Montserrat';   
+}
+.appartment-card__rating {
+    height: 40px;
+    margin: 0px 19px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.appartment-card__rating__star {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #BC9CFF;
+}
+.appartment-card__rating__review {
+    font-family: 'Montserrat';
+}

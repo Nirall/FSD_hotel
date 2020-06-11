@@ -12,9 +12,15 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new htmlPlugin({
-            template: "src/template.pug",
+            template: "src/landing-page.pug",
             inject: false,
+            filename: "index.html",
         }),
+        new htmlPlugin({
+            template: "src/search-room.pug",
+            inject: false,
+            filename: "search-room.html",
+        }),        
         new cssExtract({
             filename: "style.css",
         }),        
@@ -43,7 +49,14 @@ module.exports = {
                             loader: "file-loader",
                             options: {
                                 name: "[name].[ext]",
-                                outputPath: "images"
+                                outputPath: (url, resoursepath, context) => {                                                                                               
+                                    if(resoursepath.includes("images\\cards")) {                                        
+                                        return `images/cards/${url}`;
+                                    } else {                                        
+                                        return `images/${url}`;
+                                    }     
+                                    
+                                }   
                             }
                         },                
                 ],                

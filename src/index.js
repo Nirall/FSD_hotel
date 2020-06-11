@@ -8,6 +8,7 @@ import "./images/landingpage-bg.jpg";
 import "./images/f.png";
 import "./images/t.png";
 import "./images/i.png";
+import "./search-room.js";
 
 
 
