@@ -1,0 +1,10 @@
+mixin checkbox-item(modifier="", text)
+    -
+        let classDef = "checkbox-item"
+        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+    div(class = classMod)
+        label
+            input(type = "checkbox")
+            span.checkbox-item__pseudo
+            span.checkbox-item__text
+                != text

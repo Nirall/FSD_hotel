@@ -1,0 +1,57 @@
+.checkbox-item {
+    font: 14px/18px 'Montserrat';
+    color: rgba(31, 32, 65, 0.5); 
+    padding: 5px 0;   
+}
+.checkbox-item label {
+    display: flex;
+    align-items: top;    
+}
+.checkbox-item input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0
+}
+.checkbox-item__pseudo {
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: inline-block;
+    content: " ";
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.checkbox-item__text {
+    white-space: nowrap;    
+}
+.checkbox-item input:checked ~ .checkbox-item__pseudo {    
+    background: no-repeat center url("./blocks/checkbox-item/check-mark.png");
+    border: 1px solid #BC9CFF;
+}
+
+/*-----------------------------------------
+---------MODIFIER: _bold-------------------
+------------------------------------------*/
+.checkbox-item_bold {
+    font-family: 'Montserrat-Bold';
+    color: black;
+}
+
+/*-----------------------------------------
+---------MODIFIER: _decription-------------
+------------------------------------------*/
+.checkbox-item_description {
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+.checkbox-item_description .checkbox-item__pseudo{
+    display: none;
+}
+.checkbox-item_description .checkbox-item__text {    
+    margin-left: 30px;
+    font: 12px/14px 'Montserrat';    
+}

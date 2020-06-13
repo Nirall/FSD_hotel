@@ -1,0 +1,28 @@
+mixin appartment-form
+    .appartment-form        
+        +dropdown("_width266px", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+        .slider
+        .appartment-form__wrapper-checkbox-item__options
+            .appartment-form__title= "CHECKBOX BUTTONS"
+            +checkbox-item("", "Можно курить")
+            +checkbox-item("", "Можно с питомцами")
+            +checkbox-item("", "Можно пригласить гостей <br> (до 10 человек)")
+        .appartment-form__wrapper-checkbox-item__accessibility
+            .appartment-form__title= "ДОСТУПНОСТЬ"
+            +checkbox-item("_bold", "Широкий коридор")
+            +checkbox-item("_description", "Ширина коридоров в номере <br> не менее 91 см.")
+            +checkbox-item("_bold", "Помошник для инвалидов")
+            +checkbox-item("_description", "На 1 этаже вас встретит специалист <br> и проводит до номера")
+        +dropdown("_width266px", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+        .appartment-form__wrapper-checkbox-item__more-options
+            .appartment-form__dropdown-wrapper
+                .appartment-form__title.appartment-form__title_dropdown= "ДОПОЛНИТЕЛЬНЫЕ УДОБСТВА"
+                span.material-icons.appartment-form__expand-butt= "expand_less"
+            .appartment-form__checkboxes   
+                +checkbox-item("", "Завтрак")
+                +checkbox-item("", "Письменный стол")
+                +checkbox-item("", "Стул для кормления")
+                +checkbox-item("", "Кроватка")
+                +checkbox-item("", "Телевизор")
+                +checkbox-item("", "Шампунь")
+                

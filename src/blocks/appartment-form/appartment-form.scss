@@ -1,0 +1,32 @@
+.appartment-form__title {
+    font: 12px/15px 'Montserrat-Bold';
+    padding-bottom: 12px;
+}
+.appartment-form__title_dropdown {
+    padding: 0;
+}
+.appartment-form__dropdown-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 9px;
+}
+.appartment-form__wrapper-checkbox-item__accessibility {
+    margin: 27px 0 5px 0;    
+}
+.appartment-form__wrapper-checkbox-item__more-options {
+    padding-top: 19px;
+}
+.appartment-form__checkboxes {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;    
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+.appartment-form__checkboxes_dissappear {
+    opacity: 0;
+}
+.appartment-form__expand-butt_rotate {
+    transform: rotate(180deg);
+}

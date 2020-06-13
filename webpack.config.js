@@ -20,7 +20,7 @@ module.exports = {
             template: "src/search-room.pug",
             inject: false,
             filename: "search-room.html",
-        }),        
+        }),               
         new cssExtract({
             filename: "style.css",
         }),        
@@ -35,15 +35,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.s*css$/,
-                use: [
-                    cssExtract.loader,
-                    "css-loader",
-                    "sass-loader",  
-                ]
-            },
-            {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                         {
                             loader: "file-loader",
@@ -60,7 +52,15 @@ module.exports = {
                             }
                         },                
                 ],                
-            },            
+            }, 
+            {
+                test: /\.s*css$/,
+                use: [
+                    cssExtract.loader,
+                    "css-loader",
+                    "sass-loader",  
+                ]
+            },                       
             {
                 test: /\.(ttf|woff|svg|otf|eot)$/i,
                 use: [

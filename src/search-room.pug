@@ -1,6 +1,12 @@
 extends template.pug
+include blocks/datepicker-2f/datepicker-2f
+include blocks/dropdown/dropdown
+include blocks/checkbox-item/checkbox-item
+include blocks/appartment-form/appartment-form
+include blocks/button-with-arrow/button-with-arrow
+include blocks/appartment-card/appartment-card
 block content
-    .content-search-room
+    .content-search-room        
         -
             const cards = [
                 ["images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145],
@@ -15,8 +21,9 @@ block content
                 ["images/cards/666.jpg", "666", "", "5 000", 5, 25],
                 ["images/cards/444.jpg", "444", "", "5 000", 3, 15],
                 ["images/cards/352.jpg", "352", "", "5 000", 3, 55],
-            ]            
+            ]
         .left-col
+            +appartment-form
         .right-col
             .search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards

@@ -1,5 +1,8 @@
-mixin dropdown(title, placeholder, ...args)
-    .dropdown
+mixin dropdown(modifier = "", title, placeholder, ...args)
+    -
+        let classDef = "dropdown"
+        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+    div(class = classMod)
         div= title        
         .dropdown__field
             = placeholder

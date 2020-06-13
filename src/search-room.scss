@@ -1,3 +1,6 @@
+@import "./blocks/checkbox-item/checkbox-item.scss";
+@import "./blocks/appartment-form/appartment-form.scss";
+
 .content-search-room {
 	margin: 100px auto 0 auto;
 	max-width: 1165px;		
@@ -11,6 +14,7 @@
     padding: 0 1px;
     border: 1px solid black;
 }
+
 .right-col {
     margin-left: 50px;
 }
@@ -55,4 +59,5 @@
     font: 14px/24px 'Montserrat';
     color: rgba(31, 32, 65, 0.75);
 }
+
 
