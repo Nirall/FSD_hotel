@@ -42,7 +42,7 @@
 }
 
 /*-----------------------------------------
----------MODIFIER: _decription-------------
+---------MODIFIER: _description-------------
 ------------------------------------------*/
 .checkbox-item_description {
     padding-top: 0;
@@ -53,5 +53,19 @@
 }
 .checkbox-item_description .checkbox-item__text {    
     margin-left: 30px;
+    font: 12px/14px 'Montserrat';    
+}
+
+/*-----------------------------------------
+---------MODIFIER: _description-price-------------
+------------------------------------------*/
+.checkbox-item_description-price {
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+.checkbox-item_description-price .checkbox-item__pseudo{
+    display: none;
+}
+.checkbox-item_description-price .checkbox-item__text {   
     font: 12px/14px 'Montserrat';    
 }

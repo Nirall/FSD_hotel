@@ -12,3 +12,5 @@ import "./images/cards/444.jpg";
 import "./images/cards/352.jpg";
 import "./blocks/checkbox-item/checkbox-item.js";
 import "./blocks/appartment-form/appartment-form.js";
+import "./blocks/nouislider/nouislider.js";
+import "./blocks/nouislider/customise.js";

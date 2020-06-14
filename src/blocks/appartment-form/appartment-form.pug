@@ -1,7 +1,12 @@
 mixin appartment-form
     .appartment-form        
         +dropdown("_width266px", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-        .slider
+        .appartment-form__price-slider
+            .appartment-form__title-wrapper
+                .appartment-form__title= "ДИАПАЗОН ЦЕНЫ"
+                .appartment-form__price(id = "form-price")= ""
+            .slider(id = "slider")
+            +checkbox-item("_description-price", "Стоимость за сутки пребывания в номере")
         .appartment-form__wrapper-checkbox-item__options
             .appartment-form__title= "CHECKBOX BUTTONS"
             +checkbox-item("", "Можно курить")

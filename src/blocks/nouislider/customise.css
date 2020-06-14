@@ -1,0 +1,22 @@
+.noUi-target {
+    height: 6px;
+    margin: 13px 0;
+    box-sizing: border-box;
+}
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;    
+    right: -5px;
+    top: -6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0;
+}
+.noUi-connect {    
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.noUi-handle:before, .noUi-handle:after {
+    display: none;
+}
