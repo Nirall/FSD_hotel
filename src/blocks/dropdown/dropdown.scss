@@ -68,7 +68,8 @@
     padding: 0 7px 0 15px; 
     margin: 5px 0;   
     height: 43px;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
 }
 
 /*-----------------------------------------
@@ -78,13 +79,13 @@
 .dropdown_width266px {
     width: 266px;
 }
-.dropdown__item {
+.dropdown_width266px .dropdown__item {
     display: inline-block;
     padding-left: 15px;
     vertical-align: middle;
     width: 149px;
 }
-.dropdown__buttons {
+.dropdown_width266px .dropdown__buttons {
     box-sizing: border-box;
     height: 28px;
     width: 266px;
@@ -92,6 +93,10 @@
     padding: 15px 7px 27px 15px;
     display: none;
     background: white;
-    position: absolute;
+    position: static;
     top: 198px;
+}
+.dropdown_width266px ul {
+    display: none;
+    position: static;
 }

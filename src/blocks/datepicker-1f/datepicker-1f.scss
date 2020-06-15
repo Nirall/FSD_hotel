@@ -1,0 +1,28 @@
+.datepicker-1f {    
+    font: 12px/15px 'Montserrat-Bold';
+    background: white;
+    width: 266px;       
+}
+.datepicker-1f__wrapper-input-field { 
+    box-sizing: border-box;   
+    border: 1px solid rgba(42, 42, 48, 0.25);
+    border-radius: 4px;
+    width: 266px;
+    height: 44px;
+    padding: 0;
+    margin: 5px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.datepicker-1f__wrapper-input-field input {       
+    display: inline-block;
+    font: 14px/18px 'Montserrat';
+    outline: none;
+    border: 0;
+    padding: 0 0 0 14px;
+    text-align: left;
+}
+.datepicker-1f__wrapper-input-field span {
+    padding: 10px 9px 10px 15px;
+    margin: 0;
+}

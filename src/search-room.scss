@@ -2,6 +2,7 @@
 @import "./blocks/appartment-form/appartment-form.scss";
 @import "./blocks/nouislider/nouislider.css";
 @import "./blocks/nouislider/customise.css";
+@import "./blocks/datepicker-1f/datepicker-1f.scss";
 
 .content-search-room {
 	margin: 100px auto 0 auto;
@@ -11,10 +12,8 @@
 }
 .left-col {
     width: 266px;
-    min-width: 266px;
-    height: 1300px;
-    padding: 0 1px;
-    border: 1px solid black;
+    min-width: 266px;    
+    padding: 0 1px;    
 }
 
 .right-col {
@@ -24,8 +23,7 @@
     width: 850px;       
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid black;
+    justify-content: center;    
 }
 .search-room__title {
     padding: 0 0 9px 7px;
@@ -56,7 +54,7 @@
 }
 .search-room__pages-comment {
     width: 230px;
-    margin: 6px auto;
+    margin: 6px auto 74px auto;
     padding-right: 14px;
     font: 14px/24px 'Montserrat';
     color: rgba(31, 32, 65, 0.75);
