@@ -1,0 +1,12 @@
+.pie-chart {
+    width: 130px;
+    height: 130px;
+    transform: translateY(0.1px);    
+}
+.pie-chart__votes {
+    color: $purple;
+    position: absolute;
+    top: 41px;
+    left: 34px;
+    text-align: center;
+}

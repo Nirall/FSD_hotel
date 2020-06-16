@@ -115,10 +115,18 @@ table {
 	/* Support for IE. */
 	font-feature-settings: 'liga';
 }
-
+h1 {
+	font: 24px/30px 'Montserrat-bold';
+	//letter-spacing: -2px;
+	//font-weight: 100;
+}
 h2 {
 	font: 19px/24px 'Montserrat-bold';
 	letter-spacing: -0.53px;
+}
+h3 {
+	font: 12px/15px 'Montserrat-bold';
+	text-transform: uppercase;	
 }
 
 @import "./blocks/navbar/navbar.scss";
