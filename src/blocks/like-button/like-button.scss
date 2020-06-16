@@ -1,0 +1,26 @@
+.like-button {
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark25;
+    border-radius: 10px;
+    color: $dark25;
+    font: 10px/12px 'Montserrat';
+}
+.like-button span {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;    
+}
+
+/*-----------------------------------------
+---------MODIFIER: _active -----------
+------------------------------------------*/
+.like-button_active {
+    border: 1px solid $purple;
+    color: $purple;
+}
+.like-button_active span {
+    color: $purple;   
+}

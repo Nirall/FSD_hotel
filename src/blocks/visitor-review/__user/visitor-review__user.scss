@@ -1,0 +1,17 @@
+.visitor-review__user {
+    font: $font-body;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.visitor-review__user img {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 10px 20px $dark10;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.visitor-review__user__name {
+    font-family: "Montserrat-Bold";
+}

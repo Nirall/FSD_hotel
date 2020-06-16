@@ -1,0 +1,11 @@
+mixin like-button (modifier, quantity)
+    -
+        let classDef = "like-button"
+        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+    div(class = classMod)
+        if (modifier == "_active")
+            span.material-icons= "favorite"
+            = quantity
+        else 
+            span.material-icons= "favorite_border"
+            = quantity

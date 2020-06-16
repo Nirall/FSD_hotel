@@ -20,6 +20,11 @@ module.exports = {
             template: "src/search-room.pug",
             inject: false,
             filename: "search-room.html",
+        }),
+        new htmlPlugin({
+            template: "src/room-details.pug",
+            inject: false,
+            filename: "room-details.html",
         }),               
         new cssExtract({
             filename: "style.css",
@@ -44,6 +49,8 @@ module.exports = {
                                 outputPath: (url, resoursepath, context) => {                                                                                               
                                     if(resoursepath.includes("images\\cards")) {                                        
                                         return `images/cards/${url}`;
+                                    } else if (resoursepath.includes("images\\users")){
+                                        return `images/users/${url}`;
                                     } else {                                        
                                         return `images/${url}`;
                                     }     

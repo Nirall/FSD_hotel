@@ -1,3 +1,16 @@
+$dark100: #1F2041;
+$dark75: rgba(31, 32, 65, 0.75);
+$dark50: rgba(31, 32, 65, 0.50);
+$dark25: rgba(31, 32, 65, 0.25);
+$dark10: rgba(31, 32, 65, 0.10);
+$dark05: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+$primGrad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+$font-body: 14px/24px 'Montserrat';
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -103,6 +116,11 @@ table {
 	font-feature-settings: 'liga';
 }
 
+h2 {
+	font: 19px/24px 'Montserrat-bold';
+	letter-spacing: -0.53px;
+}
+
 @import "./blocks/navbar/navbar.scss";
 @import "./blocks/logo-toxin/logo-toxin.scss";
 @import "./blocks/footer-large/footer-large.scss";
@@ -113,6 +131,7 @@ table {
 @import "./blocks/button-with-arrow/button-with-arrow.scss";
 @import "./blocks/appartment-card/appartment-card.scss";
 @import "./search-room.scss";
+@import "room-details.scss";
 
 .content-landing-page {
 	margin: 0 auto;
