@@ -1,0 +1,63 @@
+@import "../appartment-card/__info/appartment-card__info";
+@import "../appartment-card/__info/_forCheck/appartment-card__info_forCheck";
+
+.appartments-finder-check {
+    width: 320px;
+    height: 458px;
+    padding: 22px 30px 30px 30px;
+    background: white;    
+    font: $font-body;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+    //----------PRICE-ITEM-----------------
+    .wrapper-appartments-finder-check__items {
+        padding-top: 9px;
+    }
+    .appartments-finder-check__price-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 5px 0;        
+    }
+    .appartments-finder-check__price-item__text {
+        width: 241px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .appartments-finder-check__price-item__text_lh18px {
+        line-height: 18px;
+        padding-top: 3px;
+    }    
+    .appartments-finder-check__price-item__i {
+        flex-shrink: 0;
+        display: inline-block;        
+        width: 20px;
+        height: 20px;
+        border: 1px solid $dark25;
+        color: $dark25;
+        border-radius: 50%;
+        text-align: center;
+        font-family: 'Montserrat-Bold';
+        line-height: 20px;
+        margin-left: 5px;
+    }
+
+    //----------TOTAL-----------------
+    .appartments-finder-check__total {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        font: 19px/24px 'Montserrat-Bold';
+    }
+    .appartments-finder-check__total__dot-line {
+        width: 182px;
+        border-bottom: 1px dotted $dark25;
+    }
+
+    //----------BUTTON-----------------
+    .wrapper-button-with-arrow {
+        margin-top: 19px;
+    }
+}
+

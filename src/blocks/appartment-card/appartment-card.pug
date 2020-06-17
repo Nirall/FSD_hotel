@@ -1,4 +1,5 @@
-mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
+include ./__info/appartment-card__info
+mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)    
     .appartment-card
         .appartment-card__img(style = `background: url(${img}) no-repeat;`)
             .appartment-card__img__arrows
@@ -9,15 +10,7 @@ mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
                 .appartment-card__img__spot
                 .appartment-card__img__spot   
                 .appartment-card__img__spot            
-        .appartment-card__info
-            .appartment-card__info__part
-                span.appartment-card__info__number
-                    = "№"
-                    span= ` ${number}`
-                span.appartment-card__info__luxury= ` ${luxury}`
-            .appartment-card__info__part
-                span.appartment-card__info__price= `${price}₽`
-                span.appartment-card__info__price__dimension= " в сутки"
+        +appartment-card__info("", number, luxury, price)
         .appartment-card__rating
             .appartment-card__rating__stars
                 if stars > 6

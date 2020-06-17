@@ -1,0 +1,23 @@
+.appartment-card__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 19px 0px 19px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    font: 14px/18px 'Montserrat-Bold';
+    color: $dark50;
+}
+.appartment-card__info__number {    
+    color: black;    
+}
+.appartment-card__info__number > span {
+    font-size: 18px;
+}
+.appartment-card__info__luxury {
+    color: #BC9CFF;
+    font: 12px/15px 'Montserrat';
+}
+.appartment-card__info__price__dimension {
+    font-size: 12px;
+    font-family: 'Montserrat';   
+}

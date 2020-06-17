@@ -2,13 +2,127 @@
 @import './blocks/visitor-review/visitor-review.scss';
 @import './blocks/pie-chart/pie-chart.scss';
 @import './blocks/pie-chart-legend/pie-chart-legend.scss';
+@import './blocks/appartments-finder-check/appartments-finder-check.scss';
+
 
 .content-room-details {
-    margin-top: 70px;
+    max-width: 1440px;
+    margin: 70px auto 0 auto;
+    color: $dark75;
+    
+    //--------FOTOS--------------------
+    .wrapper-fotos {    
+        display: flex;
+        margin-bottom: 71px;    
+    }
+    .wrapper-fotos__left {
+        height: 485px;          
+    }
+    .wrapper-fotos__right {
+        height: 485px;
+        display: flex;
+        flex-direction: column;         
+    }
+
+    //--------INFO---------------- 
+    .wrapper-info {        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;        
+    }
+        //--------LEFT-COL--------------------   
+            .wrapper-info__left {
+            max-width: 710px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 140px;
+        }
+        //--------INFO-APPARTMENT--------------------        
+        .wrapper-info-appartment {
+            width: 280px;
+        }
+
+        //--------PIE_CHART--------------------    
+        .wrapper-pie-chart {
+            width: 315px;
+            margin-right: 39px;
+        }
+        .wrapper-pie-chart__graph {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;    
+        }
+        .wrapper-pie-chart__graph-legend {
+            margin-bottom: 3px;
+        }
+        .wrapper-pie-chart h2 {
+            margin: 0 0 15px 5px;
+        }
+
+        //--------REVIEWS--------------------
+        .wrapper-reviews-title {
+            display: flex;
+            justify-content: space-between;
+            font: $font-body;
+            margin: 13px 0 17px 5px;
+        }    
+        .wrapper-reviews {
+            margin-left: -5px;
+        }
+        .wrapper-reviews span {
+            color: $dark50;
+        }
+        //--------ADDITIONAL--------------------
+        .wrapper-additional {
+            max-width: 710px;
+            margin: 13px 0 68px 0;
+            font: $font-body;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }        
+
+            //--------RULES--------------------
+            .wrapper-rules {
+                width: 260px;
+            }
+            .wrapper-rules h2 {
+                margin: 0 0 11px 19px;
+            }            
+            .wrapper-rules ul {                           
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+            }
+            .wrapper-rules ul li {
+                display: flex;
+                margin: 5px 0;
+                //flex-direction: column;
+            }
+            .wrapper-rules li::before {
+                flex-shrink: 0;
+                display: inline-block;
+                content: " ";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $dark25;
+                margin: 7px 10px 0 0;
+            }
+
+             //--------CANCEL--------------------
+            .wrapper-cancel {
+                width: 340px;
+                margin-left: 101px;
+            }
+            .wrapper-cancel h2 {
+                margin-bottom: 16px;
+            }
+
+    .wrapper-info__right {
+        margin-right: 140px;
+    }
 }
-.wrapper-info-appartment {
-    width: 280px;
-}
-.wrapper-info-appartment {
-    width: 710px;
-}
+
+

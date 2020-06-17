@@ -1,0 +1,27 @@
+include ../appartment-card/__info/appartment-card__info
+mixin appartments-finder-check 
+    .appartments-finder-check 
+        +appartment-card__info("_forCheck", 888, "ЛЮКС", "9 990")        
+        +datepicker-2f
+        +dropdown("", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+        .wrapper-appartments-finder-check__items
+            .appartments-finder-check__price-item
+                .appartments-finder-check__price-item__text
+                    span= "9 990₽ х 4 суток"
+                .appartments-finder-check__price-item__price= "39 960₽"
+            .appartments-finder-check__price-item
+                .appartments-finder-check__price-item__text
+                    span= "Сбор за услуги: скидка 2 179₽"
+                    span.appartments-finder-check__price-item__i= "i"
+                .appartments-finder-check__price-item__price= "0₽"
+            .appartments-finder-check__price-item
+                .appartments-finder-check__price-item__text.appartments-finder-check__price-item__text_lh18px
+                    span= "Сбор за дополнительные услуги"
+                    span.appartments-finder-check__price-item__i= "i"
+                .appartments-finder-check__price-item__price= "300₽"
+        .appartments-finder-check__total
+            span= "Итого"
+            span.appartments-finder-check__total__dot-line
+            span= "38 081₽"
+        .wrapper-button-with-arrow
+            +button-with-arrow("ЗАБРОНИРОВАТЬ")  

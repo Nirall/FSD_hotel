@@ -3,20 +3,54 @@ include blocks/info-appartment/info-appartment
 include blocks/visitor-review/visitor-review
 include blocks/pie-chart/pie-chart
 include blocks/pie-chart-legend/pie-chart-legend
+include blocks/appartments-finder-check/appartments-finder-check
+include blocks/datepicker-2f/datepicker-2f
+include blocks/dropdown/dropdown
+include blocks/button-with-arrow/button-with-arrow
 block content
     - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."
-    - var text2 = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую закать, каждый день новое блюдо и десерт как комплимент."
+    - var text2 = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."
     .content-room-details
-        .wrapper-info-appartment
-            h2 Сведения о номере
-            +info-appartment("", "insert_emoticon", "Комфорт", "Шумопоглащающие стены")
-            +info-appartment("_border", "location_city", "Удобство", "Окно в каждой из спален")
-            +info-appartment("", "whatshot", "Уют", "Номер оснащен камином")
-        .wrapper-info-appartment
-            +visitor-review ("_active", "images/users/1.png", "Мурад Сарафанов", "5 дней назад", "12", text1)
-            +visitor-review ("", "images/users/2.png", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
-        +pie-chart(25, 25, 50)
-        +pie-chart-legend
+        .wrapper-fotos
+            .wrapper-fotos__left
+                img(src = "images/cards/888_a.jpg" height = "485px" width = "980px")
+            .wrapper-fotos__right
+                img(src = "images/cards/888_b.jpg" height = "242px" width = "460px")
+                img(src = "images/cards/888_c.jpg" height = "243px" width = "460px")
+        .wrapper-info
+            .wrapper-info__left
+                .wrapper-info-appartment
+                    h2 Сведения о номере
+                    +info-appartment("", "insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                    +info-appartment("_border", "location_city", "Удобство", "Окно в каждой из спален")
+                    +info-appartment("", "whatshot", "Уют", "Номер оснащен камином")
+                .wrapper-pie-chart
+                    h2 Впечатления от номера
+                    .wrapper-pie-chart__graph
+                        +pie-chart(25, 25, 50)
+                        .wrapper-pie-chart__graph-legend
+                            +pie-chart-legend
+                .wrapper-reviews
+                    .wrapper-reviews-title
+                        h2 Отзывы посетителей номера
+                        span= "2 отзыва"
+                    +visitor-review ("_active", "images/users/1.png", "Мурад Сарафанов", "5 дней назад", "12", text1)
+                    +visitor-review ("", "images/users/2.png", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
+                .wrapper-additional
+                    .wrapper-rules
+                        h2 Правила
+                        ul
+                            li
+                                div= "Нельзя с питомцами"
+                            li 
+                                div= "Без вечеринок и мероприятий"
+                            li 
+                                div= "Время прибытия — после 13:00, а выезд до 12:00"
+                    .wrapper-cancel                    
+                        h2 Отмена
+                        = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
+            .wrapper-info__right
+                +appartments-finder-check
             
 
 
