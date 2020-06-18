@@ -10,7 +10,9 @@ mixin navbar
         +navbar__menu-elem("Вакансии")
         +navbar__menu-elem("Новости")
         +navbar__menu-elem-dropdown("Соглашения", "expand_more")
-        +navbar__button("ВОЙТИ")
-        +navbar__button("ЗАРЕГИСТРИРОВАТЬСЯ", "_violet")        
+        .wrapper-button-in
+            +navbar__button("ВОЙТИ")
+        .wrapper-button-reg
+            +navbar__button("ЗАРЕГИСТРИРОВАТЬСЯ", "_violet")        
 
 

@@ -1,0 +1,12 @@
+include ../button-with-arrow/button-with-arrow
+include ../navbar/__button/navbar__button
+mixin in-form
+    .in-form
+        h1= "Войти"
+        input.text-field(type="email" placeholder= "Email")
+        input.text-field(type="password" placeholder= "Пароль")
+        .wrapper-button-with-arrow
+            +button-with-arrow("ВОЙТИ", "_in-form")
+        .wrapper-in
+            p= "Нет аккаунта на Toxin"
+            +navbar__button("СОЗДАТЬ", "_for-reg-form")

@@ -1,0 +1,24 @@
+@import "./blocks/registration-form/registration-form";
+@import "./blocks/in-form/in-form";
+
+.content-registration {  
+    height: 754px;  
+    background: no-repeat url("./images/registration.jpg")
+}
+.wrapper-in-form {
+    position: absolute;
+    top: 233px;
+    left: 530px;
+    display: none;    
+}
+.wrapper-registration-form {
+    position: absolute;
+    top: 89px;
+    left: 533px;
+    
+}
+    
+
+
+
+

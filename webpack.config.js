@@ -25,7 +25,12 @@ module.exports = {
             template: "src/room-details.pug",
             inject: false,
             filename: "room-details.html",
-        }),               
+        }),
+        new htmlPlugin({
+            template: "src/registration.pug",
+            inject: false,
+            filename: "registration.html",
+        }),                
         new cssExtract({
             filename: "style.css",
         }),        

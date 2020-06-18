@@ -9,6 +9,7 @@ import "./images/t.png";
 import "./images/i.png";
 import "./search-room.js";
 import "./room-details.js";
+import "./registration.js";
 
 
 
