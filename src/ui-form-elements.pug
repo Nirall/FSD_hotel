@@ -1,0 +1,48 @@
+extends ui-template
+include ./blocks/dropdown/dropdown
+include ./blocks/datepicker-2f/datepicker-2f
+include ./blocks/datepicker-1f/datepicker-1f
+include ./blocks/footer-large/__inf-elem-email/footer-large__inf-elem-email
+
+block content
+    .content-ui-form-elements
+        .left-col
+            .wrapper-text-field
+                .wrapper-title-text-field
+                    h3= "text field"
+                    h3.h3-grey= "default"
+                input.text-field(type="text" placeholder="Email")
+            .wrapper-text-field
+                .wrapper-title-text-field
+                    h3= "text field"
+                    h3.h3-grey= "hover / focus"
+                input.text-field.text-field_hover(type="text" value="This is pretty awesome")
+            .wrapper-dropdown-guests
+                +dropdown("", "DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+            .wrapper-text-field
+                .wrapper-title-text-field
+                    h3= "masked text field"
+                    h3.h3-grey= "default"
+                input.text-field(type="text" placeholder="ДД.ММ.ГГГГ")
+            .wrapper-datepicker-2f
+                +datepicker-2f
+            .wrapper-datepicker-1f
+                +datepicker-1f
+            .wrapper-footer-large__inf-elem-email
+                h3= "subscription text field"
+                +footer-large__inf-elem-email
+            .wrapper-dropdown-beds
+                +dropdown("_width266px", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+            .wrapper-dropdown-beds
+                +dropdown("_width266px", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+            
+
+    
+    
+    
+    
+    
+
+
+
+

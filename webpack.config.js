@@ -30,7 +30,12 @@ module.exports = {
             template: "src/registration.pug",
             inject: false,
             filename: "registration.html",
-        }),                
+        }),
+        new htmlPlugin({
+            template: "src/ui-form-elements.pug",
+            inject: false,
+            filename: "ui-form-elements.html",
+        }),                 
         new cssExtract({
             filename: "style.css",
         }),        

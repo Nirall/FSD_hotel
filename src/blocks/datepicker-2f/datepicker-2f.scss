@@ -26,6 +26,9 @@
     padding: 0 0 0 0px;
     text-align: center;
 }
+.datepicker-2f__wrapper-input-field input::placeholder {
+    padding-left: 15px;
+}
 .datepicker-2f__wrapper-input-field span {
     padding: 10px 5px 10px 15px;
     margin: 0;

@@ -1,0 +1,44 @@
+.content-ui-form-elements {
+    margin: 143px 140px 140px 140px;
+    .left-col {
+        width: 320px;
+    }
+    .wrapper-text-field {
+        margin-bottom: 15px;
+    }
+    .wrapper-title-text-field {
+        display: flex;
+        justify-content: space-between;
+    }
+    .text-field_hover {
+        border: 1px solid $dark50;
+    }
+    .h3-grey {
+        color: $dark50;
+        font-family: "Montserrat";
+    }    
+    .dropdown {
+        padding: 0;
+        margin-bottom: 25px;
+    }
+    .wrapper-datepicker-2f {
+        margin: 35px 0 40px 0;        
+    }
+    .wrapper-footer-large__inf-elem-email {
+        width: 267px;
+        margin: 41px 0 40px 0;   
+    }
+    .wrapper-footer-large__inf-elem-email h3 {
+        margin-bottom: 4px;
+    }
+}
+
+    
+    
+    
+    
+    
+
+
+
+
