@@ -1,5 +1,6 @@
 extends ui-template
 include ./blocks/dropdown/dropdown
+include ./blocks/dropdown-without-butts/dropdown-without-butts
 include ./blocks/datepicker-2f/datepicker-2f
 include ./blocks/datepicker-1f/datepicker-1f
 include ./blocks/footer-large/__inf-elem-email/footer-large__inf-elem-email
@@ -32,12 +33,12 @@ block content
                 h3= "subscription text field"
                 +footer-large__inf-elem-email
             .wrapper-dropdown-beds
-                +dropdown("_width266px", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+                +dropdown-without-butts("", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
             .wrapper-dropdown-beds_expanded
-                +dropdown("_width266px", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+                +dropdown-without-butts("", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
     script.
-        document.querySelector(".wrapper-dropdown-beds_expanded .dropdown__field").classList.add("dropdown__field_active");
-        document.querySelector(".wrapper-dropdown-beds_expanded ul").classList.add("dropdown__ul_active");
+        document.querySelector(".wrapper-dropdown-beds_expanded .dropdown-without-butts__field").classList.add("dropdown-without-butts__field_active");
+        document.querySelector(".wrapper-dropdown-beds_expanded ul").classList.add("dropdown-without-butts__ul_active");
             
 
     

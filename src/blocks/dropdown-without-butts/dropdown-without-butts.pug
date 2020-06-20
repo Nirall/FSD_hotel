@@ -1,0 +1,16 @@
+mixin dropdown-without-butts(modifier = "", title, placeholder, ...args)
+    -
+        let classDef = "dropdown-without-butts"
+        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+    div(class = classMod)
+        div= title        
+        .dropdown-without-butts__field
+            = placeholder
+            span.material-icons= "expand_more"   
+        ul.dropdown-without-butts__ul         
+            each val in args
+                li.dropdown-without-butts__list-elem
+                    span.dropdown-without-butts__item= val
+                    button.dropdown-without-butts__butt.dropdown-without-butts__minus= "-"                        
+                    span.dropdown-without-butts__quantity.dropdown-without-butts__butt= "0"
+                    button.dropdown-without-butts__butt.dropdown-without-butts__plus= "+"        

@@ -1,7 +1,7 @@
 mixin appartment-form
     .appartment-form        
         +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")                 
-        +dropdown("_width266px", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+        +dropdown-without-butts("", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
         .appartment-form__price-slider
             .appartment-form__title-wrapper
                 .appartment-form__title= "ДИАПАЗОН ЦЕНЫ"
@@ -19,7 +19,7 @@ mixin appartment-form
             +checkbox-item("_description", "Ширина коридоров в номере <br> не менее 91 см.")
             +checkbox-item("_bold", "Помошник для инвалидов")
             +checkbox-item("_description", "На 1 этаже вас встретит специалист <br> и проводит до номера")
-        +dropdown("_width266px", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+        +dropdown-without-butts("", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
         .appartment-form__wrapper-checkbox-item__more-options
             .appartment-form__dropdown-wrapper
                 .appartment-form__title.appartment-form__title_dropdown= "ДОПОЛНИТЕЛЬНЫЕ УДОБСТВА"
