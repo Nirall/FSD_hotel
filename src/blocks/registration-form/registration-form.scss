@@ -16,29 +16,30 @@
         margin-bottom: 14px;
         letter-spacing: -0.6px;
     }
-    .wrapper-radio-buttons {
-        margin: 3px 0 22px 0;
-        display: flex;
-        justify-content: start;
-    }
-    .wrapper-h3-service-input {
-        margin: 15px 0 0 0;
-    }
-    .wrapper-toggle-button {
-        display: flex;
-        justify-content: start;
-        font: $font-body;
-        margin: 2px 0 21px 0;
-    }
-    .wrapper-toggle-button p {
-        margin-left: 10px;
-    }
-    .wrapper-in {
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font: $font-body;
-        color: black;
-    }
+    
+}
+.wrapper-radio-buttons {
+    margin: 3px 0 22px 0;
+    display: flex;
+    justify-content: start;
+}
+.wrapper-h3-service-input {
+    margin: 15px 0 0 0;
+}
+.wrapper-toggle-button {
+    display: flex;
+    justify-content: start;
+    font: $font-body;
+    margin: 2px 0 21px 0;
+}
+.wrapper-toggle-button p {
+    margin-left: 10px;
+}
+.wrapper-in {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: $font-body;
+    color: black;
 }

@@ -1,5 +1,7 @@
 .content-ui-form-elements {
     margin: 143px 140px 140px 140px;
+    display: flex;
+
     .left-col {
         width: 320px;
     }
@@ -18,7 +20,7 @@
         font-family: "Montserrat";
     }
     .wrapper-dropdown-guests {
-        margin-bottom: 26px;
+        margin-bottom: 24px;
     }   
     .wrapper-dropdown-guests .dropdown {
         padding: 0;
@@ -37,8 +39,99 @@
     .wrapper-footer-large__inf-elem-email h3 {
         margin-bottom: 4px;
     }
+    .wrapper-more-options_collapsed {
+        margin: 30px 0 0 0;
+    }
+    .appartment-form__wrapper-checkbox-item__more-options {
+        width: 266px;
+    }
+    .wrapper-more-options {
+        margin: 19px 0 0 0;
+    }
+    .wrapper-more-options .appartment-form__checkboxes {
+        margin-top: 8px;
+    }
+    .wrapper-info-appartment {
+        margin-top: 17px;
+    }
     
-        
+    
+    //--------------------middle-col-------------
+
+
+    .middle-right-col {
+        display: flex;
+    }
+
+    .middle-col {
+        margin-left: 125px;
+    }
+    .wrapper-radio-buttons-block {
+        margin-top: 37px;
+    }
+    .wrapper-radio-buttons {
+        margin-top: 13px;
+        display: flex;
+    }
+    .wrapper-toggle-buttons-block {
+        margin-top: 39px;
+    }
+    .wrapper-toggle-button {
+        margin-bottom: 10px;
+    }
+    .wrapper-toggle-buttons-block h3 {
+        margin-bottom: 13px;
+    }
+    .wrapper-like-buttons-block {
+        margin: 44px 0 0 0;
+    }
+    .wrapper-like-button {
+        display: flex;
+    }
+    .wrapper-like-buttons-block h3 {
+        margin-bottom: 16px;
+    }
+    .like-button {
+        margin-right: 10px;
+    }
+    .wrapper-stars-block {
+        margin-top: 40px;
+    }
+    .stars-block {
+        margin-top: 16px;
+        display: flex;
+    }
+    .stars {
+        margin-right: 20px;
+    }
+    .wrapper-dropdown-guests_expanded {
+        margin-top: 176px;
+    }
+    .wrapper-rich-checkbox-buttons {
+        margin-top: 257px;
+    }
+    //--------------------right-col-------------
+    .right-col {
+        width: 267px;
+        margin: -30px 0 0 71px;
+    }
+    .wrapper-buttons {
+        margin-top: 42px;
+    }
+    .wrapper-buttons-row {
+        margin: 16px 0 29px 0;
+        display: flex;
+    }
+    .navbar__button {
+        margin-right: 20px;
+    }
+    .wrapper-button-hover {
+        opacity: 0.5;
+    }
+    .wrapper-buttons-row-violet .navbar__button{
+        width: 99px;
+        height: 44px;
+    }
 }
 
     

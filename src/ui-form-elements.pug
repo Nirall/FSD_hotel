@@ -4,6 +4,12 @@ include ./blocks/dropdown-without-butts/dropdown-without-butts
 include ./blocks/datepicker-2f/datepicker-2f
 include ./blocks/datepicker-1f/datepicker-1f
 include ./blocks/footer-large/__inf-elem-email/footer-large__inf-elem-email
+include ./blocks/checkbox-item/checkbox-item
+include ./blocks/info-appartment/info-appartment
+include ./blocks/radio-button/radio-button
+include ./blocks/toggle-button/toggle-button
+include ./blocks/like-button/like-button
+include ./blocks/navbar/__button/navbar__button
 
 block content
     .content-ui-form-elements
@@ -36,9 +42,116 @@ block content
                 +dropdown-without-butts("", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
             .wrapper-dropdown-beds_expanded
                 +dropdown-without-butts("", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+            .wrapper-more-options_collapsed
+                .appartment-form__wrapper-checkbox-item__more-options
+                    .appartment-form__dropdown-wrapper
+                        .appartment-form__title.appartment-form__title_dropdown= "EXPANDABLE CHECKBOX LIST"
+                        span.material-icons.appartment-form__expand-butt= "expand_less"
+                    .appartment-form__checkboxes   
+                        +checkbox-item("", "Завтрак")
+                        +checkbox-item("", "Письменный стол")
+                        +checkbox-item("", "Стул для кормления")
+                        +checkbox-item("", "Кроватка")
+                        +checkbox-item("", "Телевизор")
+                        +checkbox-item("", "Шампунь")
+                        +checkbox-item("", "Телевизор")
+                        +checkbox-item("", "Шампунь")
+            .wrapper-more-options
+                .appartment-form__wrapper-checkbox-item__more-options
+                    .appartment-form__dropdown-wrapper
+                        .appartment-form__title.appartment-form__title_dropdown= "EXPANDABLE CHECKBOX LIST"
+                        span.material-icons.appartment-form__expand-butt= "expand_less"
+                    .appartment-form__checkboxes   
+                        +checkbox-item("", "Завтрак")
+                        +checkbox-item("", "Письменный стол")
+                        +checkbox-item("", "Стул для кормления")
+                        +checkbox-item("", "Кроватка")
+                        +checkbox-item("", "Телевизор")
+                        +checkbox-item("", "Шампунь")
+                        +checkbox-item("", "Телевизор")
+                        +checkbox-item("", "Шампунь")
+            .wrapper-info-appartment   
+                +info-appartment("", "insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                +info-appartment("_border", "location_city", "Удобство", "Окно в каждой из спален")
+        .middle-right-col
+            .middle-col
+                .appartment-form__wrapper-checkbox-item__options
+                    .appartment-form__title= "CHECKBOX BUTTONS"
+                    +checkbox-item("", "Можно курить")
+                    +checkbox-item("", "Можно с питомцами")
+                    +checkbox-item("", "Можно пригласить гостей <br> (до 10 человек)")
+                .wrapper-radio-buttons-block
+                    h3= "radio buttons"
+                    .wrapper-radio-buttons
+                        +radio-button("gender", "Мужчина")
+                        +radio-button("gender", "Женщина")
+                .wrapper-toggle-buttons-block
+                    h3= "toggle"
+                    .wrapper-toggle-button
+                        +toggle-button
+                        p= "Получать спецпредложения"
+                    .wrapper-toggle-button
+                        +toggle-button
+                        p= "Получать спецпредложения"
+                .wrapper-like-buttons-block
+                    h3= "like button"
+                    .wrapper-like-button
+                        +like-button("", 2)
+                        +like-button("_active", 12)
+                .wrapper-stars-block
+                    h3= "rate button"
+                    .stars-block
+                        .stars
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star_border"
+                        .stars
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                            span.material-icons.appartment-card__rating__star= "star"
+                .wrapper-dropdown-guests_expanded
+                    +dropdown("", "DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+                .wrapper-rich-checkbox-buttons
+                    .appartment-form__title= "RICH CHECKBOX BUTTONS"
+                    +checkbox-item("_bold", "Широкий коридор")
+                    +checkbox-item("_description", "Ширина коридоров в номере <br> не менее 91 см.")
+                    +checkbox-item("_bold", "Помошник для инвалидов")
+                    +checkbox-item("_description", "На 1 этаже вас встретит специалист <br> и проводит до номера")
+            .right-col
+                .wrapper-slider
+                    .appartment-form__price-slider
+                        .appartment-form__title-wrapper
+                            .appartment-form__title= "RANGE SLIDER"
+                            .appartment-form__price(id = "form-price")= ""
+                        .slider(id = "slider")
+                .wrapper-buttons
+                    h3= "buttons"
+                    .wrapper-buttons-row.wrapper-buttons-row-violet
+                        +navbar__button("CLICK ME", "_violet")
+                        .wrapper-button-hover
+                            +navbar__button("CLICK ME", "_violet")
+                    .wrapper-buttons-row
+                        +navbar__button("CLICK ME", "_for-reg-form")
+                        .wrapper-button-hover
+                            +navbar__button("CLICK ME", "_for-reg-form")
+                        
+                        
+
+                        
     script.
         document.querySelector(".wrapper-dropdown-beds_expanded .dropdown-without-butts__field").classList.add("dropdown-without-butts__field_active");
         document.querySelector(".wrapper-dropdown-beds_expanded ul").classList.add("dropdown-without-butts__ul_active");
+        document.querySelector(".wrapper-more-options_collapsed .appartment-form__dropdown-wrapper span.material-icons").classList.add("appartment-form__expand-butt_rotate");
+        document.querySelector(".wrapper-more-options_collapsed .appartment-form__checkboxes").setAttribute("style", "display: none;");
+        document.querySelector(".wrapper-dropdown-guests_expanded .dropdown__field").classList.add("dropdown__field_active");
+        document.querySelector(".wrapper-dropdown-guests_expanded .dropdown__ul ").classList.add("dropdown__ul_active");
+        document.querySelector(".wrapper-dropdown-guests_expanded .dropdown__buttons").setAttribute("style", "display: flex");
+        //document.querySelector(".wrapper-button-white-hover .navbar__button").classList.add("navbar__button_for-reg-form_hover");
+        
             
 
     
