@@ -1,13 +1,13 @@
-mixin datepicker-2f
+mixin datepicker-2f(title1= "", title2= "")
     .datepicker-2f
         .datepicker-2f__input-col
-            div= "ПРИБЫТИЕ"        
+            div= title1        
             .datepicker-2f__wrapper-input-field
                 input(class = "datepicker-here datepicker-2f__input-field" id = "inDateField" inline = "true" type="text"
                 data-range="true" data-multiple-dates-separator = " - " clearButton = "true" placeholder="ДД.ММ.ГГГГ")
                 span.material-icons= "expand_more"
         .datepicker-2f__input-col
-            div= "ВЫЕЗД"
+            div= title2
             .datepicker-2f__wrapper-input-field               
                 input(class = "datepicker-2f__outDateField" placeholder="ДД.ММ.ГГГГ")
                 span.material-icons= "expand_more"              

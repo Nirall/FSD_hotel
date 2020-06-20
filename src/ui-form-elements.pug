@@ -25,16 +25,19 @@ block content
                     h3.h3-grey= "default"
                 input.text-field(type="text" placeholder="ДД.ММ.ГГГГ")
             .wrapper-datepicker-2f
-                +datepicker-2f
+                +datepicker-2f("DATE DROPDOWN", "DATE DROPDOWN")
             .wrapper-datepicker-1f
-                +datepicker-1f
+                +datepicker-1f("FILTER DATE DROPDOWN")
             .wrapper-footer-large__inf-elem-email
                 h3= "subscription text field"
                 +footer-large__inf-elem-email
             .wrapper-dropdown-beds
-                +dropdown("_width266px", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
-            .wrapper-dropdown-beds
-                +dropdown("_width266px", "УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+                +dropdown("_width266px", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+            .wrapper-dropdown-beds_expanded
+                +dropdown("_width266px", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+    script.
+        document.querySelector(".wrapper-dropdown-beds_expanded .dropdown__field").classList.add("dropdown__field_active");
+        document.querySelector(".wrapper-dropdown-beds_expanded ul").classList.add("dropdown__ul_active");
             
 
     

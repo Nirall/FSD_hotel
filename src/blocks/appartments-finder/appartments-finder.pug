@@ -1,7 +1,7 @@
 mixin appartments-finder 
     .appartments-finder    
         .appartments-finder__title= "Найдем номера под ваши пожелания"
-        +datepicker-2f
+        +datepicker-2f("ПРИБЫТИЕ", "ВЫЕЗД")
         +dropdown("", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
         .wrapper-button-with-arrow
             +button-with-arrow("ПОДОБРАТЬ НОМЕР")  

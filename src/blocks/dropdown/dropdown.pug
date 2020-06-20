@@ -7,7 +7,7 @@ mixin dropdown(modifier = "", title, placeholder, ...args)
         .dropdown__field
             = placeholder
             span.material-icons= "expand_more"   
-        ul          
+        ul.dropdown__ul         
             each val in args
                 li.dropdown__list-elem
                     span.dropdown__item= val

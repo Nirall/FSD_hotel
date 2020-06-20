@@ -16,21 +16,29 @@
     .h3-grey {
         color: $dark50;
         font-family: "Montserrat";
-    }    
-    .dropdown {
+    }
+    .wrapper-dropdown-guests {
+        margin-bottom: 26px;
+    }   
+    .wrapper-dropdown-guests .dropdown {
         padding: 0;
-        margin-bottom: 25px;
+        margin-bottom: 23px;
+    }
+    .wrapper-dropdown-guests .dropdown__buttons {
+        top: 175px;
     }
     .wrapper-datepicker-2f {
-        margin: 35px 0 40px 0;        
+        margin: 35px 0 42px 0;        
     }
     .wrapper-footer-large__inf-elem-email {
         width: 267px;
-        margin: 41px 0 40px 0;   
+        margin: 41px 0 79px 0;   
     }
     .wrapper-footer-large__inf-elem-email h3 {
         margin-bottom: 4px;
     }
+    
+        
 }
 
     

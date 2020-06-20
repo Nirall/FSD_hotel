@@ -1,6 +1,6 @@
-mixin datepicker-1f
+mixin datepicker-1f(title= "")
     .datepicker-1f
-        = "ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ"                                 
+        = title                                
         .datepicker-1f__wrapper-input-field
             input(class = "datepicker-here datepicker-1f__input-field" id = "inDateField" inline = "true" type="text"
             data-range="true" data-multiple-dates-separator = " - " clearButton = "true" placeholder="ДД.ММ.ГГГГ")

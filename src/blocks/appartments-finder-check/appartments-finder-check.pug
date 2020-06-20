@@ -2,7 +2,7 @@ include ../appartment-card/__info/appartment-card__info
 mixin appartments-finder-check 
     .appartments-finder-check 
         +appartment-card__info("_forCheck", 888, "ЛЮКС", "9 990")        
-        +datepicker-2f
+        +datepicker-2f("ПРИБЫТИЕ", "ВЫЕЗД")
         +dropdown("", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
         .wrapper-appartments-finder-check__items
             .appartments-finder-check__price-item

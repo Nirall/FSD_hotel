@@ -3,19 +3,23 @@
     background: white;
     width: 320px;
     padding-top: 20px;
-    transform: translateY(0.1px);    
+    transform: translateY(0.1px);
+    box-shadow: 0px 10px 20px $dark05;
+    background: white;   
 }
 
 .dropdown li {
     height: 37px;
     padding-right: 5px;
-    background: white;    
+    background: white;
+    width: 313px;
+
 }
 .dropdown__item {
     display: inline-block;
     padding-left: 15px;
     vertical-align: middle;
-    width: 203px;
+    width: 200px;
 }
 .dropdown__butt {
     margin: 0;
@@ -23,7 +27,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $dark25;
     border-radius: 50%;
     vertical-align: middle;
     text-align: center;
@@ -42,21 +46,34 @@
     width: 320px;
     justify-content: space-between;
     padding: 15px 7px 27px 15px;
+    border: 1px solid $dark50;    
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
     display: none;
     background: white;
     position: absolute;
     top: 198px;
 }
-.dropdown ul {
+.dropdown .dropdown__ul {
+    padding-top: 5px;
+    box-sizing: border-box;
     display: none;
     position: absolute;
+    border: 1px solid $dark50;    
+}
+.dropdown .dropdown__ul_active {
+    display: block;
+    border-bottom: 0;
+}
+.dropdown__clear {
+    color: $dark50;
 }
 .dropdown__clear, .dropdown__apply {
     display: inline-block;   
     cursor: pointer;    
 }
 .dropdown__apply {
-    color: #BC9CFF;
+    color: $purple;
 }
 .dropdown__field {
     box-sizing: border-box;
@@ -64,12 +81,18 @@
     justify-content: space-between;
     align-items: center;
     font: 14px/15px 'Montserrat';
-    color: rgba(31, 32, 65, 0.75); 
+    color: $dark75; 
     padding: 0 7px 0 15px; 
-    margin: 5px 0;   
+    margin: 5px 0 0 0;   
     height: 43px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $dark25;
     border-radius: 4px;
+    cursor: pointer;
+}
+.dropdown__field_active {
+    border-radius: 4px 4px 0 0;
+    border: 1px solid $dark50;
+    border-bottom: 0;
 }
 
 /*-----------------------------------------
@@ -83,7 +106,7 @@
     display: inline-block;
     padding-left: 15px;
     vertical-align: middle;
-    width: 149px;
+    width: 147px;
 }
 .dropdown_width266px .dropdown__buttons {
     box-sizing: border-box;
@@ -96,7 +119,9 @@
     position: static;
     top: 198px;
 }
-.dropdown_width266px ul {
-    display: none;
+.dropdown_width266px .dropdown__ul {    
     position: static;
+}
+.dropdown_width266px li {
+    width: 259px;
 }
