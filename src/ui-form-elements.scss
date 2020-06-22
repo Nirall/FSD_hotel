@@ -1,6 +1,6 @@
 .content-ui-form-elements {
     margin: 143px 140px 140px 140px;
-    display: flex;
+    display: flex;    
 
     .left-col {
         width: 320px;
@@ -61,10 +61,12 @@
 
     .middle-right-col {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: left;             
     }
 
     .middle-col {
-        margin-left: 125px;
+        margin-left: 127px;
     }
     .wrapper-radio-buttons-block {
         margin-top: 37px;
@@ -131,6 +133,45 @@
     .wrapper-buttons-row-violet .navbar__button{
         width: 99px;
         height: 44px;
+    }
+    .button-without {
+        color: $purple;
+        margin: 3px 22px 0 0;
+    }
+    .button-without:hover {
+        color: $dark50;
+    }
+    .button-without_hover {
+        color: $dark50;
+    }
+    .wrapper-button-with-arrow {
+        margin: 1px 0 0 2px;
+    }
+    .wrapper-pagination {
+        margin: 41px 0 0 2px;
+    }
+    .wrapper-pagination .search-room__pages {
+        margin: 16px 0 0 0px;
+        justify-content: left;
+    }
+    .wrapper-pagination .search-room__pages-comment {
+        margin-left: 5px;
+    }
+    .wrapper-dropdown-guests_expanded_2 {
+        margin-top: 213px;
+    }
+    .wrapper-bullet-list {
+        margin: 257px 0 0 0;
+    }
+    .wrapper-rules ul{
+        margin: 8px 0 0 1px;
+    }
+    .wrapper-reviews {
+        width: 710px;
+        margin: 129px 0 0 124px; 
+    }
+    .wrapper-reviews .visitor-review__comment__wrapper-like-button {
+        margin-right: 5px;
     }
 }
 
