@@ -1,9 +1,12 @@
 .appartments-finder {
-    width: 320px;
-    height: 304px;
+    width: 380px;
+    height: 374px;
     padding: 40px 30px 30px 30px;
     background: white;
-    margin: 70px 0 0 140px;    
+    margin: 70px 0 0 140px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;    
 }
 .appartments-finder__title {
     width: 320px;

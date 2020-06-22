@@ -12,7 +12,7 @@
 
     //----------PRICE-ITEM-----------------
     .wrapper-appartments-finder-check__items {
-        padding-top: 9px;
+        padding-top: 11px;
     }
     .appartments-finder-check__price-item {
         display: flex;
@@ -58,6 +58,9 @@
     //----------BUTTON-----------------
     .wrapper-button-with-arrow {
         margin-top: 19px;
+    }
+    .button-with-arrow span.button-with-arrow__text {    
+        padding-left: 92px;
     }
 }
 

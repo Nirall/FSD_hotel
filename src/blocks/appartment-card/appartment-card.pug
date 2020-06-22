@@ -1,6 +1,7 @@
 include ./__info/appartment-card__info
-mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)    
-    .appartment-card
+mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
+    - var classMod = attributes.modifiers ? "appartment-card" + " " + attributes.modifiers : "appartment-card"    
+    div(class= classMod)
         .appartment-card__img(style = `background: url(${img}) no-repeat;`)
             .appartment-card__img__arrows
                 span.material-icons.appartment-card__img__l-arrow= "expand_more"

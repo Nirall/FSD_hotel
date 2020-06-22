@@ -35,6 +35,11 @@ module.exports = {
             template: "src/ui-form-elements.pug",
             inject: false,
             filename: "ui-form-elements.html",
+        }),
+        new htmlPlugin({
+            template: "src/ui-cards.pug",
+            inject: false,
+            filename: "ui-cards.html",
         }),                 
         new cssExtract({
             filename: "style.css",
