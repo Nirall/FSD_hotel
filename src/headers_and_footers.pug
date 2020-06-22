@@ -1,0 +1,23 @@
+extends ui-template
+include blocks/navbar/navbar
+include blocks/logo-toxin/logo-toxin
+include blocks/footer-large/footer-large
+include blocks/footer-small/footer-small
+include blocks/footer-medium/footer-medium
+
+
+block content
+    .content-headers_and_footers
+        .wrapper-empty
+        .wrapper-navbar.wrapper-navbar1 
+            +navbar
+        .wrapper-navbar.wrapper-navbar2
+            +navbar
+        .wrapper-footer-large
+            +footer-large
+        .wrapper-footer-small
+            +footer-small
+        .wrapper-footer-medium
+            +footer-medium
+                    
+                    

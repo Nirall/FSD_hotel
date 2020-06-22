@@ -1,0 +1,24 @@
+@import "blocks/footer-medium/footer-medium";
+
+.content-headers_and_footers {
+    background: #EFEFEF;
+    .wrapper-empty {
+        height: 140px;
+    }    
+    .wrapper-navbar2 {
+        margin-top: 40px;
+    }
+    .wrapper-navbar .navbar {
+        position: static;
+    }
+    .wrapper-navbar .navbar .logo-toxin {
+        position: static;
+        margin-right: 275px;
+    }
+    .wrapper-footer-large {
+        margin-top: 40px;
+    }
+    .wrapper-footer-medium {
+        margin-top: 40px;
+    }    
+}

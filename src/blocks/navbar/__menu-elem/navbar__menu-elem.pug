@@ -1,5 +1,6 @@
-mixin navbar__menu-elem(text)            
-    .navbar__menu-elem
+mixin navbar__menu-elem(text)
+    - var classMod = attributes.modifiers ? "navbar__menu-elem " + attributes.modifiers : "navbar__menu-elem"           
+    div(class = classMod)
         = text
 
 

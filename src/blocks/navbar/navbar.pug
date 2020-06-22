@@ -5,7 +5,7 @@ include __button/navbar__button
 mixin navbar
     .navbar
         +logo-toxin
-        +navbar__menu-elem("О нас")
+        +navbar__menu-elem("О нас")(modifiers = "navbar__menu-elem_bold")
         +navbar__menu-elem-dropdown("Услуги", "expand_more")
         +navbar__menu-elem("Вакансии")
         +navbar__menu-elem("Новости")

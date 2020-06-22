@@ -40,7 +40,12 @@ module.exports = {
             template: "src/ui-cards.pug",
             inject: false,
             filename: "ui-cards.html",
-        }),                 
+        }),
+        new htmlPlugin({
+            template: "src/headers_and_footers.pug",
+            inject: false,
+            filename: "headers_and_footers.html",
+        }),                  
         new cssExtract({
             filename: "style.css",
         }),        
