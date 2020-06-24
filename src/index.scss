@@ -154,6 +154,9 @@ h3 {
 	background: no-repeat url("images/landingpage-bg.jpg");
 	padding-top: 70px;	
 }
+a {
+	text-decoration: none;
+}
 .content {
 	margin: 0 auto;
 	height: 830px;
@@ -167,4 +170,14 @@ h3 {
 	left: 1008px;
 	bottom: -5px;	
 	font: 14px/24px 'Montserrat';
+}
+
+//--------------------------------------------
+//-----------------MEDIA----------------------
+//--------------------------------------------
+
+@media (max-width: 1300px) {
+    .phrase-of-day  {
+        display: none;
+    }
 }

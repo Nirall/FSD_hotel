@@ -8,6 +8,10 @@
     color: $dark50;
 }
 
+.navbar__menu-elem:hover {
+    color: $purple;
+}
+
 .navbar__menu-elem_bold {
     font-family: "Montserrat-Bold";
     color: $dark75;

@@ -7,17 +7,31 @@ mixin navbar
     - var classMod = attributes.modifiers ? "navbar " + attributes.modifiers : "navbar"
     div(class = classMod)
         +logo-toxin
-        +navbar__menu-elem("О нас")(modifiers = "navbar__menu-elem_bold")
-        +navbar__menu-elem-dropdown("Услуги", "expand_more")
-        +navbar__menu-elem("Вакансии")
-        +navbar__menu-elem("Новости")
-        +navbar__menu-elem-dropdown("Соглашения", "expand_more")
-        .wrapper-button-in
-            +navbar__button("ВОЙТИ")
-        .wrapper-button-reg
-            +navbar__button("ЗАРЕГИСТРИРОВАТЬСЯ", "_violet")
-        .wrapper-navbar__sign-in
-            +navbar__sign-in("Юлий Цезарь")
+        .wrapper-navbar-collapsed
+            a(href="changeMe")
+                +navbar__menu-elem("О нас")(modifiers = "navbar__menu-elem_bold")
+            span.material-icons.navbar__more= "more_horiz"
+        .wrapper-navbar-more-list    
+            a(href="changeMe")
+                +navbar__menu-elem-dropdown("Услуги", "expand_more")
+            a(href="changeMe")
+                +navbar__menu-elem("Вакансии")
+            a(href="changeMe")
+                +navbar__menu-elem("Новости")
+            a(href="changeMe")
+                +navbar__menu-elem-dropdown("Соглашения", "expand_more")
+        .wrapper-navbut-buttons
+            a(href="changeMe")
+                .wrapper-button-in
+                    +navbar__button("войти")
+            a(href="changeMe")
+                .wrapper-button-reg
+                    +navbar__button("зарегистрироваться", "_violet")
+            a(href="changeMe")
+                .wrapper-navbar__sign-in
+                    +navbar__sign-in("Юлий Цезарь")
+
+
         
 
 

@@ -8,16 +8,21 @@
 .navbar {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;    
     align-items: center;
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 70px;
+    min-height: 70px;
 
     background: #FFFFFF;
     box-shadow: 0px 10px 20px $dark05;
 
+    .wrapper-navbar-more-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+    }
     .wrapper-button-in {
         margin-left: 10px;
         margin-right: 20px;
@@ -28,6 +33,22 @@
     .wrapper-navbar__sign-in {
         display: none;
         margin: 0 90px 0 20px;
+    }
+    .navbar__more {
+        display: none;
+        cursor: pointer;
+    }
+    .navbar__more:hover {
+        color: $purple;
+    }
+    .wrapper-navbar-collapsed {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .wrapper-navbut-buttons {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -45,5 +66,80 @@
     .wrapper-navbar__sign-in {
         display: inline-block;
     }
+    
 }
+
+
+//--------------------------------------------
+//-----------------MEDIA----------------------
+//--------------------------------------------
+
+@media (max-width: 1300px) {
+    .navbar .wrapper-button-reg {
+        margin-right: 20px;
+    }
+    .navbar .logo-toxin {
+        left: 20px;
+    }
+}
+@media (max-width: 950px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar .wrapper-navbar-more-list {
+        position: absolute;
+        top: 70px;
+        left: 120px;
+        width: 200px;        
+        flex-direction: column;
+        align-items: flex-start;
+        background: white;
+        display: none;
+    }
+    .navbar .wrapper-navbar-more-list_display {
+        display: flex;
+    }
+    .navbar .wrapper-navbar-collapsed {
+        width: 270px;
+        padding-right: 50px;
+        justify-self: start;
+    }
+    .navbar .navbar__more {
+        display: inline-block;
+    }
+}
+@media (max-width: 670px) {
+    .navbar {
+        .navbar__button, .navbar__button_violet {
+            border: 0;
+            justify-content: flex-start;
+            width: 190px;
+            height: 37px;
+            background: white;
+            color: $dark50;
+            font: 14px/17px 'Montserrat';    
+            text-transform: capitalize;
+            margin: 0;
+            margin-left: 10px;
+            padding: 0;
+        }
+        .wrapper-navbut-buttons {
+            position: absolute;
+            top: 217px;
+            left: 120px;        
+            flex-direction: column;
+            align-items: flex-start;
+            background: white;
+            display: none;
+        }
+        .wrapper-navbut-buttons_display {
+            display: flex;
+        }
+        .wrapper-button-in, .wrapper-button-reg {
+            margin: 0;
+            padding: 0;
+        }
+    } 
+}
+
 
