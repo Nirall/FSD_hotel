@@ -1,9 +1,11 @@
 include __menu-elem/navbar__menu-elem
 include __menu-elem-dropdown/navbar__menu-elem-dropdown
 include __button/navbar__button
+include __sign-in/navbar__sign-in
 
 mixin navbar
-    .navbar
+    - var classMod = attributes.modifiers ? "navbar " + attributes.modifiers : "navbar"
+    div(class = classMod)
         +logo-toxin
         +navbar__menu-elem("О нас")(modifiers = "navbar__menu-elem_bold")
         +navbar__menu-elem-dropdown("Услуги", "expand_more")
@@ -13,6 +15,9 @@ mixin navbar
         .wrapper-button-in
             +navbar__button("ВОЙТИ")
         .wrapper-button-reg
-            +navbar__button("ЗАРЕГИСТРИРОВАТЬСЯ", "_violet")        
+            +navbar__button("ЗАРЕГИСТРИРОВАТЬСЯ", "_violet")
+        .wrapper-navbar__sign-in
+            +navbar__sign-in("Юлий Цезарь")
+        
 
 

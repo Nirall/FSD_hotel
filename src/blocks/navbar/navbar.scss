@@ -3,6 +3,7 @@
 @import "__menu-elem-dropdown/navbar__menu-elem-dropdown.scss";
 @import "__button/navbar__button.scss";
 @import "__button/_violet/navbar__button_violet.scss";
+@import "__sign-in/navbar__sign-in.scss";
 
 .navbar {
     width: 100%;
@@ -12,12 +13,10 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 70px;    
-    margin-right: auto;
-    margin-left: auto;
+    height: 70px;
 
     background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    box-shadow: 0px 10px 20px $dark05;
 
     .wrapper-button-in {
         margin-left: 10px;
@@ -26,4 +25,25 @@
     .wrapper-button-reg {
         margin-right: 140px;
     }
+    .wrapper-navbar__sign-in {
+        display: none;
+        margin: 0 90px 0 20px;
+    }
 }
+
+//--------------------------------------------
+//--------MODIFIER: _SIGN-IN------------------
+//--------------------------------------------
+
+.navbar_without-buttons {
+    .wrapper-button-in {
+        display: none;
+    }
+    .wrapper-button-reg {
+        display: none;
+    }
+    .wrapper-navbar__sign-in {
+        display: inline-block;
+    }
+}
+

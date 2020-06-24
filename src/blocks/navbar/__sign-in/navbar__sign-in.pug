@@ -1,0 +1,4 @@
+mixin navbar__sign-in(login)
+    - var classMod = attributes.modifiers ? "navbar__sign-in " + attributes.modifiers : "navbar__sign-in"    
+    div(class = classMod)
+        = login
