@@ -1,7 +1,5 @@
-mixin appartment-card__info(modifier, number, luxury="", price)
-    -
-        let classDef = "appartment-card__info"
-        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+mixin appartment-card__info(number, luxury="", price)
+    - var classMod = attributes.modifiers ? "appartment-card__info " + attributes.modifiers : "appartment-card__info"
     div(class = classMod)
         .appartment-card__info__part
             span.appartment-card__info__number

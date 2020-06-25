@@ -1,7 +1,5 @@
-mixin dropdown-without-butts(modifier = "", title, placeholder, ...args)
-    -
-        let classDef = "dropdown-without-butts"
-        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+mixin dropdown-without-butts(title, placeholder, ...args)
+    - var classMod = attributes.modifiers ? "dropdown-without-butts " + attributes.modifiers : "dropdown-without-butts"
     div(class = classMod)
         div= title        
         .dropdown-without-butts__field

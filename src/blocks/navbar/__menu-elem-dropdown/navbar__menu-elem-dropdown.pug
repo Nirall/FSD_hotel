@@ -1,7 +1,7 @@
 mixin navbar__menu-elem-dropdown(text, mIcon)
-    .navbar__menu-elem-dropdown             
-        .navbar__menu-elem.navbar__menu-elem_marginR0-inline
-            = text
+    - var classMod = attributes.modifiers ? "navbar__menu-elem-dropdown " + attributes.modifiers : "navbar__menu-elem-dropdown" 
+    div(class = classMod)            
+        +navbar__menu-elem(text)(modifiers = "navbar__menu-elem_marginR0-inline")
         span.material-icons
             = mIcon  
 

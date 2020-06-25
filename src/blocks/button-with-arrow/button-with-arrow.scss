@@ -8,7 +8,11 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 22px;
-    font: 12px/15px 'Montserrat-Bold';           
+    font: 12px/15px 'Montserrat-Bold'; 
+    cursor: pointer;          
+}
+.button-with-arrow:hover {
+    opacity: 0.5;
 }
 .button-with-arrow span.material-icons {    
     color: white;
@@ -16,3 +20,4 @@
 .button-with-arrow span.button-with-arrow__text {    
     padding-left: 82px;
 }
+

@@ -1,7 +1,5 @@
-mixin checkbox-item(modifier="", text)
-    -
-        let classDef = "checkbox-item"
-        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+mixin checkbox-item(text)
+    - var classMod = attributes.modifiers ? "checkbox-item " + attributes.modifiers : "checkbox-item"
     div(class = classMod)
         label
             input(type = "checkbox")

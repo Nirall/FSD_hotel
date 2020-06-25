@@ -1,3 +1,3 @@
-mixin logo-toxin(modifer = false)
-  - var classM = modifer ? "logo-toxin" + modifer : "logo-toxin"
-  img(class = classM height="40px" alt="logo-toxin" src = "images/logo-toxin.png")
+mixin logo-toxin
+  - var classMod = attributes.modifiers ? "logo-toxin " + attributes.modifiers : "logo-toxin"
+  img(class = classMod height="40px" alt="logo-toxin" src = "images/logo-toxin.png")

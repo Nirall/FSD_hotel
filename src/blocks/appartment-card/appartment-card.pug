@@ -11,7 +11,7 @@ mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
                 .appartment-card__img__spot
                 .appartment-card__img__spot   
                 .appartment-card__img__spot            
-        +appartment-card__info("", number, luxury, price)
+        +appartment-card__info(number, luxury, price)
         .appartment-card__rating
             .appartment-card__rating__stars
                 if stars > 6

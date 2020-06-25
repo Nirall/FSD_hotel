@@ -1,6 +1,4 @@
-mixin navbar__button(text, modifier="")
-    -
-        let classDef = "navbar__button"
-        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
-    div(class = classMod)
-        =text
+mixin navbar__button(text)
+    - var classMod = attributes.modifiers ? "navbar__button " + attributes.modifiers : "navbar__button"
+    div(class = classMod)= text
+    

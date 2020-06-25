@@ -1,0 +1,18 @@
+.phrase-of-day {
+	width: 297px;
+	position: absolute;
+	text-align: right;
+	left: 1008px;
+	bottom: -5px;	
+	font: 14px/24px 'Montserrat';
+}
+
+//--------------------------------------------
+//-----------------MEDIA----------------------
+//--------------------------------------------
+
+@media (max-width: 1300px) {
+    .phrase-of-day  {
+        display: none;
+    }
+}

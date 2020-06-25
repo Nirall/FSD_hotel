@@ -27,7 +27,7 @@ block content
                     h3.h3-grey= "hover / focus"
                 input.text-field.text-field_hover(type="text" value="This is pretty awesome")
             .wrapper-dropdown-guests
-                +dropdown("", "DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+                +dropdown("DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
             .wrapper-text-field
                 .wrapper-title-text-field
                     h3= "masked text field"
@@ -41,47 +41,47 @@ block content
                 h3= "subscription text field"
                 +footer-large__inf-elem-email
             .wrapper-dropdown-beds
-                +dropdown-without-butts("", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+                +dropdown-without-butts("DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
             .wrapper-dropdown-beds_expanded
-                +dropdown-without-butts("", "DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
+                +dropdown-without-butts("DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")
             .wrapper-more-options_collapsed
                 .appartment-form__wrapper-checkbox-item__more-options
                     .appartment-form__dropdown-wrapper
                         .appartment-form__title.appartment-form__title_dropdown= "EXPANDABLE CHECKBOX LIST"
                         span.material-icons.appartment-form__expand-butt= "expand_less"
                     .appartment-form__checkboxes   
-                        +checkbox-item("", "Завтрак")
-                        +checkbox-item("", "Письменный стол")
-                        +checkbox-item("", "Стул для кормления")
-                        +checkbox-item("", "Кроватка")
-                        +checkbox-item("", "Телевизор")
-                        +checkbox-item("", "Шампунь")
-                        +checkbox-item("", "Телевизор")
-                        +checkbox-item("", "Шампунь")
+                        +checkbox-item("Завтрак")
+                        +checkbox-item("Письменный стол")
+                        +checkbox-item("Стул для кормления")
+                        +checkbox-item("Кроватка")
+                        +checkbox-item("Телевизор")
+                        +checkbox-item("Шампунь")
+                        +checkbox-item("Телевизор")
+                        +checkbox-item("Шампунь")
             .wrapper-more-options
                 .appartment-form__wrapper-checkbox-item__more-options
                     .appartment-form__dropdown-wrapper
                         .appartment-form__title.appartment-form__title_dropdown= "EXPANDABLE CHECKBOX LIST"
                         span.material-icons.appartment-form__expand-butt= "expand_less"
                     .appartment-form__checkboxes   
-                        +checkbox-item("", "Завтрак")
-                        +checkbox-item("", "Письменный стол")
-                        +checkbox-item("", "Стул для кормления")
-                        +checkbox-item("", "Кроватка")
-                        +checkbox-item("", "Телевизор")
-                        +checkbox-item("", "Шампунь")
-                        +checkbox-item("", "Телевизор")
-                        +checkbox-item("", "Шампунь")
+                        +checkbox-item("Завтрак")
+                        +checkbox-item("Письменный стол")
+                        +checkbox-item("Стул для кормления")
+                        +checkbox-item("Кроватка")
+                        +checkbox-item("Телевизор")
+                        +checkbox-item("Шампунь")
+                        +checkbox-item("Телевизор")
+                        +checkbox-item("Шампунь")
             .wrapper-info-appartment   
-                +info-appartment("", "insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                +info-appartment("_border", "location_city", "Удобство", "Окно в каждой из спален")
+                +info-appartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                +info-appartment("location_city", "Удобство", "Окно в каждой из спален")(modifiers = "info-appartment_border")
         .middle-right-col
             .middle-col
                 .appartment-form__wrapper-checkbox-item__options
                     .appartment-form__title= "CHECKBOX BUTTONS"
-                    +checkbox-item("", "Можно курить")
-                    +checkbox-item("", "Можно с питомцами")
-                    +checkbox-item("", "Можно пригласить гостей <br> (до 10 человек)")
+                    +checkbox-item("Можно курить")
+                    +checkbox-item("Можно с питомцами")
+                    +checkbox-item("Можно пригласить гостей <br> (до 10 человек)")
                 .wrapper-radio-buttons-block
                     h3= "radio buttons"
                     .wrapper-radio-buttons
@@ -116,13 +116,13 @@ block content
                             span.material-icons.appartment-card__rating__star= "star"
                             span.material-icons.appartment-card__rating__star= "star"
                 .wrapper-dropdown-guests_expanded
-                    +dropdown("", "DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+                    +dropdown("DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
                 .wrapper-rich-checkbox-buttons
                     .appartment-form__title= "RICH CHECKBOX BUTTONS"
-                    +checkbox-item("_bold", "Широкий коридор")
-                    +checkbox-item("_description", "Ширина коридоров в номере <br> не менее 91 см.")
-                    +checkbox-item("_bold", "Помошник для инвалидов")
-                    +checkbox-item("_description", "На 1 этаже вас встретит специалист <br> и проводит до номера")
+                    +checkbox-item("Широкий коридор")(modifiers = "checkbox-item_bold")
+                    +checkbox-item("Ширина коридоров в номере <br> не менее 91 см.")(modifiers = "checkbox-item_description")
+                    +checkbox-item("Помошник для инвалидов")(modifiers = "checkbox-item_bold")
+                    +checkbox-item("На 1 этаже вас встретит специалист <br> и проводит до номера")(modifiers = "checkbox-item_description")
             .right-col
                 .wrapper-slider
                     .appartment-form__price-slider
@@ -133,13 +133,13 @@ block content
                 .wrapper-buttons
                     h3= "buttons"
                     .wrapper-buttons-row.wrapper-buttons-row-violet
-                        +navbar__button("CLICK ME", "_violet")
+                        +navbar__button("CLICK ME")(modifiers = "navbar__button_violet")
                         .wrapper-button-hover
-                            +navbar__button("CLICK ME", "_violet")
+                            +navbar__button("CLICK ME")(modifiers = "navbar__button_violet")
                     .wrapper-buttons-row
-                        +navbar__button("CLICK ME", "_for-reg-form")
+                        +navbar__button("CLICK ME")(modifiers = "navbar__button_for-reg-form")
                         .wrapper-button-hover
-                            +navbar__button("CLICK ME", "_for-reg-form")
+                            +navbar__button("CLICK ME")(modifiers = "navbar__button_for-reg-form")
                     .wrapper-buttons-row
                         .button-without
                             h3= "CLICK ME"
@@ -158,7 +158,7 @@ block content
                         button.material-icons.search-room__button.search-room__button_green= "arrow_forward"
                     .search-room__pages-comment= "1 – 12 из 100+ вариантов аренды"
                 .wrapper-dropdown-guests_expanded_2
-                    +dropdown("", "DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+                    +dropdown("DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
                 .wrapper-bullet-list
                     .wrapper-additional
                         .wrapper-rules

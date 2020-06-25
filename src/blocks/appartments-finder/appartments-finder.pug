@@ -1,7 +1,8 @@
-mixin appartments-finder 
-    .appartments-finder    
+mixin appartments-finder
+    - var classMod = attributes.modifiers ? "appartments-finder " + attributes.modifiers : "appartments-finder"
+    div(class = classMod)   
         .appartments-finder__title= "Найдем номера под ваши пожелания"
         +datepicker-2f("ПРИБЫТИЕ", "ВЫЕЗД")
-        +dropdown("", "ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+        +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
         .wrapper-button-with-arrow
             +button-with-arrow("ПОДОБРАТЬ НОМЕР")  

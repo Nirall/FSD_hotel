@@ -1,7 +1,5 @@
-mixin info-appartment (modifier, icon, title, text)
-    -
-        let classDef = "info-appartment"
-        let classMod = modifier != "" ? classDef + " " + classDef + modifier : classDef
+mixin info-appartment (icon, title, text)
+    - var classMod = attributes.modifiers ? "info-appartment " + attributes.modifiers : "info-appartment"
     div(class = classMod)
         span.material-icons.info-appartment__icon= icon
         .info-appartment__text-block

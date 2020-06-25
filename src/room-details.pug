@@ -21,9 +21,9 @@ block content
             .wrapper-info__left
                 .wrapper-info-appartment
                     h2 Сведения о номере
-                    +info-appartment("", "insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                    +info-appartment("_border", "location_city", "Удобство", "Окно в каждой из спален")
-                    +info-appartment("", "whatshot", "Уют", "Номер оснащен камином")
+                    +info-appartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                    +info-appartment("location_city", "Удобство", "Окно в каждой из спален")(modifiers = "info-appartment_border")
+                    +info-appartment("whatshot", "Уют", "Номер оснащен камином")
                 .wrapper-pie-chart
                     h2 Впечатления от номера
                     .wrapper-pie-chart__graph
@@ -51,8 +51,3 @@ block content
                         = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
             .wrapper-info__right
                 +appartments-finder-check
-            
-
-
-
-

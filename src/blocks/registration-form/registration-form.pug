@@ -19,8 +19,8 @@ mixin registration-form
         .wrapper-toggle-button
             +toggle-button
             p= "Получать спецпредложения"
-        +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ", "")
+        +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
         .wrapper-in
             p= "Уже есть аккаунт на Toxin"
-            +navbar__button("ВОЙТИ", "_for-reg-form")
+            +navbar__button("ВОЙТИ")(modifiers = "navbar__button_for-reg-form")
         

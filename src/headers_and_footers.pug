@@ -8,8 +8,6 @@ include blocks/footer-medium/footer-medium
 
 block content
     .content-headers_and_footers
-        .wrapper-navbar.wrapper-navbar-test 
-            +navbar
         .wrapper-empty
         .wrapper-navbar.wrapper-navbar1 
             +navbar
@@ -20,6 +18,6 @@ block content
         .wrapper-footer-small
             +footer-small
         .wrapper-footer-medium
-            +footer-medium
+            +footer-medium(modifiers = "footer-medium_768x367")
                     
                     

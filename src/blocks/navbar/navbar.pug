@@ -21,12 +21,10 @@ mixin navbar
             a(href="changeMe")
                 +navbar__menu-elem-dropdown("Соглашения", "expand_more")
         .wrapper-navbut-buttons
-            a(href="changeMe")
-                .wrapper-button-in
-                    +navbar__button("войти")
-            a(href="changeMe")
-                .wrapper-button-reg
-                    +navbar__button("зарегистрироваться", "_violet")
+            .wrapper-button-in
+                +navbar__button("войти")
+            .wrapper-button-reg
+                +navbar__button("зарегистрироваться")(modifiers = "navbar__button_violet")
             a(href="changeMe")
                 .wrapper-navbar__sign-in
                     +navbar__sign-in("Юлий Цезарь")

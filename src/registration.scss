@@ -2,8 +2,10 @@
 @import "./blocks/in-form/in-form";
 
 .content-registration {  
-    height: 754px;  
-    background: no-repeat url("./images/registration.jpg")
+    height: 754px;
+    max-width: 1440px;  
+    background: no-repeat url("./images/registration.jpg");
+    margin: 0 auto;
 }
 .wrapper-in-form {
     position: absolute;

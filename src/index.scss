@@ -139,6 +139,7 @@ h3 {
 @import "./blocks/appartments-finder/appartments-finder.scss";
 @import "./blocks/button-with-arrow/button-with-arrow.scss";
 @import "./blocks/appartment-card/appartment-card.scss";
+@import "landing-page.scss";
 @import "search-room.scss";
 @import "room-details.scss";
 @import "registration.scss";
@@ -176,8 +177,23 @@ a {
 //-----------------MEDIA----------------------
 //--------------------------------------------
 
-@media (max-width: 1300px) {
-    .phrase-of-day  {
+@media (max-width: 1200px) {
+    .phrase-of-day, .footer-large, .footer-small  {
         display: none;
-    }
+	}
+	.footer-medium {
+		display: block;
+	}
 }
+@media (max-width: 950px) {
+	.appartments-finder {
+		margin: 230px auto;
+	}
+}
+@media (max-width: 380px) {
+	.appartments-finder {
+		width: 320px;
+		padding: 30px 0;
+	}
+}
+

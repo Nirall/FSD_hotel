@@ -1,7 +1,7 @@
 include __user/visitor-review__user
 include __comment/visitor-review__comment
     
-mixin visitor-review (modifier, img, name, date, quantity, text)    
+mixin visitor-review (modifier, img, name, date, quantity, text)
     +visitor-review__user(img, name, date)
     +visitor-review__comment(modifier, quantity, text)    
     
