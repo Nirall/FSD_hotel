@@ -20,7 +20,7 @@
     margin-left: 50px;
 }
 .search-room__cards {
-    width: 850px;       
+    max-width: 850px;       
     display: flex;
     flex-wrap: wrap;
     justify-content: center;    
@@ -28,7 +28,8 @@
 .search-room__title {
     padding: 0 0 9px 7px;
     font: 24px/30px 'Montserrat-Bold';
-    letter-spacing: -0.45px;    
+    letter-spacing: -0.45px;
+    text-align: center;    
 }
 .search-room__pages {
     margin: 30px 14px 0 0;
@@ -60,4 +61,21 @@
     color: rgba(31, 32, 65, 0.75);
 }
 
+//---------------------------------------
+//----------------MEDIA------------------
+//---------------------------------------
 
+@media (max-width: 600px) {
+    .content-search-room {
+        flex-wrap: wrap;
+    }
+    .content-search-room .left-col {
+        margin: 0 auto;
+    }
+    .content-search-room .right-col {
+        margin: 0 auto;
+    }
+    .search-room__title {
+        margin-top: 30px;
+    }
+}
