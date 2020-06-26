@@ -12,22 +12,27 @@
 }
 
 .wrapper-fotos {    
-        display: flex;
-        margin-bottom: 71px;    
+    display: flex;
+    margin-bottom: 71px;
 }
 .wrapper-fotos__left {
-    height: 485px;          
+    max-height: 485px;
+}
+.wrapper-fotos__left img {
+    max-width: 100%;
 }
 .wrapper-fotos__right {
-    height: 485px;
+    max-height: 485px;
     display: flex;
-    flex-direction: column;         
+    flex-direction: column;
+}
+.wrapper-fotos__right img {
+    max-width: 100%;
 }
 
 //--------INFO---------------- 
 .wrapper-info {        
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;        
 }
 //--------LEFT-COL--------------------   
@@ -36,7 +41,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 140px;
+    margin: 0 20px 0 140px;
 }
 //--------INFO-APPARTMENT--------------------        
 .wrapper-info-appartment {
@@ -122,6 +127,101 @@
 
 .wrapper-info__right {
     margin-right: 140px;
+}
+
+//------------------------------
+//---------------MEDIA----------
+//------------------------------
+@media (max-width: 1400px) {
+    .wrapper-info__left {
+        margin: 0 20px;
+    }
+    .wrapper-info__right {
+        margin: 0 20px;
+    }
+}
+@media (max-width: 1160px) {
+    .wrapper-info {
+        flex-direction: column;
+    }
+    .wrapper-info__left {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .wrapper-info__right {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 750px) {
+    .wrapper-additional {
+        flex-direction: column;
+        margin: 13px auto;
+    }
+    .wrapper-rules, .wrapper-cancel {
+        margin: 0 auto;
+    }
+    .wrapper-rules h2, .wrapper-cancel h2 {
+        text-align: center;
+        margin: 10px auto;
+    }
+    .wrapper-info__left {
+        flex-direction: column;
+    }
+    .wrapper-info-appartment, .wrapper-pie-chart {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 450px) {
+    .wrapper-reviews-title span {
+        display: none;
+    }
+}
+@media (max-width: 385px) {
+    .wrapper-info__left {
+        width: 300px;
+        padding: 0 10px;
+    }
+    .wrapper-cancel {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .wrapper-reviews {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .wrapper-pie-chart {
+        width: 300px;
+    }
+    .appartments-finder-check {
+        box-sizing: border-box;
+        width: 320px;
+        height: 480px;
+        padding: 10px;
+        margin: 0 auto;
+
+        .datepicker-2f, .dropdown {
+            width: 300px;
+        }
+        .appartments-finder-check__total__dot-line {
+            width: 160px;
+        }
+        .button-with-arrow {
+            box-sizing: border-box;
+            width: 300px;
+        }
+        .dropdown__ul {
+            width: 300px;
+        }
+        .dropdown li {
+            width: 292px;
+        }
+        .dropdown__item {
+            width: 175px;
+        }
+        .dropdown__buttons {
+            width: 300px;
+        }
+    }
 }
 
 
