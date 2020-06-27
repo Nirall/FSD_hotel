@@ -19,6 +19,31 @@
     left: 533px;
     
 }
+
+@media (max-width: 950px) {
+    .wrapper-registration-form, .wrapper-in-form  {
+        left: 0;
+        top: 300px;
+    }
+    .content-registration {
+        height: 1000px;
+    }
+}
+
+@media (max-width: 385px) {
+    .registration-form, .in-form {
+        box-sizing: border-box;
+        width: 320px;
+        padding: 20px;
+
+        .text-field {
+            width: 280px;
+        }
+        .button-with-arrow {
+            width: 260px;
+        }
+    }
+}
     
 
 
