@@ -1,0 +1,334 @@
+/*! nouislider - 14.5.0 - 5/11/2020 */
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.noUi-target {
+  position: relative;
+}
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+/* Wrapper for all connect elements.
+ */
+.noUi-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+.noUi-connect,
+.noUi-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  transform-style: flat;
+}
+.noUi-connect {
+  height: 100%;
+  width: 100%;
+}
+.noUi-origin {
+  height: 10%;
+  width: 10%;
+}
+/* Offset direction
+ */
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  left: 0;
+  right: auto;
+}
+/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+.noUi-vertical .noUi-origin {
+  width: 0;
+}
+.noUi-horizontal .noUi-origin {
+  height: 0;
+}
+.noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+}
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+  height: 18px;
+}
+.noUi-horizontal .noUi-handle {
+  width: 34px;
+  height: 28px;
+  right: -17px;
+  top: -6px;
+}
+.noUi-vertical {
+  width: 18px;
+}
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  right: -6px;
+  top: -17px;
+}
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+  left: -17px;
+  right: auto;
+}
+/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+.noUi-target {
+  background: #FAFAFA;
+  border-radius: 4px;
+  border: 1px solid #D3D3D3;
+  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+.noUi-connects {
+  border-radius: 3px;
+}
+.noUi-connect {
+  background: #3FB8AF;
+}
+/* Handles and cursors;
+ */
+.noUi-draggable {
+  cursor: ew-resize;
+}
+.noUi-vertical .noUi-draggable {
+  cursor: ns-resize;
+}
+.noUi-handle {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+}
+.noUi-active {
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px;
+}
+.noUi-handle:after {
+  left: 17px;
+}
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px;
+}
+.noUi-vertical .noUi-handle:after {
+  top: 17px;
+}
+/* Disabled state;
+ */
+[disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+/* Base;
+ *
+ */
+.noUi-pips,
+.noUi-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.noUi-pips {
+  position: absolute;
+  color: #999;
+}
+/* Values;
+ *
+ */
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+/* Markings;
+ *
+ */
+.noUi-marker {
+  position: absolute;
+  background: #CCC;
+}
+.noUi-marker-sub {
+  background: #AAA;
+}
+.noUi-marker-large {
+  background: #AAA;
+}
+/* Horizontal layout;
+ *
+ */
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 80px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.noUi-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+.noUi-rtl .noUi-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px;
+}
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+/* Vertical layout;
+ *
+ */
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+.noUi-value-vertical {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding-left: 25px;
+}
+.noUi-rtl .noUi-value-vertical {
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+.noUi-horizontal .noUi-tooltip {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 120%;
+}
+.noUi-vertical .noUi-tooltip {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 120%;
+}
+.noUi-horizontal .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  left: auto;
+  bottom: 10px;
+}
+.noUi-vertical .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(0, -18px);
+  transform: translate(0, -18px);
+  top: auto;
+  right: 28px;
+}
+
+.noUi-target {
+    height: 6px;
+    margin: 13px 0;
+    box-sizing: border-box;
+}
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;    
+    right: -5px;
+    top: -6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0;
+}
+.noUi-connect {    
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.noUi-handle:before, .noUi-handle:after {
+    display: none;
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}@font-face{font-family:"Montserrat";src:url(fonts/Montserrat-Regular.eot);src:local("☺"),url(fonts/Montserrat-Regular.woff) format("woff"),url(fonts/Montserrat-Regular.ttf) format("truetype"),url(images/Montserrat-Regular.svg) format("svg");font-weight:normal;font-style:normal}@font-face{font-family:"Montserrat-Bold";src:url(fonts/Montserrat-Bold.eot);src:local("☺"),url(fonts/Montserrat-Bold.woff) format("woff"),url(fonts/Montserrat-Bold.ttf) format("truetype"),url(images/Montserrat-Bold.svg) format("svg");font-weight:normal;font-style:normal}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:url(fonts/MaterialIcons-Regular.eot);src:local("Material Icons"),local("MaterialIcons-Regular"),url(fonts/MaterialIcons-Regular.woff) format("woff"),url(fonts/MaterialIcons-Regular.ttf) format("truetype"),url(images/MaterialIcons-Regular.svg) format("svg")}@font-face{font-family:"Quicksand-Bold";src:url(fonts/Quicksand-Bold.eot);src:local("☺"),url(fonts/Quicksand-Bold.woff) format("woff"),url(fonts/Quicksand-Bold.ttf) format("truetype"),url(images/Quicksand-Bold.svg) format("svg");font-weight:normal;font-style:normal}.material-icons{font-family:"Material Icons";font-weight:normal;font-style:normal;font-size:24px;display:inline-block;line-height:1;text-transform:none;letter-spacing:normal;word-wrap:normal;white-space:nowrap;direction:ltr;margin:1px;vertical-align:middle;color:rgba(31,32,65,.5);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-feature-settings:"liga"}h1{font:24px/30px "Montserrat-bold"}h2{font:19px/24px "Montserrat-bold";letter-spacing:-0.53px}h3{font:12px/15px "Montserrat-bold";text-transform:uppercase}.navbar__menu-elem{margin:10px;font-family:"Montserrat";font-style:normal;font-weight:normal;font-size:14px;line-height:17px;color:rgba(31,32,65,.5)}.navbar__menu-elem:hover{color:#bc9cff}.navbar__menu-elem_bold{font-family:"Montserrat-Bold";color:rgba(31,32,65,.75)}.navbar__menu-elem_marginR0-inline{display:inline-block;margin:10px 0px 10px 10px;font-family:Montserrat;font-style:normal;font-weight:normal;font-size:14px;line-height:17px;color:rgba(31,32,65,.5)}.navbar__menu-elem-dropdown span{margin-right:10px}.navbar__button{border:2px solid #bc9cff;width:87px;height:34px;box-sizing:border-box;border-radius:20px;display:flex;justify-content:center;align-items:center;font:12px/15px "Montserrat-Bold";text-transform:uppercase;color:#bc9cff;cursor:pointer}.navbar__button:hover{opacity:.5}.navbar__button_violet{background:linear-gradient(to bottom, #BC9CFF, #8BA4F9);color:#fff;width:196px;height:34px}.navbar__button_violet:hover{opacity:.5}.navbar__sign-in{width:150px;height:30px;padding-left:20px;margin-left:-9px;border-left:1px solid rgba(31,32,65,.1);color:rgba(31,32,65,.5);font:14px/17px "Montserrat";display:flex;align-items:center}.navbar{width:100%;display:flex;justify-content:flex-end;align-items:center;position:absolute;left:0px;top:0px;min-height:70px;background:#fff;box-shadow:0px 10px 20px rgba(31,32,65,.05)}.navbar .wrapper-navbar-more-list{display:flex;justify-content:flex-end;align-items:center}.navbar .wrapper-button-in{margin-left:10px;margin-right:20px}.navbar .wrapper-button-reg{margin-right:140px}.navbar .wrapper-navbar__sign-in{display:none;margin:0 90px 0 20px}.navbar .navbar__more{display:none;cursor:pointer}.navbar .navbar__more:hover{color:#bc9cff}.navbar .wrapper-navbar-collapsed{display:flex;align-items:center;justify-content:flex-end}.navbar .wrapper-navbut-buttons{display:flex;align-items:center}.navbar_without-buttons .wrapper-button-in{display:none}.navbar_without-buttons .wrapper-button-reg{display:none}.navbar_without-buttons .wrapper-navbar__sign-in{display:inline-block}@media(max-width: 1300px){.navbar .wrapper-button-reg{margin-right:20px}.navbar .logo-toxin{left:20px}}@media(max-width: 950px){.navbar{justify-content:space-between}.navbar .wrapper-navbar-more-list{position:absolute;top:70px;left:120px;width:200px;flex-direction:column;align-items:flex-start;background:#fff;display:none;z-index:1}.navbar .wrapper-navbar-more-list_display{display:flex}.navbar .wrapper-navbar-collapsed{width:270px;padding-right:50px;justify-self:start}.navbar .navbar__more{display:inline-block}}@media(max-width: 670px){.navbar .navbar__button,.navbar .navbar__button_violet{border:0;justify-content:flex-start;width:190px;height:37px;background:#fff;color:rgba(31,32,65,.5);font:14px/17px "Montserrat";text-transform:capitalize;margin:0;margin-left:10px;padding:0}.navbar .wrapper-navbut-buttons{position:absolute;top:217px;left:120px;flex-direction:column;align-items:flex-start;background:#fff;display:none;z-index:1}.navbar .wrapper-navbut-buttons_display{display:flex}.navbar .wrapper-button-in,.navbar .wrapper-button-reg{margin:0;padding:0}}.logo-toxin{position:absolute;left:140px;top:15px}.footer-large__inf-elem-list{width:200px;margin:0px;font-family:Montserrat;font-style:normal;font-weight:normal;font-size:14px;line-height:18px;color:rgba(31,32,65,.5)}.footer-large__inf-elem-list ul{margin:0px;padding-inline-start:0px;list-style-type:none}.footer-large__inf-elem-list li{padding:10px 0px}.footer-large__inf-elem-list_width260px{width:260px;line-height:24px;padding-bottom:10px}.footer-large__inf-elem-email{border:1px solid rgba(31,32,65,.25);border-radius:4px}.footer-large__inf-elem-email form{display:inline-block}.footer-large__inf-elem-email input{width:220px;height:44px;padding:15px;background:#fff;border:none;outline:none;box-sizing:border-box;font-family:"Montserrat";font-style:normal;font-weight:normal;font-size:14px;line-height:24px}.footer-large__inf-elem-email input::placeholder{color:rgba(31,32,65,.25)}.footer-large__inf-elem-email span{margin:8px;color:#8ba4f9}.footer-large__inf-elem-logo{padding:5px 40px 0px 0px;width:260px;margin:0px;font-family:Montserrat;font-style:normal;font-weight:normal;font-size:14px;line-height:24px;color:rgba(31,32,65,.5);font-family:Montserrat}.footer-large__inf-elem-logo p{margin-top:10px}.logo-toxin_static{position:static}.footer-large{padding-top:95px;width:100%;height:277px;display:flex;justify-content:center;background:#fff;box-shadow:0px 1px 0px rgba(31,32,65,.1)}.footer-small{box-sizing:border-box;width:100%;height:70px;font-family:Montserrat;font-style:normal;font-weight:normal;font-size:14px;line-height:17px;color:rgba(31,32,65,.75);background:#fff;box-shadow:0px 10px 20px rgba(31,32,65,.05);display:flex;align-items:center;border-top:1px solid rgba(31,32,65,.1);display:flex;justify-content:space-between;padding:0 130px 0 140px}.footer-small__icons img{margin:10px}.footer-small p{display:inline-block}.datepicker--cell-day.-other-month-,.datepicker--cell-year.-other-decade-{color:#dedede}.datepicker--cell-day.-other-month-:hover,.datepicker--cell-year.-other-decade-:hover{color:#c5c5c5}.-disabled-.-focus-.datepicker--cell-day.-other-month-,.-disabled-.-focus-.datepicker--cell-year.-other-decade-{color:#dedede}.-selected-.datepicker--cell-day.-other-month-,.-selected-.datepicker--cell-year.-other-decade-{color:#fff;background:#a2ddf6}.-selected-.-focus-.datepicker--cell-day.-other-month-,.-selected-.-focus-.datepicker--cell-year.-other-decade-{background:#8ad5f4}.-in-range-.datepicker--cell-day.-other-month-,.-in-range-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.1);color:#ccc}.-in-range-.-focus-.datepicker--cell-day.-other-month-,.-in-range-.-focus-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.2)}.datepicker--cell-day.-other-month-:empty,.datepicker--cell-year.-other-decade-:empty{background:none;border:none}.datepicker--cells{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.datepicker--cell{border-radius:4px;box-sizing:border-box;cursor:pointer;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:32px;z-index:1}.datepicker--cell.-focus-{background:#f0f0f0}.datepicker--cell.-current-{color:#4eb5e6}.datepicker--cell.-current-.-focus-{color:#4a4a4a}.datepicker--cell.-current-.-in-range-{color:#4eb5e6}.datepicker--cell.-in-range-{background:rgba(92, 196, 239, 0.1);color:#4a4a4a;border-radius:0}.datepicker--cell.-in-range-.-focus-{background-color:rgba(92, 196, 239, 0.2)}.datepicker--cell.-disabled-{cursor:default;color:#aeaeae}.datepicker--cell.-disabled-.-focus-{color:#aeaeae}.datepicker--cell.-disabled-.-in-range-{color:#a1a1a1}.datepicker--cell.-disabled-.-current-.-focus-{color:#aeaeae}.datepicker--cell.-range-from-{border:1px solid rgba(92, 196, 239, 0.5);background-color:rgba(92, 196, 239, 0.1);border-radius:4px 0 0 4px}.datepicker--cell.-range-to-{border:1px solid rgba(92, 196, 239, 0.5);background-color:rgba(92, 196, 239, 0.1);border-radius:0 4px 4px 0}.datepicker--cell.-range-from-.-range-to-{border-radius:4px}.datepicker--cell.-selected-{color:#fff;border:none;background:#5cc4ef}.datepicker--cell.-selected-.-current-{color:#fff;background:#5cc4ef}.datepicker--cell.-selected-.-focus-{background:#45bced}.datepicker--cell:empty{cursor:default}.datepicker--days-names{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:8px 0 3px}.datepicker--day-name{color:#ff9a19;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;text-transform:uppercase;font-size:.8em}.datepicker--cell-day{width:14.28571%}.datepicker--cells-months{height:170px}.datepicker--cell-month{width:33.33%;height:25%}.datepicker--years{height:170px}.datepicker--cells-years{height:170px}.datepicker--cell-year{width:25%;height:33.33%}.datepicker--cell-day.-other-month-,.datepicker--cell-year.-other-decade-{color:#dedede}.datepicker--cell-day.-other-month-:hover,.datepicker--cell-year.-other-decade-:hover{color:#c5c5c5}.-disabled-.-focus-.datepicker--cell-day.-other-month-,.-disabled-.-focus-.datepicker--cell-year.-other-decade-{color:#dedede}.-selected-.datepicker--cell-day.-other-month-,.-selected-.datepicker--cell-year.-other-decade-{color:#fff;background:#a2ddf6}.-selected-.-focus-.datepicker--cell-day.-other-month-,.-selected-.-focus-.datepicker--cell-year.-other-decade-{background:#8ad5f4}.-in-range-.datepicker--cell-day.-other-month-,.-in-range-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.1);color:#ccc}.-in-range-.-focus-.datepicker--cell-day.-other-month-,.-in-range-.-focus-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.2)}.datepicker--cell-day.-other-month-:empty,.datepicker--cell-year.-other-decade-:empty{background:none;border:none}.datepickers-container{position:absolute;left:0;top:0}@media print{.datepickers-container{display:none}}.datepicker{background:#fff;border:1px solid #dbdbdb;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15);border-radius:4px;box-sizing:content-box;font-family:Tahoma,sans-serif;font-size:14px;color:#4a4a4a;width:250px;position:absolute;left:-100000px;opacity:0;transition:opacity .3s ease,left 0s .3s,-webkit-transform .3s ease;transition:opacity .3s ease,transform .3s ease,left 0s .3s;transition:opacity .3s ease,transform .3s ease,left 0s .3s,-webkit-transform .3s ease;z-index:100}.datepicker.-from-top-{-webkit-transform:translateY(-8px);transform:translateY(-8px)}.datepicker.-from-right-{-webkit-transform:translateX(8px);transform:translateX(8px)}.datepicker.-from-bottom-{-webkit-transform:translateY(8px);transform:translateY(8px)}.datepicker.-from-left-{-webkit-transform:translateX(-8px);transform:translateX(-8px)}.datepicker.active{opacity:1;-webkit-transform:translate(0);transform:translate(0);transition:opacity .3s ease,left 0s 0s,-webkit-transform .3s ease;transition:opacity .3s ease,transform .3s ease,left 0s 0s;transition:opacity .3s ease,transform .3s ease,left 0s 0s,-webkit-transform .3s ease}.datepicker-inline .datepicker{border-color:#d7d7d7;box-shadow:none;position:static;left:auto;right:auto;opacity:1;-webkit-transform:none;transform:none}.datepicker-inline .datepicker--pointer{display:none}.datepicker--content{box-sizing:content-box;padding:4px}.-only-timepicker- .datepicker--content{display:none}.datepicker--pointer{position:absolute;background:#fff;border-top:1px solid #dbdbdb;border-right:1px solid #dbdbdb;width:10px;height:10px;z-index:-1}.-top-left- .datepicker--pointer,.-top-center- .datepicker--pointer,.-top-right- .datepicker--pointer{top:calc(100% - 4px);-webkit-transform:rotate(135deg);transform:rotate(135deg)}.-right-top- .datepicker--pointer,.-right-center- .datepicker--pointer,.-right-bottom- .datepicker--pointer{right:calc(100% - 4px);-webkit-transform:rotate(225deg);transform:rotate(225deg)}.-bottom-left- .datepicker--pointer,.-bottom-center- .datepicker--pointer,.-bottom-right- .datepicker--pointer{bottom:calc(100% - 4px);-webkit-transform:rotate(315deg);transform:rotate(315deg)}.-left-top- .datepicker--pointer,.-left-center- .datepicker--pointer,.-left-bottom- .datepicker--pointer{left:calc(100% - 4px);-webkit-transform:rotate(45deg);transform:rotate(45deg)}.-top-left- .datepicker--pointer,.-bottom-left- .datepicker--pointer{left:10px}.-top-right- .datepicker--pointer,.-bottom-right- .datepicker--pointer{right:10px}.-top-center- .datepicker--pointer,.-bottom-center- .datepicker--pointer{left:calc(50% - 10px / 2)}.-left-top- .datepicker--pointer,.-right-top- .datepicker--pointer{top:10px}.-left-bottom- .datepicker--pointer,.-right-bottom- .datepicker--pointer{bottom:10px}.-left-center- .datepicker--pointer,.-right-center- .datepicker--pointer{top:calc(50% - 10px / 2)}.datepicker--body{display:none}.datepicker--body.active{display:block}.datepicker--cell-day.-other-month-,.datepicker--cell-year.-other-decade-{color:#dedede}.datepicker--cell-day.-other-month-:hover,.datepicker--cell-year.-other-decade-:hover{color:#c5c5c5}.-disabled-.-focus-.datepicker--cell-day.-other-month-,.-disabled-.-focus-.datepicker--cell-year.-other-decade-{color:#dedede}.-selected-.datepicker--cell-day.-other-month-,.-selected-.datepicker--cell-year.-other-decade-{color:#fff;background:#a2ddf6}.-selected-.-focus-.datepicker--cell-day.-other-month-,.-selected-.-focus-.datepicker--cell-year.-other-decade-{background:#8ad5f4}.-in-range-.datepicker--cell-day.-other-month-,.-in-range-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.1);color:#ccc}.-in-range-.-focus-.datepicker--cell-day.-other-month-,.-in-range-.-focus-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.2)}.datepicker--cell-day.-other-month-:empty,.datepicker--cell-year.-other-decade-:empty{background:none;border:none}.datepicker--nav{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;border-bottom:1px solid #efefef;min-height:32px;padding:4px}.-only-timepicker- .datepicker--nav{display:none}.datepicker--nav-title,.datepicker--nav-action{display:-webkit-flex;display:-ms-flexbox;display:flex;cursor:pointer;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.datepicker--nav-action{width:32px;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.datepicker--nav-action:hover{background:#f0f0f0}.datepicker--nav-action.-disabled-{visibility:hidden}.datepicker--nav-action svg{width:32px;height:32px}.datepicker--nav-action path{fill:none;stroke:#9c9c9c;stroke-width:2px}.datepicker--nav-title{border-radius:4px;padding:0 8px}.datepicker--nav-title i{font-style:normal;color:#9c9c9c;margin-left:5px}.datepicker--nav-title:hover{background:#f0f0f0}.datepicker--nav-title.-disabled-{cursor:default;background:none}.datepicker--buttons{display:-webkit-flex;display:-ms-flexbox;display:flex;padding:4px;border-top:1px solid #efefef}.datepicker--button{color:#4eb5e6;cursor:pointer;border-radius:4px;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:32px}.datepicker--button:hover{color:#4a4a4a;background:#f0f0f0}.datepicker--cell-day.-other-month-,.datepicker--cell-year.-other-decade-{color:#dedede}.datepicker--cell-day.-other-month-:hover,.datepicker--cell-year.-other-decade-:hover{color:#c5c5c5}.-disabled-.-focus-.datepicker--cell-day.-other-month-,.-disabled-.-focus-.datepicker--cell-year.-other-decade-{color:#dedede}.-selected-.datepicker--cell-day.-other-month-,.-selected-.datepicker--cell-year.-other-decade-{color:#fff;background:#a2ddf6}.-selected-.-focus-.datepicker--cell-day.-other-month-,.-selected-.-focus-.datepicker--cell-year.-other-decade-{background:#8ad5f4}.-in-range-.datepicker--cell-day.-other-month-,.-in-range-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.1);color:#ccc}.-in-range-.-focus-.datepicker--cell-day.-other-month-,.-in-range-.-focus-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.2)}.datepicker--cell-day.-other-month-:empty,.datepicker--cell-year.-other-decade-:empty{background:none;border:none}.datepicker--time{border-top:1px solid #efefef;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:4px;position:relative}.datepicker--time.-am-pm- .datepicker--time-sliders{-webkit-flex:0 1 138px;-ms-flex:0 1 138px;flex:0 1 138px;max-width:138px}.-only-timepicker- .datepicker--time{border-top:none}.datepicker--time-sliders{-webkit-flex:0 1 153px;-ms-flex:0 1 153px;flex:0 1 153px;margin-right:10px;max-width:153px}.datepicker--time-label{display:none;font-size:12px}.datepicker--time-current{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-flex:1;-ms-flex:1;flex:1;font-size:14px;text-align:center;margin:0 0 0 10px}.datepicker--time-current-colon{margin:0 2px 3px;line-height:1}.datepicker--time-current-hours,.datepicker--time-current-minutes{line-height:1;font-size:19px;font-family:"Century Gothic",CenturyGothic,AppleGothic,sans-serif;position:relative;z-index:1}.datepicker--time-current-hours:after,.datepicker--time-current-minutes:after{content:"";background:#f0f0f0;border-radius:4px;position:absolute;left:-2px;top:-3px;right:-2px;bottom:-2px;z-index:-1;opacity:0}.datepicker--time-current-hours.-focus-:after,.datepicker--time-current-minutes.-focus-:after{opacity:1}.datepicker--time-current-ampm{text-transform:uppercase;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;color:#9c9c9c;margin-left:6px;font-size:11px;margin-bottom:1px}.datepicker--time-row{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-size:11px;height:17px;background:linear-gradient(to right, #dedede, #dedede) left 50%/100% 1px no-repeat}.datepicker--time-row:first-child{margin-bottom:4px}.datepicker--time-row input[type=range]{background:none;cursor:pointer;-webkit-flex:1;-ms-flex:1;flex:1;height:100%;padding:0;margin:0;-webkit-appearance:none}.datepicker--time-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none}.datepicker--time-row input[type=range]::-ms-tooltip{display:none}.datepicker--time-row input[type=range]:hover::-webkit-slider-thumb{border-color:#b8b8b8}.datepicker--time-row input[type=range]:hover::-moz-range-thumb{border-color:#b8b8b8}.datepicker--time-row input[type=range]:hover::-ms-thumb{border-color:#b8b8b8}.datepicker--time-row input[type=range]:focus{outline:none}.datepicker--time-row input[type=range]:focus::-webkit-slider-thumb{background:#5cc4ef;border-color:#5cc4ef}.datepicker--time-row input[type=range]:focus::-moz-range-thumb{background:#5cc4ef;border-color:#5cc4ef}.datepicker--time-row input[type=range]:focus::-ms-thumb{background:#5cc4ef;border-color:#5cc4ef}.datepicker--time-row input[type=range]::-webkit-slider-thumb{box-sizing:border-box;height:12px;width:12px;border-radius:3px;border:1px solid #dedede;background:#fff;cursor:pointer;transition:background .2s}.datepicker--time-row input[type=range]::-moz-range-thumb{box-sizing:border-box;height:12px;width:12px;border-radius:3px;border:1px solid #dedede;background:#fff;cursor:pointer;transition:background .2s}.datepicker--time-row input[type=range]::-ms-thumb{box-sizing:border-box;height:12px;width:12px;border-radius:3px;border:1px solid #dedede;background:#fff;cursor:pointer;transition:background .2s}.datepicker--time-row input[type=range]::-webkit-slider-thumb{margin-top:-6px}.datepicker--time-row input[type=range]::-webkit-slider-runnable-track{border:none;height:1px;cursor:pointer;color:transparent;background:transparent}.datepicker--time-row input[type=range]::-moz-range-track{border:none;height:1px;cursor:pointer;color:transparent;background:transparent}.datepicker--time-row input[type=range]::-ms-track{border:none;height:1px;cursor:pointer;color:transparent;background:transparent}.datepicker--time-row input[type=range]::-ms-fill-lower{background:transparent}.datepicker--time-row input[type=range]::-ms-fill-upper{background:transparent}.datepicker--time-row span{padding:0 12px}.datepicker--time-icon{color:#9c9c9c;border:1px solid;border-radius:50%;font-size:16px;position:relative;margin:0 5px -1px 0;width:1em;height:1em}.datepicker--time-icon:after,.datepicker--time-icon:before{content:"";background:currentColor;position:absolute}.datepicker--time-icon:after{height:.4em;width:1px;left:calc(50% - 1px);top:calc(50% + 1px);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.datepicker--time-icon:before{width:.4em;height:1px;top:calc(50% + 1px);left:calc(50% - 1px)}.datepicker--cell-day.-other-month-,.datepicker--cell-year.-other-decade-{color:#dedede}.datepicker--cell-day.-other-month-:hover,.datepicker--cell-year.-other-decade-:hover{color:#c5c5c5}.-disabled-.-focus-.datepicker--cell-day.-other-month-,.-disabled-.-focus-.datepicker--cell-year.-other-decade-{color:#dedede}.-selected-.datepicker--cell-day.-other-month-,.-selected-.datepicker--cell-year.-other-decade-{color:#fff;background:#a2ddf6}.-selected-.-focus-.datepicker--cell-day.-other-month-,.-selected-.-focus-.datepicker--cell-year.-other-decade-{background:#8ad5f4}.-in-range-.datepicker--cell-day.-other-month-,.-in-range-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.1);color:#ccc}.-in-range-.-focus-.datepicker--cell-day.-other-month-,.-in-range-.-focus-.datepicker--cell-year.-other-decade-{background-color:rgba(92, 196, 239, 0.2)}.datepicker--cell-day.-other-month-:empty,.datepicker--cell-year.-other-decade-:empty{background:none;border:none}.datepicker{font:12px/15px "Montserrat";width:320px}.datepicker.-from-bottom-{-webkit-transform:translateY(5px);transform:translateY(5px)}.datepicker--body.active{width:280px}.datepicker--content{padding:5px 20px 0px 20px}.datepicker--cell{height:40px;width:40px;border-radius:50%}.datepicker--cell.-current-{background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);color:white}.datepicker--cell.-selected-{background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)}.datepicker--cell.-selected-.-focus-{background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)}.datepicker--cell.-range-to-,.datepicker--cell.-range-from-{border-radius:50%;background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);color:white}.datepicker--cell.-in-range-{background:#e8e7fe}.datepicker--day-name{vertical-align:middle;color:#bc9cff;height:40px;text-transform:capitalize}.datepicker--days-names{font:12px/15px "Montserrat-Bold";margin:0}.datepicker--nav{padding:15px 15px 20px 15px;border:0}.datepicker--nav-title,.datepicker--nav-title i{font:19px/24px "Quicksand-Bold";font-weight:bold;color:#1f2041}.datepicker--pointer{display:none}.datepicker--buttons{margin:10px 20px 10px 20px;padding:10px 0px 0px 0px;border-top:0}.datepicker--button{display:block;height:25px;text-transform:uppercase;font-family:"Montserrat-Bold";color:rgba(31, 32, 65, 0.5)}.datepicker--button[data-action=today]{color:#bc9cff;text-align:right}.db-arrow{color:#bc9cff}.datepicker-2f{display:flex;justify-content:space-between;font:12px/15px "Montserrat-Bold";background:#fff;width:320px}.datepicker-2f__wrapper-input-field{box-sizing:border-box;border:1px solid rgba(42,42,48,.25);border-radius:4px;width:150px;height:44px;padding:0;margin:5px 0 0 0}.datepicker-2f__wrapper-input-field input{width:100px;display:inline-block;font:14px/18px "Montserrat";outline:none;border:0;padding:0 0 0 0px;text-align:center}.datepicker-2f__wrapper-input-field input::placeholder{padding-left:15px}.datepicker-2f__wrapper-input-field span{padding:10px 5px 10px 15px;margin:0}.dropdown{font:12px/15px "Montserrat-Bold";background:#fff;width:320px;padding-top:20px;transform:translateY(0.1px);box-shadow:0px 10px 20px rgba(31,32,65,.05);background:#fff}.dropdown li{height:37px;padding-right:5px;background:#fff;width:313px}.dropdown__item{display:inline-block;padding-left:15px;vertical-align:middle;width:200px}.dropdown__butt{margin:0;padding:0;display:inline-block;width:30px;height:30px;border:1px solid rgba(31,32,65,.25);border-radius:50%;vertical-align:middle;text-align:center;background:#fff;font:18px/30px "Montserrat";cursor:pointer;outline:none}.dropdown__quantity{font:12px/30px "Montserrat-Bold";border:0}.dropdown__buttons{box-sizing:border-box;height:28px;width:320px;justify-content:space-between;padding:15px 7px 27px 15px;border:1px solid rgba(31,32,65,.5);border-top:0;border-radius:0 0 4px 4px;display:none;background:#fff;position:absolute;top:198px}.dropdown .dropdown__ul{padding-top:5px;box-sizing:border-box;display:none;position:absolute;border:1px solid rgba(31,32,65,.5)}.dropdown .dropdown__ul_active{display:block;border-bottom:0}.dropdown__clear{color:rgba(31,32,65,.5)}.dropdown__clear,.dropdown__apply{display:inline-block;cursor:pointer}.dropdown__apply{color:#bc9cff}.dropdown__field{box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;font:14px/15px "Montserrat";color:rgba(31,32,65,.75);padding:0 7px 0 15px;margin:5px 0 0 0;height:43px;border:1px solid rgba(31,32,65,.25);border-radius:4px;cursor:pointer}.dropdown__field_active{border-radius:4px 4px 0 0;border:1px solid rgba(31,32,65,.5);border-bottom:0}.dropdown_width266px{width:266px}.dropdown_width266px .dropdown__item{display:inline-block;padding-left:15px;vertical-align:middle;width:147px}.dropdown_width266px .dropdown__buttons{box-sizing:border-box;height:28px;width:266px;justify-content:space-between;padding:15px 7px 27px 15px;display:none;background:#fff;position:static;top:198px}.dropdown_width266px .dropdown__ul{position:static}.dropdown_width266px li{width:259px}.dropdown-without-butts{font:12px/15px "Montserrat-Bold";background:#fff;width:266px;padding-top:20px;transform:translateY(0.1px);box-shadow:0px 10px 20px rgba(31,32,65,.05);background:#fff}.dropdown-without-butts li{height:37px;padding-right:5px;background:#fff;width:259px}.dropdown-without-butts__item{display:inline-block;padding-left:15px;vertical-align:middle;width:147px}.dropdown-without-butts__butt{margin:0;padding:0;display:inline-block;width:30px;height:30px;border:1px solid rgba(31,32,65,.25);border-radius:50%;vertical-align:middle;text-align:center;background:#fff;font:18px/30px "Montserrat";cursor:pointer;outline:none}.dropdown-without-butts__quantity{font:12px/30px "Montserrat-Bold";border:0}.dropdown-without-butts .dropdown-without-butts__ul{padding-top:5px;box-sizing:border-box;display:none;border:1px solid rgba(31,32,65,.5)}.dropdown-without-butts .dropdown-without-butts__ul_active{display:block}.dropdown-without-butts__field{box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;font:14px/15px "Montserrat";color:rgba(31,32,65,.75);padding:0 7px 0 15px;margin:5px 0 0 0;height:43px;border:1px solid rgba(31,32,65,.25);border-radius:4px;cursor:pointer}.dropdown-without-butts__field_active{border-radius:4px 4px 0 0;border:1px solid rgba(31,32,65,.5);border-bottom:0}.appartments-finder{width:380px;height:374px;padding:40px 30px 30px 30px;background:#fff;margin:70px 0 0 140px;box-sizing:border-box;box-shadow:0px 0px 25px rgba(0,0,0,.2);border-radius:4px}.appartments-finder__title{width:320px;font:24px/30px "Montserrat-Bold";padding-bottom:22px;letter-spacing:-0.3px}.wrapper-button-with-arrow{margin-top:32px}.button-with-arrow{background:linear-gradient(to bottom, #BC9CFF, #8BA4F9);width:302px;padding:0 9px;height:44px;color:#fff;display:flex;justify-content:space-between;align-items:center;border-radius:22px;font:12px/15px "Montserrat-Bold";cursor:pointer}.button-with-arrow:hover{opacity:.5}.button-with-arrow span.material-icons{color:#fff}.button-with-arrow span.button-with-arrow__text{padding-left:82px}.appartment-card__info{display:flex;justify-content:space-between;margin:24px 19px 0px 19px;padding-bottom:11px;border-bottom:1px solid rgba(31,32,65,.1);font:14px/18px "Montserrat-Bold";color:rgba(31,32,65,.5)}.appartment-card__info__number{color:#000}.appartment-card__info__number>span{font-size:18px}.appartment-card__info__luxury{color:#bc9cff;font:12px/15px "Montserrat"}.appartment-card__info__price__dimension{font-size:12px;font-family:"Montserrat"}.appartment-card{margin:10.4px 5.6px;width:270px;height:257px;background:#fff;font:14px/18px "Montserrat-Bold";color:rgba(31,32,65,.5);box-shadow:0px 10px 20px rgba(31,32,65,.05);border-radius:4px}.appartment-card__img{color:#fff;height:151px;border-radius:4px 4px 0 0;box-shadow:inset -30px 0px 30px 0px rgba(0,0,0,.4),inset 30px 0px 30px 0px rgba(0,0,0,.4)}.appartment-card__img__arrows{display:flex;justify-content:space-between;padding-top:53px}.appartment-card__img span{width:22px;height:22px;margin:10px;color:#fff}.appartment-card__img__spots{padding:29px 0 0 212px}.appartment-card__img__spot{box-sizing:border-box;margin:2px;padding:0;display:inline-block;width:7px;height:7px;border:1px solid #fff;border-radius:50%;background:transparent}.appartment-card__img__spot_fill{background:#fff}.appartment-card__img__l-arrow{transform:rotate(90deg)}.appartment-card__img__r-arrow{transform:rotate(-90deg)}.appartment-card__rating{height:40px;margin:0px 19px;padding-bottom:10px;display:flex;justify-content:space-between;align-items:center}.appartment-card__rating__star{margin:0;padding:0;font-size:24px;color:#bc9cff}.appartment-card__rating__review{font-family:"Montserrat"}.appartment-card_common .appartment-card__img__arrows{opacity:0}.appartment-card_common .appartment-card__img{box-shadow:none}.content-landing-page{margin:0 auto;height:830px;max-width:1440px;background:no-repeat url(images/landingpage-bg.jpg);padding-top:70px}.phrase-of-day{width:297px;position:absolute;text-align:right;left:1008px;top:830px;font:14px/24px "Montserrat"}@media(max-width: 1400px){.phrase-of-day{left:500px}}@media(max-width: 950px){.appartments-finder{margin:230px auto}.phrase-of-day{display:none}}@media(max-width: 385px){.datepicker{width:300px}.datepicker--content{padding:5px 10px 0}.appartments-finder{box-sizing:border-box;width:320px;padding:20px 10px}.appartments-finder .appartments-finder__title,.appartments-finder .datepicker-2f,.appartments-finder .dropdown{width:300px}.appartments-finder .button-with-arrow{width:280px}.appartments-finder .dropdown__ul{width:300px}.appartments-finder .dropdown li{width:292px}.appartments-finder .dropdown__item{width:175px}.appartments-finder .dropdown__buttons{width:300px}}.checkbox-item{font:14px/18px "Montserrat";color:rgba(31,32,65,.5);padding:5px 0}.checkbox-item label{display:flex;align-items:top}.checkbox-item input{position:absolute;z-index:-1;opacity:0}.checkbox-item__pseudo{flex-shrink:0;flex-grow:0;display:inline-block;content:" ";margin-right:10px;width:20px;height:20px;background:#fff;border:1px solid rgba(31,32,65,.25);box-sizing:border-box;border-radius:4px}.checkbox-item__text{white-space:nowrap}.checkbox-item input:checked~.checkbox-item__pseudo{background:no-repeat center url(images/check-mark.png);border:1px solid #bc9cff}.checkbox-item_bold{font-family:"Montserrat-Bold";color:#000}.checkbox-item_description{padding-top:0;padding-bottom:4px}.checkbox-item_description .checkbox-item__pseudo{display:none}.checkbox-item_description .checkbox-item__text{margin-left:30px;font:12px/14px "Montserrat"}.checkbox-item_description-price{padding-top:0;padding-bottom:4px}.checkbox-item_description-price .checkbox-item__pseudo{display:none}.checkbox-item_description-price .checkbox-item__text{font:12px/14px "Montserrat"}.appartment-form__title-wrapper{display:flex;justify-content:space-between}.appartment-form__price-slider{margin:32px 0 25px 0}.appartment-form__title{font:12px/15px "Montserrat-Bold";padding-bottom:12px}.appartment-form__price{font:12px/15px "Montserrat";color:rgba(31,32,65,.5)}.appartment-form__title_dropdown{padding:0}.appartment-form__dropdown-wrapper{display:flex;justify-content:space-between;align-items:center;margin:6px 9px 10px 0}.appartment-form__wrapper-checkbox-item__accessibility{margin:27px 0 5px 0}.appartment-form__wrapper-checkbox-item__more-options{padding-top:19px;cursor:pointer}.appartment-form__checkboxes{-webkit-transition:opacity .3s ease-in-out;-moz-transition:opacity .3s ease-in-out;-o-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out;opacity:1}.appartment-form__checkboxes_dissappear{opacity:0}.appartment-form__expand-butt_rotate{transform:rotate(180deg)}.datepicker-1f{font:12px/15px "Montserrat-Bold";background:#fff;width:266px}.datepicker-1f__wrapper-input-field{box-sizing:border-box;border:1px solid rgba(42,42,48,.25);border-radius:4px;width:266px;height:44px;padding:0;margin:5px 0 0 0;display:flex;justify-content:space-between}.datepicker-1f__wrapper-input-field input{display:inline-block;font:14px/18px "Montserrat";outline:none;border:0;padding:0 0 0 14px;text-align:left}.datepicker-1f__wrapper-input-field span{padding:10px 9px 10px 15px;margin:0}.content-search-room{margin:100px auto 0 auto;max-width:1164px;display:flex;justify-content:space-between}.content-search-room .left-col{min-width:266px;padding:0 1px}.content-search-room .right-col{margin-left:52px}.search-room__cards{max-width:850px;display:flex;flex-wrap:wrap;justify-content:center}.search-room__title{padding:1px 0 9px 5px;font:24px/30px "Montserrat-Bold";letter-spacing:-0.45px;text-align:left}.search-room__pages{margin:30px 14px 0 0;display:flex;justify-content:center}.search-room__button{width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:rgba(31,32,65,.5)}.search-room__button_violet{background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);color:#fff;font-family:"Montserrat-Bold"}.search-room__button_green{background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);color:#fff}.search-room__pages-comment{width:230px;margin:6px auto 74px auto;padding-right:14px;font:14px/24px "Montserrat";color:rgba(31,32,65,.75)}@media(max-width: 1200px){.left-col{margin-left:20px}.search-room__title{text-align:center}}@media(max-width: 620px){.content-search-room{flex-wrap:wrap}.content-search-room .left-col{margin:0 auto}.content-search-room .right-col{margin:0 auto}.search-room__title{margin-top:30px}}.info-appartment{display:flex;align-items:center}.info-appartment__icon{color:#bc9cff;font-size:48px;margin:20px 10px 20px 0}.info-appartment__text-block{font:14px/24px "Montserrat"}.info-appartment__title{font-family:"Montserrat-bold"}.info-appartment_border{border-top:1px solid rgba(31,32,65,.1);border-bottom:1px solid rgba(31,32,65,.1)}.visitor-review__user{font:14px/24px "Montserrat";display:flex;align-items:center;margin-bottom:8px}.visitor-review__user img{width:48px;height:48px;border:2px solid #fff;box-shadow:0px 10px 20px rgba(31,32,65,.1);border-radius:50%;margin-right:10px}.visitor-review__user__name{font-family:"Montserrat-Bold"}.visitor-review__comment{font:14px/24px "Montserrat";display:flex;margin-bottom:21px}.visitor-review__comment__wrapper-like-button{margin:0 15px 0 5px}.like-button{width:40px;height:20px;box-sizing:border-box;border:1px solid rgba(31,32,65,.25);border-radius:10px;color:rgba(31,32,65,.25);font:10px/12px "Montserrat"}.like-button span{width:20px;height:18px;font-size:10px;line-height:18px;text-align:center}.like-button_active{border:1px solid #bc9cff;color:#bc9cff}.like-button_active span.material-icons{color:#bc9cff}.pie-chart{width:130px;height:130px;transform:translateY(0.1px)}.pie-chart__votes{color:#bc9cff;position:absolute;top:41px;left:34px;text-align:center}.pie-chart-legend{font:14px/24px "Montserrat"}.pie-chart-legend__item__mark{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.pie-chart-legend__item__mark_great{background:#ffe39c}.pie-chart-legend__item__mark_good{background:#6fcf97}.pie-chart-legend__item__mark_normal{background:#bc9cff}.pie-chart-legend__item__mark_bad{background:#919191}.appartment-card__info{display:flex;justify-content:space-between;margin:24px 19px 0px 19px;padding-bottom:11px;border-bottom:1px solid rgba(31,32,65,.1);font:14px/18px "Montserrat-Bold";color:rgba(31,32,65,.5)}.appartment-card__info__number{color:#000}.appartment-card__info__number>span{font-size:18px}.appartment-card__info__luxury{color:#bc9cff;font:12px/15px "Montserrat"}.appartment-card__info__price__dimension{font-size:12px;font-family:"Montserrat"}.appartment-card__info_forCheck{margin:24px 0 12px 0;border-bottom:0;align-items:flex-end}.appartment-card__info_forCheck .appartment-card__info__number span{font-size:24px;letter-spacing:-1.5px}.appartments-finder-check{width:320px;height:458px;padding:22px 30px 30px 30px;background:#fff;font:14px/24px "Montserrat";border:1px solid rgba(0,0,0,.12);box-shadow:0px 0px 25px rgba(0,0,0,.2)}.appartments-finder-check .wrapper-appartments-finder-check__items{padding-top:11px}.appartments-finder-check .appartments-finder-check__price-item{display:flex;justify-content:space-between;align-items:flex-start;padding:5px 0}.appartments-finder-check .appartments-finder-check__price-item__text{width:241px;display:flex;justify-content:space-between}.appartments-finder-check .appartments-finder-check__price-item__text_lh18px{line-height:18px;padding-top:3px}.appartments-finder-check .appartments-finder-check__price-item__i{flex-shrink:0;display:inline-block;width:20px;height:20px;border:1px solid rgba(31,32,65,.25);color:rgba(31,32,65,.25);border-radius:50%;text-align:center;font-family:"Montserrat-Bold";line-height:20px;margin-left:5px}.appartments-finder-check .appartments-finder-check__total{margin-top:26px;display:flex;justify-content:space-between;font:19px/24px "Montserrat-Bold"}.appartments-finder-check .appartments-finder-check__total__dot-line{width:182px;border-bottom:1px dotted rgba(31,32,65,.25)}.appartments-finder-check .wrapper-button-with-arrow{margin-top:19px}.appartments-finder-check .button-with-arrow span.button-with-arrow__text{padding-left:92px}.content-room-details{max-width:1440px;margin:70px auto 0 auto;color:rgba(31,32,65,.75)}.wrapper-fotos{display:flex;margin-bottom:71px}.wrapper-fotos__left{max-height:485px}.wrapper-fotos__left img{max-width:100%}.wrapper-fotos__right{max-height:485px;display:flex;flex-direction:column}.wrapper-fotos__right img{max-width:100%}.wrapper-info{display:flex;justify-content:space-between}.wrapper-info__left{max-width:710px;display:flex;flex-wrap:wrap;justify-content:space-between;margin:0 20px 0 140px}.wrapper-info-appartment{width:280px}.wrapper-pie-chart{width:315px;margin-right:39px}.wrapper-pie-chart__graph{display:flex;justify-content:space-between;align-items:flex-end}.wrapper-pie-chart__graph-legend{margin-bottom:3px}.wrapper-pie-chart h2{margin:0 0 15px 5px}.wrapper-reviews-title{display:flex;justify-content:space-between;font:14px/24px "Montserrat";margin:13px 0 17px 5px}.wrapper-reviews{margin-left:-5px}.wrapper-reviews span{color:rgba(31,32,65,.5)}.wrapper-additional{max-width:710px;margin:13px 0 68px 0;font:14px/24px "Montserrat";display:flex;justify-content:space-between;flex-wrap:wrap}.wrapper-rules{width:260px}.wrapper-rules h2{margin:0 0 11px 19px}.wrapper-rules ul{list-style-type:none;display:flex;flex-direction:column}.wrapper-rules ul li{display:flex;margin:5px 0}.wrapper-rules li::before{flex-shrink:0;display:inline-block;content:" ";width:10px;height:10px;border-radius:50%;background:rgba(31,32,65,.25);margin:7px 10px 0 0}.wrapper-cancel{width:340px;margin-left:101px}.wrapper-cancel h2{margin-bottom:16px}.wrapper-info__right{margin-right:140px}@media(max-width: 1400px){.wrapper-info__left{margin:0 20px}.wrapper-info__right{margin:0 20px}}@media(max-width: 1160px){.wrapper-info{flex-direction:column}.wrapper-info__left{margin:0 auto;padding:0 20px}.wrapper-info__right{margin:0 auto}}@media(max-width: 750px){.wrapper-additional{flex-direction:column;margin:13px auto}.wrapper-rules,.wrapper-cancel{margin:0 auto}.wrapper-rules h2,.wrapper-cancel h2{text-align:center;margin:10px auto}.wrapper-info__left{flex-direction:column}.wrapper-info-appartment,.wrapper-pie-chart{margin:0 auto}}@media(max-width: 450px){.wrapper-reviews-title span{display:none}}@media(max-width: 385px){.wrapper-info__left{width:300px;padding:0 10px}.wrapper-cancel{width:300px;margin:0 auto}.wrapper-reviews{width:300px;margin:0 auto}.wrapper-pie-chart{width:300px}.appartments-finder-check{box-sizing:border-box;width:320px;height:480px;padding:10px;margin:0 auto}.appartments-finder-check .datepicker-2f,.appartments-finder-check .dropdown{width:300px}.appartments-finder-check .appartments-finder-check__total__dot-line{width:160px}.appartments-finder-check .button-with-arrow{box-sizing:border-box;width:300px}.appartments-finder-check .dropdown__ul{width:300px}.appartments-finder-check .dropdown li{width:292px}.appartments-finder-check .dropdown__item{width:175px}.appartments-finder-check .dropdown__buttons{width:300px}}.toggle-button__box{display:inline-block;width:40px;height:20px;border-radius:10px;border:1px solid rgba(31,32,65,.25);box-sizing:border-box;transition:.4s}.toggle-button input{position:absolute;opacity:0;width:0;height:0}.toggle-button__slider{display:inline-block;margin:3px;width:12px;height:12px;background:rgba(31,32,65,.25);border-radius:50%;transition:.4s}.toggle-button input:checked+.toggle-button__box{border:1px solid #bc9cff}.toggle-button input:checked+.toggle-button__box .toggle-button__slider{transform:translateX(20px);background:#bc9cff}.toggle-button{display:flex;align-items:center}.radio-button{display:flex;align-items:center;font:14px/24px "Montserrat";margin-right:20px}.radio-button input{position:absolute;opacity:0;width:0;height:0}.radio-button__border{box-sizing:border-box;display:inline-block;margin-right:10px;width:20px;height:20px;border:1px solid rgba(31,32,65,.25);border-radius:50%;transition:.4s}.radio-button__spot{display:inline-block;margin:3px;width:12px;height:12px;background:#fff;border-radius:50%;transition:.4s}.radio-button input:checked+.radio-button__border{border:1px solid #bc9cff}.radio-button input:checked+.radio-button__border .radio-button__spot{background:#bc9cff}.text-field{width:320px;height:44px;border:1px solid rgba(31,32,65,.25);padding-left:15px;border-radius:4px;box-sizing:border-box;margin:5px 0;outline:0;font:14px/24px "Montserrat"}.text-field:hover,.text-field:focus{border:1px solid rgba(31,32,65,.5)}.text-field::placeholder{color:rgba(31,32,65,.25)}.button-with-arrow{background:linear-gradient(to bottom, #BC9CFF, #8BA4F9);width:302px;padding:0 9px;height:44px;color:#fff;display:flex;justify-content:space-between;align-items:center;border-radius:22px;font:12px/15px "Montserrat-Bold";cursor:pointer}.button-with-arrow:hover{opacity:.5}.button-with-arrow span.material-icons{color:#fff}.button-with-arrow span.button-with-arrow__text{padding-left:82px}.navbar__button_for-reg-form{box-sizing:border-box;padding:0;margin:0;width:99px;height:44px;border-radius:22px}.registration-form{width:320px;padding:40px 30px 30px 30px;border:1px solid rgba(0,0,0,.12);box-shadow:0px 0px 25px rgba(0,0,0,.2);border-radius:4px;background:#fff}.registration-form h1{margin-bottom:14px;letter-spacing:-0.6px}.wrapper-radio-buttons{margin:3px 0 22px 0;display:flex;justify-content:start}.wrapper-h3-service-input{margin:15px 0 0 0}.wrapper-toggle-button{display:flex;justify-content:start;font:14px/24px "Montserrat";margin:2px 0 21px 0}.wrapper-toggle-button p{margin-left:10px}.wrapper-in{margin-top:30px;display:flex;justify-content:space-between;align-items:center;font:14px/24px "Montserrat";color:#000}.text-field{width:320px;height:44px;border:1px solid rgba(31,32,65,.25);padding-left:15px;border-radius:4px;box-sizing:border-box;margin:5px 0;outline:0;font:14px/24px "Montserrat"}.text-field:hover,.text-field:focus{border:1px solid rgba(31,32,65,.5)}.text-field::placeholder{color:rgba(31,32,65,.25)}.button-with-arrow{background:linear-gradient(to bottom, #BC9CFF, #8BA4F9);width:302px;padding:0 9px;height:44px;color:#fff;display:flex;justify-content:space-between;align-items:center;border-radius:22px;font:12px/15px "Montserrat-Bold";cursor:pointer}.button-with-arrow:hover{opacity:.5}.button-with-arrow span.material-icons{color:#fff}.button-with-arrow span.button-with-arrow__text{padding-left:82px}.button-with-arrow_in-form span.button-with-arrow__text{padding-left:127px}.navbar__button_for-reg-form{box-sizing:border-box;padding:0;margin:0;width:99px;height:44px;border-radius:22px}.in-form{width:320px;padding:40px 30px 30px 30px;border:1px solid rgba(0,0,0,.12);box-shadow:0px 0px 25px rgba(0,0,0,.2);border-radius:4px;background:#fff}.in-form h1{margin-bottom:14px;letter-spacing:-0.6px}.in-form .wrapper-button-with-arrow{margin-top:15px}.in-form .wrapper-in{margin-top:30px;display:flex;justify-content:space-between;align-items:center;font:14px/24px "Montserrat";color:#000}.content-registration{height:754px;max-width:1440px;background:no-repeat url(images/registration.jpg);margin:0 auto}.wrapper-in-form{position:absolute;top:233px;left:530px;display:none}.wrapper-registration-form{position:absolute;top:89px;left:533px}@media(max-width: 950px){.wrapper-registration-form,.wrapper-in-form{left:0;top:300px}.content-registration{height:1000px}}@media(max-width: 385px){.registration-form,.in-form{box-sizing:border-box;width:320px;padding:20px}.registration-form .text-field,.in-form .text-field{width:280px}.registration-form .button-with-arrow,.in-form .button-with-arrow{width:260px}}.content-ui-form-elements{margin:143px 140px 140px 140px;display:flex}.content-ui-form-elements .left-col{width:320px}.content-ui-form-elements .wrapper-text-field{margin-bottom:15px}.content-ui-form-elements .wrapper-title-text-field{display:flex;justify-content:space-between}.content-ui-form-elements .text-field_hover{border:1px solid rgba(31,32,65,.5)}.content-ui-form-elements .h3-grey{color:rgba(31,32,65,.5);font-family:"Montserrat"}.content-ui-form-elements .wrapper-dropdown-guests{margin-bottom:24px}.content-ui-form-elements .wrapper-dropdown-guests .dropdown{padding:0;margin-bottom:23px}.content-ui-form-elements .wrapper-dropdown-guests .dropdown__buttons{top:175px}.content-ui-form-elements .wrapper-datepicker-2f{margin:35px 0 42px 0}.content-ui-form-elements .wrapper-footer-large__inf-elem-email{width:267px;margin:41px 0 79px 0}.content-ui-form-elements .wrapper-footer-large__inf-elem-email h3{margin-bottom:4px}.content-ui-form-elements .wrapper-more-options_collapsed{margin:24px 0 0 0}.content-ui-form-elements .appartment-form__wrapper-checkbox-item__more-options{width:266px}.content-ui-form-elements .wrapper-more-options{margin:13px 0 0 0}.content-ui-form-elements .wrapper-more-options .appartment-form__checkboxes{margin-top:8px}.content-ui-form-elements .wrapper-info-appartment{margin-top:13px}.content-ui-form-elements .middle-right-col{display:flex;flex-wrap:wrap;justify-content:left}.content-ui-form-elements .middle-col{margin-left:127px}.content-ui-form-elements .wrapper-radio-buttons-block{margin-top:37px}.content-ui-form-elements .wrapper-radio-buttons{margin-top:13px;display:flex}.content-ui-form-elements .wrapper-toggle-buttons-block{margin-top:39px}.content-ui-form-elements .wrapper-toggle-button{margin-bottom:10px}.content-ui-form-elements .wrapper-toggle-buttons-block h3{margin-bottom:13px}.content-ui-form-elements .wrapper-like-buttons-block{margin:44px 0 0 0}.content-ui-form-elements .wrapper-like-button{display:flex}.content-ui-form-elements .wrapper-like-buttons-block h3{margin-bottom:16px}.content-ui-form-elements .like-button{margin-right:10px}.content-ui-form-elements .wrapper-stars-block{margin-top:40px}.content-ui-form-elements .stars-block{margin-top:16px;display:flex}.content-ui-form-elements .stars{margin-right:20px}.content-ui-form-elements .wrapper-dropdown-guests_expanded{margin-top:176px}.content-ui-form-elements .wrapper-rich-checkbox-buttons{margin-top:257px}.content-ui-form-elements .right-col{width:267px;margin:-30px 0 0 71px}.content-ui-form-elements .wrapper-buttons{margin-top:42px}.content-ui-form-elements .wrapper-buttons-row{margin:16px 0 29px 0;display:flex}.content-ui-form-elements .navbar__button{margin-right:20px}.content-ui-form-elements .wrapper-button-hover{opacity:.5}.content-ui-form-elements .wrapper-buttons-row-violet .navbar__button{width:99px;height:44px}.content-ui-form-elements .button-without{color:#bc9cff;margin:3px 22px 0 0}.content-ui-form-elements .button-without:hover{color:rgba(31,32,65,.5)}.content-ui-form-elements .button-without_hover{color:rgba(31,32,65,.5)}.content-ui-form-elements .wrapper-button-with-arrow{margin:1px 0 0 2px}.content-ui-form-elements .wrapper-pagination{margin:41px 0 0 2px}.content-ui-form-elements .wrapper-pagination .search-room__pages{margin:16px 0 0 0px;justify-content:left}.content-ui-form-elements .wrapper-pagination .search-room__pages-comment{margin-left:5px}.content-ui-form-elements .wrapper-dropdown-guests_expanded_2{margin-top:213px}.content-ui-form-elements .wrapper-bullet-list{margin:257px 0 0 0}.content-ui-form-elements .wrapper-rules ul{margin:8px 0 0 1px}.content-ui-form-elements .wrapper-reviews{width:710px;margin:126px 0 0 124px}.content-ui-form-elements .wrapper-reviews .visitor-review__comment__wrapper-like-button{margin-right:5px}.content-ui-cards{display:flex;flex-wrap:wrap}.content-ui-cards .wrapper-appartments-finder{margin-top:149px}.content-ui-cards .wrapper-registration-form{margin:41px 0 0 140px;position:static}.content-ui-cards .wrapper-appartments-finder-check{margin:151px 0 0 37px}.content-ui-cards .wrapper-in-form{position:static;display:inline-block;margin:38px 0 0 37px}.content-ui-cards .wrapper-datepicker-2f{margin:151px 0 0 37px}.content-ui-cards .wrapper-appartment-card1,.content-ui-cards .wrapper-appartment-card2{margin-left:33px;margin-top:39px}.contetn-ui-colors{display:flex}.contetn-ui-colors h1{font:24px/30px "Montserrat";font-weight:bold;letter-spacing:-0.5px}.contetn-ui-colors h2{font:19px/24px "Montserrat";font-weight:bold;letter-spacing:-0.4px}.contetn-ui-colors .left-col{width:280px;margin:125px 0 0 150px}.contetn-ui-colors .left-col .sq{width:70px;height:70px;border-radius:6px}.contetn-ui-colors .left-col .sq_dark100{background:#1f2041}.contetn-ui-colors .left-col .sq_dark75{background:rgba(31,32,65,.75)}.contetn-ui-colors .left-col .sq_dark50{background:rgba(31,32,65,.5)}.contetn-ui-colors .left-col .sq_dark25{background:rgba(31,32,65,.25)}.contetn-ui-colors .left-col .sq_dark05{background:rgba(31,32,65,.05)}.contetn-ui-colors .left-col .sq_purple{background:#bc9cff}.contetn-ui-colors .left-col .sq_green{background:#6fcf97}.contetn-ui-colors .left-col .color-item{display:flex;justify-content:flex-start;align-items:center;margin:20px 0}.contetn-ui-colors .left-col .color-item__text{margin-left:40px}.contetn-ui-colors .left-col h2{margin:5px 0}.contetn-ui-colors .left-col h2.normal{font-weight:normal}.contetn-ui-colors .right-col{margin:94px 0 0 402px}.contetn-ui-colors .right-col .type-item{display:flex;justify-content:flex-start;margin:50px 0}.contetn-ui-colors .right-col .type-item .pre{white-space:pre-line}.contetn-ui-colors .right-col .for-types{text-align:right;color:rgba(31,32,65,.25);font-family:"Montserrat";margin-right:30px;width:50px}.contetn-ui-colors .right-col .font-body{font:14px/24px "Montserrat"}.footer-medium{box-sizing:border-box;margin:0 auto;font-family:"Montserrat";font-style:normal;font-weight:normal;font-size:14px;line-height:17px;color:rgba(31,32,65,.75);background:#fff;box-shadow:0px 10px 20px rgba(31,32,65,.05);border-top:1px solid rgba(31,32,65,.1);display:none}.wrapper-footer-medium-content{margin:20px auto;display:flex;flex-direction:column;justify-content:center;align-items:center}.footer-medium__icons img{margin:10px}.footer-medium p{margin:20px 0 17px 0;display:inline-block;text-align:center}.footer-medium_768x367{width:768px;height:367px;display:block}.footer-medium_768x367 .wrapper-footer-medium-content{margin:120px auto 0 auto}.content-headers_and_footers{background:#efefef}.content-headers_and_footers .wrapper-empty{height:140px}.content-headers_and_footers .wrapper-navbar2{margin-top:40px}.content-headers_and_footers .wrapper-navbar .navbar{position:static}.content-headers_and_footers .wrapper-navbar .navbar .logo-toxin{position:static;margin-right:275px}.content-headers_and_footers .wrapper-navbar2 .navbar .logo-toxin{margin-right:456px}.content-headers_and_footers .wrapper-footer-large{margin-top:40px}.content-headers_and_footers .wrapper-footer-medium{margin-top:40px}a{text-decoration:none}.content{margin:0 auto;height:830px;max-width:1440px;padding-top:70px}@media(max-width: 1200px){.footer-large,.footer-small{display:none}.footer-medium{display:block}}
