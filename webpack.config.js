@@ -42,10 +42,15 @@ module.exports = {
             filename: "ui-cards.html",
         }),
         new htmlPlugin({
+            template: "src/ui-colors.pug",
+            inject: false,
+            filename: "ui-colors.html",
+        }),
+        new htmlPlugin({
             template: "src/headers_and_footers.pug",
             inject: false,
             filename: "headers_and_footers.html",
-        }),                  
+        }),                 
         new cssExtract({
             filename: "style.css",
         }),        

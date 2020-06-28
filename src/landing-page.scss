@@ -1,3 +1,11 @@
+.content-landing-page {
+	margin: 0 auto;
+	height: 830px;
+	max-width: 1440px;
+	background: no-repeat url("images/landingpage-bg.jpg");
+	padding-top: 70px;	
+}
+
 .phrase-of-day {
 	width: 297px;
 	position: absolute;
@@ -10,9 +18,50 @@
 //--------------------------------------------
 //-----------------MEDIA----------------------
 //--------------------------------------------
+@media (max-width: 1500px) {
+	.phrase-of-day {
+		left: 500px;
+	}
+}
 
-@media (max-width: 1300px) {
-    .phrase-of-day  {
-        display: none;
-    }
+@media (max-width: 950px) {
+	.appartments-finder {
+		margin: 230px auto;
+	}
+	.phrase-of-day {
+		display: none;
+	}
+}
+@media (max-width: 385px) {
+	.datepicker {
+		width: 300px;
+	}
+	.datepicker--content {
+		padding: 5px 10px 0;
+	}
+	.appartments-finder {
+		box-sizing: border-box;
+		width: 320px;
+		padding: 20px 10px;
+
+		.appartments-finder__title, .datepicker-2f, .dropdown {
+			width: 300px;
+		}
+		
+		.button-with-arrow {
+			width: 280px;
+		}
+		.dropdown__ul {
+            width: 300px;
+        }
+        .dropdown li {
+            width: 292px;
+        }
+        .dropdown__item {
+            width: 175px;
+        }
+        .dropdown__buttons {
+            width: 300px;
+        }
+	}
 }

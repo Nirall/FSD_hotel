@@ -1,0 +1,84 @@
+.contetn-ui-colors {
+    display: flex;
+    h1 {
+        font: 24px/30px 'Montserrat';
+        font-weight: bold;
+        letter-spacing: -0.5px;
+    }
+    h2 {
+        font: 19px/24px 'Montserrat';
+        font-weight: bold;
+        letter-spacing: -0.4px;
+    }
+
+    .left-col {
+        width: 280px;
+        margin: 125px 0 0 150px;
+        .sq {
+            width: 70px;
+            height: 70px;
+            border-radius: 6px;
+        }
+        .sq_dark100 {
+            background: $dark100;
+        }
+        .sq_dark75 {
+            background: $dark75;
+        }
+        .sq_dark50 {
+            background: $dark50;
+        }
+        .sq_dark25 {
+            background: $dark25;
+        }
+        .sq_dark05 {
+            background: $dark05;
+        }
+        .sq_purple {
+            background: $purple;
+        }
+        .sq_green {
+            background: $green;
+        }
+    
+        .color-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .color-item__text {
+            margin-left: 40px;
+        }
+        h2 {
+            margin: 5px 0;
+        }
+        h2.normal {
+            font-weight: normal;
+        }
+    }
+    
+
+    .right-col {
+        margin: 94px 0 0 402px;
+
+        .type-item {
+            display: flex;
+            justify-content: flex-start;
+            margin: 50px 0;
+        }
+        .type-item .pre {
+            white-space: pre-line;
+        }
+        .for-types {
+            text-align: right;
+            color: $dark25;
+            font-family: "Montserrat";
+            margin-right: 30px;
+            width: 50px;
+        }
+        .font-body {
+            font: $font-body;
+        }
+    }
+}

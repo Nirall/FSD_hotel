@@ -1,0 +1,32 @@
+extends ui-template
+
+
+block content
+    .contetn-ui-colors
+        .left-col
+            - var sq__classes = ["sq_dark100", "sq_dark75", "sq_dark50", "sq_dark25", "sq_dark05", "sq_purple", "sq_green"]
+            - var titles = ["Dark Shade 100%", "Dark Shade 75%", "Dark Shade 50%", "Dark Shade 25%", "Dark Shade 5%", "Purple", "Green"]
+            - var codes = ["#1F2041", "#1F2041", "#1F2041", "#1F2041", "#1F2041", "#BC9CFF", "#6FCF97"]
+            each item, index in sq__classes
+                .color-item
+                    div(class = "sq " + item)
+                    .color-item__text
+                        h2= titles[index]
+                        h2.normal= codes[index]
+        .right-col
+            .type-item
+                h1.for-types= "H1"
+                h1.pre!= "This one is the sub-section or&#10;widget title"
+            .type-item
+                h2.for-types= "H2"
+                h2.pre!= "Next one is the item title inside&#10;widgets"
+            .type-item
+                h3.for-types= "H3"
+                h3.pre!= "This is a label or CTA text"
+            .type-item
+                p.font-body.for-types= "Body"
+                p.font-body.pre!= "This is the body text which is used for most&#10;of the design, like paragraphs, lists, etc."
+                    
+
+    
+                    
