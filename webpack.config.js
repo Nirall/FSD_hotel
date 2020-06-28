@@ -47,9 +47,9 @@ module.exports = {
             filename: "ui-colors.html",
         }),
         new htmlPlugin({
-            template: "src/headers_and_footers.pug",
+            template: "src/ui-headers_and_footers.pug",
             inject: false,
-            filename: "headers_and_footers.html",
+            filename: "ui-headers_and_footers.html",
         }),                 
         new cssExtract({
             filename: "style.css",

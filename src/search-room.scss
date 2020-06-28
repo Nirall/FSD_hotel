@@ -6,18 +6,17 @@
 
 .content-search-room {
 	margin: 100px auto 0 auto;
-	max-width: 1165px;		
+	max-width: 1164px;		
     display: flex;
     justify-content: space-between;    	
 }
 .content-search-room .left-col {
-    width: 266px;
     min-width: 266px;    
     padding: 0 1px;    
 }
 
 .content-search-room .right-col {
-    margin-left: 50px;
+    margin-left: 52px;
 }
 .search-room__cards {
     max-width: 850px;       
@@ -26,10 +25,10 @@
     justify-content: center;    
 }
 .search-room__title {
-    padding: 0 0 9px 7px;
+    padding: 1px 0 9px 5px;
     font: 24px/30px 'Montserrat-Bold';
     letter-spacing: -0.45px;
-    text-align: center;    
+    text-align: left;    
 }
 .search-room__pages {
     margin: 30px 14px 0 0;
@@ -64,8 +63,16 @@
 //---------------------------------------
 //----------------MEDIA------------------
 //---------------------------------------
+@media (max-width: 1200px) {
+    .left-col {
+        margin-left: 20px;
+    }
+    .search-room__title {
+        text-align: center;
+    }
 
-@media (max-width: 600px) {
+}
+@media (max-width: 620px) {
     .content-search-room {
         flex-wrap: wrap;
     }

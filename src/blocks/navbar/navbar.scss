@@ -95,6 +95,7 @@
         align-items: flex-start;
         background: white;
         display: none;
+        z-index: 1;
     }
     .navbar .wrapper-navbar-more-list_display {
         display: flex;
@@ -131,6 +132,7 @@
             align-items: flex-start;
             background: white;
             display: none;
+            z-index: 1;
         }
         .wrapper-navbut-buttons_display {
             display: flex;
