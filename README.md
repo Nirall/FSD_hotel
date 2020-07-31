@@ -1,5 +1,6 @@
 # Тестовое задание по верстке FSD_hotel
-### В репозитарии уже присутствует итоговая сборка в папке "dist". Для установки клонируйте репозиторий, из папки проекта выполните "npm install", сборка "npm run build".
+### Установка
+В репозитарии уже присутствует итоговая сборка в папке "dist". Для установки клонируйте репозиторий, из папки проекта выполните "npm install", сборка "npm run build".
 1. [Landing page](https://nirall.github.io/FSD_hotel/dist)
 2. [Search room](https://nirall.github.io/FSD_hotel/dist/search-room.html)
 3. [Room details](https://nirall.github.io/FSD_hotel/dist/room-details.html)
