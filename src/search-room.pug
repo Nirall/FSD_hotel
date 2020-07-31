@@ -21,10 +21,10 @@ block content
                 ["images/cards/444.jpg", "444", "", "5 000", 3, 15],
                 ["images/cards/352.jpg", "352", "", "5 000", 3, 55],
             ]
-        .left-col
+        aside.left-col
             +appartment-form
-        .right-col
-            .search-room__title= "Номера, которые мы для вас подобрали"
+        main.right-col
+            h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
                 +appartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
                 each val in cards

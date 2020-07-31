@@ -1,49 +1,34 @@
+@import "./_768х367/footer-medium_768х367.scss";
+
 .footer-medium {
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: $dark75;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px $dark05; 
-    border-top: 1px solid $dark10;
-    display: none;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark75;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px $dark05; 
+  border-top: 1px solid $dark10;
+  display: none;
 }
 
 .wrapper-footer-medium-content {
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-medium__icons img {
-    margin: 10px;
+  margin: 10px;
 }
 
 .footer-medium p {
-    margin: 20px 0 17px 0;
-    display: inline-block;
-    text-align: center;
+  margin: 20px 0 17px 0;
+  text-align: center;
 }
 
 
-//-------------------------------------------------------
-//------------------MODIFIER: _768x367-------------------
-//-------------------------------------------------------
-
-
-.footer-medium_768x367 {
-    width: 768px;
-    height: 367px;
-    display: block;
-}
-.footer-medium_768x367 .wrapper-footer-medium-content {
-    margin: 120px auto 0 auto;
-}
 
 

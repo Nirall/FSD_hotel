@@ -2,10 +2,13 @@ mixin footer-medium
     - var classMod = attributes.modifiers ? "footer-medium " + attributes.modifiers : "footer-medium"
     div(class = classMod)
         .wrapper-footer-medium-content
-            +logo-toxin(modifiers = "logo-toxin_static")
+            img(height="40px" alt="логотип" src = "images/logo-toxin.png")
             p. 
                 Copyrigth &copy; 2018 Toxin отель. Все права защищены.
             .footer-small__icons
-                img(src="images/t.png")
-                img(src="images/f.png")
-                img(src="images/i.png")
+                a(href = "changeMe")
+                    img(src="images/t.png" alt = "твиттер")
+                a(href = "changeMe")
+                    img(src="images/f.png" alt = "фейсбук")
+                a(href = "changeMe")
+                    img(src="images/i.png" alt = "инстаграмм")

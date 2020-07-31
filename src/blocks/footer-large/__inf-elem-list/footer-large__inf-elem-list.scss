@@ -1,22 +1,29 @@
 .footer-large__inf-elem-list {
-    width: 200px;
-    margin: 0px;                  
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.5);
-    
+  width: 200px;
+  margin: 0px;
+  line-height: 18px;
 }
 
 .footer-large__inf-elem-list ul {
-    margin: 0px;
-    padding-inline-start: 0px;    
-    list-style-type: none;
+  padding-inline-start: 0px;    
+  list-style-type: none;
 }
 
 .footer-large__inf-elem-list li {
-    padding: 10px 0px;
+  padding: 10px 0px;
 }
+
+li.footer-large__inf-elem-list__title {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark100;
+}
+
+
+
+
+
+
 

@@ -18,26 +18,26 @@ block content
                 img(src = "images/cards/888_b.jpg")
                 img(src = "images/cards/888_c.jpg")
         .wrapper-info
-            .wrapper-info__left
-                .wrapper-info-appartment
+            main.wrapper-info__left
+                section.wrapper-info-appartment
                     h2 Сведения о номере
                     +info-appartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
                     +info-appartment("location_city", "Удобство", "Окно в каждой из спален")(modifiers = "info-appartment_border")
                     +info-appartment("whatshot", "Уют", "Номер оснащен камином")
-                .wrapper-pie-chart
+                section.wrapper-pie-chart
                     h2 Впечатления от номера
                     .wrapper-pie-chart__graph
                         +pie-chart(25, 25, 50)
                         .wrapper-pie-chart__graph-legend
                             +pie-chart-legend
-                .wrapper-reviews
+                section.wrapper-reviews
                     .wrapper-reviews-title
                         h2 Отзывы посетителей номера
                         span= "2 отзыва"
                     +visitor-review ("_active", "images/users/1.png", "Мурад Сарафанов", "5 дней назад", "12", text1)
                     +visitor-review ("", "images/users/2.png", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
                 .wrapper-additional
-                    .wrapper-rules
+                    section.wrapper-rules
                         h2 Правила
                         ul
                             li
@@ -46,8 +46,8 @@ block content
                                 div= "Без вечеринок и мероприятий"
                             li 
                                 div= "Время прибытия — после 13:00, а выезд до 12:00"
-                    .wrapper-cancel                    
+                    section.wrapper-cancel                    
                         h2 Отмена
                         = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
-            .wrapper-info__right
+            aside.wrapper-info__right
                 +appartments-finder-check
