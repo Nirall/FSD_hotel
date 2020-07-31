@@ -4,32 +4,34 @@ include __button/navbar__button
 include __sign-in/navbar__sign-in
 
 mixin navbar
-    - var classMod = attributes.modifiers ? "navbar " + attributes.modifiers : "navbar"
-    nav(class = classMod)
-        +logo-toxin
-        .wrapper-navbar-collapsed
+    nav(class = "navbar")
+        .navbar__logo
+            img(height="40px" alt="логотип" src = "images/logo-toxin.png")
+        .navbar__items
             a(href="changeMe")
-                +navbar__menu-elem("О нас")(modifiers = "navbar__menu-elem_bold")
-            span.material-icons.navbar__more= "more_horiz"
-        .wrapper-navbar-more-list    
-            a(href="changeMe")
-                +navbar__menu-elem-dropdown("Услуги", "expand_more")
-            a(href="changeMe")
-                +navbar__menu-elem("Вакансии")
-            a(href="changeMe")
-                +navbar__menu-elem("Новости")
-            a(href="changeMe")
-                +navbar__menu-elem-dropdown("Соглашения", "expand_more")
-        .wrapper-navbut-buttons
-            .wrapper-button-in
-                
-                    +navbar__button("войти")
-            .wrapper-button-reg
-                
-                    +navbar__button("зарегистрироваться")(modifiers = "navbar__button_violet")
-            a(href="changeMe")
-                .wrapper-navbar__sign-in
-                    +navbar__sign-in("Юлий Цезарь")
+                .navbar__item.navbar__item_bold= "О нас"
+            span.material-icons.navbar__item.navbar__expand-butt= "more_horiz"
+            .wrapper-navbar-more-list    
+                a(href="changeMe")
+                    .navbar__item
+                        ="Услуги"
+                        span.material-icons= "expand_more"
+                a(href="changeMe")
+                    .navbar__item= "Вакансии"
+                a(href="changeMe")
+                    .navbar__item= "Новости"
+                a(href="changeMe")
+                    .navbar__item
+                        ="Соглашения"
+                        span.material-icons= "expand_more"
+            .navbar__buttons
+                .navbar__button.navbar__button
+                    h3= "войти"
+                .navbar__button.navbar__button_violet
+                    h3= "зарегистрироваться"
+                a(href="changeMe")
+                    .wrapper-navbar__sign-in
+                        +navbar__sign-in("Юлий Цезарь")
 
 
         

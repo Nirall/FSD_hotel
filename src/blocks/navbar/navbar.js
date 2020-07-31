@@ -1,4 +1,4 @@
-try {
+/*try {
     const moreButt = document.querySelector(".navbar .wrapper-navbar-collapsed .navbar__more");
     moreButt.onclick = () => {
         document.querySelector(".navbar .wrapper-navbar-more-list").classList.toggle("wrapper-navbar-more-list_display");
@@ -7,4 +7,4 @@ try {
     
 } catch {
     console.log("There is no navbar");
-}
+}*/

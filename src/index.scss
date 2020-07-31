@@ -8,7 +8,7 @@ $purple: #BC9CFF;
 $green: #6FCF97;
 $primGrad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
-$font-body: 14px/24px 'Montserrat Arial sans-serif';
+$font-body: 14px/24px Montserrat, Arial, sans-serif;
 
 
 html, body, div, span, applet, object, iframe,
@@ -153,10 +153,9 @@ h3 {
 
 a {
 	text-decoration: none;
-	color: $dark50
+	color: $dark50;
 }
-
-a:visited a:hover {
+a:hover {
 	color: $purple;
 }
 
@@ -165,10 +164,6 @@ a:visited a:hover {
 	height: 830px;
 	max-width: 1440px;	
 	padding-top: 70px;	
-}
-
-footer {
-	font-family: Montserrat, Arial, san-serif;
 }
 
 @media (max-width: 1200px) {
