@@ -1,17 +1,18 @@
 mixin dropdown(title, placeholder, ...args)
     - var classMod = attributes.modifiers ? "dropdown " + attributes.modifiers : "dropdown"
-    div(class = classMod)
-        div= title        
+    .dropdown
+        h3= title        
         .dropdown__field
             = placeholder
             span.material-icons= "expand_more"   
         ul.dropdown__ul         
             each val in args
-                li.dropdown__list-elem
-                    span.dropdown__item= val
-                    button.dropdown__butt.dropdown__minus= "-"                        
-                    span.dropdown__quantity.dropdown__butt= "0"
-                    button.dropdown__butt.dropdown__plus= "+"
+                li.dropdown__li
+                    .dropdown__item= val
+                    .dropdown__counter
+                        button.dropdown__butt.dropdown__minus!= "–"                        
+                        span.dropdown__butt.dropdown__quantity= "0"
+                        button.dropdown__butt.dropdown__plus= "+"
         .dropdown__buttons
-            .dropdown__clear= "ОЧИСТИТЬ"
-            .dropdown__apply= "ПРИМЕНИТЬ"
+            .dropdown__clear= "очистить"
+            .dropdown__apply= "применить"

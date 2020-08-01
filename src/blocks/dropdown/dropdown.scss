@@ -1,99 +1,101 @@
-.dropdown {    
-    font: 12px/15px 'Montserrat-Bold';
-    background: white;
-    width: 320px;
-    padding-top: 20px;
-    transform: translateY(0.1px);
-    box-shadow: 0px 10px 20px $dark05;
-    background: white;   
-}
-
-.dropdown li {
-    height: 37px;
-    padding-right: 5px;
-    background: white;
-    width: 313px;
-
-}
-.dropdown__item {
-    display: inline-block;
-    padding-left: 15px;
-    vertical-align: middle;
-    width: 200px;
-}
-.dropdown__butt {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $dark25;
-    border-radius: 50%;
-    vertical-align: middle;
-    text-align: center;
-    background: white;
-    font: 18px/30px 'Montserrat';
-    cursor: pointer;
-    outline: none;
-}
-.dropdown__quantity {
-    font: 12px/30px 'Montserrat-Bold';    
-    border: 0;
-}
-.dropdown__buttons {
-    box-sizing: border-box;
-    height: 28px;
-    width: 320px;
-    justify-content: space-between;
-    padding: 15px 7px 27px 15px;
-    border: 1px solid $dark50;    
-    border-top: 0;
-    border-radius: 0 0 4px 4px;
-    display: none;
-    background: white;
-    position: absolute;
-    top: 198px;
-}
-.dropdown .dropdown__ul {
-    padding-top: 5px;
-    box-sizing: border-box;
-    display: none;
-    position: absolute;
-    border: 1px solid $dark50;    
-}
-.dropdown .dropdown__ul_active {
-    display: block;
-    border-bottom: 0;
-}
-.dropdown__clear {
-    color: $dark50;
-}
-.dropdown__clear, .dropdown__apply {
-    display: inline-block;   
-    cursor: pointer;    
-}
-.dropdown__apply {
-    color: $purple;
+.dropdown {
+  background: white;
+  width: 320px;
+  position: relative;
+  box-shadow: 0px 10px 20px $dark05;
+  background: white;   
 }
 .dropdown__field {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font: 14px/15px 'Montserrat';
-    color: $dark75; 
-    padding: 0 7px 0 15px; 
-    margin: 5px 0 0 0;   
-    height: 43px;
-    border: 1px solid $dark25;
-    border-radius: 4px;
-    cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $dark75; 
+  padding: 0 7px 0 15px; 
+  margin: 5px 0 0 0;   
+  height: 43px;
+  border: 1px solid $dark25;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .dropdown__field_active {
-    border-radius: 4px 4px 0 0;
-    border: 1px solid $dark50;
-    border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid $dark50;
+  border-bottom: 0;
 }
+.dropdown__ul {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  border: 1px solid $dark50;    
+}
+.dropdown__ul_active {
+  display: block;
+  border-bottom: 0;
+}
+.dropdown__li {
+  height: 37px;
+  padding: 0 5px 0 15px;
+  box-sizing: border-box;
+  width: 318px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown__item {
+  font-size: 12px;
+  font-weight: bold;
+  color: $dark100;
+}
+.dropdown__butt {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $dark25;
+  color: $dark50;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  background: white;
+  font-size: 18px;
+  line-height: 18px;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown__quantity {
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: bold;
+  border: 0;
+  color: $dark100;
+}
+.dropdown__buttons {
+  box-sizing: border-box;
+  height: 48px;
+  width: 320px;
+  position: absolute;
+  top: 174px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 7px 0 15px;
+  border: 1px solid $dark50;    
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  background: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.dropdown__clear, .dropdown__apply {
+  cursor: pointer;    
+}
+.dropdown__apply {
+  color: $purple;
+}
+
+
 
 /*-----------------------------------------
 ---------MODIFIER: __width266px -----------

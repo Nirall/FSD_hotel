@@ -3,18 +3,18 @@
     height: 374px;
     padding: 40px 30px 30px 30px;
     background: white;
-    margin: 70px 0 0 140px;
+    margin: 0 0 0 140px;
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;    
 }
-.appartments-finder__title {
-    width: 320px;
-    font: 24px/30px 'Montserrat-Bold';
-    padding-bottom: 22px;
-    letter-spacing: -0.3px;    
+.appartments-finder h1 {
+    margin-bottom: 20px;
 }
-.wrapper-button-with-arrow {
+.appartments-finder__dropdown {
+    margin-top: 20px;
+}
+.appartments-finder__button-with-arrow {
     margin-top: 32px;
 }
 

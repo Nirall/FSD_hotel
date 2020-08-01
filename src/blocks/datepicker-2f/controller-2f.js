@@ -1,5 +1,5 @@
 const datepickerApi_2f = $('.datepicker-2f .datepicker-2f__input-field').datepicker().data('datepicker');
-const outDateField_2f = $(".datepicker-2f .datepicker-2f__outDateField");
+const outDateField_2f = $(".datepicker-2f .datepicker-2f__out-date-field");
 const inDateField_2f = $(".datepicker-2f .datepicker-2f__input-field");
 
 inDateField_2f.datepicker({   

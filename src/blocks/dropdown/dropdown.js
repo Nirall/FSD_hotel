@@ -29,18 +29,19 @@ try {
     for (let item of listApply) {
         let placeholder = item.parentNode.parentNode.querySelector(".dropdown__field");        
         let quanList = item.parentNode.parentNode.querySelectorAll(".dropdown__quantity");
+        const expand = '<span class = "material-icons">expand_more</span>';
         item.onclick = () => {
             if (placeholder.innerHTML.split("<span")[0] == "Сколько гостей"
                 || placeholder.innerHTML.split(" ")[0] == "Гостей") {
                 let quanPeople = parseInt(quanList.item(0).innerHTML) + parseInt(quanList.item(1).innerHTML);
                 let quanBaby = parseInt(quanList.item(2).innerHTML);
                 if (quanBaby !=0) {            
-                    placeholder.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}`;
+                    placeholder.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
                 } else {
                     if (quanPeople == 0) {
-                        placeholder.innerHTML = "Сколько гостей";
+                        placeholder.innerHTML = "Сколько гостей" + expand;
                     } else {
-                        placeholder.innerHTML = `Гостей - ${quanPeople.toString()}`;
+                        placeholder.innerHTML = `Гостей - ${quanPeople.toString()}` + expand;
                     }            
                 }     
             } else if (placeholder.innerHTML.split("<span")[0] == "Выберите удобства"

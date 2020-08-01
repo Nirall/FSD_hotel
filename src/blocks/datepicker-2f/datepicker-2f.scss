@@ -2,35 +2,34 @@
 @import "controller-2f";
 
 .datepicker-2f {
-    display: flex;
-    justify-content: space-between;
-    font: 12px/15px 'Montserrat-Bold';
-    background: white;
-    width: 320px;       
+	display: flex;
+	justify-content: space-between;
+	background: white;
+	width: 320px;
 }
 .datepicker-2f__wrapper-input-field { 
-    box-sizing: border-box;   
-    border: 1px solid rgba(42, 42, 48, 0.25);
-    border-radius: 4px;
-    width: 150px;
-    height: 44px;
-    padding: 0;
-    margin: 5px 0 0 0;
+	box-sizing: border-box;   
+	border: 1px solid rgba(42, 42, 48, 0.25);
+	border-radius: 4px;
+	width: 150px;
+	height: 44px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.datepicker-2f__wrapper-input-field:hover {
+	border-color: $dark50;
 }
 .datepicker-2f__wrapper-input-field input {
-    width: 100px;    
-    display: inline-block;
-    font: 14px/18px 'Montserrat';
-    outline: none;
-    border: 0;
-    padding: 0 0 0 0px;
-    text-align: center;
-}
-.datepicker-2f__wrapper-input-field input::placeholder {
-    padding-left: 15px;
+	width: 100px;
+	outline: none;
+	border: 0;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 14px;
+	cursor: pointer;
 }
 .datepicker-2f__wrapper-input-field span {
-    padding: 10px 5px 10px 15px;
-    margin: 0;
+	padding: 10px 5px 10px 15px;
+	margin: 0;
 }
         
