@@ -1,8 +1,0 @@
-mixin navbar__menu-elem-dropdown(text, mIcon)
-    - var classMod = attributes.modifiers ? "navbar__menu-elem-dropdown " + attributes.modifiers : "navbar__menu-elem-dropdown" 
-    div(class = classMod)            
-        +navbar__menu-elem(text)(modifiers = "navbar__menu-elem_marginR0-inline")
-        span.material-icons
-            = mIcon  
-
-

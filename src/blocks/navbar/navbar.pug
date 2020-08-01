@@ -1,17 +1,13 @@
-include __menu-elem/navbar__menu-elem
-include __menu-elem-dropdown/navbar__menu-elem-dropdown
-include __button/navbar__button
-include __sign-in/navbar__sign-in
-
 mixin navbar
     nav(class = "navbar")
         .navbar__logo
             img(height="40px" alt="логотип" src = "images/logo-toxin.png")
         .navbar__items
-            a(href="changeMe")
-                .navbar__item.navbar__item_bold= "О нас"
-            span.material-icons.navbar__item.navbar__expand-butt= "more_horiz"
-            .wrapper-navbar-more-list    
+            .navbar__items__menu-collapsed
+                a(href="changeMe")
+                    .navbar__item.navbar__item_bold= "О нас"
+                span.material-icons.navbar__item.navbar__expand-butt= "more_horiz"
+            .navbar__list    
                 a(href="changeMe")
                     .navbar__item
                         ="Услуги"
@@ -25,13 +21,11 @@ mixin navbar
                         ="Соглашения"
                         span.material-icons= "expand_more"
             .navbar__buttons
-                .navbar__button.navbar__button
-                    h3= "войти"
-                .navbar__button.navbar__button_violet
-                    h3= "зарегистрироваться"
+                .button.navbar__button= "войти"
+                .button.button_violet.navbar__button= "зарегистрироваться"
                 a(href="changeMe")
-                    .wrapper-navbar__sign-in
-                        +navbar__sign-in("Юлий Цезарь")
+                    .navbar__sign-in= "Юлий Цезарь"
+                        
 
 
         

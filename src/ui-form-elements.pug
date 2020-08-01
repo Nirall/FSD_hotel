@@ -9,7 +9,6 @@ include ./blocks/info-appartment/info-appartment
 include ./blocks/radio-button/radio-button
 include ./blocks/toggle-button/toggle-button
 include ./blocks/like-button/like-button
-include ./blocks/navbar/__button/navbar__button
 include ./blocks/button-with-arrow/button-with-arrow
 include blocks/visitor-review/visitor-review
 
@@ -133,13 +132,13 @@ block content
                 .wrapper-buttons
                     h3= "buttons"
                     .wrapper-buttons-row.wrapper-buttons-row-violet
-                        +navbar__button("CLICK ME")(modifiers = "navbar__button_violet")
+                        //+navbar__button("CLICK ME")(modifiers = "navbar__button_violet")
                         .wrapper-button-hover
-                            +navbar__button("CLICK ME")(modifiers = "navbar__button_violet")
+                            //+navbar__button("CLICK ME")(modifiers = "navbar__button_violet")
                     .wrapper-buttons-row
-                        +navbar__button("CLICK ME")(modifiers = "navbar__button_for-reg-form")
+                        //+navbar__button("CLICK ME")(modifiers = "navbar__button_for-reg-form")
                         .wrapper-button-hover
-                            +navbar__button("CLICK ME")(modifiers = "navbar__button_for-reg-form")
+                            //+navbar__button("CLICK ME")(modifiers = "navbar__button_for-reg-form")
                     .wrapper-buttons-row
                         .button-without
                             h3= "CLICK ME"

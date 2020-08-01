@@ -1,5 +1,5 @@
 include ../button-with-arrow/button-with-arrow
-include ../navbar/__button/navbar__button
+
 mixin in-form
     .in-form
         h1= "Войти"
@@ -9,4 +9,4 @@ mixin in-form
             +button-with-arrow("ВОЙТИ")(modifiers = "button-with-arrow_in-form")
         .wrapper-in
             p= "Нет аккаунта на Toxin"
-            +navbar__button("СОЗДАТЬ")(modifiers = "navbar__button_for-reg-form")
+            //+navbar__button("СОЗДАТЬ")(modifiers = "navbar__button_for-reg-form")

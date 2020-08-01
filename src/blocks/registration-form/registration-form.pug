@@ -1,7 +1,7 @@
 include ../toggle-button/toggle-button
 include ../radio-button/radio-button
 include ../button-with-arrow/button-with-arrow
-include ../navbar/__button/navbar__button
+
 mixin registration-form
     .registration-form
         h1= "Регистрация аккаунта"
@@ -22,5 +22,5 @@ mixin registration-form
         +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
         .wrapper-in
             p= "Уже есть аккаунт на Toxin"
-            +navbar__button("ВОЙТИ")(modifiers = "navbar__button_for-reg-form")
+            //+navbar__button("ВОЙТИ")(modifiers = "navbar__button_for-reg-form")
         

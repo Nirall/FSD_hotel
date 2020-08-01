@@ -1,10 +1,9 @@
-/*try {
-    const moreButt = document.querySelector(".navbar .wrapper-navbar-collapsed .navbar__more");
+try {
+    const moreButt = document.querySelector(".navbar .navbar__items__menu-collapsed span");
     moreButt.onclick = () => {
-        document.querySelector(".navbar .wrapper-navbar-more-list").classList.toggle("wrapper-navbar-more-list_display");
-        document.querySelector(".navbar .wrapper-navbut-buttons").classList.toggle("wrapper-navbut-buttons_display");
+        document.querySelector(".navbar .navbar__list").classList.toggle("navbar__item_visible-flex");
+        document.querySelector(".navbar .navbar__buttons").classList.toggle("navbar__item_visible-flex");
     }
-    
 } catch {
-    console.log("There is no navbar");
-}*/
+    console.error("There is no navbar");
+}
