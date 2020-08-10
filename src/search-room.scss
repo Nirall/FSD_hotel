@@ -1,88 +1,78 @@
 @import "./blocks/checkbox-item/checkbox-item.scss";
+@import "./blocks/checkbox-item/_bold/checkbox-item_bold.scss";
 @import "./blocks/appartment-form/appartment-form.scss";
 @import "./blocks/nouislider/nouislider.css";
 @import "./blocks/nouislider/customise.css";
 @import "./blocks/datepicker-1f/datepicker-1f.scss";
+@import "./blocks/appartment-card/appartment-card.scss";
+@import "./blocks/appartment-card/_common/appartment-card_common.scss";
 
 .content-search-room {
-	margin: 100px auto 0 auto;
+	margin: 30px auto 0 auto;
 	max-width: 1164px;		
-    display: flex;
-    justify-content: space-between;    	
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 620px) {
+    flex-wrap: wrap;
+  }    	
 }
-.content-search-room .left-col {
-    min-width: 266px;    
-    padding: 0 1px;    
+.search-room__left-col {
+  min-width: 266px;    
+  padding: 0 1px;
+  @media (max-width: 1200px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 620px) {
+    margin: 0 auto;
+  }    
 }
-
-.content-search-room .right-col {
-    margin-left: 52px;
+.search-room__right-col {
+  margin-left: 52px;
+  @media (max-width: 620px) {
+    margin: 0 auto;
+  }
 }
 .search-room__cards {
-    max-width: 850px;       
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;    
+  max-width: 850px;       
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    
 }
 .search-room__title {
-    padding: 1px 0 9px 5px;
-    font: 24px/30px 'Montserrat-Bold';
-    letter-spacing: -0.45px;
-    text-align: left;    
+  padding: 1px 0 9px 5px;
+  //letter-spacing: -0.45px;
+  text-align: left;
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+  @media (max-width: 620px) {
+    margin-top: 30px;
+  }    
 }
 .search-room__pages {
-    margin: 30px 14px 0 0;
-    display: flex;
-    justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 .search-room__button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 0;
-    background: white;    
-    color: rgba(31, 32, 65, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: white;
+  color: $dark50;
 }
 .search-room__button_violet {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: white;
-    font-family: 'Montserrat-Bold';
+  background: $primGrad;
+  color: white;
+  font-weight: bold;
 }
 .search-room__button_green {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    color: white;    
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  color: white;    
 }
 .search-room__pages-comment {
-    width: 230px;
-    margin: 6px auto 74px auto;
-    padding-right: 14px;
-    font: 14px/24px 'Montserrat';
-    color: rgba(31, 32, 65, 0.75);
-}
-
-//---------------------------------------
-//----------------MEDIA------------------
-//---------------------------------------
-@media (max-width: 1200px) {
-    .left-col {
-        margin-left: 20px;
-    }
-    .search-room__title {
-        text-align: center;
-    }
-
-}
-@media (max-width: 620px) {
-    .content-search-room {
-        flex-wrap: wrap;
-    }
-    .content-search-room .left-col {
-        margin: 0 auto;
-    }
-    .content-search-room .right-col {
-        margin: 0 auto;
-    }
-    .search-room__title {
-        margin-top: 30px;
-    }
+  width: 230px;
+  margin: 13px auto 77px auto;
+  color: $dark75;
 }

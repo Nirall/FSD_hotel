@@ -1,5 +1,4 @@
 @import "__inf-elem-list/footer-large__inf-elem-list.scss";
-@import "__inf-elem-list/_width260px/footer-large__inf-elem-list_width260px.scss";
 @import "__inf-elem-subcribe/footer-large__inf-elem-subcribe.scss";
 @import "__inf-elem-email/footer-large__inf-elem-email.scss";
 @import "__inf-elem-logo/footer-large__inf-elem-logo.scss";
@@ -13,5 +12,8 @@
   background: #FFFFFF;
   color: $dark50;
   box-shadow: 0px 1px 0px $dark10;
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 

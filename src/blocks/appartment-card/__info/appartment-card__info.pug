@@ -1,5 +1,8 @@
 mixin appartment-card__info(number, luxury="", price)
-    - var classMod = attributes.modifiers ? "appartment-card__info " + attributes.modifiers : "appartment-card__info"
+    - 
+        var classMod = "appartment-card__info"
+        if (attributes.type == "for-appartments-finder-check")
+            classMod += " appartment-card__info_forCheck"
     div(class = classMod)
         .appartment-card__info__part
             span.appartment-card__info__number

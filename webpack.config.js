@@ -32,7 +32,7 @@ module.exports = {
             inject: false,
             filename: "registration.html",
         }),
-        new htmlPlugin({
+        /*new htmlPlugin({
             template: "src/ui-form-elements.pug",
             inject: false,
             filename: "ui-form-elements.html",
@@ -51,7 +51,7 @@ module.exports = {
             template: "src/ui-headers_and_footers.pug",
             inject: false,
             filename: "ui-headers_and_footers.html",
-        }),                 
+        }),*/                 
         new cssExtract({
             filename: "style.css",
         }),        

@@ -1,10 +1,11 @@
 extends template.pug
 include blocks/datepicker-1f/datepicker-1f
-include blocks/dropdown-without-butts/dropdown-without-butts
+include blocks/dropdown/dropdown
 include blocks/checkbox-item/checkbox-item
 include blocks/appartment-form/appartment-form
-include blocks/button-with-arrow/button-with-arrow
 include blocks/appartment-card/appartment-card
+include blocks/button-with-arrow/button-with-arrow
+
 block content
     .content-search-room        
         -
@@ -21,14 +22,14 @@ block content
                 ["images/cards/444.jpg", "444", "", "5 000", 3, 15],
                 ["images/cards/352.jpg", "352", "", "5 000", 3, 55],
             ]
-        aside.left-col
+        aside.search-room__left-col
             +appartment-form
-        main.right-col
+        main.search-room__right-col
             h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
                 +appartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
                 each val in cards
-                    +appartment-card(...val)(modifiers = "appartment-card_common")
+                    +appartment-card(...val)(type = "common")
             .search-room__pages
                 button.search-room__button.search-room__button_violet= 1
                 button.search-room__button= 2

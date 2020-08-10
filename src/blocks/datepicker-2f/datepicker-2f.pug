@@ -2,13 +2,13 @@ mixin datepicker-2f(title1= "", title2= "")
     .datepicker-2f
         .datepicker-2f__input-col
             h3= title1        
-            .datepicker-2f__wrapper-input-field
-                input(class = "datepicker-here datepicker-2f__input-field" inline = "true" type="text"
+            .input-text.datepicker-2f__wrapper-input-field
+                input(type="text" class = "datepicker-here datepicker-2f__input-field" inline = "true" 
                     data-range="true" data-multiple-dates-separator = " - " clearButton = "true" placeholder="ДД.ММ.ГГГГ")
                 span.material-icons= "expand_more"
         .datepicker-2f__input-col
             h3= title2
-            .datepicker-2f__wrapper-input-field               
+            .input-text.datepicker-2f__wrapper-input-field               
                 input(class = "datepicker-2f__out-date-field" placeholder="ДД.ММ.ГГГГ")
                 span.material-icons= "expand_more"              
         

@@ -1,7 +1,7 @@
 .content-landing-page {
 	margin: 0 auto;
-	height: 830px;
 	max-width: 1440px;
+	height: 760px;
 	background: no-repeat url("images/landingpage-bg.jpg");
 	padding-top: 70px;	
 }
@@ -12,7 +12,10 @@
 	text-align: right;
 	left: 1008px;
 	top: 830px;	
-	font: 14px/24px 'Montserrat';
+	font-size: 14px;
+	@media (max-width: 950px) {
+		display: none;
+	}
 }
 
 //--------------------------------------------
@@ -27,9 +30,6 @@
 @media (max-width: 950px) {
 	.appartments-finder {
 		margin: 230px auto;
-	}
-	.phrase-of-day {
-		display: none;
 	}
 }
 @media (max-width: 385px) {

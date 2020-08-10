@@ -5,9 +5,9 @@
     width: 270px;
     height: 257px;
     background: white;
-    font: 14px/18px 'Montserrat-Bold';
-    color: rgba(31, 32, 65, 0.5);
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    font-weight: bold;
+    color: $dark50;
+    box-shadow: 0px 10px 20px $dark05;
     border-radius: 4px;    
 }
 .appartment-card__img {       
@@ -69,18 +69,3 @@
 .appartment-card__rating__review {
     font-family: 'Montserrat';
 }
-
-
-//------------------------------------------
-//------------MODIFIER: _COMMON--------------
-//------------------------------------------
-
-.appartment-card_common {
-    .appartment-card__img__arrows {
-        opacity: 0;
-    }
-    .appartment-card__img {
-        box-shadow: none;
-    }
-}
-    

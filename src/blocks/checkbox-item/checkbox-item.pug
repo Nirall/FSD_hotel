@@ -1,5 +1,9 @@
 mixin checkbox-item(text)
-    - var classMod = attributes.modifiers ? "checkbox-item " + attributes.modifiers : "checkbox-item"
+    -
+        var classMod = "checkbox-item"
+        if (attributes.style == "bold") {
+            classMod += " checkbox-item_bold"
+        }
     div(class = classMod)
         label
             input(type = "checkbox")

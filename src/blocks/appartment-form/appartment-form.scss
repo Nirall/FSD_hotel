@@ -2,16 +2,22 @@
     display: flex;
     justify-content: space-between;
 }
+.appartment-form__dropdown-guests {
+    margin-top: 20px;
+}
 .appartment-form__price-slider {
     margin: 32px 0 25px 0;
 }
 .appartment-form__title {
-    font: 12px/15px 'Montserrat-Bold';
     padding-bottom: 12px;
 }
 .appartment-form__price {
-    font: 12px/15px 'Montserrat';
-    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+    color: $dark50;
+}
+.appartment-form__price-slider__description-price {
+    padding: 0 0 4px 0;
+    font-size: 12px;
 }
 .appartment-form__title_dropdown {
     padding: 0;
@@ -22,19 +28,22 @@
     align-items: center;
     margin: 6px 9px 10px 0;
 }
+.checkbox-item__description {
+    padding-top: 0;
+    padding-bottom: 4px;
+    margin-left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+}
 .appartment-form__wrapper-checkbox-item__accessibility {
-    margin: 27px 0 5px 0;    
+    margin: 27px 0 25px 0;    
 }
 .appartment-form__wrapper-checkbox-item__more-options {
     padding-top: 19px;
     cursor: pointer;
 }
 .appartment-form__checkboxes {
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;    
     transition: opacity 0.3s ease-in-out;
-    opacity: 1;
 }
 .appartment-form__checkboxes_dissappear {
     opacity: 0;

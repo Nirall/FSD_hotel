@@ -11,16 +11,20 @@
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase; 
-    cursor: pointer;  
-    position: relative;        
+    cursor: pointer;
 }
 .button-with-arrow:hover {
     opacity: 0.5;
 }
+.button-with-arrow__text {
+    flex: 9;
+    text-align: center;
+}
 .button-with-arrow span.material-icons {    
     color: white;
-    position: absolute;
-    right: 15px;
+    flex: 1;
+    text-align: center;
+    
 }
 
 

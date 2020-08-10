@@ -60,15 +60,17 @@ try {
             }
             item.parentNode.parentNode.querySelector(".dropdown__ul").classList.remove("dropdown__ul_active");
             item.parentNode.parentNode.querySelector(".dropdown__field_active").classList.remove("dropdown__field_active");
-            item.parentNode.parentNode.querySelector(".dropdown__buttons").setAttribute("style", "display: none");
+            item.parentNode.parentNode.querySelector(".dropdown__buttons").classList.remove("dropdown__buttons_active");
         }           
     }
     const listField = document.getElementsByClassName("dropdown__field");
     for (let item of listField) {
         item.onclick = () => {
-            item.parentNode.querySelector(".dropdown__ul").classList.add("dropdown__ul_active");
-            item.parentNode.querySelector(".dropdown__field").classList.add("dropdown__field_active");
-            item.parentNode.querySelector(".dropdown__buttons").setAttribute("style", "display: flex");
+            item.parentNode.querySelector(".dropdown__ul").classList.toggle("dropdown__ul_active");
+            item.parentNode.querySelector(".dropdown__field").classList.toggle("dropdown__field_active");
+            if (!item.parentNode.querySelector(".dropdown__buttons").classList.contains("dropdown__buttons_none")) {
+                item.parentNode.querySelector(".dropdown__buttons").classList.toggle("dropdown__buttons_active");
+            }
         }        
     }  
 } catch {

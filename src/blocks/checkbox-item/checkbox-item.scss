@@ -1,6 +1,7 @@
 .checkbox-item {
-    font: 14px/18px 'Montserrat';
-    color: rgba(31, 32, 65, 0.5); 
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark50; 
     padding: 5px 0;   
 }
 .checkbox-item label {
@@ -21,51 +22,11 @@
     width: 20px;
     height: 20px;
     background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $dark25;
     box-sizing: border-box;
     border-radius: 4px;
 }
-.checkbox-item__text {
-    white-space: nowrap;    
-}
 .checkbox-item input:checked ~ .checkbox-item__pseudo {    
     background: no-repeat center url("./blocks/checkbox-item/check-mark.png");
-    border: 1px solid #BC9CFF;
-}
-
-/*-----------------------------------------
----------MODIFIER: _bold-------------------
-------------------------------------------*/
-.checkbox-item_bold {
-    font-family: 'Montserrat-Bold';
-    color: black;
-}
-
-/*-----------------------------------------
----------MODIFIER: _description-------------
-------------------------------------------*/
-.checkbox-item_description {
-    padding-top: 0;
-    padding-bottom: 4px;
-}
-.checkbox-item_description .checkbox-item__pseudo{
-    display: none;
-}
-.checkbox-item_description .checkbox-item__text {    
-    margin-left: 30px;
-    font: 12px/14px 'Montserrat';    
-}
-
-/*-----------------------------------------
----------MODIFIER: _description-price-------------
-------------------------------------------*/
-.checkbox-item_description-price {
-    padding-top: 0;
-    padding-bottom: 4px;
-}
-.checkbox-item_description-price .checkbox-item__pseudo{
-    display: none;
-}
-.checkbox-item_description-price .checkbox-item__text {   
-    font: 12px/14px 'Montserrat';    
+    border: 1px solid $purple;
 }

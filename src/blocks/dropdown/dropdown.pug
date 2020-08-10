@@ -1,8 +1,21 @@
 mixin dropdown(title, placeholder, ...args)
-    - var classMod = attributes.modifiers ? "dropdown " + attributes.modifiers : "dropdown"
-    .dropdown
+    -   
+        var blockclass = "dropdown"
+        var buttonsClass = "dropdown__buttons"
+
+        if (attributes.width === "266px")
+            blockclass += " dropdown_width266px"
+
+        if (attributes.type === "without butts") {
+            buttonsClass += " dropdown__buttons_none"
+            blockclass += " dropdown_without-butts"
+        }
+            
+        
+
+    div(class = blockclass)
         h3= title        
-        .dropdown__field
+        .input-text.dropdown__field
             = placeholder
             span.material-icons= "expand_more"   
         ul.dropdown__ul         
@@ -13,6 +26,6 @@ mixin dropdown(title, placeholder, ...args)
                         button.dropdown__butt.dropdown__minus!= "–"                        
                         span.dropdown__butt.dropdown__quantity= "0"
                         button.dropdown__butt.dropdown__plus= "+"
-        .dropdown__buttons
+        div(class = buttonsClass)
             .dropdown__clear= "очистить"
             .dropdown__apply= "применить"
