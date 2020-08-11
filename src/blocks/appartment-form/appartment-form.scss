@@ -1,53 +1,21 @@
-.appartment-form__title-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-.appartment-form__dropdown-guests {
-    margin-top: 20px;
-}
-.appartment-form__price-slider {
-    margin: 32px 0 25px 0;
-}
-.appartment-form__title {
-    padding-bottom: 12px;
-}
-.appartment-form__price {
-    font-size: 12px;
-    color: $dark50;
-}
-.appartment-form__price-slider__description-price {
-    padding: 0 0 4px 0;
-    font-size: 12px;
-}
-.appartment-form__title_dropdown {
-    padding: 0;
-}
-.appartment-form__dropdown-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 6px 9px 10px 0;
-}
-.checkbox-item__description {
-    padding-top: 0;
-    padding-bottom: 4px;
-    margin-left: 30px;
-    font-size: 12px;
-    line-height: 14px;
-}
-.appartment-form__wrapper-checkbox-item__accessibility {
-    margin: 27px 0 25px 0;    
-}
-.appartment-form__wrapper-checkbox-item__more-options {
-    padding-top: 19px;
-    cursor: pointer;
-}
-.appartment-form__checkboxes {
-    transition: opacity 0.3s ease-in-out;
-}
-.appartment-form__checkboxes_dissappear {
-    opacity: 0;
-}
-.appartment-form__expand-butt_rotate {
-    transform: rotate(180deg);
-}
+@import "__dropdown-guests/appartment-form__dropdown-guests.scss";
+@import "__price-slider/appartment-form__price-slider.scss";
+@import "__title-wrapper/appartment-form__title-wrapper.scss";
+@import "__title/appartment-form__title.scss";
+@import "__price/appartment-form__price.scss";
+@import "__slider-description-price/appartment-form__slider-description-price.scss";
+@import "__accessibility/appartment-form__accessibility.scss";
+@import "__more-options/appartment-form__more-options.scss";
+@import "__checkbox-description/appartment-form__checkbox-description.scss";
+@import "__more-options/appartment-form__more-options.scss";
+@import "__dropdown-title/appartment-form__dropdown-title.scss";
+@import "__expand-butt/appartment-form__expand-butt_rotate.scss";
+@import "__checkboxes/appartment-form__checkboxes.scss";
+@import "__checkboxes/appartment-form__checkboxes_dissappear_dissapear.scss";
+
+
+
+
+
+
+

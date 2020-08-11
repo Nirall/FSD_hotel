@@ -1,6 +1,5 @@
-include ../../like-button/like-button
 mixin visitor-review__comment(like, quantity, text)
     .visitor-review__comment
-        .visitor-review__comment__wrapper-like-button
+        .visitor-review__comment-like-button
             +like-button(like, quantity)
-        .visitor-review__comment__text= text
+        .visitor-review__comment-text= text

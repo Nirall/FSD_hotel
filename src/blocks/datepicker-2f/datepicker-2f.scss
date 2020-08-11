@@ -1,5 +1,4 @@
-@import "datepicker";
-@import "controller-2f";
+@import "__wrapper-input-field/datepicker-2f__wrapper-input-field.scss";
 
 .datepicker-2f {
 	display: flex;
@@ -7,20 +6,5 @@
 	background: white;
 	width: 320px;
 }
-.datepicker-2f__wrapper-input-field {
-	width: 150px;
-	margin-top: 5px;
-  display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 
-.datepicker-2f__wrapper-input-field input {
-	width: 100px;
-	outline: none;
-	border: 0;
-}
-.datepicker-2f__wrapper-input-field span {
-	margin: 0;
-}
         

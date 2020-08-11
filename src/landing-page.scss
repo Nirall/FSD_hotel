@@ -13,6 +13,10 @@
 	left: 1008px;
 	top: 830px;	
 	font-size: 14px;
+	line-height: 24px;
+	@media (max-width: 1400px) {
+		left: 500px;
+	}
 	@media (max-width: 950px) {
 		display: none;
 	}
@@ -21,12 +25,6 @@
 //--------------------------------------------
 //-----------------MEDIA----------------------
 //--------------------------------------------
-@media (max-width: 1400px) {
-	.phrase-of-day {
-		left: 500px;
-	}
-}
-
 @media (max-width: 950px) {
 	.appartments-finder {
 		margin: 230px auto;

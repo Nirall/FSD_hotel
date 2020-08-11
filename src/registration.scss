@@ -2,7 +2,7 @@
 @import "./blocks/in-form/in-form";
 
 .content-registration {  
-    height: 754px;
+    height: 684px;
     max-width: 1440px;  
     background: no-repeat url("./images/registration.jpg");
     margin: 0 auto;
@@ -17,7 +17,6 @@
     position: absolute;
     top: 89px;
     left: 533px;
-    
 }
 
 @media (max-width: 950px) {
@@ -31,7 +30,7 @@
 }
 
 @media (max-width: 385px) {
-    .registration-form, .in-form {
+    .in-form {
         box-sizing: border-box;
         width: 320px;
         padding: 20px;

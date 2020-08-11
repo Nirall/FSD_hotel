@@ -1,7 +1,7 @@
 .pie-chart {
     width: 130px;
     height: 130px;
-    transform: translateY(0.1px);    
+    position: relative;    
 }
 .pie-chart__votes {
     color: $purple;

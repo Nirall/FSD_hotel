@@ -1,5 +1,5 @@
 try {
-    const dropdownWrapperList = document.getElementsByClassName("appartment-form__dropdown-wrapper");
+    const dropdownWrapperList = document.getElementsByClassName("appartment-form__dropdown-title");
     for (let item of dropdownWrapperList) {               
         item.onclick = () => {            
             const expandButt = item.parentNode.querySelector("span.material-icons");

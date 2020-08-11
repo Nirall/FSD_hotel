@@ -1,65 +1,54 @@
-@import "../appartment-card/__info/appartment-card__info";
-@import "../appartment-card/__info/_forCheck/appartment-card__info_forCheck";
+@import "./blocks/appartment-card/__info/appartment-card__info";
+@import "./blocks/appartment-card/__info/appartment-card__info_forCheck";
+@import "__dropdown/appartments-finder-check__dropdown.scss";
+@import "__items/appartments-finder-check__items.scss";
+@import "__price-item/appartments-finder-check__price-item.scss";
+@import "__price-item-text/appartments-finder-check__price-item-text.scss";
+@import "__price-item-text/appartments-finder-check__price-item-text_lh18px.scss";
+@import "__price-item-i/appartments-finder-check__price-item-i.scss";
+@import "__total/appartments-finder-check__total.scss";
+@import "__total-dot-line/appartments-finder-check__total-dot-line.scss";
+@import "__button-with-arrow/appartments-finder-check__button-with-arrow.scss";
 
 .appartments-finder-check {
+  width: 320px;
+  height: 458px;
+  padding: 22px 30px 30px 30px;
+  background: white;    
+  font: $font-body;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 385px) {
+    box-sizing: border-box;
     width: 320px;
-    height: 458px;
-    padding: 22px 30px 30px 30px;
-    background: white;    
-    font: $font-body;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    height: 480px;
+    padding: 10px;
+    margin: 0 auto;
 
-    //----------PRICE-ITEM-----------------
-    .wrapper-appartments-finder-check__items {
-        padding-top: 11px;
+    .datepicker-2f, .dropdown {
+      width: 300px;
     }
-    .appartments-finder-check__price-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 5px 0;        
+    .dropdown__ul {
+      width: 300px;
     }
-    .appartments-finder-check__price-item__text {
-        width: 241px;
-        display: flex;
-        justify-content: space-between;
+    .dropdown li {
+      width: 292px;
     }
-    .appartments-finder-check__price-item__text_lh18px {
-        line-height: 18px;
-        padding-top: 3px;
-    }    
-    .appartments-finder-check__price-item__i {
-        flex-shrink: 0;
-        display: inline-block;        
-        width: 20px;
-        height: 20px;
-        border: 1px solid $dark25;
-        color: $dark25;
-        border-radius: 50%;
-        text-align: center;
-        font-family: 'Montserrat-Bold';
-        line-height: 20px;
-        margin-left: 5px;
+    .dropdown__item {
+      width: 175px;
     }
-
-    //----------TOTAL-----------------
-    .appartments-finder-check__total {
-        margin-top: 26px;
-        display: flex;
-        justify-content: space-between;
-        font: 19px/24px 'Montserrat-Bold';
+    .dropdown__buttons {
+      width: 300px;
     }
-    .appartments-finder-check__total__dot-line {
-        width: 182px;
-        border-bottom: 1px dotted $dark25;
+    .button-with-arrow {
+      box-sizing: border-box;
+      width: 300px;
     }
-
-    //----------BUTTON-----------------
-    .wrapper-button-with-arrow {
-        margin-top: 19px;
-    }
-    .button-with-arrow span.button-with-arrow__text {    
-        padding-left: 92px;
-    }
+  }
 }
+
+
+
+
+

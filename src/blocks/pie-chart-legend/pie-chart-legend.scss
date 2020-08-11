@@ -1,34 +1,9 @@
+@import "__mark/pie-chart-legend__mark.scss";
+@import "__mark/pie-chart-legend__mark_bad.scss";
+@import "__mark/pie-chart-legend__mark_good.scss";
+@import "__mark/pie-chart-legend__mark_great.scss";
+@import "__mark/pie-chart-legend__mark_normal.scss";
+
 .pie-chart-legend {
     font: $font-body;
-}
-.pie-chart-legend__item__mark {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-//---------------------------------------------
-//---------------MODIFIER: _great--------------
-//---------------------------------------------
-.pie-chart-legend__item__mark_great {
-    background: #FFE39C;
-}
-//---------------------------------------------
-//---------------MODIFIER: _good--------------
-//---------------------------------------------
-.pie-chart-legend__item__mark_good {
-    background: $green;
-}
-//---------------------------------------------
-//---------------MODIFIER: _normal--------------
-//---------------------------------------------
-.pie-chart-legend__item__mark_normal {
-    background: $purple;
-}
-//---------------------------------------------
-//---------------MODIFIER: _bad--------------
-//---------------------------------------------
-.pie-chart-legend__item__mark_bad {
-    background: #919191;
 }

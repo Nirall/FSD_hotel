@@ -1,71 +1,21 @@
+@import "__img/appartment-card__img.scss";
+@import "__img-arrows/appartment-card__img-arrows.scss";
+@import "__img-spots/appartment-card__img-spots.scss";
+@import "__img-spot/appartment-card__img-spot.scss";
+@import "__img-spot/appartment-card__img-spot_fill.scss";
 @import "./__info/appartment-card__info";
+@import "./__info/appartment-card__info_forCheck.scss";
+@import "./__rating/appartment-card__rating.scss";
+@import "./__rating-star/appartment-card__rating-star.scss";
+@import "./__review/appartment-card__review.scss";
 
 .appartment-card {
-    margin: 10.4px 5.6px;    
-    width: 270px;
-    height: 257px;
-    background: white;
-    font-weight: bold;
-    color: $dark50;
-    box-shadow: 0px 10px 20px $dark05;
-    border-radius: 4px;    
-}
-.appartment-card__img {       
-    color: white;
-    height: 151px;
-    border-radius: 4px 4px 0 0;     
-    box-shadow: inset -30px 0px 30px 0px rgba(0, 0, 0, 0.4), 
-                inset 30px 0px 30px 0px rgba(0, 0, 0, 0.4);    
-}
-.appartment-card__img__arrows {
-    display: flex;
-    justify-content: space-between; 
-    padding-top: 53px;
-}
-.appartment-card__img span {    
-    width: 22px;
-    height: 22px;
-    margin: 10px;    
-    color: white;      
-}
-.appartment-card__img__spots {
-    padding: 29px 0 0 212px;
-}
-.appartment-card__img__spot {
-    box-sizing: border-box;    
-    margin: 2px;
-    padding: 0;
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    border: 1px solid white;
-    border-radius: 50%;
-    background: transparent;
-}
-.appartment-card__img__spot_fill {
-    background: white;
-}
-.appartment-card__img__l-arrow {
-    transform: rotate(90deg);
-}
-.appartment-card__img__r-arrow {
-    transform: rotate(-90deg);
-}
-
-.appartment-card__rating {
-    height: 40px;
-    margin: 0px 19px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.appartment-card__rating__star {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    color: #BC9CFF;
-}
-.appartment-card__rating__review {
-    font-family: 'Montserrat';
+  margin: 10.4px 5.6px;    
+  width: 270px;
+  height: 257px;
+  background: white;
+  font-weight: bold;
+  color: $dark50;
+  box-shadow: 0px 10px 20px $dark05;
+  border-radius: 4px;    
 }

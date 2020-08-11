@@ -7,20 +7,20 @@ mixin registration-form
         h1= "Регистрация аккаунта"
         input.text-field(type="text" placeholder= "Имя")
         input.text-field(type="text" placeholder= "Фамилия")
-        .wrapper-radio-buttons
+        .registration-form__radio-buttons
             +radio-button("gender", "Мужчина")
             +radio-button("gender", "Женщина")
         h3= "Дата рождения"
         input.text-field(type="text" placeholder= "ДД.ММ.ГГГГ")
-        .wrapper-h3-service-input
+        .registration-form__service-input
             h3= "Данные для входа в сервис"
-        input.text-field(type="email" placeholder= "Email")
-        input.text-field(type="password" placeholder= "Пароль")
-        .wrapper-toggle-button
+            input.text-field(type="email" placeholder= "Email")
+            input.text-field(type="password" placeholder= "Пароль")
+        .registration-form__toggle-button
             +toggle-button
             p= "Получать спецпредложения"
         +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
-        .wrapper-in
+        .registration-form__wrapper-in
             p= "Уже есть аккаунт на Toxin"
-            //+navbar__button("ВОЙТИ")(modifiers = "navbar__button_for-reg-form")
+            .button.button_for-regform= "войти"
         

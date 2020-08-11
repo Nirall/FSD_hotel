@@ -1,44 +1,30 @@
-@import "../toggle-button/toggle-button";
-@import "../radio-button/radio-button";
-@import "../text-field/text-field";
-@import "../button-with-arrow/button-with-arrow";
+@import "__radio-buttons/registration-form__radio-buttons.scss";
+@import "__service-input/registration-form__service-input.scss";
+@import "__toggle-button/registration-form__toggle-button.scss";
+@import "__wrapper-in/registration-form__wrapper-in.scss";
 
 .registration-form {
+  width: 320px;
+  padding: 40px 30px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);    
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: white;
+  @media (max-width: 385px) {
+    box-sizing: border-box;
     width: 320px;
-    padding: 40px 30px 30px 30px;
-    border: 1px solid rgba(0, 0, 0, 0.12);    
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    background: white;
-
-    h1 {
-        margin-bottom: 14px;
-        letter-spacing: -0.6px;
-    }
+    padding: 20px;
     
+    .text-field {
+      width: 280px;
+    }
+    .button-with-arrow {
+      width: 260px;
+    }
+  }
 }
-.wrapper-radio-buttons {
-    margin: 3px 0 22px 0;
-    display: flex;
-    justify-content: start;
+.registration-form h1 {
+    margin-bottom: 14px;
+    letter-spacing: -0.6px;
 }
-.wrapper-h3-service-input {
-    margin: 15px 0 0 0;
-}
-.wrapper-toggle-button {
-    display: flex;
-    justify-content: start;
-    font: $font-body;
-    margin: 2px 0 21px 0;
-}
-.wrapper-toggle-button p {
-    margin-left: 10px;
-}
-.wrapper-in {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font: $font-body;
-    color: black;
-}
+

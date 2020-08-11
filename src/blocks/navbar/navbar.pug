@@ -3,7 +3,7 @@ mixin navbar
         .navbar__logo
             img(height="40px" alt="логотип" src = "images/logo-toxin.png")
         .navbar__items
-            .navbar__items__menu-collapsed
+            .navbar__collapsed-menu
                 a(href="changeMe")
                     .navbar__item.navbar__item_bold= "О нас"
                 span.material-icons.navbar__item.navbar__expand-butt= "more_horiz"
@@ -22,6 +22,6 @@ mixin navbar
                         span.material-icons= "expand_more"
             .navbar__buttons
                 .button.navbar__button= "войти"
-                .button.button_violet.navbar__button= "зарегистрироваться"
+                .button.navbar__button.button_violet= "зарегистрироваться"
                 a(href="changeMe")
                     .navbar__sign-in= "Юлий Цезарь"

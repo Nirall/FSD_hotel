@@ -1,5 +1,4 @@
 mixin button-with-arrow(text)
-    - var classMod = attributes.modifiers ? "button-with-arrow " + attributes.modifiers : "button-with-arrow"
-    div(class = classMod)
+    .button-with-arrow 
         span.button-with-arrow__text= text
         span.material-icons= "arrow_forward"

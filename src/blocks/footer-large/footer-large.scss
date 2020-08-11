@@ -1,8 +1,8 @@
-@import "__inf-elem-list/footer-large__inf-elem-list.scss";
-@import "__inf-elem-subcribe/footer-large__inf-elem-subcribe.scss";
-@import "__inf-elem-email/footer-large__inf-elem-email.scss";
-@import "__inf-elem-logo/footer-large__inf-elem-logo.scss";
-@import "../logo-toxin/_static/logo-toxin_static.scss";
+@import "__logo/footer-large__logo.scss";
+@import "__list/footer-large__list.scss";
+@import "__list/footer-large__list_width260px.scss";
+@import "__subcribe/footer-large__subcribe.scss";
+@import "__email/footer-large__email.scss";
 
 .footer-large {
   padding: 95px 0 90px 0;

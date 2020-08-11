@@ -1,0 +1,15 @@
+.dropdown__butt {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $dark25;
+  color: $dark50;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  background: white;
+  font-size: 18px;
+  line-height: 18px;
+  cursor: pointer;
+  outline: none;
+}

@@ -1,23 +1,9 @@
+@import "__icon/info-appartment__icon.scss";
+@import "__text-block/info-appartment__text-block.scss";
+@import "__title/info-appartment__title.scss";
+
 .info-appartment {
     display: flex;
     align-items: center;
 }
-.info-appartment__icon {
-    color: $purple;
-    font-size: 48px;
-    margin: 20px 10px 20px 0;
-}
-.info-appartment__text-block {
-    font: $font-body;
-}
-.info-appartment__title {
-    font-family: 'Montserrat-bold';
-}
 
-/*-----------------------------------------
----------MODIFIER: _border -----------
-------------------------------------------*/
-.info-appartment_border {    
-    border-top: 1px solid $dark10;
-    border-bottom: 1px solid $dark10;
-}

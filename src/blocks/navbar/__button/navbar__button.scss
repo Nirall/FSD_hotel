@@ -1,0 +1,20 @@
+.navbar__button {
+  @media (max-width: 670px) {
+    border: 0;
+    justify-content: flex-start;
+    width: 180px;
+    background: white;
+    color: $dark50;
+    font-size: 14px;
+    font-weight: normal;    
+    text-transform: capitalize;
+    margin: 10px;
+    padding: 0;
+  }
+}
+.navbar__button:hover {
+  @media (max-width: 670px) {
+    color: $purple;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+.dropdown__buttons {
+  box-sizing: border-box;
+  height: 48px;
+  width: 320px;
+  position: absolute;
+  top: 174px;
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 7px 0 15px;
+  border: 1px solid $dark50;    
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  background: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.dropdown__buttons_active {
+  display: flex;
+}

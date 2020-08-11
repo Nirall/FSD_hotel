@@ -1,13 +1,14 @@
-include __inf-elem-list/footer-large__inf-elem-list
-include __inf-elem-subcribe/footer-large__inf-elem-subcribe
-include __inf-elem-email/footer-large__inf-elem-email
-include __inf-elem-logo/footer-large__inf-elem-logo
-
+include __list/footer-large__list
+include __subcribe/footer-large__subcribe
+include __email/footer-large__email
 
 mixin footer-large
     .footer-large
-        +footer-large__inf-elem-logo 
-        +footer-large__inf-elem-list("Навигация", ["О нас", "Новости", "Служба поддержки", "Услуги"])
-        +footer-large__inf-elem-list("О нас", ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"])
-        +footer-large__inf-elem-list("Служба поддержки", ["Соглашения", "Сообщества", "Связь с нами"])
-        +footer-large__inf-elem-subcribe            
+        .footer-large__logo
+            img(height="40px" alt="логотип" src = "images/logo-toxin.png")
+            p.
+                Бронирование номеров в лучшем отеле 2019 года по версии ассоциации &#171;Отельные взгляды&#187; 
+        +footer-large__list("Навигация", ["О нас", "Новости", "Служба поддержки", "Услуги"])
+        +footer-large__list("О нас", ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"])
+        +footer-large__list("Служба поддержки", ["Соглашения", "Сообщества", "Связь с нами"])
+        +footer-large__subcribe            

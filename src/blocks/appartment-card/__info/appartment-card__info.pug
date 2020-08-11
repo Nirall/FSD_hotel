@@ -4,11 +4,11 @@ mixin appartment-card__info(number, luxury="", price)
         if (attributes.type == "for-appartments-finder-check")
             classMod += " appartment-card__info_forCheck"
     div(class = classMod)
-        .appartment-card__info__part
-            span.appartment-card__info__number
+        .appartment-card__info-part
+            span.appartment-card__info-number
                 = "№"
                 span= ` ${number}`
-            span.appartment-card__info__luxury= ` ${luxury}`
-        .appartment-card__info__part
-            span.appartment-card__info__price= `${price}₽`
-            span.appartment-card__info__price__dimension= " в сутки"
+            span.appartment-card__info-luxury= ` ${luxury}`
+        .appartment-card__info-part
+            span.appartment-card__info-price= `${price}₽`
+            span.appartment-card__info-price-dimension= " в сутки"

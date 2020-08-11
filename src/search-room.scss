@@ -1,9 +1,6 @@
-@import "./blocks/checkbox-item/checkbox-item.scss";
-@import "./blocks/checkbox-item/_bold/checkbox-item_bold.scss";
 @import "./blocks/appartment-form/appartment-form.scss";
 @import "./blocks/nouislider/nouislider.css";
 @import "./blocks/nouislider/customise.css";
-@import "./blocks/datepicker-1f/datepicker-1f.scss";
 @import "./blocks/appartment-card/appartment-card.scss";
 @import "./blocks/appartment-card/_common/appartment-card_common.scss";
 
@@ -40,7 +37,6 @@
 }
 .search-room__title {
   padding: 1px 0 9px 5px;
-  //letter-spacing: -0.45px;
   text-align: left;
   @media (max-width: 1200px) {
     text-align: center;

@@ -4,6 +4,6 @@ mixin pie-chart-legend
         - var classes = ["_great", "_good", "_normal", "_bad"]
         each item, index in assesment
             .pie-chart-legend__item            
-                span(class= "pie-chart-legend__item__mark pie-chart-legend__item__mark"+classes[index])
-                span(class = "pie-chart-legend__item__text")
+                span(class= "pie-chart-legend__mark pie-chart-legend__mark"+classes[index])
+                span(class = "pie-chart-legend__text")
                     = item

@@ -1,3 +1,5 @@
+@import "__text/button-with-arrow__text.scss";
+
 .button-with-arrow {    
     background: $primGrad;
     width: 302px;
@@ -16,15 +18,10 @@
 .button-with-arrow:hover {
     opacity: 0.5;
 }
-.button-with-arrow__text {
-    flex: 9;
-    text-align: center;
-}
 .button-with-arrow span.material-icons {    
     color: white;
     flex: 1;
     text-align: center;
-    
 }
 
 
