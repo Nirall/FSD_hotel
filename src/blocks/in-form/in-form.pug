@@ -2,11 +2,12 @@ include ../button-with-arrow/button-with-arrow
 
 mixin in-form
     .in-form
-        h1= "Войти"
-        input.text-field(type="email" placeholder= "Email")
-        input.text-field(type="password" placeholder= "Пароль")
-        .wrapper-button-with-arrow
-            +button-with-arrow("ВОЙТИ")
-        .wrapper-in
-            p= "Нет аккаунта на Toxin"
-            //+navbar__button("СОЗДАТЬ")(modifiers = "navbar__button_for-reg-form")
+        form(action="changeme", method="post")
+            h1= "Войти"
+            input.text-field(type="email" placeholder= "Email")
+            input.text-field(type="password" placeholder= "Пароль")
+            button(type = "submit").in-form__button-with-arrow
+                +button-with-arrow("ВОЙТИ")
+            .in-form__wrapper-in
+                p= "Нет аккаунта на Toxin"
+                .button.button_for-regform= "войти"

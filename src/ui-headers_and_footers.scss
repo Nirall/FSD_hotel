@@ -7,21 +7,25 @@
     }    
     .wrapper-navbar2 {
         margin-top: 40px;
+        .navbar .button {
+            display: none;
+        }
+        .navbar__sign-in {
+            display: flex;
+        }
+        .navbar__buttons {
+            margin-right: 90px;
+        }
     }
-    .wrapper-navbar .navbar {
-        position: static;
-    }
-    .wrapper-navbar .navbar .logo-toxin {
-        position: static;
-        margin-right: 275px;
-    }
-    .wrapper-navbar2 .navbar .logo-toxin {
-        margin-right: 456px;
-    }
+    
     .wrapper-footer-large {
         margin-top: 40px;
     }
     .wrapper-footer-medium {
         margin-top: 40px;
+        .footer-medium {
+            display: flex;
+            width: 768px;
+        }
     }
 }

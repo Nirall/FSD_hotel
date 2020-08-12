@@ -1,8 +1,9 @@
 mixin appartments-finder
     .appartments-finder   
-        h1= "Найдем номера под ваши пожелания"
-        +datepicker-2f("прибытие", "выезд")
-        .appartments-finder__dropdown
-            +dropdown("гости", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-        .appartments-finder__button-with-arrow
-            +button-with-arrow("подобрать номер")
+        form(action="changeme", method="post")
+            h1= "Найдем номера под ваши пожелания"
+            +datepicker-2f("прибытие", "выезд")
+            .appartments-finder__dropdown
+                +dropdown("гости", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+            button(type="submit").appartments-finder__button-with-arrow
+                +button-with-arrow("подобрать номер")

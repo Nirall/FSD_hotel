@@ -1,6 +1,11 @@
 @import "__box/toggle-button__box.scss";
 @import "__slider/toggle-button__slider.scss";
 
+.toggle-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 .toggle-button input {
     position: absolute;
     opacity: 0;
@@ -14,10 +19,7 @@
     transform: translateX(20px);
     background: $purple;
 }
-.toggle-button {
-    display: flex;
-    align-items: center;
-}
+
 
 
 

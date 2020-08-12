@@ -4,23 +4,25 @@ include ../button-with-arrow/button-with-arrow
 
 mixin registration-form
     .registration-form
-        h1= "Регистрация аккаунта"
-        input.text-field(type="text" placeholder= "Имя")
-        input.text-field(type="text" placeholder= "Фамилия")
-        .registration-form__radio-buttons
-            +radio-button("gender", "Мужчина")
-            +radio-button("gender", "Женщина")
-        h3= "Дата рождения"
-        input.text-field(type="text" placeholder= "ДД.ММ.ГГГГ")
-        .registration-form__service-input
-            h3= "Данные для входа в сервис"
-            input.text-field(type="email" placeholder= "Email")
-            input.text-field(type="password" placeholder= "Пароль")
-        .registration-form__toggle-button
-            +toggle-button
-            p= "Получать спецпредложения"
-        +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
-        .registration-form__wrapper-in
-            p= "Уже есть аккаунт на Toxin"
-            .button.button_for-regform= "войти"
+        form(action="changeme", method="post")
+            h1= "Регистрация аккаунта"
+            input.text-field(type="text" placeholder= "Имя")
+            input.text-field(type="text" placeholder= "Фамилия")
+            .registration-form__radio-buttons
+                +radio-button("gender", "Мужчина")
+                +radio-button("gender", "Женщина")
+            h3= "Дата рождения"
+            input.text-field(type="text" placeholder= "ДД.ММ.ГГГГ")
+            .registration-form__service-input
+                h3= "Данные для входа в сервис"
+                input.text-field(type="email" placeholder= "Email")
+                input.text-field(type="password" placeholder= "Пароль")
+            .registration-form__toggle-button
+                +toggle-button
+                p= "Получать спецпредложения"
+            button(type="submit")
+                +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
+            .registration-form__wrapper-in
+                p= "Уже есть аккаунт на Toxin"
+                .button.button_for-regform= "войти"
         

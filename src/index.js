@@ -1,3 +1,4 @@
+import "./favicons/favicon";
 import "./index.scss";
 
 import "./blocks/navbar/navbar.js";

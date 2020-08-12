@@ -21,9 +21,9 @@ mixin dropdown(title, placeholder, ...args)
                 li.dropdown__li
                     .dropdown__item= val
                     .dropdown__counter
-                        button.dropdown__butt.dropdown__minus!= "–"                        
+                        button(type="button").dropdown__butt.dropdown__minus!= "–"                        
                         span.dropdown__butt.dropdown__quantity= "0"
-                        button.dropdown__butt.dropdown__plus= "+"
+                        button(type="button").dropdown__butt.dropdown__plus= "+"
         div(class = buttonsClass)
             .dropdown__clear= "очистить"
             .dropdown__apply= "применить"
