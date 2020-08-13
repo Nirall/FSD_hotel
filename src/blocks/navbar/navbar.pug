@@ -6,8 +6,8 @@ mixin navbar
             .navbar__collapsed-menu
                 a(href="changeMe")
                     .navbar__item.navbar__item_bold= "О нас"
-                span.material-icons.navbar__item.navbar__expand-butt= "more_horiz"
-            .navbar__list    
+                span.material-icons.navbar__item.navbar__expand-butt.js-navbar__expand-butt= "more_horiz"
+            .navbar__list.js-navbar__list    
                 a(href="changeMe")
                     .navbar__item
                         ="Услуги"
@@ -20,8 +20,8 @@ mixin navbar
                     .navbar__item
                         ="Соглашения"
                         span.material-icons= "expand_more"
-            .navbar__buttons
-                .button.navbar__button= "войти"
-                .button.navbar__button.button_violet= "зарегистрироваться"
+            .navbar__buttons.js-navbar__buttons 
+                .button.navbar__button.js-in-butt= "войти"
+                .button.navbar__button.button_violet.js-reg-butt= "зарегистрироваться"
                 a(href="changeMe")
                     .navbar__sign-in= "Юлий Цезарь"

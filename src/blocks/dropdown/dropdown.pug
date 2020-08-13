@@ -1,7 +1,7 @@
 mixin dropdown(title, placeholder, ...args)
     -   
         var blockclass = "dropdown"
-        var buttonsClass = "dropdown__buttons"
+        var buttonsClass = "dropdown__buttons js-dropdown__buttons"
 
         if (attributes.width === "266px")
             blockclass += " dropdown_width266px"
@@ -13,17 +13,17 @@ mixin dropdown(title, placeholder, ...args)
 
     div(class = blockclass)
         h3= title        
-        .input-text.dropdown__field
+        .input-text.dropdown__field.js-dropdown__field
             = placeholder
             span.material-icons= "expand_more"   
-        ul.dropdown__ul         
+        ul.dropdown__ul.js-dropdown__ul          
             each val in args
                 li.dropdown__li
                     .dropdown__item= val
                     .dropdown__counter
-                        button(type="button").dropdown__butt.dropdown__minus!= "–"                        
-                        span.dropdown__butt.dropdown__quantity= "0"
-                        button(type="button").dropdown__butt.dropdown__plus= "+"
+                        button(type="button").dropdown__butt.dropdown__minus.js-dropdown__minus!= "–"                        
+                        span.dropdown__butt.dropdown__quantity.js-dropdown__quantity= "0"
+                        button(type="button").dropdown__butt.dropdown__plus.js-dropdown__plus= "+"
         div(class = buttonsClass)
-            .dropdown__clear= "очистить"
-            .dropdown__apply= "применить"
+            .dropdown__clear.js-dropdown__clear= "очистить"
+            .dropdown__apply.js-dropdown__apply= "применить"

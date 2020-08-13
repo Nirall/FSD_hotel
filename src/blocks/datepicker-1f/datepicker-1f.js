@@ -3,7 +3,6 @@ const inDateField_1f = $(".datepicker-1f .datepicker-1f__input-field");
 
 inDateField_1f.datepicker({   
     onSelect: (formattedDate) => {
-        
         let resDate = "";
         if (formattedDate.split(" - ").length > 1) {
             let arrDates = formattedDate.split(" - ");
@@ -11,7 +10,6 @@ inDateField_1f.datepicker({
             resDate = arrDates.join(" - ");
         } else {
             resDate = formattedDate.match(/\d{2}\s[а-яА-Я]{3}/)[0];
-            
         }               
         inDateField_1f.val(resDate);       
     }

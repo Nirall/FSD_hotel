@@ -1,20 +1,29 @@
-import "./images/registration.jpg"
+import "./images/registration.jpg";
 
-
-const inButt = document.querySelector(".navbar .navbar__button");
-const regButt = document.querySelector(".navbar .button_violet");
-const inForm = document.querySelector(".content-registration .wrapper-in-form");
-const regForm = document.querySelector(".content-registration .wrapper-registration-form");
+const inButt = document.querySelector(".js-in-butt");
+const regButt = document.querySelector(".js-reg-butt");
+const inForm = document.querySelector(".js-in-form");
+const regForm = document.querySelector(".js-reg-form");
 
 inButt.onclick = () => {
-    regForm.setAttribute("style", "display: none;");
-    inForm.setAttribute("style", "display: block;");
+    try {
+        regForm.classList.add("wrapper-registration-form_hidden");
+        inForm.classList.add("wrapper-in-form_visibled");
+    } catch {
+        console.log("There are no reg and(or) sign-in forms");
+    }
 }
 
 regButt.onclick = () => {
-    inForm.setAttribute("style", "display: none;");
-    regForm.setAttribute("style", "display: block;");
+    try {
+        regForm.classList.remove("wrapper-registration-form_hidden");
+        inForm.classList.remove("wrapper-in-form_visibled")
+    } catch {
+        console.log("There are no reg and(or) sign-in forms");
+    }
 }
+
+
 
 
 

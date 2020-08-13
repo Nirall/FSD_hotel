@@ -1,6 +1,57 @@
 try {
-    const listMinus = document.getElementsByClassName("dropdown__minus");
-    for (let item of listMinus) {
+    const isGuestsDropdown = function (placeholder) {
+        if (
+            placeholder.innerHTML.split("<span")[0] === "Сколько гостей"
+            || placeholder.innerHTML.split(" ")[0] === "Гостей"
+        ) {
+            return true;
+        }
+
+        return false
+    }
+
+    const isBedsDropdown = function (placeholder) {
+        if (
+            placeholder.innerHTML.split("<span")[0] == "Выберите удобства"
+            || placeholder.innerHTML.split(" ")[0] == "Спален"
+        ) {
+            return true;
+        }
+
+        return false
+    }
+
+    const placeholderChanger = function (quanList, placeholder) {
+        const expand = '<span class = "material-icons">expand_more</span>';
+        if (isGuestsDropdown(placeholder)) {
+            let quanPeople = parseInt(quanList.item(0).innerHTML) + parseInt(quanList.item(1).innerHTML);
+            let quanBaby = parseInt(quanList.item(2).innerHTML);
+            if (quanBaby !== 0) {            
+                placeholder.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
+            } else {
+                if (quanPeople === 0) {
+                    placeholder.innerHTML = "Сколько гостей" + expand;
+                } else {
+                    placeholder.innerHTML = `Гостей - ${quanPeople.toString()}` + expand;
+                }            
+            }     
+        } else if (isBedsDropdown(placeholder)) {
+            let quanRoom = parseInt(quanList.item(0).innerHTML);
+            let quanBed = parseInt(quanList.item(1).innerHTML);            
+            if (quanBed !== 0) {            
+                placeholder.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...`;
+            } else {
+                if (quanRoom === 0) {
+                    placeholder.innerHTML = "Выберите удобства";
+                } else {
+                    placeholder.innerHTML = `Спален - ${quanRoom.toString()}, спать на коврике ...`;
+                }            
+            }     
+        }
+    }
+
+    const listMinus = document.getElementsByClassName("js-dropdown__minus");
+    Array.from(listMinus, (item) => {
         item.onclick = () => {
             let content = item.nextSibling.innerHTML;
             if (content !== "0") {
@@ -8,74 +59,48 @@ try {
                 item.nextSibling.innerHTML = newContent.toString();
             }        
         }
-    }
-    const listPlus = document.getElementsByClassName("dropdown__plus");
-    for (let item of listPlus) {
+    });
+
+    const listPlus = document.getElementsByClassName("js-dropdown__plus");
+    Array.from(listPlus, (item) => {
         item.onclick = () => {        
             let content = item.previousSibling.previousSibling.innerHTML;        
             let newContent = parseInt(content) + 1;               
             item.previousSibling.previousSibling.innerHTML = newContent.toString();                
         }
-    }
-    const listClear = document.getElementsByClassName("dropdown__clear");
-    for (let item of listClear) {
+    });
+
+    const listClear = document.getElementsByClassName("js-dropdown__clear");
+    Array.from(listClear, (item) => {
         item.onclick = () => {
-            for (let quan of item.parentNode.parentNode.querySelectorAll(".dropdown__quantity")) {
-                quan.innerHTML = "0";
-            }        
+            item.parentNode.parentNode.querySelectorAll(".js-dropdown__quantity").forEach((quan) => quan.innerHTML = "0");
         }           
-    }
-    const listApply = document.getElementsByClassName("dropdown__apply");
-    for (let item of listApply) {
-        let placeholder = item.parentNode.parentNode.querySelector(".dropdown__field");        
-        let quanList = item.parentNode.parentNode.querySelectorAll(".dropdown__quantity");
-        const expand = '<span class = "material-icons">expand_more</span>';
+    });
+
+    const listApply = document.getElementsByClassName("js-dropdown__apply");
+    Array.from(listApply, (item) => {
+        let placeholder = item.parentNode.parentNode.querySelector(".js-dropdown__field");        
+        let quanList = item.parentNode.parentNode.querySelectorAll(".js-dropdown__quantity");
         item.onclick = () => {
-            if (placeholder.innerHTML.split("<span")[0] == "Сколько гостей"
-                || placeholder.innerHTML.split(" ")[0] == "Гостей") {
-                let quanPeople = parseInt(quanList.item(0).innerHTML) + parseInt(quanList.item(1).innerHTML);
-                let quanBaby = parseInt(quanList.item(2).innerHTML);
-                if (quanBaby !=0) {            
-                    placeholder.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
-                } else {
-                    if (quanPeople == 0) {
-                        placeholder.innerHTML = "Сколько гостей" + expand;
-                    } else {
-                        placeholder.innerHTML = `Гостей - ${quanPeople.toString()}` + expand;
-                    }            
-                }     
-            } else if (placeholder.innerHTML.split("<span")[0] == "Выберите удобства"
-                || placeholder.innerHTML.split(" ")[0] == "Спален") {
-                let quanRoom = parseInt(quanList.item(0).innerHTML);
-                let quanBed = parseInt(quanList.item(1).innerHTML);            
-                if (quanBed !=0) {            
-                    placeholder.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...`;
-                } else {
-                    if (quanRoom == 0) {
-                        placeholder.innerHTML = "Выберите удобства";
-                    } else {
-                        placeholder.innerHTML = `Спален - ${quanRoom.toString()}, спать на коврике ...`;
-                    }            
-                }     
-            }
-            item.parentNode.parentNode.querySelector(".dropdown__ul").classList.remove("dropdown__ul_active");
+            placeholderChanger(quanList, placeholder);
+            item.parentNode.parentNode.querySelector(".js-dropdown__ul").classList.remove("dropdown__ul_active");
             item.parentNode.parentNode.querySelector(".dropdown__field_active").classList.remove("dropdown__field_active");
-            item.parentNode.parentNode.querySelector(".dropdown__buttons").classList.remove("dropdown__buttons_active");
+            item.parentNode.parentNode.querySelector(".js-dropdown__buttons").classList.remove("dropdown__buttons_active");
         }           
-    }
-    const listField = document.getElementsByClassName("dropdown__field");
-    for (let item of listField) {
+    });
+
+    const listField = document.getElementsByClassName("js-dropdown__field");
+    Array.from(listField, (item) => {
         item.onclick = () => {
-            item.parentNode.querySelector(".dropdown__ul").classList.toggle("dropdown__ul_active");
-            item.parentNode.querySelector(".dropdown__field").classList.toggle("dropdown__field_active");
-            if (!item.parentNode.querySelector(".dropdown__buttons").classList.contains("dropdown__buttons_none")) {
-                item.parentNode.querySelector(".dropdown__buttons").classList.toggle("dropdown__buttons_active");
+            let quanList = item.parentNode.querySelectorAll(".js-dropdown__quantity");
+            placeholderChanger(quanList, item);
+            item.parentNode.querySelector(".js-dropdown__ul").classList.toggle("dropdown__ul_active");
+            item.classList.toggle("dropdown__field_active");
+            if (!item.parentNode.querySelector(".js-dropdown__buttons").classList.contains("dropdown__buttons_none")) {
+                item.parentNode.querySelector(".js-dropdown__buttons").classList.toggle("dropdown__buttons_active");
             }
         }        
-    }  
+    });
 } catch {
-    console.log("There is no dropdown-guests")
+    console.log("There are no dropdowns")
 }
-
-
-
