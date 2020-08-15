@@ -7,10 +7,9 @@ $dark05: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
 $primGrad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
 $font-body: 14px/24px Montserrat, Arial, sans-serif;
 
-
+// Reset CSS
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,7 +30,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -106,19 +105,15 @@ table {
 	white-space: nowrap;
 	direction: ltr;
 	margin: 1px;
-	
 	vertical-align: middle;
 	color: $dark50;
-
-	/* Support for all WebKit browsers. */
+	// Support for all WebKit browsers.
 	-webkit-font-smoothing: antialiased;
-	/* Support for Safari and Chrome. */
+	// Support for Safari and Chrome.
 	text-rendering: optimizeLegibility;
-
-	/* Support for Firefox. */
+	// Support for Firefox.
 	-moz-osx-font-smoothing: grayscale;
-
-	/* Support for IE. */
+	// Support for IE.
 	font-feature-settings: 'liga';
 }
 
@@ -147,7 +142,6 @@ h3 {
 	text-transform: uppercase;
 	color: $dark100;	
 }
-
 a {
 	text-decoration: none;
 	color: $dark50;
@@ -155,11 +149,9 @@ a {
 a:hover {
 	color: $purple;
 }
-
 input {
 	font-family: Montserrat, Arial, sans-serif;
 }
-
 input[type="text"], .input-text {
 	box-sizing: border-box;
 	height: 44px;
@@ -175,7 +167,17 @@ input[type="text"]:focus,
 .input-text:focus {
 	border-color: $dark50;
 }
-
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
+}
 
 @import "./blocks/button/button.scss";
 @import "./blocks/button/button_violet.scss";
@@ -189,7 +191,6 @@ input[type="text"]:focus,
 @import "./blocks/datepicker-2f/datepicker.css";
 @import "./blocks/datepicker-2f/controller-2f.css";
 @import "./blocks/dropdown/dropdown.scss";
-
 @import "./blocks/dropdown/dropdown_width266px.scss";
 @import "./blocks/dropdown/dropdown_without-butts.scss";
 @import "./blocks/button-with-arrow/button-with-arrow.scss";
@@ -201,7 +202,6 @@ input[type="text"]:focus,
 @import "./blocks/nouislider/customise.css";
 @import "./blocks/appartment-card/appartment-card.scss";
 @import "./blocks/appartment-card/appartment-card_common.scss";
-
 @import "./blocks/like-button/like-button.scss";
 @import "./blocks/like-button/like-button_active.scss";
 @import "./blocks/info-appartment/info-appartment.scss";
@@ -210,7 +210,6 @@ input[type="text"]:focus,
 @import './blocks/pie-chart/pie-chart.scss';
 @import './blocks/pie-chart-legend/pie-chart-legend.scss';
 @import './blocks/appartments-finder-check/appartments-finder-check.scss';
-
 @import './blocks/text-field/text-field.scss';
 @import "./blocks/radio-button/radio-button";
 @import "./blocks/toggle-button/toggle-button";
@@ -225,7 +224,3 @@ input[type="text"]:focus,
 @import "ui-cards";
 @import "ui-colors";
 @import "ui-headers_and_footers";
-
-
-
-
