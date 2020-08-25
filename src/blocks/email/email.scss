@@ -1,0 +1,23 @@
+.email {
+	border: 1px solid $dark25;
+	border-radius: 4px;
+
+	&__input{
+		width: 220px;
+		height: 44px;
+		padding: 15px;
+		background: #FFFFFF;
+		border: none;
+		outline: none;    
+		box-sizing: border-box;
+	
+		&::placeholder {
+			color: $dark25;
+		}
+	}
+
+	&__arrow-symbol {
+		margin: 8px;
+		color: #8BA4F9;
+	}
+}

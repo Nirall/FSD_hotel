@@ -7,7 +7,7 @@ mixin appartment-card__info(number, luxury="", price)
         .appartment-card__info-part
             span.appartment-card__info-number
                 = "№"
-                span= ` ${number}`
+                span.appartment-card__number= ` ${number}`
             span.appartment-card__info-luxury= ` ${luxury}`
         .appartment-card__info-part
             span.appartment-card__info-price= `${price}₽`

@@ -5,7 +5,7 @@ include ../button-with-arrow/button-with-arrow
 mixin registration-form
     .registration-form
         form(action="changeme", method="post")
-            h1= "Регистрация аккаунта"
+            h1.registration-form__title= "Регистрация аккаунта"
             input.text-field(type="text" placeholder= "Имя")
             input.text-field(type="text" placeholder= "Фамилия")
             .registration-form__radio-buttons
@@ -19,8 +19,8 @@ mixin registration-form
                 input.text-field(type="password" placeholder= "Пароль")
             .registration-form__toggle-button
                 +toggle-button
-                p= "Получать спецпредложения"
-            button(type="submit")
+                p.registration-form__toggle-button-text= "Получать спецпредложения"
+            button(type="submit").registration-form__button
                 +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
             .registration-form__wrapper-in
                 p= "Уже есть аккаунт на Toxin"

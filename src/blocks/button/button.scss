@@ -13,7 +13,18 @@
   font-weight: bold;
   color: $purple;
   cursor: pointer;
+
+  &_violet {    
+    background: $primGrad;
+    color: #FFFFFF;
+  }
+
+  &_for-regform {  
+    padding: 12px 23px;
+    margin: 0;
+  }
 }
+
 .button:hover {
   opacity: 0.5;
 }

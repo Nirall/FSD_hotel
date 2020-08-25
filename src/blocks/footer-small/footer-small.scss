@@ -1,5 +1,3 @@
-@import "__icons/footer-small__icons.scss";
-
 .footer-small {
   box-sizing: border-box;
   width: 100%;
@@ -13,8 +11,13 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 130px 10px 140px;
+  
   @media (max-width: 1200px) {
     display: none;
+  }
+
+  &__icon {
+    margin: 10px;
   }
 }
 

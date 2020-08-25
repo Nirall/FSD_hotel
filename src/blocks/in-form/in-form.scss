@@ -1,5 +1,5 @@
-@import "__button-with-arrow/in-form__button-with-arrow.scss";
-@import "__wrapper-in/in-form__wrapper-in.scss";
+//@import "__button-with-arrow/in-form__button-with-arrow.scss";
+//@import "__wrapper-in/in-form__wrapper-in.scss";
 
 .in-form {
 	width: 320px;
@@ -8,6 +8,7 @@
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 	background: white;
+
 	@media (max-width: 385px) {
 		box-sizing: border-box;
 		width: 320px;
@@ -16,12 +17,30 @@
 		.text-field {
 			width: 280px;
 		}
+
 		.button-with-arrow {
 			width: 260px;
 		}
 	}
-}
-.in-form h1 {
-	margin-bottom: 14px;
-	letter-spacing: -0.6px;
+
+	&__title {
+		margin-bottom: 14px;
+		letter-spacing: -0.6px;
+	}
+
+	&__button-with-arrow {
+		padding: 0;
+		border: 0;
+		background: 0;
+		margin-top: 15px;
+	}
+
+	&__wrapper-in {
+		margin-top: 28px;
+		margin-bottom: 4px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $dark100;
+	}
 }

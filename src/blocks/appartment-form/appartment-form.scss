@@ -1,19 +1,68 @@
-@import "__dropdown-guests/appartment-form__dropdown-guests.scss";
-@import "__price-slider/appartment-form__price-slider.scss";
-@import "__title-wrapper/appartment-form__title-wrapper.scss";
-@import "__title/appartment-form__title.scss";
-@import "__price/appartment-form__price.scss";
-@import "__slider-description-price/appartment-form__slider-description-price.scss";
-@import "__accessibility/appartment-form__accessibility.scss";
-@import "__more-options/appartment-form__more-options.scss";
-@import "__checkbox-description/appartment-form__checkbox-description.scss";
-@import "__more-options/appartment-form__more-options.scss";
-@import "__dropdown-title/appartment-form__dropdown-title.scss";
-@import "__expand-butt/appartment-form__expand-butt_rotate.scss";
-@import "__checkboxes/appartment-form__checkboxes_dissappear.scss";
+.appartment-form {
+  &__dropdown-guests {
+    margin-top: 20px;
+  }
 
+  &__price-slider {
+    margin: 32px 0 25px 0;
+  }
 
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__title {
+    padding-bottom: 12px;
+  }
+
+  &__price {
+    font-size: 12px;
+    color: $dark50;
+  }
+
+  &__slider-description-price {
+    padding: 0 0 4px 0;
+    font-size: 12px;
+  }
+
+  &__accessibility {
+    margin: 27px 0 25px 0;    
+  }
+
+  &__more-options {
+    padding-top: 19px;
+    cursor: pointer;
+  }
+
+  &__checkbox-description {
+    padding-top: 0;
+    padding-bottom: 4px;
+    margin-left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__more-options {
+    padding-top: 19px;
+    cursor: pointer;
+  }
+
+  &__dropdown-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 9px 10px 0;
+  }
+
+  &__expand-butt_rotate {
+    transform: rotate(180deg);
+  }
+
+  &__checkboxes_dissappear {
+    display: none;
+  }
+}
 
 
 

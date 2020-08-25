@@ -1,15 +1,3 @@
-@import "./blocks/appartment-card/__info/appartment-card__info";
-@import "./blocks/appartment-card/__info/appartment-card__info_forCheck";
-@import "__dropdown/appartments-finder-check__dropdown.scss";
-@import "__items/appartments-finder-check__items.scss";
-@import "__price-item/appartments-finder-check__price-item.scss";
-@import "__price-item-text/appartments-finder-check__price-item-text.scss";
-@import "__price-item-text/appartments-finder-check__price-item-text_lh18px.scss";
-@import "__price-item-i/appartments-finder-check__price-item-i.scss";
-@import "__total/appartments-finder-check__total.scss";
-@import "__total-dot-line/appartments-finder-check__total-dot-line.scss";
-@import "__button-with-arrow/appartments-finder-check__button-with-arrow.scss";
-
 .appartments-finder-check {
   width: 320px;
   height: 458px;
@@ -44,6 +32,74 @@
     .button-with-arrow {
       box-sizing: border-box;
       width: 300px;
+    }
+  }
+
+  &__dropdown {
+    margin-top: 20px;
+  }
+
+  &__items {
+    padding-top: 11px;
+  }
+
+  &__price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 0;        
+  }
+
+  &__price-item-text {
+    width: 241px;
+    display: flex;
+    justify-content: space-between;
+
+    &_lh18px {
+      line-height: 18px;
+      padding-top: 3px;
+    } 
+  }
+
+  &__price-item-i {
+    flex-shrink: 0;
+    display: inline-block;        
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark25;
+    color: $dark25;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 5px;
+  }
+
+  &__total {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  &__total-dot-line {
+    width: 182px;
+    border-bottom: 1px dotted $dark25;
+    @media (max-width: 385px) {
+      width: 160px;
+    }
+  }
+
+  &__button-with-arrow {
+    margin-top: 21px;
+    padding: 0;
+    border: 0;
+    background: 0;
+
+    .button-with-arrow__text {    
+      padding-left: 23px;
     }
   }
 }

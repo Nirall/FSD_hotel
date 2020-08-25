@@ -2,24 +2,43 @@
   width: 200px;
   margin: 0px;
   line-height: 18px;
+
+  &_width260px {
+    width: 260px;
+    padding-bottom: 7px;
+    line-height: 24px;
+  }
 }
 
-.footer-large__list ul {
+.footer-large__list-ul {
   padding-inline-start: 0px;    
   list-style-type: none;
 }
 
-.footer-large__list li {
+.footer-large__list-li {
   padding: 10px 0px;
+
+  &_title {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark100;
+  }
 }
 
-li.footer-large__list-title {
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $dark100;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

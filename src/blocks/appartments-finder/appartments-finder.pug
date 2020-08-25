@@ -1,7 +1,7 @@
 mixin appartments-finder
     .appartments-finder   
         form(action="changeme", method="post")
-            h1= "Найдем номера под ваши пожелания"
+            h1.appartments-finder__title= "Найдем номера под ваши пожелания"
             +datepicker-2f("прибытие", "выезд")
             .appartments-finder__dropdown
                 +dropdown("гости", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")

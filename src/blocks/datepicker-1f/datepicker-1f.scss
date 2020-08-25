@@ -1,6 +1,24 @@
-@import "__wrapper-input-field/datepicker-1f__wrapper-input-field.scss";
-
 .datepicker-1f {
   background: white;
-  width: 266px;       
+  width: 266px;
+  
+  &__wrapper-input-field {
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input-field {
+    font-size: 14px;
+    outline: none;
+    border: 0;
+    padding-left: 14px;
+  }
+
+  &__expand-symbol {
+    padding: 10px 9px 10px 15px;
+    margin: 0;
+  }
 }

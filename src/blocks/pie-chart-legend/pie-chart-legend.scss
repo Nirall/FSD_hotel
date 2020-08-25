@@ -1,9 +1,27 @@
-@import "__mark/pie-chart-legend__mark.scss";
-@import "__mark/pie-chart-legend__mark_bad.scss";
-@import "__mark/pie-chart-legend__mark_good.scss";
-@import "__mark/pie-chart-legend__mark_great.scss";
-@import "__mark/pie-chart-legend__mark_normal.scss";
-
 .pie-chart-legend {
-    font: $font-body;
+  font: $font-body;
+
+  &__mark {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+
+    &_bad {
+      background: #919191;
+    }
+
+    &_good {
+      background: $green;
+    }
+
+    &_great {
+      background: #FFE39C;
+    }
+
+    &_normal {
+      background: $purple;
+    }
+  }
 }

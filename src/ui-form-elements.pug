@@ -2,7 +2,7 @@ extends ui-template
 include blocks/dropdown/dropdown
 include blocks/datepicker-2f/datepicker-2f
 include blocks/datepicker-1f/datepicker-1f
-include blocks/footer-large/__email/footer-large__email
+include blocks/email/email
 include blocks/checkbox-item/checkbox-item
 include blocks/info-appartment/info-appartment
 include blocks/radio-button/radio-button
@@ -37,7 +37,7 @@ block content
                 +datepicker-1f("FILTER DATE DROPDOWN")
             .wrapper-footer-large__inf-elem-email
                 h3= "subscription text field"
-                +footer-large__email
+                +email
             .wrapper-dropdown-beds
                 +dropdown("DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px")
             .wrapper-dropdown-beds_expanded
@@ -171,7 +171,7 @@ block content
             .wrapper-reviews
                 .wrapper-reviews-title
                 - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."                        
-                +visitor-review ("_active", "images/users/1.png", "Мурад Сарафанов", "5 дней назад", "12", text1)                    
+                +visitor-review ("_active", "images/users/1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)                    
 
 
 

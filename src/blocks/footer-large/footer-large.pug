@@ -1,14 +1,18 @@
 include __list/footer-large__list
-include __subcribe/footer-large__subcribe
-include __email/footer-large__email
+include ../email/email
 
 mixin footer-large
     .footer-large
         .footer-large__logo
             img(height="40px" alt="логотип" src = "images/logo-toxin.png")
-            p.
-                Бронирование номеров в лучшем отеле 2019 года по версии ассоциации &#171;Отельные взгляды&#187; 
+            p.footer-large__logo-text.
+                Бронирование номеров в лучшем отеле 2019 года по версии ассоциации &#171;Отельные взгляды&#187;
         +footer-large__list("Навигация", ["О нас", "Новости", "Служба поддержки", "Услуги"])
         +footer-large__list("О нас", ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"])
         +footer-large__list("Служба поддержки", ["Соглашения", "Сообщества", "Связь с нами"])
-        +footer-large__subcribe            
+        .footer-large__subcribe
+            .footer-large__list.footer-large__list_width260px
+                ul.footer-large__list-ul
+                    li.footer-large__list-li.footer-large__list-li_title= "Подписка"                
+                    li.footer-large__list-li= "Получайте специальные предложения и новости сервиса"
+            +email

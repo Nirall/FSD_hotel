@@ -1,9 +1,0 @@
-.navbar__expand-butt {
-  display: none;
-  @media (max-width: 950px) {
-    display: inline-block;
-  }
-}
-.navbar__expand-butt:hover {
-  color: $purple;
-}

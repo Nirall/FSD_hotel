@@ -1,12 +1,14 @@
 .pie-chart {
-    width: 130px;
-    height: 130px;
-    position: relative;    
-}
-.pie-chart__votes {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  
+  &__votes {
     color: $purple;
     position: absolute;
     top: 41px;
     left: 34px;
     text-align: center;
+  }
 }
+

@@ -9,6 +9,9 @@ mixin datepicker-2f(title1= "", title2= "")
         .datepicker-2f__input-col
             h3= title2
             .input-text.datepicker-2f__wrapper-input-field.js-wrapper-input               
-                input(class = "datepicker-2f__out-date-field js-datepicker-2f__out-date-field" placeholder="ДД.ММ.ГГГГ")
-                span.material-icons= "expand_more"              
+                input(
+                    class = "datepicker-2f__input-field js-datepicker-2f__out-date-field"
+                    placeholder="ДД.ММ.ГГГГ"
+                )
+                span.material-icons.datepicker-2f__expand-symbol= "expand_more"              
         

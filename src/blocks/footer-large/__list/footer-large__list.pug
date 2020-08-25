@@ -1,7 +1,7 @@
 mixin footer-large__list(title, items)
     .footer-large__list
-        ul
-            li.footer-large__list-title= title                
+        ul.footer-large__list-ul
+            li.footer-large__list-li.footer-large__list-li_title= title                
             each val in items
                 a(href="changeMe")
-                    li= val
+                    li.footer-large__list-li= val

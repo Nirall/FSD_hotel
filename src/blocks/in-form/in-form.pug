@@ -3,7 +3,7 @@ include ../button-with-arrow/button-with-arrow
 mixin in-form
     .in-form
         form(action="changeme", method="post")
-            h1= "Войти"
+            h1.in-form__title= "Войти"
             input.text-field(type="email" placeholder= "Email")
             input.text-field(type="password" placeholder= "Пароль")
             button(type = "submit").in-form__button-with-arrow

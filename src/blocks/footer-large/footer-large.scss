@@ -1,8 +1,4 @@
-@import "__logo/footer-large__logo.scss";
 @import "__list/footer-large__list.scss";
-@import "__list/footer-large__list_width260px.scss";
-@import "__subcribe/footer-large__subcribe.scss";
-@import "__email/footer-large__email.scss";
 
 .footer-large {
   padding: 95px 0 90px 0;
@@ -15,5 +11,16 @@
   @media (max-width: 1200px) {
     display: none;
   }
+
+  &__logo {
+    padding: 5px 40px 0px 0px;
+    width: 260px;
+    line-height: 24px;
+  }
+  
+  &__logo-text {
+    margin-top: 10px;
+  }
+  
 }
 

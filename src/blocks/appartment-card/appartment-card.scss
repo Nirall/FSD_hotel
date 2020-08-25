@@ -1,13 +1,4 @@
-@import "__img/appartment-card__img.scss";
-@import "__img-arrows/appartment-card__img-arrows.scss";
-@import "__img-spots/appartment-card__img-spots.scss";
-@import "__img-spot/appartment-card__img-spot.scss";
-@import "__img-spot/appartment-card__img-spot_fill.scss";
-@import "./__info/appartment-card__info";
-@import "./__info/appartment-card__info_forCheck.scss";
-@import "./__rating/appartment-card__rating.scss";
-@import "./__rating-star/appartment-card__rating-star.scss";
-@import "./__review/appartment-card__review.scss";
+@import "./blocks/appartment-card/__info/appartment-card__info";
 
 .appartment-card {
   margin: 10.4px 5.6px;    
@@ -17,5 +8,118 @@
   font-weight: bold;
   color: $dark50;
   box-shadow: 0px 10px 20px $dark05;
-  border-radius: 4px;    
+  border-radius: 4px;
+  
+  &_common {
+    .appartment-card__img-arrows {
+      visibility: hidden;
+    }
+    
+    .appartment-card__img {
+      box-shadow: none;
+    }
+  }
+
+  &__img {       
+    color: white;
+    height: 151px;
+    border-radius: 4px 4px 0 0;     
+    box-shadow: inset -30px 0px 30px 0px rgba(0, 0, 0, 0.4), 
+                inset 30px 0px 30px 0px rgba(0, 0, 0, 0.4);    
+  }
+
+  &__img span {    
+    width: 22px;
+    height: 22px;
+    margin: 10px;    
+    color: white;      
+  }
+
+  &__img-arrows {
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 53px;
+  }
+
+  &__img-spots {
+    padding: 29px 0 0 212px;
+  }
+
+  &__img-spot {
+    box-sizing: border-box;    
+    margin: 2px;
+    padding: 0;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  &__img-spot_fill {
+    background: white;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 19px 0px 19px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $dark10;
+    font-weight: bold;
+    color: $dark50;
+  }
+
+  &__info_forCheck {    
+    margin: 21px 0 6px 0;    
+    border-bottom: 0;
+    align-items: flex-end;
+
+    &__info-number span {
+      font-size: 24px;
+      letter-spacing: -1.5px;
+    }       
+  }
+
+  &__info-number {    
+    color: $dark100;    
+  }
+
+  &__info-number > span {
+    font-size: 18px;
+  }
+
+  &__info-luxury {
+    color: $purple;
+    font-size: 12px;
+  }
+
+  &__info-price-dimension {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  &__rating {
+    height: 40px;
+    margin: 0px 19px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__rating-star {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: $purple;
+  }
+
+  &__review {
+    font-family: 'Montserrat';
+    font-weight: normal;
+  }
 }
+

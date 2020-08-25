@@ -6,8 +6,8 @@ mixin like-button (modifier, quantity)
         }
     div(class = classMod)
         if (modifier == "_active")
-            span.material-icons= "favorite"
+            span.material-icons.like-button__icon= "favorite"
             = quantity
         else 
-            span.material-icons= "favorite_border"
+            span.material-icons.like-button__icon= "favorite_border"
             = quantity

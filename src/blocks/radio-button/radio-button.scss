@@ -1,22 +1,43 @@
-@import "__border/radio-button__border.scss";
-@import "__spot/radio-button__spot.scss";
-
 .radio-button {
-    display: flex;
-    align-items: center;
-    font: $font-body;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.radio-button input {
+  display: flex;
+  align-items: center;
+  font: $font-body;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &__input {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
-}
-.radio-button input:checked + .radio-button__border {
+  }
+
+  &__border {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark25;
+    border-radius: 50%;
+    transition: 0.4s;    
+  }
+
+  &__spot {
+    display: inline-block;
+    margin: 3px;
+    width: 12px;
+    height: 12px;
+    background: white;    
+    border-radius: 50%;
+    transition: 0.4s;    
+  }
+
+  &__input:checked + &__border {
     border: 1px solid $purple;
-}
-.radio-button input:checked + .radio-button__border .radio-button__spot {
+  }
+
+  &__input:checked + &__border &__spot {
     background: $purple;
+  }
 }

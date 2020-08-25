@@ -1,24 +1,47 @@
-@import "__box/toggle-button__box.scss";
-@import "__slider/toggle-button__slider.scss";
-
 .toggle-button {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.toggle-button input {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
-}
-.toggle-button input:checked + .toggle-button__box {
+  }
+
+  &__input:checked + &__box {
     border: 1px solid $purple;
-}
-.toggle-button input:checked + .toggle-button__box .toggle-button__slider {
+  }
+
+  &__input:checked + &__box &__slider {
     transform: translateX(20px);
     background: $purple;
+  }
+
+  &__box {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid $dark25;
+    box-sizing: border-box;
+    transition: 0.4s; 
+  }
+
+  &__slider {
+    display: inline-block;
+    margin: 3px;
+    width: 12px;
+    height: 12px;
+    background: $dark25;
+    border-radius: 50%;
+    transition: 0.4s;    
+  }
 }
+
+
+
 
 
 
