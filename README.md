@@ -1,6 +1,10 @@
 # Тестовое задание по верстке FSD
 ### Установка
-В репозитарии уже присутствует итоговая сборка в папке "dist". Для установки клонируйте репозиторий, из папки проекта выполните "npm install", сборка "npm run build".
+Клонирование репозитория "git clone https://github.com/Nirall/FSD_hotel".
+Установка зависимостей "npm install".
+Запуск dev-mode "npm start". Автоматически хостит index.html, для доступа к другим страницам добавлять к пути необходимую страницу. Пример: "http://localhost:3000/search-room.html".
+Сборка билда "npm run build".
+Для публикации на GitHub Pages, к ссылке добавляйте путь до нужной страницы через папку 'dist'. Пример - "https://nirall.github.io/FSD_hotel/dist/room-details.html".
 ### Примеры страниц
 1. [Landing page](https://nirall.github.io/FSD_hotel/dist)
 2. [Search room](https://nirall.github.io/FSD_hotel/dist/search-room.html)

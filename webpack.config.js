@@ -10,8 +10,12 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     devtool: "inline-source-map",
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        port: 3000,
+    },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin,
         new htmlPlugin({
             template: "src/landing-page.pug",
             inject: false,
