@@ -1,4 +1,4 @@
-import "./images/registration.jpg";
+import "../../images/registration.jpg";
 
 const inButt = document.querySelector(".js-in-butt");
 const regButt = document.querySelector(".js-reg-butt");

@@ -17,42 +17,42 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin,
         new htmlPlugin({
-            template: "src/landing-page.pug",
+            template: "src/pages/landing-page/landing-page.pug",
             inject: false,
             filename: "index.html",
         }),
         new htmlPlugin({
-            template: "src/search-room.pug",
+            template: "src/pages/search-room/search-room.pug",
             inject: false,
             filename: "search-room.html",
         }),
         new htmlPlugin({
-            template: "src/room-details.pug",
+            template: "src/pages/room-details/room-details.pug",
             inject: false,
             filename: "room-details.html",
         }),
         new htmlPlugin({
-            template: "src/registration.pug",
+            template: "src/pages/registration/registration.pug",
             inject: false,
             filename: "registration.html",
         }),
         new htmlPlugin({
-            template: "src/ui-form-elements.pug",
+            template: "src/pages/ui-form-elements/ui-form-elements.pug",
             inject: false,
             filename: "ui-form-elements.html",
         }),
         new htmlPlugin({
-            template: "src/ui-cards.pug",
+            template: "src/pages/ui-cards/ui-cards.pug",
             inject: false,
             filename: "ui-cards.html",
         }),
         new htmlPlugin({
-            template: "src/ui-colors.pug",
+            template: "src/pages/ui-colors/ui-colors.pug",
             inject: false,
             filename: "ui-colors.html",
         }),
         new htmlPlugin({
-            template: "src/ui-headers_and_footers.pug",
+            template: "src/pages/ui-headers_and_footers/ui-headers_and_footers.pug",
             inject: false,
             filename: "ui-headers_and_footers.html",
         }),                
