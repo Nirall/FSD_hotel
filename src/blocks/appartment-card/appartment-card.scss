@@ -1,4 +1,4 @@
-@import "./blocks/appartment-card/__info/appartment-card__info";
+@import "./__info/appartment-card__info";
 
 .appartment-card {
   margin: 10.4px 5.6px;    
@@ -110,7 +110,7 @@
     align-items: center;
   }
 
-  &__rating-star {
+  .appartment-card__rating-star {
     margin: 0;
     padding: 0;
     font-size: 24px;

@@ -1,13 +1,12 @@
-import "./index.scss";
+function importAll(r) {
+  r.keys().forEach(r);
+}
 
-import "./favicons/favicon";
-import "./blocks/navbar/navbar.js";
+importAll(require.context("./", true, /\.(js|s?css)$/i));
+
 import "./blocks/datepicker-2f/datepicker.js";
 import "./blocks/datepicker-2f/controller-2f.js";
-import "./blocks/dropdown/dropdown.js";
-import "./search-room.js";
-import "./room-details.js";
-import "./registration.js";
+import "./blocks/datepicker-1f/datepicker-1f.js";
 
 import "./images/logo-toxin.png";
 import "./images/landingpage-bg.jpg";

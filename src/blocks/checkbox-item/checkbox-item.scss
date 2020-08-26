@@ -21,9 +21,24 @@
     opacity: 0
   }
 
-  &__input:checked ~ .checkbox-item__pseudo {    
-    background: no-repeat center url("./blocks/checkbox-item/check-mark.png");
+  &__input:checked ~ .checkbox-item__pseudo {
     border: 1px solid $purple;
+    position: relative;
+    //background: no-repeat center url("images/check-mark.png");
+  }
+
+  &__input:checked ~ .checkbox-item__pseudo:after {
+    display: block;
+    content: '';
+    width: 4px;
+    height: 8px;
+    border: 2px solid $purple;
+    border-top: 0;
+    border-left: 0;
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    transform: rotate(45deg);
   }
 
   &__pseudo {

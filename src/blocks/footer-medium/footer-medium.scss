@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   @media (max-width: 1200px) {
     display: flex;
   }
@@ -20,6 +19,10 @@
   &__text {
     margin: 20px 0 17px 0;
     text-align: center;
+  }
+
+  &__icon {
+    margin: 10px;
   }
 }
 

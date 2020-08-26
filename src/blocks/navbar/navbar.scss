@@ -25,9 +25,10 @@
 
   &__collapsed-menu {
     display: flex;
+    align-items: center;
   }
 
-  &__expand-butt {
+  .navbar__expand-butt {
     display: none;
     @media (max-width: 950px) {
       display: inline-block;

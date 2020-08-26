@@ -10,8 +10,4 @@ import "./images/cards/350.jpg";
 import "./images/cards/666.jpg";
 import "./images/cards/444.jpg";
 import "./images/cards/352.jpg";
-import "./blocks/checkbox-item/checkbox-item.js";
-import "./blocks/appartment-form/appartment-form.js";
-import "./blocks/nouislider/nouislider.js";
-import "./blocks/nouislider/customise.js";
-import "./blocks/datepicker-1f/datepicker-1f.js"
+

@@ -83,8 +83,7 @@ module.exports = {
                                         return `images/users/${url}`;
                                     } else {                                        
                                         return `images/${url}`;
-                                    }     
-                                    
+                                    }
                                 }   
                             }
                         },                
@@ -95,7 +94,12 @@ module.exports = {
                 use: [
                     cssExtract.loader,
                     "css-loader",
-                    "sass-loader",  
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            prependData: `@import 'src/variables.scss';`
+                        }
+                    },  
                 ]
             },                       
             {
