@@ -1,4 +1,4 @@
-.appartment-card {
+.apartment-card {
   margin: 10.4px 5.6px;    
   width: 270px;
   height: 257px;
@@ -9,11 +9,11 @@
   border-radius: 4px;
   
   &_common {
-    .appartment-card__img-arrows {
+    .apartment-card__img-arrows {
       visibility: hidden;
     }
     
-    .appartment-card__img {
+    .apartment-card__img {
       box-shadow: none;
     }
   }
@@ -97,7 +97,7 @@
     align-items: center;
   }
 
-  .appartment-card__rating-star {
+  .apartment-card__rating-star {
     margin: 0;
     padding: 0;
     font-size: 24px;

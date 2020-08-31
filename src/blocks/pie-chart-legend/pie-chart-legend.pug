@@ -1,8 +1,8 @@
 mixin pie-chart-legend
     .pie-chart-legend
-        - var assesment = ["Великолепно", "Хорошо", "Удовлетворительно", "Разочарован"]
+        - var assessment = ["Великолепно", "Хорошо", "Удовлетворительно", "Разочарован"]
         - var classes = ["_great", "_good", "_normal", "_bad"]
-        each item, index in assesment
+        each item, index in assessment
             .pie-chart-legend__item            
                 span(class= "pie-chart-legend__mark pie-chart-legend__mark"+classes[index])
                 span(class = "pie-chart-legend__text")

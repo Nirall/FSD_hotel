@@ -1,10 +1,10 @@
 extends ../../template.pug
 
-include ../../blocks/info-appartment/info-appartment
+include ../../blocks/info-apartment/info-apartment
 include ../../blocks/visitor-review/visitor-review
 include ../../blocks/pie-chart/pie-chart
 include ../../blocks/pie-chart-legend/pie-chart-legend
-include ../../blocks/appartments-finder-check/appartments-finder-check
+include ../../blocks/apartments-finder-check/apartments-finder-check
 
 block content
     - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."
@@ -18,11 +18,11 @@ block content
                 img(src = "images/cards/888_c.jpg" alt = "фото комнаты")
         .room-details__info
             main.room-details__info-left
-                section.room-details__info-appartment
+                section.room-details__info-apartment
                     h2 Сведения о номере
-                    +info-appartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                    +info-appartment("location_city", "Удобство", "Окно в каждой из спален")(type = "with border")
-                    +info-appartment("whatshot", "Уют", "Номер оснащен камином")
+                    +info-apartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                    +info-apartment("location_city", "Удобство", "Окно в каждой из спален")(type = "with border")
+                    +info-apartment("whatshot", "Уют", "Номер оснащен камином")
                 section.room-details__pie-chart
                     h2 Впечатления от номера
                     .room-details__pie-chart-graph
@@ -49,5 +49,5 @@ block content
                         h2 Отмена
                         = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
             aside.room-details__info-right
-                +appartments-finder-check
+                +apartments-finder-check
 

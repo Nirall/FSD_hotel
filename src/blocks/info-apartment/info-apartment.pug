@@ -1,0 +1,11 @@
+mixin info-apartment (icon, title, text)
+    -
+        var classMod = "info-apartment"
+        if (attributes.type == "with border") {
+            classMod += " info-apartment_border"
+        }
+    div(class = classMod)
+        span.material-icons.info-apartment__icon= icon
+        .info-apartment__text-block
+            .info-apartment__title= title
+            .info-apartment__text= text

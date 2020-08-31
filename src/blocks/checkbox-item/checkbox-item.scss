@@ -24,7 +24,6 @@
   &__input:checked ~ .checkbox-item__pseudo {
     border: 1px solid $purple;
     position: relative;
-    //background: no-repeat center url("images/check-mark.png");
   }
 
   &__input:checked ~ .checkbox-item__pseudo:after {

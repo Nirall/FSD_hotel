@@ -1,9 +1,9 @@
-mixin appartments-finder
-    .appartments-finder   
+mixin apartments-finder
+    .apartments-finder   
         form(action="changeme", method="post")
-            h1.appartments-finder__title= "Найдем номера под ваши пожелания"
+            h1.apartments-finder__title= "Найдем номера под ваши пожелания"
             +datepicker-2f("прибытие", "выезд")
-            .appartments-finder__dropdown
+            .apartments-finder__dropdown
                 +dropdown("гости", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-            button(type="submit").appartments-finder__button-with-arrow
+            button(type="submit").apartments-finder__button-with-arrow
                 +button-with-arrow("подобрать номер")

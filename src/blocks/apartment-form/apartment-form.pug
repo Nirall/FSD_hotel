@@ -1,31 +1,31 @@
-mixin appartment-form
-    .appartment-form        
+mixin apartment-form
+    .apartment-form        
         +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
-        .appartment-form__dropdown-guests               
+        .apartment-form__dropdown-guests               
             +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(width = "266px")
-        .appartment-form__price-slider
-            .appartment-form__title-wrapper
-                h3.appartment-form__title= "диапазон цены"
-                .appartment-form__price(id = "form-price")= ""
+        .apartment-form__price-slider
+            .apartment-form__title-wrapper
+                h3.apartment-form__title= "диапазон цены"
+                .apartment-form__price(id = "form-price")= ""
             .slider(id = "slider")
-            p.appartment-form__slider-description-price= "Стоимость за сутки пребывания в номере"
-        .appartment-form__options
-            h3.appartment-form__title= "checkbox buttons"
+            p.apartment-form__slider-description-price= "Стоимость за сутки пребывания в номере"
+        .apartment-form__options
+            h3.apartment-form__title= "checkbox buttons"
             +checkbox-item("Можно курить")
             +checkbox-item("Можно с питомцами")
             +checkbox-item("Можно пригласить гостей <br> (до 10 человек)")
-        .appartment-form__accessibility
-            h3.appartment-form__title= "доступность"
+        .apartment-form__accessibility
+            h3.apartment-form__title= "доступность"
             +checkbox-item("Широкий коридор")(style = "bold")
-            p.appartment-form__checkbox-description!= "Ширина коридоров в номере <br> не менее 91 см."
+            p.apartment-form__checkbox-description!= "Ширина коридоров в номере <br> не менее 91 см."
             +checkbox-item("Помошник для инвалидов")(style = "bold")
-            p.appartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
+            p.apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
         +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px")
-        .appartment-form__more-options
-            .appartment-form__dropdown-title
+        .apartment-form__more-options
+            .apartment-form__dropdown-title
                 h3= "дополнительные удобства"
-                span.material-icons.appartment-form__expand-butt= "expand_less"
-            .appartment-form__checkboxes   
+                span.material-icons.apartment-form__expand-butt= "expand_less"
+            .apartment-form__checkboxes   
                 +checkbox-item("Завтрак")
                 +checkbox-item("Письменный стол")
                 +checkbox-item("Стул для кормления")

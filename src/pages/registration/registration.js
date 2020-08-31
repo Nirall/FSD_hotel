@@ -8,7 +8,7 @@ const regForm = document.querySelector(".js-reg-form");
 inButt.onclick = () => {
     try {
         regForm.classList.add("wrapper-registration-form_hidden");
-        inForm.classList.add("wrapper-in-form_visibled");
+        inForm.classList.add("wrapper-in-form_visible");
     } catch {
         console.log("There are no reg and(or) sign-in forms");
     }
@@ -17,7 +17,7 @@ inButt.onclick = () => {
 regButt.onclick = () => {
     try {
         regForm.classList.remove("wrapper-registration-form_hidden");
-        inForm.classList.remove("wrapper-in-form_visibled")
+        inForm.classList.remove("wrapper-in-form_visible")
     } catch {
         console.log("There are no reg and(or) sign-in forms");
     }

@@ -1,0 +1,44 @@
+mixin apartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
+    - 
+        var classMod = "apartment-card"
+        if (attributes.type == "common")
+            classMod += " apartment-card_common"
+    div(class = classMod)
+        .apartment-card__img(style = `background: url(${img}) no-repeat;`)
+            .apartment-card__img-arrows
+                span.material-icons= "chevron_left"
+                span.material-icons= "chevron_right"
+            .apartment-card__img-spots
+                .apartment-card__img-spot.apartment-card__img-spot_fill
+                .apartment-card__img-spot
+                .apartment-card__img-spot   
+                .apartment-card__img-spot
+        .apartment-card__info
+            .apartment-card__info-part
+                span.apartment-card__info-number
+                    = "№"
+                    span.apartment-card__number= ` ${number}`
+                span.apartment-card__info-luxury= ` ${luxury}`
+            .apartment-card__info-part
+                span.apartment-card__info-price= `${price}₽`
+                span.apartment-card__info-price-dimension= " в сутки"
+        .apartment-card__rating
+            .apartment-card__rating-stars
+                if stars > 6
+                    - stars = 5                    
+                if stars < 0
+                    - stars = 0                
+                - let n = 0                
+                while n < stars
+                    - n++
+                    span.material-icons.apartment-card__rating-star= "star"
+                - let k = 5 - n
+                    while k > 0                            
+                        span.material-icons.apartment-card__rating-star= "star_border"
+                        - k--
+            .apartment-card__reviews
+                span= reviews
+                span.apartment-card__review= " Отзывов"
+
+
+

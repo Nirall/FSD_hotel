@@ -2,24 +2,24 @@ extends ../../ui-template
 
 include ../../blocks/datepicker-2f/datepicker-2f
 include ../../blocks/dropdown/dropdown
-include ../../blocks/appartments-finder/appartments-finder
+include ../../blocks/apartments-finder/apartments-finder
 include ../../blocks/button-with-arrow/button-with-arrow
 include ../../blocks/registration-form/registration-form
-include ../../blocks/appartments-finder-check/appartments-finder-check
+include ../../blocks/apartments-finder-check/apartments-finder-check
 include ../../blocks/in-form/in-form
-include ../../blocks/appartment-card/appartment-card
+include ../../blocks/apartment-card/apartment-card
 
 
 block content
     .content-ui-cards
         .left-col
-            .wrapper-appartments-finder
-                +appartments-finder
+            .wrapper-apartments-finder
+                +apartments-finder
             .wrapper-registration-form
                 +registration-form
         .middle-col
-            .wrapper-appartments-finder-check
-                +appartments-finder-check
+            .wrapper-apartments-finder-check
+                +apartments-finder-check
             .wrapper-in-form
                 +in-form
         .right-col
@@ -27,9 +27,9 @@ block content
                 .datepicker-2f
                     div(class = "datepicker-here datepicker-2f__input-field" id = "inDateField" inline = "true" type="text"
                     data-range="true" data-multiple-dates-separator = " - " clearButton = "true" placeholder="ДД.ММ.ГГГГ")
-            .wrapper-appartment-card1
-                +appartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
-            .wrapper-appartment-card2
-                +appartment-card("images/cards/840.jpg", "840", "", "9 900", 4, 65)(type = "common")
+            .wrapper-apartment-card
+                +apartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
+            .wrapper-apartment-card
+                +apartment-card("images/cards/840.jpg", "840", "", "9 900", 4, 65)(type = "common")
                 
                     
