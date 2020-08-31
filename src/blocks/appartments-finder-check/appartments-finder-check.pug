@@ -1,4 +1,3 @@
-include ../appartment-card/__info/appartment-card__info
 include ../datepicker-2f/datepicker-2f
 include ../dropdown/dropdown
 include ../button-with-arrow/button-with-arrow
@@ -6,7 +5,15 @@ include ../button-with-arrow/button-with-arrow
 mixin appartments-finder-check 
     .appartments-finder-check
         form(action="changeme", method="post")
-            +appartment-card__info(888, "ЛЮКС", "9 990")(type = "for-appartments-finder-check")       
+            .appartments-finder-check__info
+                .appartments-finder-check__info-part
+                    span.appartments-finder-check__info-number
+                        = "№"
+                        span.appartments-finder-check__number= ` 888`
+                    span.appartments-finder-check__info-luxury= ` ЛЮКС`
+                .appartments-finder-check__info-part
+                    span.appartments-finder-check__info-price= `9 990₽`
+                    span.appartments-finder-check__info-price-dimension= " в сутки"
             +datepicker-2f("ПРИБЫТИЕ", "ВЫЕЗД")
             .appartments-finder-check__dropdown
                 +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")

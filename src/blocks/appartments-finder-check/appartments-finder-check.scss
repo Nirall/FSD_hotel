@@ -6,14 +6,13 @@
   font: $font-body;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  
+
   @media (max-width: 385px) {
     box-sizing: border-box;
     width: 320px;
     height: 480px;
     padding: 10px;
     margin: 0 auto;
-
     .datepicker-2f, .dropdown {
       width: 300px;
     }
@@ -33,6 +32,36 @@
       box-sizing: border-box;
       width: 300px;
     }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 21px 0 6px 0;
+    padding-bottom: 11px;
+    font-weight: bold;
+    color: $dark50;
+  }
+
+  &__info-number {
+    font-size: 14px;
+    color: $dark100; 
+  }
+
+  &__number {
+    font-size: 24px;
+    letter-spacing: -1.5px;
+  }
+
+  &__info-luxury {
+    color: $purple;
+    font-size: 12px;
+  }
+
+  &__info-price-dimension {
+    font-size: 12px;
+    font-weight: normal;
   }
 
   &__dropdown {

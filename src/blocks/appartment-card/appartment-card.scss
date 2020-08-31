@@ -1,5 +1,3 @@
-@import "./__info/appartment-card__info";
-
 .appartment-card {
   margin: 10.4px 5.6px;    
   width: 270px;
@@ -72,22 +70,11 @@
     color: $dark50;
   }
 
-  &__info_forCheck {    
-    margin: 21px 0 6px 0;    
-    border-bottom: 0;
-    align-items: flex-end;
-
-    &__info-number span {
-      font-size: 24px;
-      letter-spacing: -1.5px;
-    }       
-  }
-
   &__info-number {    
     color: $dark100;    
   }
 
-  &__info-number > span {
+  &__number {
     font-size: 18px;
   }
 

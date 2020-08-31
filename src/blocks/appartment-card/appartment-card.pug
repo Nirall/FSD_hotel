@@ -1,4 +1,3 @@
-include ./__info/appartment-card__info
 mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
     - 
         var classMod = "appartment-card"
@@ -13,8 +12,16 @@ mixin appartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
                 .appartment-card__img-spot.appartment-card__img-spot_fill
                 .appartment-card__img-spot
                 .appartment-card__img-spot   
-                .appartment-card__img-spot            
-        +appartment-card__info(number, luxury, price)
+                .appartment-card__img-spot
+        .appartment-card__info
+            .appartment-card__info-part
+                span.appartment-card__info-number
+                    = "№"
+                    span.appartment-card__number= ` ${number}`
+                span.appartment-card__info-luxury= ` ${luxury}`
+            .appartment-card__info-part
+                span.appartment-card__info-price= `${price}₽`
+                span.appartment-card__info-price-dimension= " в сутки"
         .appartment-card__rating
             .appartment-card__rating-stars
                 if stars > 6
