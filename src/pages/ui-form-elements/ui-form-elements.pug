@@ -12,140 +12,140 @@ include ../../blocks/button-with-arrow/button-with-arrow
 include ../../blocks/visitor-review/visitor-review
 
 block content
-    .content-ui-form-elements
-        .left-col
-            .wrapper-text-field
-                .wrapper-title-text-field
+    .ui-form-elements
+        .ui-form-elements__left-col
+            .ui-form-elements__text-field
+                .ui-form-elements__title-text-field
                     h3= "text field"
-                    h3.h3-grey= "default"
+                    h3.ui-form-elements__h3_grey= "default"
                 input.text-field(type="text" placeholder="Email")
-            .wrapper-text-field
-                .wrapper-title-text-field
+            .ui-form-elements__text-field
+                .ui-form-elements__title-text-field
                     h3= "text field"
-                    h3.h3-grey= "hover / focus"
+                    h3.ui-form-elements__h3_grey= "hover / focus"
                 input.text-field.text-field_hover(type="text" value="This is pretty awesome")
-            .wrapper-dropdown-guests
+            .ui-form-elements__dropdown-guests
                 +dropdown("DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-            .wrapper-text-field
-                .wrapper-title-text-field
+            .ui-form-elements__text-field
+                .ui-form-elements__title-text-field
                     h3= "masked text field"
-                    h3.h3-grey= "default"
+                    h3.ui-form-elements__h3_grey= "default"
                 input.text-field(type="text" placeholder="ДД.ММ.ГГГГ")
-            .wrapper-datepicker-2f
+            .ui-form-elements__datepicker-2f
                 +datepicker-2f("DATE DROPDOWN", "DATE DROPDOWN")
-            .wrapper-datepicker-1f
+            .ui-form-elements__datepicker-1f
                 +datepicker-1f("FILTER DATE DROPDOWN")
-            .wrapper-footer-large__inf-elem-email
-                h3= "subscription text field"
+            .ui-form-elements__email
+                h3.ui-form-elements__email-h3= "subscription text field"
                 +email
-            .wrapper-dropdown-beds
+            .ui-form-elements__dropdown-beds
                 +dropdown("DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px")
-            .wrapper-dropdown-beds_expanded
+            .ui-form-elements__dropdown-beds.js-ui-form-elements__dropdown_expanded
                 +dropdown("DROPDOWN", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px")
-            .wrapper-more-options_collapsed
-                .apartment-form__wrapper-checkbox-item__more-options
-                    .apartment-form__dropdown-title
-                        h3= "EXPANDABLE CHECKBOX LIST"
-                        span.material-icons.apartment-form__expand-butt.apartment-form__expand-butt_rotate= "expand_less"
-                    .apartment-form__checkboxes.apartment-form__checkboxes_dissappear   
-                        +checkbox-item("Завтрак")
-                        +checkbox-item("Письменный стол")
-                        +checkbox-item("Стул для кормления")
-                        +checkbox-item("Кроватка")
-                        +checkbox-item("Телевизор")
-                        +checkbox-item("Шампунь")
-                        +checkbox-item("Телевизор")
-                        +checkbox-item("Шампунь")
-            .wrapper-more-options
-                .apartment-form__wrapper-checkbox-item__more-options
-                    .apartment-form__dropdown-title
-                        h3= "EXPANDABLE CHECKBOX LIST"
-                        span.material-icons.apartment-form__expand-butt= "expand_less"
-                    .apartment-form__checkboxes   
-                        +checkbox-item("Завтрак")
-                        +checkbox-item("Письменный стол")
-                        +checkbox-item("Стул для кормления")
-                        +checkbox-item("Кроватка")
-                        +checkbox-item("Телевизор")
-                        +checkbox-item("Шампунь")
-                        +checkbox-item("Телевизор")
-                        +checkbox-item("Шампунь")
-            .wrapper-info-apartment   
+            .ui-form-elements__more-options.ui-form-elements__more-options_collapsed.js-ui-form-elements__more-options_collapsed
+                .apartment-form__dropdown-title
+                    h3= "EXPANDABLE CHECKBOX LIST"
+                    span.material-icons.apartment-form__expand-butt.apartment-form__expand-butt_rotate= "expand_less"
+                .apartment-form__checkboxes.apartment-form__checkboxes_dissappear 
+                    +checkbox-item("Завтрак")
+                    +checkbox-item("Письменный стол")
+                    +checkbox-item("Стул для кормления")
+                    +checkbox-item("Кроватка")
+                    +checkbox-item("Телевизор")
+                    +checkbox-item("Шампунь")
+                    +checkbox-item("Телевизор")
+                    +checkbox-item("Шампунь")
+            .ui-form-elements__more-options
+                .apartment-form__dropdown-title
+                    h3= "EXPANDABLE CHECKBOX LIST"
+                    span.material-icons.apartment-form__expand-butt= "expand_less"
+                .apartment-form__checkboxes   
+                    +checkbox-item("Завтрак")
+                    +checkbox-item("Письменный стол")
+                    +checkbox-item("Стул для кормления")
+                    +checkbox-item("Кроватка")
+                    +checkbox-item("Телевизор")
+                    +checkbox-item("Шампунь")
+                    +checkbox-item("Телевизор")
+                    +checkbox-item("Шампунь")
+            .ui-form-elements__info-apartment   
                 +info-apartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
                 +info-apartment("location_city", "Удобство", "Окно в каждой из спален")(type = "with border")
-        .middle-right-col
-            .middle-col
-                .apartment-form__wrapper-checkbox-item__options
-                    h3= "CHECKBOX BUTTONS"
+        .ui-form-elements__middle-right-col
+            .ui-form-elements__middle-col
+                .ui-form-elements__checkbox-buttons
+                    h3.ui-form-elements__checkbox-buttons-h3= "CHECKBOX BUTTONS"
                     +checkbox-item("Можно курить")
                     +checkbox-item("Можно с питомцами")
                     +checkbox-item("Можно пригласить гостей <br> (до 10 человек)")
-                .wrapper-radio-buttons-block
+                .ui-form-elements__radio-buttons-block
                     h3= "radio buttons"
-                    .wrapper-radio-buttons
+                    .ui-form-elements__radio-buttons
                         +radio-button("gender", "Мужчина")
                         +radio-button("gender", "Женщина")
-                .wrapper-toggle-buttons-block
-                    h3= "toggle"
-                    .wrapper-toggle-button
+                .ui-form-elements__toggle-buttons
+                    h3.ui-form-elements__toggle-buttons-title= "toggle"
+                    .ui-form-elements__toggle-button
                         +toggle-button
-                        p= "Получать спецпредложения"
-                    .wrapper-toggle-button
+                        p.ui-form-elements__toggle-button-text= "Получать спецпредложения"
+                    .ui-form-elements__toggle-button
                         +toggle-button
-                        p= "Получать спецпредложения"
-                .wrapper-like-buttons-block
-                    h3= "like button"
-                    .wrapper-like-button
-                        +like-button("", 2)
-                        +like-button("_active", 12)
-                .wrapper-stars-block
+                        p.ui-form-elements__toggle-button-text= "Получать спецпредложения"
+                .ui-form-elements__like-buttons-block
+                    h3.ui-form-elements__like-buttons-title= "like button"
+                    .ui-form-elements__like-buttons
+                        .ui-form-elements__like-button
+                            +like-button("", 2)
+                        .ui-form-elements__like-button
+                            +like-button("_active", 12)
+                .ui-form-elements__rate-button
                     h3= "rate button"
-                    .stars-block
-                        .stars
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star_border"
-                        .stars
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                            span.material-icons.apartment-card__rating-star= "star"
-                .wrapper-dropdown-guests_expanded
+                    .ui-form-elements__stars-block
+                        .ui-form-elements__stars
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star_border"
+                        .ui-form-elements__stars
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                            span.material-icons.ui-form-elements__star= "star"
+                .ui-form-elements__dropdown-guests-expanded.js-ui-form-elements__dropdown_expanded
                     +dropdown("DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-                .wrapper-rich-checkbox-buttons
-                    h3= "RICH CHECKBOX BUTTONS"
+                .ui-form-elements__rich-checkbox-buttons
+                    h3.ui-form-elements__rich-checkbox-buttons-title= "RICH CHECKBOX BUTTONS"
                     +checkbox-item("Широкий коридор")(style = "bold")
                     .apartment-form__checkbox-description!= "Ширина коридоров в номере <br> не менее 91 см."
                     +checkbox-item("Помошник для инвалидов")(style = "bold")
                     .apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
-            .right-col
-                .wrapper-slider
+            .ui-form-elements__right-col
+                .ui-form-elements__slider
                     .apartment-form__price-slider
                         .apartment-form__title-wrapper
-                            h3.apartment-form__title= "RANGE SLIDER"
+                            h3.ui-form-elements__apartment-form-title= "RANGE SLIDER"
                             .apartment-form__price(id = "form-price")= ""
                         .slider(id = "slider")
-                .wrapper-buttons
+                .ui-form-elements__buttons
                     h3= "buttons"
-                    .wrapper-buttons-row.wrapper-buttons-row-violet
-                        .button.button_violet= "CLICK ME"
-                        .wrapper-button-hover
-                            .button.button_violet= "CLICK ME"
-                    .wrapper-buttons-row
-                        .button= "CLICK ME"
-                        .wrapper-button-hover
-                            .button= "CLICK ME"
-                    .wrapper-buttons-row.wrapper-buttons-row_last
-                        .button-without.button-without_hover
-                            h3= "CLICK ME"
-                        .button-without
-                            h3= "CLICK ME"
-                    .wrapper-button-with-arrow
+                    .ui-form-elements__buttons-row.ui-form-elements__buttons-row_violet
+                        .button.button_violet.button_for-ui= "CLICK ME"
+                        .ui-form-elements__button_hover
+                            .button.button_violet.button_for-ui= "CLICK ME"
+                    .ui-form-elements__buttons-row
+                        .button.button_for-ui= "CLICK ME"
+                        .ui-form-elements__button_hover
+                            .button.button_for-ui= "CLICK ME"
+                    .ui-form-elements__buttons-row.ui-form-elements__buttons-row_last
+                        .ui-form-elements__button-without
+                            h3.ui-form-elements__button-without-text= "CLICK ME"
+                        .ui-form-elements__button-without
+                            h3.ui-form-elements__button-without-text.ui-form-elements__button-without-text_hover= "CLICK ME"
+                    .ui-form-elements__button-with-arrow
                         +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
-                .wrapper-pagination
+                .ui-form-elements__pagination
                     h3= "pagination"
                     .search-room__pages
                         button.search-room__button.search-room__button_violet= 1
@@ -155,45 +155,20 @@ block content
                         button.search-room__button= 15                
                         button.material-icons.search-room__button.search-room__button_green= "arrow_forward"
                     .search-room__pages-comment= "1 – 12 из 100+ вариантов аренды"
-                .wrapper-dropdown-guests_expanded_2
+                .ui-form-elements__dropdown-guests-expanded2.js-ui-form-elements__dropdown_expanded
                     +dropdown("DROPDOWN", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
-                .wrapper-bullet-list
+                .ui-form-elements__bullet-list
                     .room-details__additional
                         .room-details__rules
-                            h3 BULLET LIST
-                            ul
-                                li
+                            h3.ui-form-elements__rules-title BULLET LIST
+                            ul.room-details__rules-ul
+                                li.room-details__rules-ul-li
                                     div= "Нельзя с питомцами"
-                                li 
+                                li.room-details__rules-ul-li 
                                     div= "Без вечеринок и мероприятий"
-                                li 
+                                li.room-details__rules-ul-li 
                                     div= "Время прибытия — после 13:00, а выезд до 12:00"
-            .wrapper-reviews
-                .wrapper-reviews-title
-                - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."                        
-                +visitor-review ("_active", "images/users/1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)                    
-
-    script.
-        document.querySelector(".wrapper-dropdown-beds_expanded .dropdown-without-butts__field").classList.add("dropdown-without-butts__field_active");
-        document.querySelector(".wrapper-dropdown-beds_expanded ul").classList.add("dropdown-without-butts__ul_active");
-        document.querySelector(".wrapper-more-options_collapsed .apartment-form__dropdown-wrapper span.material-icons").classList.add("apartment-form__expand-butt_rotate");
-        document.querySelector(".wrapper-more-options_collapsed .apartment-form__checkboxes").setAttribute("style", "display: none;");
-        document.querySelector(".wrapper-dropdown-guests_expanded .dropdown__field").classList.add("dropdown__field_active");
-        document.querySelector(".wrapper-dropdown-guests_expanded .dropdown__ul ").classList.add("dropdown__ul_active");
-        document.querySelector(".wrapper-dropdown-guests_expanded .dropdown__buttons").setAttribute("style", "display: flex");
-        document.querySelector(".wrapper-dropdown-guests_expanded_2 .dropdown__field").classList.add("dropdown__field_active");
-        document.querySelector(".wrapper-dropdown-guests_expanded_2 .dropdown__ul ").classList.add("dropdown__ul_active");
-        document.querySelector(".wrapper-dropdown-guests_expanded_2 .dropdown__buttons").setAttribute("style", "display: flex");
-       
-        
-            
-
-    
-    
-    
-    
-    
-
-
-
-
+            .ui-form-elements__reviews
+                .ui-form-elements__reviews-title
+                    - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару – никто не жаловался из соседей."                        
+                    +visitor-review ("_active", "images/users/1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)                    

@@ -52,7 +52,7 @@ module.exports = {
             filename: "ui-colors.html",
         }),
         new htmlPlugin({
-            template: "src/pages/ui-headers_and_footers/ui-headers_and_footers.pug",
+            template: "src/pages/ui-headers/ui-headers.pug",
             inject: false,
             filename: "ui-headers_and_footers.html",
         }),                

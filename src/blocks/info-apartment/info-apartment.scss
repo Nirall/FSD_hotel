@@ -1,24 +1,24 @@
 .info-apartment {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    &_border {    
-        border-top: 1px solid $dark10;
-        border-bottom: 1px solid $dark10;
-    }
+  &_border {    
+    border-top: 1px solid $dark10;
+    border-bottom: 1px solid $dark10;
+  }
 
-    .info-apartment__icon {
-        color: $purple;
-        font-size: 48px;
-        margin: 20px 10px 20px 0;
-    }
+  .info-apartment__icon {
+    color: $purple;
+    font-size: 48px;
+    margin: 20px 10px 20px 0;
+  }
 
-    &__text-block {
-        line-height: 24px;
-    }
+  &__text-block {
+    line-height: 24px;
+  }
 
-    &__title {
-        font-weight: bold;
-    }
+  &__title {
+    font-weight: bold;
+  }
 }
 

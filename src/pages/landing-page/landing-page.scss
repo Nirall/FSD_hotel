@@ -1,4 +1,4 @@
-.content-landing-page {
+.landing-page {
 	margin: 0 auto;
 	max-width: 1440px;
 	height: 760px;
@@ -7,19 +7,21 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;	
+
+	&__phrase-of-day {
+		width: 297px;
+		text-align: right;
+		margin-left: 1010px;
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 24px;
+		@media (max-width: 1400px) {
+			margin-left: 500px;
+		}
+		@media (max-width: 950px) {
+			display: none;
+		}
+	}
 }
 
-.phrase-of-day {
-	width: 297px;
-	text-align: right;
-	margin-left: 1010px;
-	margin-bottom: 20px;
-	font-size: 14px;
-	line-height: 24px;
-	@media (max-width: 1400px) {
-		margin-left: 500px;
-	}
-	@media (max-width: 950px) {
-		display: none;
-	}
-}
+

@@ -1,27 +1,32 @@
-.content-ui-cards {
-    display: flex;
-    flex-wrap: wrap;
+.ui-cards {
+  display: flex;
+  flex-wrap: wrap;
 
-    .wrapper-apartments-finder {
-        margin-top: 149px;
-    }
-    .wrapper-registration-form {
-        margin: 41px 0 0 140px;
-        position: static;
-    }
-    .wrapper-apartments-finder-check {
-        margin: 151px 0 0 37px;
-    }
-    .wrapper-in-form {
-        position: static;
-        display: inline-block;
-        margin: 38px 0 0 37px;
-    }
-    .wrapper-datepicker-2f {
-        margin: 151px 0 0 37px;
-    }
-    .wrapper-apartment-card {
-        margin-left: 33px;
-        margin-top: 39px;
-    }    
+  &__apartments-finder {
+    margin-top: 149px;
+  }
+
+  &__registration-form {
+    margin: 41px 0 0 140px;
+    position: static;
+  }
+  
+  &__apartments-finder-check {
+    margin: 151px 0 0 37px;
+  }
+
+  &__in-form {
+    position: static;
+    display: inline-block;
+    margin: 38px 0 0 37px;
+  }
+
+  &__datepicker-2f {
+    margin: 151px 0 0 37px;
+  }
+
+  &__apartment-card {
+    margin-left: 33px;
+    margin-top: 39px;
+  }    
 }

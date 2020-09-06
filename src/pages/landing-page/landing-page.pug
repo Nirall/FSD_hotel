@@ -5,9 +5,10 @@ include ../../blocks/button-with-arrow/button-with-arrow
 include ../../blocks/apartments-finder/apartments-finder
 
 block content
-    main.content-landing-page
-        +apartments-finder
-        .phrase-of-day= "Лучшие номера для вашей работы, отдыха и просто вдохновения"        
+    main.landing-page
+        .landing-page__apartments-finder
+            +apartments-finder
+        .landing-page__phrase-of-day= "Лучшие номера для вашей работы, отдыха и просто вдохновения"        
 
 
 

@@ -1,36 +1,35 @@
-.content-registration {  
+.registration {  
   height: 684px;
   max-width: 1440px;  
   background: no-repeat url("../../images/registration.jpg");
   margin: 0 auto;
-}
-.wrapper-in-form {
-  position: absolute;
-  top: 233px;
-  left: 530px;
-  display: none;
-  @media (max-width: 950px) {
-    left: 0;
-    top: 70px;
-  }    
-}
-.wrapper-in-form_visible {
-  display: block;
-}
-.wrapper-registration-form {
-  position: absolute;
-  top: 89px;
-  left: 533px;
-  @media (max-width: 950px) {
-    left: 0;
-    top: 70px;
+
+  &__reg-form {
+    position: absolute;
+    top: 89px;
+    left: 533px;
+    @media (max-width: 950px) {
+      left: 0;
+      top: 70px;
+    }
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__in-form {
+    position: absolute;
+    top: 233px;
+    left: 530px;
+    display: none;
+    @media (max-width: 950px) {
+      left: 0;
+      top: 70px;
+    }
+
+    &_visible {
+      display: block;
+    }
   }
 }
-.wrapper-registration-form_hidden {
-  display: none;
-}
-
-
-
-
-

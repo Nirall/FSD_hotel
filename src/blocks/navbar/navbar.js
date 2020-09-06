@@ -6,5 +6,5 @@ try {
         document.querySelector(".js-navbar__buttons").classList.toggle("navbar__item_visible-flex");
     }
 } catch {
-    console.error("There is no navbar");
+    console.log("There is no navbar");
 }

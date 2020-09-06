@@ -39,12 +39,12 @@ try {
             let quanRoom = parseInt(quanList.item(0).innerHTML);
             let quanBed = parseInt(quanList.item(1).innerHTML);            
             if (quanBed !== 0) {            
-                placeholder.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...`;
+                placeholder.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...` + expand;
             } else {
                 if (quanRoom === 0) {
-                    placeholder.innerHTML = "Выберите удобства";
+                    placeholder.innerHTML = "Выберите удобства" + expand;
                 } else {
-                    placeholder.innerHTML = `Спален - ${quanRoom.toString()}, спать на коврике ...`;
+                    placeholder.innerHTML = `Спален - ${quanRoom.toString()}, спать на коврике ...` + expand;
                 }            
             }     
         }

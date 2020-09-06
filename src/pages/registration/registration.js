@@ -1,27 +1,25 @@
 import "../../images/registration.jpg";
 
-const inButt = document.querySelector(".js-in-butt");
-const regButt = document.querySelector(".js-reg-butt");
-const inForm = document.querySelector(".js-in-form");
-const regForm = document.querySelector(".js-reg-form");
+try {
+  const inButt = document.querySelector(".js-navbar__in-butt");
+  const regButt = document.querySelector(".js-navbar__reg-butt");
+  const inForm = document.querySelector(".js-registration__in-form");
+  const regForm = document.querySelector(".js-registration__reg-form");
 
-inButt.onclick = () => {
-    try {
-        regForm.classList.add("wrapper-registration-form_hidden");
-        inForm.classList.add("wrapper-in-form_visible");
-    } catch {
-        console.log("There are no reg and(or) sign-in forms");
-    }
+  inButt.onclick = () => {
+    regForm.classList.add("registration__reg-form_hidden");
+    inForm.classList.add("registration__in-form_visible");
+  }
+
+  regButt.onclick = () => {
+    regForm.classList.remove("registration__reg-form_hidden");
+    inForm.classList.remove("registration__in-form_visible")
+  }
+} catch {
+  console.log("It's not a registration page")
 }
 
-regButt.onclick = () => {
-    try {
-        regForm.classList.remove("wrapper-registration-form_hidden");
-        inForm.classList.remove("wrapper-in-form_visible")
-    } catch {
-        console.log("There are no reg and(or) sign-in forms");
-    }
-}
+
 
 
 

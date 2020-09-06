@@ -9,27 +9,25 @@ include ../../blocks/apartments-finder-check/apartments-finder-check
 include ../../blocks/in-form/in-form
 include ../../blocks/apartment-card/apartment-card
 
-
 block content
-    .content-ui-cards
-        .left-col
-            .wrapper-apartments-finder
+    .ui-cards
+        .ui-cards__left-col
+            .ui-cards__apartments-finder
                 +apartments-finder
-            .wrapper-registration-form
+            .ui-cards__registration-form
                 +registration-form
-        .middle-col
-            .wrapper-apartments-finder-check
+        .ui-cards__middle-col
+            .ui-cards__apartments-finder-check
                 +apartments-finder-check
-            .wrapper-in-form
+            .ui-cards__in-form
                 +in-form
-        .right-col
-            .wrapper-datepicker-2f
+        .ui-cards__right-col
+            .ui-cards__datepicker-2f
                 .datepicker-2f
                     div(class = "datepicker-here datepicker-2f__input-field" id = "inDateField" inline = "true" type="text"
                     data-range="true" data-multiple-dates-separator = " - " clearButton = "true" placeholder="ДД.ММ.ГГГГ")
-            .wrapper-apartment-card
+            .ui-cards__apartment-card
                 +apartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
-            .wrapper-apartment-card
+            .ui-cards__apartment-card
                 +apartment-card("images/cards/840.jpg", "840", "", "9 900", 4, 65)(type = "common")
                 
-                    

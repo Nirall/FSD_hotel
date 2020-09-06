@@ -6,17 +6,17 @@ include ../../blocks/footer-medium/footer-medium
 
 
 block content
-    .content-headers_and_footers
-        .wrapper-empty
-        .wrapper-navbar.wrapper-navbar1 
+    .ui-headers
+        .ui-headers__empty
+        .ui-headers__navbar
             +navbar
-        .wrapper-navbar.wrapper-navbar2
+        .ui-headers__navbar.ui-headers__navbar_sign-in
             +navbar(modifiers = "navbar_without-buttons")
-        .wrapper-footer-large
+        .ui-headers__footer-large
             +footer-large
-        .wrapper-footer-small
+        .ui-headers__footer-small
             +footer-small
-        .wrapper-footer-medium
+        .ui-headers__footer-medium
             +footer-medium
                     
                     

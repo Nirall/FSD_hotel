@@ -1,68 +1,82 @@
-.content-search-room {
+.search-room {
 	margin: 30px auto 0 auto;
 	max-width: 1164px;		
   display: flex;
   justify-content: space-between;
+
   @media (max-width: 620px) {
     flex-wrap: wrap;
-  }    	
-}
-.search-room__left-col {
-  min-width: 266px;    
-  padding: 0 1px;
-  @media (max-width: 1200px) {
-    margin-left: 20px;
   }
-  @media (max-width: 620px) {
-    margin: 0 auto;
-  }    
-}
-.search-room__right-col {
-  margin-left: 52px;
-  @media (max-width: 620px) {
-    margin: 0 auto;
+  
+  &__left-col {
+    min-width: 266px;    
+    padding: 0 1px;
+
+    @media (max-width: 1200px) {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 620px) {
+      margin: 0 auto;
+    }    
   }
-}
-.search-room__cards {
-  max-width: 850px;       
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;    
-}
-.search-room__title {
-  padding: 1px 0 9px 5px;
-  text-align: left;
-  @media (max-width: 1200px) {
-    text-align: center;
+
+  &__right-col {
+    margin-left: 52px;
+    @media (max-width: 620px) {
+      margin: 0 auto;
+    }
   }
-  @media (max-width: 620px) {
+
+  &__cards {
+    max-width: 850px;       
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+  }
+
+  &__title {
+    padding: 1px 0 9px 5px;
+    text-align: left;
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      margin-top: 30px;
+    }    
+  }
+
+  &__pages {
     margin-top: 30px;
-  }    
-}
-.search-room__pages {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-.search-room__button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 0;
-  background: white;
-  color: $dark50;
-}
-.search-room__button_violet {
-  background: $primGrad;
-  color: white;
-  font-weight: bold;
-}
-.search-room__button_green {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  color: white;    
-}
-.search-room__pages-comment {
-  width: 230px;
-  margin: 13px auto 77px auto;
-  color: $dark75;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background: white;
+    color: $dark50;
+  }
+
+  &__button_violet {
+    background: $primGrad;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__button_green {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    color: white;    
+  }
+
+  &__pages-comment {
+    width: 230px;
+    margin: 13px auto 77px auto;
+    color: $dark75;
+  }
 }
