@@ -1,4 +1,4 @@
-class UIFormElementsInit {
+class UIFormElements {
   static init() {
     const DropdownElems = document.getElementsByClassName("js-ui-form-elements__dropdown_expanded");
     const clickEvent = new Event("click");
@@ -17,4 +17,9 @@ class UIFormElementsInit {
   }
 }
 
-UIFormElementsInit.init();
+try {
+  UIFormElements.init();
+} catch {
+  console.log("There is no UIFormElements");
+}
+
