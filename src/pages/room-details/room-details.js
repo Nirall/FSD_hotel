@@ -1,5 +1,3 @@
-import "../../images/users/1.jpg";
-import "../../images/users/2.jpg";
-import "../../images/cards/888_a.jpg";
-import "../../images/cards/888_b.jpg";
-import "../../images/cards/888_c.jpg";
+import "./images/room-888a.jpg";
+import "./images/room-888b.jpg";
+import "./images/room-888c.jpg";

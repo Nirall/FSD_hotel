@@ -1,3 +1,5 @@
+import "./images/logo-toxin.png";
+
 try {
     const navbarExpandButt = document.querySelector(".js-navbar__expand-butt");
     

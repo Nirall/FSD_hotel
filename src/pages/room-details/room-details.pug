@@ -12,10 +12,10 @@ block content
     .room-details
         .room-details__fotos
             .room-details__fotos-left
-                img(src = "images/cards/888_a.jpg" alt = "фото комнаты").room-details__fotos-left-img
+                img(src = "images/room-888a.jpg" alt = "фото комнаты").room-details__fotos-left-img
             .room-details__fotos-right
-                img(src = "images/cards/888_b.jpg" alt = "фото комнаты").room-details__fotos-right-img
-                img(src = "images/cards/888_c.jpg" alt = "фото комнаты").room-details__fotos-right-img
+                img(src = "images/room-888b.jpg" alt = "фото комнаты").room-details__fotos-right-img
+                img(src = "images/room-888c.jpg" alt = "фото комнаты").room-details__fotos-right-img
         .room-details__info
             main.room-details__info-left
                 section.room-details__info-apartment
@@ -33,8 +33,8 @@ block content
                     .room-details__reviews-title
                         h2.room-details__reviews-text Отзывы посетителей номера
                         span.room-details__reviews-counter= "2 отзыва"
-                    +visitor-review ("_active", "images/users/1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)
-                    +visitor-review ("", "images/users/2.jpg", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
+                    +visitor-review ("_active", "images/guest-1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)
+                    +visitor-review ("", "images/guest-2.jpg", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
                 .room-details__additional
                     section.room-details__rules
                         h2.room-details__rules-title Правила

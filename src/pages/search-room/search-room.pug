@@ -9,24 +9,24 @@ block content
     .search-room        
         -
             const cards = [
-                ["images/cards/840.jpg", "840", "", "9 900", 4, 65],
-                ["images/cards/980.jpg", "980", "ЛЮКС", "8 500", 3, 35],
-                ["images/cards/856.jpg", "856", "", "7 300", 5, 19],
-                ["images/cards/740.jpg", "740", "", "6 000", 4, 44],
-                ["images/cards/982.jpg", "982", "", "5 800", 3, 56],
-                ["images/cards/678.jpg", "678", "", "5 500", 5, 45],
-                ["images/cards/450.jpg", "450", "", "5 300", 4, 39],
-                ["images/cards/350.jpg", "350", "", "5 000", 3, 77],
-                ["images/cards/666.jpg", "666", "", "5 000", 5, 25],
-                ["images/cards/444.jpg", "444", "", "5 000", 3, 15],
-                ["images/cards/352.jpg", "352", "", "5 000", 3, 55],
+                ["images/room-840.jpg", "840", "", "9 900", 4, 65],
+                ["images/room-980.jpg", "980", "ЛЮКС", "8 500", 3, 35],
+                ["images/room-856.jpg", "856", "", "7 300", 5, 19],
+                ["images/room-740.jpg", "740", "", "6 000", 4, 44],
+                ["images/room-982.jpg", "982", "", "5 800", 3, 56],
+                ["images/room-678.jpg", "678", "", "5 500", 5, 45],
+                ["images/room-450.jpg", "450", "", "5 300", 4, 39],
+                ["images/room-350.jpg", "350", "", "5 000", 3, 77],
+                ["images/room-666.jpg", "666", "", "5 000", 5, 25],
+                ["images/room-444.jpg", "444", "", "5 000", 3, 15],
+                ["images/room-352.jpg", "352", "", "5 000", 3, 55],
             ]
         aside.search-room__left-col
             +apartment-form
         main.search-room__right-col
             h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
-                +apartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
+                +apartment-card("images/room-888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
                 each val in cards
                     +apartment-card(...val)(type = "common")
             .search-room__pages

@@ -75,16 +75,7 @@ module.exports = {
                         {
                             loader: "file-loader",
                             options: {
-                                name: "[name].[ext]",
-                                outputPath: (url, resoursepath, context) => {                                                                                               
-                                    if(resoursepath.includes("images\\cards")) {                                        
-                                        return `images/cards/${url}`;
-                                    } else if (resoursepath.includes("images\\users")){
-                                        return `images/users/${url}`;
-                                    } else {                                        
-                                        return `images/${url}`;
-                                    }
-                                }   
+                                name: "images/[name].[ext]",
                             }
                         },                
                 ],                

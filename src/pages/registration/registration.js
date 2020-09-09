@@ -1,4 +1,4 @@
-import "../../images/registration.jpg";
+import "./images/registration-bg.jpg";
 
 try {
   const inButt = document.querySelector(".js-navbar__in-butt");
