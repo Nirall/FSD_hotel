@@ -1,5 +1,5 @@
 .apartment-card {
-  margin: 10.4px 5.6px;    
+  margin: 10.4px 5.6px;
   width: 270px;
   height: 257px;
   background: white;
@@ -7,46 +7,44 @@
   color: $dark50;
   box-shadow: 0px 10px 20px $dark05;
   border-radius: 4px;
-  
-  &_common {
-    .apartment-card__img-arrows {
+  $root: &;
+
+  &_type-common {
+    #{$root}__img-arrows {
       visibility: hidden;
     }
-    
-    .apartment-card__img {
+
+    #{$root}__img {
       box-shadow: none;
     }
   }
 
-  &__img {       
+  &__img {
     color: white;
     height: 151px;
-    border-radius: 4px 4px 0 0;     
-    box-shadow: inset -30px 0px 30px 0px rgba(0, 0, 0, 0.4), 
-                inset 30px 0px 30px 0px rgba(0, 0, 0, 0.4);    
-  }
-
-  &__img span {    
-    width: 22px;
-    height: 22px;
-    margin: 10px;    
-    color: white;      
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset -30px 0px 30px 0px rgba(0, 0, 0, 0.4),
+                inset 30px 0px 30px 0px rgba(0, 0, 0, 0.4);
   }
 
   &__img-arrows {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding-top: 53px;
   }
 
+  &__img-arrow {
+    width: 22px;
+    height: 22px;
+    margin: 10px;
+    color: white;
+  }
+
   &__img-spots {
-    padding: 29px 0 0 212px;
+    padding: 24px 0 0 214px;
   }
 
   &__img-spot {
-    box-sizing: border-box;    
-    margin: 2px;
-    padding: 0;
     display: inline-block;
     width: 7px;
     height: 7px;
@@ -55,7 +53,7 @@
     background: transparent;
   }
 
-  &__img-spot_fill {
+  &__img-spot_filled {
     background: white;
   }
 
@@ -63,15 +61,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 24px 19px 0px 19px;
-    padding-bottom: 11px;
+    margin: 21px 19px 0 20px;
+    padding-bottom: 7px;
     border-bottom: 1px solid $dark10;
     font-weight: bold;
     color: $dark50;
   }
 
-  &__info-number {    
-    color: $dark100;    
+  &__info-number {
+    color: $dark100;
   }
 
   &__number {
@@ -90,18 +88,20 @@
 
   &__rating {
     height: 40px;
-    margin: 0px 19px;
+    margin: 8px 21px 0 19px;
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .apartment-card__rating-star {
-    margin: 0;
-    padding: 0;
+  &__rating-star {
     font-size: 24px;
     color: $purple;
+  }
+
+  &__reviews {
+    margin-bottom: 4px;
   }
 
   &__review {

@@ -1,29 +1,30 @@
 mixin dropdown(title, placeholder, ...args)
-    -   
+    -
         var blockclass = "dropdown"
         var buttonsClass = "dropdown__buttons js-dropdown__buttons"
+        var listClass = "dropdown__list js-dropdown__list"
 
         if (attributes.width === "266px")
-            blockclass += " dropdown_width266px"
+            blockclass += " dropdown_width-266px"
 
         if (attributes.type === "without butts") {
-            buttonsClass += " dropdown__buttons_none"
-            blockclass += " dropdown_without-butts"
+            listClass += " dropdown__list_bordered"
+            buttonsClass += " dropdown__buttons_hidden"
         }
 
     div(class = blockclass)
-        h3= title        
-        .input-text.dropdown__field.js-dropdown__field
+        h3.dropdown__title= title
+        .dropdown__field.js-dropdown__field
             = placeholder
-            span.material-icons= "expand_more"   
-        ul.dropdown__ul.js-dropdown__ul          
+            span.material-icons.dropdown__symbol-expand= "expand_more"
+        ul(class = listClass)
             each val in args
-                li.dropdown__li
+                li.dropdown__list-item
                     .dropdown__item= val
                     .dropdown__counter
-                        button(type="button").dropdown__butt.dropdown__minus.js-dropdown__minus!= "–"                        
-                        span.dropdown__butt.dropdown__quantity.js-dropdown__quantity= "0"
-                        button(type="button").dropdown__butt.dropdown__plus.js-dropdown__plus= "+"
+                        button(type="button").dropdown__btn.dropdown__minus.js-dropdown__minus!= "–"
+                        span.dropdown__btn.dropdown__quantity.js-dropdown__quantity= "0"
+                        button(type="button").dropdown__btn.dropdown__plus.js-dropdown__plus= "+"
         div(class = buttonsClass)
             .dropdown__clear.js-dropdown__clear= "очистить"
             .dropdown__apply.js-dropdown__apply= "применить"

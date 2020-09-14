@@ -1,12 +1,12 @@
 class ApartmentForm {
   static init() {
-    const dropdownWrapperList = document.getElementsByClassName("apartment-form__dropdown-title");
-    for (let item of dropdownWrapperList) {               
-      item.onclick = () => {            
-        const expandButt = item.parentNode.querySelector("span.material-icons");
-        const checkboxes = item.parentNode.querySelector(".apartment-form__checkboxes");
-        checkboxes.classList.toggle("apartment-form__checkboxes_disappear");
-        expandButt.classList.toggle("apartment-form__expand-butt_rotate");
+    const dropdownWrapperList = document.getElementsByClassName("js-apartment-form__dropdown-title");
+    for (let item of dropdownWrapperList) {
+      item.onclick = () => {
+        const expandButt = item.parentNode.querySelector(".js-apartment-form__symbol-expand");
+        const checkboxes = item.parentNode.querySelector(".js-apartment-form__checkboxes");
+        checkboxes.classList.toggle("apartment-form__checkboxes_hidden");
+        expandButt.classList.toggle("apartment-form__symbol-expand_rotated");
       }
     }
   }

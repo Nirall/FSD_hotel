@@ -1,23 +1,32 @@
 .email {
+	height: 44px;
+	width: 260px;
+	padding: 0 10px 0 15px;
 	border: 1px solid $dark25;
 	border-radius: 4px;
+	color: $dark75;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 
-	&__input{
+	&:hover {
+		border-color: $dark50;
+	}
+
+	&__input {
 		width: 220px;
-		height: 44px;
-		padding: 15px;
 		background: #FFFFFF;
 		border: none;
-		outline: none;    
-		box-sizing: border-box;
-	
+		outline: none;
+		font-family: Montserrat, Arial, sans-serif;
+		font-size: 14px;
+
 		&::placeholder {
 			color: $dark25;
 		}
 	}
 
-	&__arrow-symbol {
-		margin: 8px;
+	&__symbol-arrow {
 		color: #8BA4F9;
 	}
 }

@@ -1,14 +1,14 @@
 mixin apartment-form
-    .apartment-form        
+    .apartment-form
         +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
-        .apartment-form__dropdown-guests               
+        .apartment-form__dropdown-guests
             +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(width = "266px")
-        .apartment-form__price-slider
-            .apartment-form__title-wrapper
-                h3.apartment-form__title= "диапазон цены"
-                .apartment-form__price(id = "form-price")= ""
+        .apartment-form__slider
+            .apartment-form__slider-title
+                h3.apartment-form__title.apartment-form__title_padding-0= "диапазон цены"
+                .apartment-form__slider-price(id = "form-price")= ""
             .slider(id = "slider")
-            p.apartment-form__slider-description-price= "Стоимость за сутки пребывания в номере"
+            p.apartment-form__slider-price-description= "Стоимость за сутки пребывания в номере"
         .apartment-form__options
             h3.apartment-form__title= "checkbox buttons"
             +checkbox-item("Можно курить")
@@ -22,14 +22,13 @@ mixin apartment-form
             p.apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
         +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px")
         .apartment-form__more-options
-            .apartment-form__dropdown-title
-                h3= "дополнительные удобства"
-                span.material-icons.apartment-form__expand-butt= "expand_less"
-            .apartment-form__checkboxes   
+            .apartment-form__dropdown-title.js-apartment-form__dropdown-title
+                h3.apartment-form__title.apartment-form__title_padding-0= "дополнительные удобства"
+                span.material-icons.apartment-form__symbol-expand.js-apartment-form__symbol-expand= "expand_less"
+            .apartment-form__checkboxes.js-apartment-form__checkboxes
                 +checkbox-item("Завтрак")
                 +checkbox-item("Письменный стол")
                 +checkbox-item("Стул для кормления")
                 +checkbox-item("Кроватка")
                 +checkbox-item("Телевизор")
                 +checkbox-item("Шампунь")
-                

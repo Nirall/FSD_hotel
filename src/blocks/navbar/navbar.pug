@@ -4,24 +4,24 @@ mixin navbar
             img(height="40px" alt="логотип" src = "images/logo-toxin.png")
         .navbar__items
             .navbar__collapsed-menu
-                a(href="changeMe")
-                    .navbar__item.navbar__item_bold= "О нас"
-                span.material-icons.navbar__item.navbar__expand-butt.js-navbar__expand-butt= "more_horiz"
-            .navbar__list.js-navbar__list    
-                a(href="changeMe")
+                a(href="changeMe" class = "navbar__reference")
+                    .navbar__item= "О нас"
+                span.material-icons.navbar__expand-btn.js-navbar__expand-btn= "more_horiz"
+            .navbar__list.js-navbar__list
+                a(href="changeMe" class = "navbar__reference")
                     .navbar__item
                         ="Услуги"
-                        span.material-icons= "expand_more"
-                a(href="changeMe")
+                        span.material-icons.navbar__symbol-expand= "expand_more"
+                a(href="changeMe" class = "navbar__reference")
                     .navbar__item= "Вакансии"
-                a(href="changeMe")
+                a(href="changeMe" class = "navbar__reference")
                     .navbar__item= "Новости"
-                a(href="changeMe")
+                a(href="changeMe" class = "navbar__reference")
                     .navbar__item
                         ="Соглашения"
-                        span.material-icons= "expand_more"
-            .navbar__buttons.js-navbar__buttons 
-                .button.navbar__button.js-navbar__in-butt= "войти"
-                .button.navbar__button.button_violet.js-navbar__reg-butt= "зарегистрироваться"
-                a(href="changeMe")
-                    .navbar__sign-in= "Юлий Цезарь"
+                        span.material-icons.navbar__symbol-expand= "expand_more"
+            .navbar__buttons.js-navbar__buttons
+                .navbar__button.js-navbar__in-btn= "войти"
+                .navbar__button.navbar__button_color-violet.js-navbar__reg-btn= "зарегистрироваться"
+                a(href="changeMe" class = "navbar__reference")
+                    .navbar__user-name= "Юлий Цезарь"

@@ -3,30 +3,26 @@ include ../email/email
 mixin footer-large
     .footer-large
         .footer-large__logo
-            img(height="40px" alt="логотип" src = "images/logo-toxin.png")
+            img(height="40px" alt="логотип" src = "images/logo-toxin.png").footer-large__image
             p.footer-large__logo-text.
                 Бронирование номеров в лучшем отеле 2019 года по версии ассоциации &#171;Отельные взгляды&#187;
-        .footer-large__list
-            ul.footer-large__list-ul
-                li.footer-large__list-li.footer-large__list-li_title= "Навигация"                
-                each val in ["О нас", "Новости", "Служба поддержки", "Услуги"]
-                    a(href="changeMe")
-                        li.footer-large__list-li= val
-        .footer-large__list
-            ul.footer-large__list-ul
-                li.footer-large__list-li.footer-large__list-li_title= "О нас"                
-                each val in ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
-                    a(href="changeMe")
-                        li.footer-large__list-li= val
-        .footer-large__list
-            ul.footer-large__list-ul
-                li.footer-large__list-li.footer-large__list-li_title= "Служба поддержки"                
-                each val in ["Соглашения", "Сообщества", "Связь с нами"]
-                    a(href="changeMe")
-                        li.footer-large__list-li= val
+        ul.footer-large__list
+            li.footer-large__list-item.footer-large__list-item_bolded= "Навигация"
+            each val in ["О нас", "Новости", "Служба поддержки", "Услуги"]
+                a(href="changeMe" class = "footer-large__reference")
+                    li.footer-large__list-item= val
+        ul.footer-large__list
+            li.footer-large__list-item.footer-large__list-item_bolded= "О нас"
+            each val in ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+                a(href="changeMe" class = "footer-large__reference")
+                    li.footer-large__list-item= val
+        ul.footer-large__list
+            li.footer-large__list-item.footer-large__list-item_bolded= "Служба поддержки"
+            each val in ["Соглашения", "Сообщества", "Связь с нами"]
+                a(href="changeMe" class = "footer-large__reference")
+                    li.footer-large__list-item= val
         .footer-large__subscribe
-            .footer-large__list.footer-large__list_width260px
-                ul.footer-large__list-ul
-                    li.footer-large__list-li.footer-large__list-li_title= "Подписка"                
-                    li.footer-large__list-li= "Получайте специальные предложения и новости сервиса"
+            ul.footer-large__list.footer-large__list_width-small
+                li.footer-large__list-item.footer-large__list-item_bolded= "Подписка"
+                li.footer-large__list-item.footer-large__list-item_shifted= "Получайте специальные предложения и новости сервиса"
             +email

@@ -1,14 +1,15 @@
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: space-between;    
+  justify-content: space-between;
   align-items: center;
   min-height: 70px;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px $dark05;
 
   &__logo {
-    margin-left: 140px;
+    margin: 4px 0 0 140px;
+
     @media (max-width: 1300px) {
       margin-left: 20px;
     }
@@ -17,9 +18,35 @@
   &__items {
     display: flex;
     align-items: center;
+
     @media (max-width: 950px) {
       width: 100%;
       justify-content: space-between;
+    }
+  }
+
+  &__expand-btn {
+    display: none;
+
+    &:hover {
+      color: $purple;
+    }
+
+    @media (max-width: 950px) {
+      display: inline-block;
+    }
+  }
+
+  &__symbol-expand {
+    margin-left: 2px;
+  }
+
+  &__reference {
+    text-decoration: none;
+    color: $dark50;
+
+    &:hover {
+      color: $purple;
     }
   }
 
@@ -28,24 +55,14 @@
     align-items: center;
   }
 
-  .navbar__expand-butt {
-    display: none;
-    @media (max-width: 950px) {
-      display: inline-block;
-    }
-  }
-
-  &__expand-butt:hover {
-    color: $purple;
-  }
-
   &__list {
     display: flex;
+
     @media (max-width: 950px) {
       position: absolute;
       top: 70px;
       left: 120px;
-      width: 200px;        
+      width: 200px;
       flex-direction: column;
       align-items: flex-start;
       background: white;
@@ -57,14 +74,16 @@
   &__buttons {
     display: flex;
     margin-right: 130px;
+
     @media (max-width: 1300px) {
       margin-right: 20px;
     }
+
     @media (max-width: 670px) {
       margin-right: 0;
       position: absolute;
       top: 248px;
-      left: 120px;        
+      left: 120px;
       flex-direction: column;
       align-items: flex-start;
       background: white;
@@ -73,26 +92,30 @@
     }
   }
 
-  &__item {
-    margin: 10px;
-    line-height: 24px;
-    cursor: pointer;
-  }
-
-  &__item:hover {
-    color: $purple;
-  }
-
-  &__item_bold {
-    color: $dark75;
-    font-weight: bold;
-  }
-
-  &__item_visible-flex {
-    display: flex;
-  }
-
   &__button {
+    border: 2px solid $purple;
+    border-radius: 20px;
+    padding: 8px 18px;
+    margin: 10px;
+    display: flex;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    color: $purple;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_color-violet {
+      background: $primGrad;
+      color: #FFFFFF;
+    }
+
     @media (max-width: 670px) {
       border: 0;
       justify-content: flex-start;
@@ -100,21 +123,30 @@
       background: white;
       color: $dark50;
       font-size: 14px;
-      font-weight: normal;    
+      font-weight: normal;
       text-transform: capitalize;
       margin: 10px;
       padding: 0;
     }
   }
 
-  &__button:hover {
-    @media (max-width: 670px) {
+  &__item {
+    margin: 10px;
+    line-height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
       color: $purple;
-      opacity: 1;
+    }
+
+    &_visible-flex {
+      display: flex;
     }
   }
 
-  &__sign-in {
+  &__user-name {
     width: 150px;
     height: 30px;
     margin-left: 10px;

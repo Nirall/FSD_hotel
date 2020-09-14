@@ -2,8 +2,8 @@ import "./images/registration-bg.jpg";
 
 class Registration {
   static init() {
-    const inButt = document.querySelector(".js-navbar__in-butt");
-    const regButt = document.querySelector(".js-navbar__reg-butt");
+    const inButt = document.querySelector(".js-navbar__in-btn");
+    const regButt = document.querySelector(".js-navbar__reg-btn");
     const inForm = document.querySelector(".js-registration__in-form");
     const regForm = document.querySelector(".js-registration__reg-form");
     inButt.onclick = () => {

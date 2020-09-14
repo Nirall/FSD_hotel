@@ -2,12 +2,12 @@ mixin like-button (modifier, quantity)
     -
         let classMod = "like-button"
         if (modifier == "_active") {
-            classMod += " like-button_active"
+            classMod += " like-button_activated"
         }
     div(class = classMod)
         if (modifier == "_active")
             span.material-icons.like-button__icon= "favorite"
             = quantity
-        else 
+        else
             span.material-icons.like-button__icon= "favorite_border"
             = quantity

@@ -1,28 +1,29 @@
 include ../toggle-button/toggle-button
 include ../radio-button/radio-button
 include ../button-with-arrow/button-with-arrow
+include ../button/button
 
 mixin registration-form
     .registration-form
         form(action="changeme", method="post")
             h1.registration-form__title= "Регистрация аккаунта"
-            input.text-field(type="text" placeholder= "Имя")
-            input.text-field(type="text" placeholder= "Фамилия")
+            input(type="text" placeholder= "Имя").registration-form__input
+            input(type="text" placeholder= "Фамилия").registration-form__input
             .registration-form__radio-buttons
                 +radio-button("gender", "Мужчина")
                 +radio-button("gender", "Женщина")
-            h3= "Дата рождения"
-            input.text-field(type="text" placeholder= "ДД.ММ.ГГГГ")
+            h3.registration-form__header= "Дата рождения"
+            input(type="text" placeholder= "ДД.ММ.ГГГГ").registration-form__input
             .registration-form__service-input
-                h3= "Данные для входа в сервис"
-                input.text-field(type="email" placeholder= "Email")
-                input.text-field(type="password" placeholder= "Пароль")
+                h3.registration-form__header= "Данные для входа в сервис"
+                input(type="email" placeholder= "Email").registration-form__input
+                input(type="password" placeholder= "Пароль").registration-form__input
             .registration-form__toggle-button
                 +toggle-button
                 p.registration-form__toggle-button-text= "Получать спецпредложения"
             button(type="submit").registration-form__button
                 +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
-            .registration-form__wrapper-in
+            .registration-form__footer
                 p= "Уже есть аккаунт на Toxin"
-                .button.button_for-regform= "войти"
-        
+                +button("войти")(size = "long")
+

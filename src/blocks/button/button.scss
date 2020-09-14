@@ -1,8 +1,7 @@
-.button {  
+.button {
   border: 2px solid $purple;
   border-radius: 20px;
-  padding: 8px 18px;
-  margin: 10px;
+  padding: 12px 18px;
   display: flex;
   font-size: 12px;
   line-height: 15px;
@@ -10,26 +9,23 @@
 	text-transform: uppercase;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
   color: $purple;
   cursor: pointer;
+  background: white;
 
-  &_violet {    
-    background: $primGrad;
-    color: #FFFFFF;
+  &:hover {
+    opacity: 0.5;
   }
 
-  &_for-regform {  
-    padding: 12px 23px;
-    margin: 0;
+  &_size-long {
+    padding: 12px 26px;
   }
-
+  /*
   &_for-ui {
     padding: 12px 17px;
     margin: 0 20px 0 0;
   }
+  */
 }
 
-.button:hover {
-  opacity: 0.5;
-}
+

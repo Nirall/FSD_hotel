@@ -55,10 +55,10 @@ module.exports = {
             template: "src/pages/ui-headers/ui-headers.pug",
             inject: false,
             filename: "ui-headers_and_footers.html",
-        }),                
+        }),
         new cssExtract({
             filename: "style.css",
-        }),        
+        }),
     ],
     module: {
         rules: [
@@ -77,9 +77,9 @@ module.exports = {
                             options: {
                                 name: "images/[name].[ext]",
                             }
-                        },                
-                ],                
-            }, 
+                        },
+                ],
+            },
             {
                 test: /\.s*css$/,
                 use: [
@@ -88,11 +88,12 @@ module.exports = {
                     {
                         loader: "sass-loader",
                         options: {
-                            prependData: `@import 'src/variables.scss';`
+                            prependData: `@import 'src/variables.scss';`,
+                            sourceMap: true,
                         }
-                    },  
+                    },
                 ]
-            },                       
+            },
             {
                 test: /\.(ttf|woff|svg|otf|eot)$/i,
                 use: [
@@ -102,9 +103,9 @@ module.exports = {
                                 name: "[name].[ext]",
                                 outputPath: "fonts"
                             }
-                        },                
+                        },
                 ],
-            },            
-        ],        
+            },
+        ],
     },
-}  
+}

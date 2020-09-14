@@ -7,46 +7,54 @@
 	box-sizing: border-box;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
+	$root: &;
 
 	@media (max-width: 950px) {
 		margin: 230px auto;
 	}
+
 	@media (max-width: 385px) {
 		box-sizing: border-box;
 		width: 320px;
 		padding: 20px 10px;
+
 		.datepicker {
 			width: 300px;
 		}
+
 		.datepicker--content {
 			padding: 5px 10px 0;
 		}
-		.apartments-finder__title, .datepicker-2f, .dropdown {
-			width: 300px;
-		}
-		.button-with-arrow {
-			width: 280px;
-		}
-		.dropdown__ul {
-			width: 300px;
-		}
-		.dropdown li {
-			width: 292px;
-		}
-		.dropdown__item {
-			width: 175px;
-		}
+
+		#{$root}__title,
+		.datepicker-2f,
+		.dropdown,
+		.button-with-arrow,
+		.dropdown__list,
 		.dropdown__buttons {
 			width: 300px;
 		}
+
+		.dropdown__list-item {
+			width: 292px;
+		}
+
+		.dropdown__item {
+			width: 175px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: bold;
+		letter-spacing: -0.5px;
+		color: $dark100;
 	}
 
 	&__dropdown {
 		margin-top: 20px;
-	}
-	
-	&__title {
-		margin-bottom: 20px;
 	}
 
 	&__button-with-arrow {

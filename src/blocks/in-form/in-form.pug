@@ -1,13 +1,15 @@
 include ../button-with-arrow/button-with-arrow
+include ../button/button
 
 mixin in-form
     .in-form
         form(action="changeme", method="post")
             h1.in-form__title= "Войти"
-            input.text-field(type="email" placeholder= "Email")
-            input.text-field(type="password" placeholder= "Пароль")
+            input(type="email" placeholder= "Email").in-form__input
+            input(type="password" placeholder= "Пароль").in-form__input
             button(type = "submit").in-form__button-with-arrow
                 +button-with-arrow("ВОЙТИ")
-            .in-form__wrapper-in
-                p= "Нет аккаунта на Toxin"
-                .button.button_for-regform= "войти"
+            .in-form__footer
+                p.in-form__footer-text= "Нет аккаунта на Toxin?"
+                .in-form__button
+                    +button("создать")

@@ -11,43 +11,50 @@
   }
 
   &__logo {
-    padding: 5px 40px 0px 0px;
-    width: 260px;
+    padding: 5px 20px 0px 0px;
+    width: 300px;
     line-height: 24px;
   }
-  
+
   &__logo-text {
     margin-top: 10px;
   }
 
   &__list {
     width: 200px;
-    margin: 0px;
     line-height: 18px;
-  
-    &_width260px {
+    padding-inline-start: 0px;
+    list-style-type: none;
+
+    &_width-small {
       width: 260px;
-      padding-bottom: 7px;
       line-height: 24px;
     }
   }
-  
-  &__list-ul {
-    padding-inline-start: 0px;    
-    list-style-type: none;
-  }
-  
-  &__list-li {
+
+  &__list-item {
     padding: 10px 0px;
-  
-    &_title {
+
+    &_bolded {
       font-size: 12px;
       line-height: 15px;
       font-weight: bold;
       text-transform: uppercase;
       color: $dark100;
     }
+
+    &_shifted {
+      padding: 8px 0 23px 0;
+    }
   }
-  
+
+  &__reference {
+    text-decoration: none;
+    color: $dark50;
+
+    &:hover {
+      color: $purple;
+    }
+  }
 }
 

@@ -14,12 +14,11 @@ mixin pie-chart (normal= 0, good= 0, great= 0, bad= 0)
             var greatOffset = goodOffset - good - 0.5
             var badOffset = greatOffset - great - 0.5
         svg(width="100%" height="100%" viewBox = "0 0 36 36")
-            circle(cx="18" cy="18" r="16.23" fill="#fff") 
+            circle(cx="18" cy="18" r="16.23" fill="#fff")
             circle(cx="18" cy="18" r="16.23" fill="transparent" stroke="#BC9CFF" stroke-width=stWidth stroke-dasharray=`${normal} ${normalDashSpace}` stroke-dashoffset=normalOffset)
             circle(cx="18" cy="18" r="16.23" fill="transparent" stroke="#6FCF97" stroke-width=stWidth stroke-dasharray=`${good} ${goodDashSpace}` stroke-dashoffset=goodOffset)
             circle(cx="18" cy="18" r="16.23" fill="transparent" stroke="#FFE39C" stroke-width=stWidth stroke-dasharray=`${great} ${greatDashSpace}` stroke-dashoffset=greatOffset)
             circle(cx="18" cy="18" r="16.23" fill="transparent" stroke="#919191" stroke-width=stWidth stroke-dasharray=`${bad} ${badDashSpace}` stroke-dashoffset=badOffset)
         .pie-chart__votes
-            h1= 260
-            h3= "голосов"
-    
+            h2.pie-chart__counter= 260
+            h3.pie-chart__votes-text= "голосов"

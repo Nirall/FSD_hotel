@@ -2,10 +2,10 @@ mixin checkbox-item(text)
     -
         var classMod = "checkbox-item"
         if (attributes.style == "bold") {
-            classMod += " checkbox-item_bold"
+            classMod += " checkbox-item_bolded"
         }
     div(class = classMod)
         label.checkbox-item__label
             input(type = "checkbox").checkbox-item__input
-            span.checkbox-item__pseudo
-            span!= text
+            span.checkbox-item__square
+            span.checkbox-item__text!= text

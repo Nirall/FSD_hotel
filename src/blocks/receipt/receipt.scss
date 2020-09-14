@@ -1,36 +1,32 @@
-.appartments-finder-check {
-  width: 320px;
-  height: 458px;
+.receipt {
+  width: 380px;
+  height: 510px;
   padding: 22px 30px 30px 30px;
-  background: white;    
+  background: white;
   font: $font-body;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 385px) {
-    box-sizing: border-box;
     width: 320px;
     height: 480px;
     padding: 10px;
     margin: 0 auto;
-    .datepicker-2f, .dropdown {
+
+    .datepicker-2f,
+    .dropdown,
+    .dropdown__list,
+    .dropdown__buttons,
+    .button-with-arrow {
       width: 300px;
     }
-    .dropdown__ul {
-      width: 300px;
+
+    .dropdown__list-item {
+      width: 298px;
     }
-    .dropdown li {
-      width: 292px;
-    }
+
     .dropdown__item {
       width: 175px;
-    }
-    .dropdown__buttons {
-      width: 300px;
-    }
-    .button-with-arrow {
-      box-sizing: border-box;
-      width: 300px;
     }
   }
 
@@ -44,19 +40,21 @@
     color: $dark50;
   }
 
-  &__info-number {
+  &__number {
     font-size: 14px;
-    color: $dark100; 
+    color: $dark100;
   }
 
-  &__number {
+  &__digits {
     font-size: 24px;
-    letter-spacing: -1.5px;
+    font-family: Arial, sans-serif;
+    letter-spacing: -1px;
   }
 
   &__info-luxury {
     color: $purple;
     font-size: 12px;
+    margin-left: 4px;
   }
 
   &__info-price-dimension {
@@ -69,43 +67,44 @@
   }
 
   &__items {
-    padding-top: 11px;
+    padding-top: 13px;
   }
 
-  &__price-item {
+  &__item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 5px 0;        
+    padding: 5px 0;
+
+    &_line-height-18px {
+      line-height: 18px;
+      padding-top: 8px;
+    }
   }
 
-  &__price-item-text {
-    width: 241px;
+  &__item-text {
+    width: 239px;
     display: flex;
     justify-content: space-between;
-
-    &_lh18px {
-      line-height: 18px;
-      padding-top: 3px;
-    } 
   }
 
-  &__price-item-i {
+  &__symbol-i {
     flex-shrink: 0;
-    display: inline-block;        
+    display: inline-block;
     width: 20px;
     height: 20px;
+    margin-left: 5px;
     border: 1px solid $dark25;
     color: $dark25;
     border-radius: 50%;
     text-align: center;
     font-weight: bold;
     line-height: 20px;
-    margin-left: 5px;
   }
 
   &__total {
     margin-top: 26px;
+    padding-bottom: 6px;
     display: flex;
     justify-content: space-between;
     font-size: 19px;
@@ -114,22 +113,24 @@
   }
 
   &__total-dot-line {
-    width: 182px;
+    margin: 0 5px 6px 0;
+    width: 170px;
     border-bottom: 1px dotted $dark25;
+
     @media (max-width: 385px) {
       width: 160px;
     }
   }
 
+  &__total-price {
+    letter-spacing: -1.3px;
+  }
+
   &__button-with-arrow {
-    margin-top: 21px;
+    margin-top: 13px;
     padding: 0;
     border: 0;
     background: 0;
-
-    .button-with-arrow__text {    
-      padding-left: 23px;
-    }
   }
 }
 

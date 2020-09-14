@@ -1,13 +1,13 @@
-.registration {  
+.registration {
   height: 684px;
-  max-width: 1440px;  
+  max-width: 1440px;
   background: no-repeat url("./images/registration-bg.jpg");
   margin: 0 auto;
 
   &__reg-form {
     position: absolute;
     top: 89px;
-    left: 533px;
+    left: 532px;
     @media (max-width: 950px) {
       left: 0;
       top: 70px;
@@ -21,7 +21,7 @@
   &__in-form {
     position: absolute;
     top: 233px;
-    left: 530px;
+    left: 529px;
     display: none;
     @media (max-width: 950px) {
       left: 0;

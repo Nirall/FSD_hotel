@@ -5,7 +5,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/apartments-finder/apartments-finder
 include ../../blocks/button-with-arrow/button-with-arrow
 include ../../blocks/registration-form/registration-form
-include ../../blocks/apartments-finder-check/apartments-finder-check
+include ../../blocks/receipt/receipt
 include ../../blocks/in-form/in-form
 include ../../blocks/apartment-card/apartment-card
 
@@ -18,7 +18,7 @@ block content
                 +registration-form
         .ui-cards__middle-col
             .ui-cards__apartments-finder-check
-                +apartments-finder-check
+                +receipt
             .ui-cards__in-form
                 +in-form
         .ui-cards__right-col
@@ -30,4 +30,3 @@ block content
                 +apartment-card("images/cards/888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
             .ui-cards__apartment-card
                 +apartment-card("images/cards/840.jpg", "840", "", "9 900", 4, 65)(type = "common")
-                

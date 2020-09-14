@@ -3,8 +3,8 @@ class Datepicker2f {
     const datepickerApi_2f = $('.js-datepicker-2f__input-field').datepicker().data('datepicker');
     const outDateField_2f = $(".js-datepicker-2f__out-date-field");
     const inDateField_2f = $(".js-datepicker-2f__input-field");
-    inDateField_2f.datepicker({   
-        onSelect: (formattedDate) => {        
+    inDateField_2f.datepicker({
+        onSelect: (formattedDate) => {
             let inDate = formattedDate.match(/.+?(?=\s|$)/) ? formattedDate.match(/.+?(?=\s|$)/)[0] : "";
             let outDate = formattedDate.match(/(?<=\s-\s).+/) ? formattedDate.match(/(?<=\s-\s).+/)[0] : "";
             inDateField_2f.val(inDate);
@@ -18,8 +18,8 @@ class Datepicker2f {
     inDateField_2f.datepicker({nextHtml: '<i class = "db-arrow material-icons">arrow_forward</i>'});
     const applyButt = $(".datepicker--button[data-action='today']");
     applyButt.html("Применить");
-    applyButt.click(() => datepickerApi_2f.hide());
-    $('.js-wrapper-input').click(() => datepickerApi_2f.show());
+    applyButt.on("click", () => datepickerApi_2f.hide());
+    $('.js-datepicker-2f__wrapper-input-field').on("click", () => datepickerApi_2f.show());
   }
 }
 

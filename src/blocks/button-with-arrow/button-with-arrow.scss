@@ -1,32 +1,28 @@
-.button-with-arrow {    
+.button-with-arrow {
   background: $primGrad;
-  width: 302px;
-  padding: 0 9px;
-  height: 44px;  
-  color: #FFFFFF;    
+  width: 320px;
+  height: 44px;
+  padding-right: 4px;
+  color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 22px;
   font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase; 
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
   cursor: pointer;
+  position: relative;
 
-  &__text {
-    flex: 9;
-    text-align: center;
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 11px;
   }
 }
 
-.button-with-arrow:hover {
-  opacity: 0.5;
-}
-
-.button-with-arrow span.material-icons {    
-  color: white;
-  flex: 1;
-  text-align: center;
-}
 
 

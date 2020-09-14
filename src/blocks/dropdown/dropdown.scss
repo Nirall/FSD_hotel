@@ -4,62 +4,77 @@
   position: relative;
   box-shadow: 0px 10px 20px $dark05;
   background: white;
+  $root: &;
 
-  &_width266px {
+  &_width-266px {
     width: 266px;
 
-    .dropdown__buttons {
+    #{$root}__buttons {
       width: 266px;
       position: static;
     }
 
-    .dropdown__ul {    
-        position: static;
+    #{$root}__list {
+      position: static;
     }
 
-    .dropdown__li {
+    #{$root}__list-item {
       width: 264px;
     }
   }
 
-  &_without-butts {
-    .dropdown__ul_active {
+  &__title {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark100;
+  }
+
+  &__field {
+    height: 44px;
+    margin: 5px 0 0 0;
+    padding: 0 7px 0 15px;
+    border-radius: 4px;
+    border: 1px solid $dark25;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $dark75;
+    cursor: pointer;
+
+    &:hover, &:focus {
+			border-color: $dark50;
+    }
+
+    &_activated {
+      border-radius: 4px 4px 0 0;
+      border-bottom: 0;
+      border-color: $dark50;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    border: 1px solid $dark50;
+    z-index: 3;
+
+    &_activated {
+      display: block;
+      border-bottom: 0
+    }
+
+    &_bordered {
       padding-bottom: 4px;
       border-bottom: 1px solid $dark50;
       border-radius: 0 0 4px 4px;
     }
   }
-  
-  &__field {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0 0 0;
-  }
 
-  .dropdown__field_active {
-    border-radius: 4px 4px 0 0;
-    border-bottom: 0;
-    border-color: $dark50;
-  }
-
-  &__ul {
-    box-sizing: border-box;
-    display: none;
-    position: absolute;
-    border: 1px solid $dark50;
-    z-index: 3;   
-  }
-
-  &__ul_active {
-    display: block;
-    border-bottom: 0;
-  }
-
-  &__li {
+  &__list-item {
     height: 37px;
     padding: 0 5px 0 15px;
-    box-sizing: border-box;
     width: 318px;
     background: white;
     display: flex;
@@ -73,7 +88,7 @@
     color: $dark100;
   }
 
-  &__butt {
+  &__btn {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -98,7 +113,6 @@
   }
 
   &__buttons {
-    box-sizing: border-box;
     height: 48px;
     width: 320px;
     position: absolute;
@@ -107,7 +121,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 7px 0 15px;
-    border: 1px solid $dark50;    
+    border: 1px solid $dark50;
     border-top: 0;
     border-radius: 0 0 4px 4px;
     background: white;
@@ -115,7 +129,7 @@
     font-weight: bold;
     text-transform: uppercase;
 
-    &_active {
+    &_activated {
       display: flex;
     }
   }
@@ -126,7 +140,7 @@
   }
 
   &__clear {
-    cursor: pointer;    
+    cursor: pointer;
   }
 }
 

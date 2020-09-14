@@ -1,0 +1,38 @@
+include ../datepicker-2f/datepicker-2f
+include ../dropdown/dropdown
+include ../button-with-arrow/button-with-arrow
+
+mixin receipt
+    .receipt
+        form(action="changeme", method="post")
+            .receipt__info
+                .receipt__info-part
+                    span.receipt__number= "№"
+                        span.receipt__digits= ` 888`
+                    span.receipt__info-luxury= ` ЛЮКС`
+                .receipt__info-part
+                    span.receipt__info-price= `9 990₽`
+                    span.receipt__info-price-dimension= " в сутки"
+            +datepicker-2f("ПРИБЫТИЕ", "ВЫЕЗД")
+            .receipt__dropdown
+                +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+            .receipt__items
+                .receipt__item
+                    span.receipt__item-text= "9 990₽ х 4 суток"
+                    .receipt__item-price= "39 960₽"
+                .receipt__item
+                    span.receipt__item-text
+                        = "Сбор за услуги: скидка 2 179₽"
+                        span.receipt__symbol-i= "i"
+                    .receipt__item-price= "0₽"
+                .receipt__item.receipt__item_line-height-18px
+                    .receipt__item-text
+                        = "Сбор за дополнительные услуги"
+                        span.receipt__symbol-i= "i"
+                    .receipt__item-price= "300₽"
+                .receipt__total
+                    = "Итого"
+                    span.receipt__total-dot-line
+                    span.receipt__total-price= "38 081₽"
+            button(type="submit").receipt__button-with-arrow
+                +button-with-arrow("ЗАБРОНИРОВАТЬ")
