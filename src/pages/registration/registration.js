@@ -8,12 +8,12 @@ class Registration {
     const regForm = document.querySelector(".js-registration__reg-form");
     inButt.onclick = () => {
       regForm.classList.add("registration__reg-form_hidden");
-      inForm.classList.add("registration__in-form_visible");
+      inForm.classList.add("registration__in-form_displayed");
     }
 
     regButt.onclick = () => {
       regForm.classList.remove("registration__reg-form_hidden");
-      inForm.classList.remove("registration__in-form_visible")
+      inForm.classList.remove("registration__in-form_displayed")
     }
   }
 }

@@ -12,42 +12,42 @@ block content
     .room-details
         .room-details__fotos
             .room-details__fotos-left
-                img(src = "images/room-888a.jpg" alt = "фото комнаты").room-details__fotos-left-img
+                img(src = "images/room-888a.jpg" alt = "фото комнаты").room-details__fotos-img
             .room-details__fotos-right
-                img(src = "images/room-888b.jpg" alt = "фото комнаты").room-details__fotos-right-img
-                img(src = "images/room-888c.jpg" alt = "фото комнаты").room-details__fotos-right-img
+                img(src = "images/room-888b.jpg" alt = "фото комнаты").room-details__fotos-img
+                img(src = "images/room-888c.jpg" alt = "фото комнаты").room-details__fotos-img
         .room-details__info
-            main.room-details__info-left
+            main.room-details__info-left-column
                 section.room-details__info-apartment
-                    h2.room-details__info-apartment-title Сведения о номере
+                    h2.room-details__header= "Сведения о номере"
                     +info-apartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
                     +info-apartment("location_city", "Удобство", "Окно в каждой из спален")(type = "with border")
                     +info-apartment("whatshot", "Уют", "Номер оснащен камином")
                 section.room-details__pie-chart
-                    h2.room-details__pie-chart-title Впечатления от номера
+                    h2.room-details__header.room-details__pie-chart-title= "Впечатления от номера"
                     .room-details__pie-chart-graph
                         +pie-chart(25, 25, 50)
-                        .room-details__pie-chart-graph-legend
+                        .room-details__pie-chart-legend
                             +pie-chart-legend
                 section.room-details__reviews
                     .room-details__reviews-title
-                        h2.room-details__reviews-text Отзывы посетителей номера
+                        h2.room-details__header= "Отзывы посетителей номера"
                         span.room-details__reviews-counter= "2 отзыва"
                     +visitor-review ("_active", "images/guest-1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)
                     +visitor-review ("", "images/guest-2.jpg", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
                 .room-details__additional
                     section.room-details__rules
-                        h2.room-details__rules-title Правила
-                        ul.room-details__rules-ul
-                            li.room-details__rules-ul-li
+                        h2.room-details__header.room-details__rules-title= "Правила"
+                        ul.room-details__rules-list
+                            li.room-details__rules-list-item
                                 div= "Нельзя с питомцами"
-                            li.room-details__rules-ul-li
+                            li.room-details__rules-list-item
                                 div= "Без вечеринок и мероприятий"
-                            li.room-details__rules-ul-li
+                            li.room-details__rules-list-item
                                 div= "Время прибытия — после 13:00, а выезд до 12:00"
                     section.room-details__cancel
-                        h2.room-details__cancel-title Отмена
+                        h2.room-details__header.room-details__cancel-title= "Отмена"
                         = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
-            aside.room-details__info-right
+            aside.room-details__info-right-column
                 +receipt
 

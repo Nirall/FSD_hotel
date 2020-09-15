@@ -1,15 +1,13 @@
 .search-room {
-	margin: 30px auto 0 auto;
-	max-width: 1164px;		
+	margin: 30px auto 0 138px;
   display: flex;
-  justify-content: space-between;
 
   @media (max-width: 620px) {
     flex-wrap: wrap;
   }
-  
+
   &__left-col {
-    min-width: 266px;    
+    min-width: 266px;
     padding: 0 1px;
 
     @media (max-width: 1200px) {
@@ -18,24 +16,30 @@
 
     @media (max-width: 620px) {
       margin: 0 auto;
-    }    
+    }
   }
 
   &__right-col {
-    margin-left: 52px;
-    @media (max-width: 620px) {
+    margin-left: 53px;
+
+    @media (max-width: 610px) {
       margin: 0 auto;
     }
   }
 
   &__cards {
-    max-width: 850px;       
+    max-width: 850px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;
   }
 
   &__title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    color: $dark100;
     padding: 1px 0 9px 5px;
     text-align: left;
 
@@ -45,11 +49,12 @@
 
     @media (max-width: 620px) {
       margin-top: 30px;
-    }    
+    }
   }
 
   &__pages {
-    margin-top: 30px;
+    margin-top: 31px;
+    margin-right: 18px;
     display: flex;
     justify-content: center;
   }
@@ -63,20 +68,20 @@
     color: $dark50;
   }
 
-  &__button_violet {
+  &__button_current {
     background: $primGrad;
     color: white;
     font-weight: bold;
   }
 
-  &__button_green {
+  &__button_next {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    color: white;    
+    color: white;
   }
 
   &__pages-comment {
-    width: 230px;
-    margin: 13px auto 77px auto;
+    margin: 8px 18px 72px 0;
+    text-align: center;
     color: $dark75;
   }
 }

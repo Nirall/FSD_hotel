@@ -5,6 +5,8 @@
   border-radius: 10px;
   color: $dark25;
   font: 10px/12px 'Montserrat';
+  display: flex;
+  align-items: center;
   $root: &;
 
   &_activated {

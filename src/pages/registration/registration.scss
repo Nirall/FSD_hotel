@@ -8,13 +8,14 @@
     position: absolute;
     top: 89px;
     left: 532px;
-    @media (max-width: 950px) {
-      left: 0;
-      top: 70px;
-    }
 
     &_hidden {
       display: none;
+    }
+
+    @media (max-width: 950px) {
+      left: 0;
+      top: 70px;
     }
   }
 
@@ -23,13 +24,14 @@
     top: 233px;
     left: 529px;
     display: none;
+
+    &_displayed {
+      display: block;
+    }
+
     @media (max-width: 950px) {
       left: 0;
       top: 70px;
-    }
-
-    &_visible {
-      display: block;
     }
   }
 }

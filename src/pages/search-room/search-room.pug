@@ -6,7 +6,7 @@ include ../../blocks/apartment-form/apartment-form
 include ../../blocks/apartment-card/apartment-card
 
 block content
-    .search-room        
+    .search-room
         -
             const cards = [
                 ["images/room-840.jpg", "840", "", "9 900", 4, 65],
@@ -30,10 +30,11 @@ block content
                 each val in cards
                     +apartment-card(...val)(type = "common")
             .search-room__pages
-                button.search-room__button.search-room__button_violet= 1
+                button.search-room__button.search-room__button_current= 1
                 button.search-room__button= 2
                 button.search-room__button= 3
                 button.search-room__button= "..."
-                button.search-room__button= 15                
-                button.material-icons.search-room__button.search-room__button_green= "arrow_forward"
-            .search-room__pages-comment= "1 – 12 из 100+ вариантов аренды"
+                button.search-room__button= 15
+                button.material-icons.search-room__button.search-room__button_next= "arrow_forward"
+            .search-room__pages-comment
+                = "1 – 12 из 100+ вариантов аренды"
