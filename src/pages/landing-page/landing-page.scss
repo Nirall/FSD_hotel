@@ -1,18 +1,32 @@
 .landing-page {
 	margin: 0 auto;
-	max-width: 1440px;
+	max-width: 100%;
 	height: 830px;
-	background: no-repeat url("./images/landingpage-bg.jpg");
-	padding-top: 70px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	background: center / cover no-repeat  url("./images/landingpage-bg.jpg");
+	padding: 70px 130px 0 140px;
+
+	@media (max-width: 1300px) {
+		padding: 70px 20px 0 20px;
+	}
+
+	@media (max-width: 420px) {
+		padding: 70px 0 0 0;
+	}
+
+	&__content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
 	&__phrase-of-day {
-		width: 297px;
+		width: 280px;
+		align-self: flex-end;
 		text-align: right;
-		margin-left: 1010px;
-		margin-bottom: 20px;
+		margin-bottom: 21px;
+		margin-right: 5px;
 		font-size: 14px;
 		line-height: 24px;
 

@@ -1,5 +1,5 @@
 .room-details {
-  max-width: 1440px;
+  //max-width: 1440px;
   margin: 0 auto;
   color: $dark75;
 
@@ -9,15 +9,24 @@
   }
 
   &__fotos-left {
-    max-height: 485px;
+    flex-grow: 2.13;
+    height: 485px;
+    background: center / cover no-repeat  url("./images/room-888a.jpg");
   }
 
-  &__fotos-img {
-    max-width: 100%;
+  &__fotos-right-img1 {
+    height: 50%;
+    background: center / cover no-repeat  url("./images/room-888b.jpg");
+  }
+
+  &__fotos-right-img2 {
+    height: 50%;
+    background: center / cover no-repeat  url("./images/room-888c.jpg");
   }
 
   &__fotos-right {
-    max-height: 485px;
+    flex-grow: 1;
+    height: 485px;
     display: flex;
     flex-direction: column;
   }

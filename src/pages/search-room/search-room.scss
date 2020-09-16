@@ -1,8 +1,13 @@
 .search-room {
-	margin: 30px auto 0 138px;
+	padding: 30px 130px 0 139px;
   display: flex;
+  justify-content: space-between;
 
-  @media (max-width: 620px) {
+  @media (max-width: 1300px) {
+    padding: 30px 20px 0 20px;
+  }
+
+  @media (max-width: 630px) {
     flex-wrap: wrap;
   }
 
@@ -10,11 +15,7 @@
     min-width: 266px;
     padding: 0 1px;
 
-    @media (max-width: 1200px) {
-      margin-left: 20px;
-    }
-
-    @media (max-width: 620px) {
+    @media (max-width: 630px) {
       margin: 0 auto;
     }
   }
@@ -22,16 +23,20 @@
   &__right-col {
     margin-left: 53px;
 
-    @media (max-width: 610px) {
+    @media (max-width: 630px) {
       margin: 0 auto;
     }
   }
 
   &__cards {
-    max-width: 850px;
     display: flex;
+    margin-right: 3px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
+
+    @media (max-width: 1438px) {
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -40,10 +45,14 @@
     font-weight: bold;
     letter-spacing: -0.5px;
     color: $dark100;
-    padding: 1px 0 9px 5px;
-    text-align: left;
+    padding: 1px 0 9px 7px;
+    text-align: center;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1440px) {
+      text-align: left;
+    }
+
+    @media (max-width: 1438px) {
       text-align: center;
     }
 

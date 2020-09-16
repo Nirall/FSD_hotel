@@ -1,37 +1,36 @@
 .registration {
   height: 684px;
-  max-width: 1440px;
-  background: no-repeat url("./images/registration-bg.jpg");
+  background: center / cover no-repeat url("./images/registration-bg.jpg");
   margin: 0 auto;
 
   &__reg-form {
-    position: absolute;
-    top: 89px;
-    left: 532px;
+    width: 384px;
+    padding: 19px 0 0 4px;
+    margin: 0 auto;
+
+    @media (max-width: 385px) {
+      width: 320px;
+      padding: 10px 0;
+    }
 
     &_hidden {
       display: none;
     }
-
-    @media (max-width: 950px) {
-      left: 0;
-      top: 70px;
-    }
   }
 
   &__in-form {
-    position: absolute;
-    top: 233px;
-    left: 529px;
+    width: 382px;
+    padding: 162px 2px 0 0;
+    margin: 0 auto;
     display: none;
+
+    @media (max-width: 385px) {
+      width: 320px;
+      padding: 10px 0;
+    }
 
     &_displayed {
       display: block;
-    }
-
-    @media (max-width: 950px) {
-      left: 0;
-      top: 70px;
     }
   }
 }
