@@ -1,5 +1,9 @@
 class Nouislider {
-  static init() {
+  constructor() {
+    this.init();
+  }
+
+  init() {
     const noUiSlider = require("./nouislider.js");
     const slider = document.getElementById("slider");
     noUiSlider.create(slider, {
@@ -25,7 +29,7 @@ class Nouislider {
 }
 
 try {
-  Nouislider.init();
+  const nouislider = new Nouislider();
 } catch {
   console.log("There is no uislider.")
 }

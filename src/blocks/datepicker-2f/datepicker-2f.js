@@ -1,5 +1,9 @@
 class Datepicker2f {
-  static init() {
+  constructor() {
+    this.init();
+  }
+
+  init() {
     const datepickerApi_2f = $('.js-datepicker-2f__input-field').datepicker().data('datepicker');
     const outDateField_2f = $(".js-datepicker-2f__out-date-field");
     const inDateField_2f = $(".js-datepicker-2f__input-field");
@@ -24,7 +28,7 @@ class Datepicker2f {
 }
 
 try {
-  Datepicker2f.init();
+  const datepicker2f = new Datepicker2f();
 } catch {
   console.log("Something wrong with datepicker-2f");
 }

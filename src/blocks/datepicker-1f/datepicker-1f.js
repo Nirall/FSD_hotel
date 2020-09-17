@@ -1,5 +1,9 @@
 class Datepicker1f {
-  static init() {
+  constructor() {
+    this.init();
+  }
+
+  init() {
     const datepickerApi_1f = $('.datepicker-1f .datepicker-1f__input-field').datepicker().data('datepicker');
     const inDateField_1f = $(".datepicker-1f .datepicker-1f__input-field");
     inDateField_1f.datepicker({
@@ -29,7 +33,7 @@ class Datepicker1f {
 }
 
 try {
-  Datepicker1f.init();
+  const datepicker1f = new Datepicker1f();
 } catch {
   console.log("there is no datepicker1f")
 }

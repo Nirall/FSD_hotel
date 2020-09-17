@@ -1,5 +1,9 @@
 class ApartmentForm {
-  static init() {
+  constructor() {
+    this.init();
+  }
+
+  init() {
     const dropdownWrapperList = document.getElementsByClassName("js-apartment-form__dropdown-title");
     for (let item of dropdownWrapperList) {
       item.onclick = () => {
@@ -13,7 +17,7 @@ class ApartmentForm {
 }
 
 try {
-  ApartmentForm.init();
+  const apartmentForm = new ApartmentForm();
 } catch {
   console.log("There is no apartment's form.")
 }

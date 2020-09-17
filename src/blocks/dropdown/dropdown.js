@@ -1,5 +1,9 @@
 class Dropdown {
-  static init() {
+  constructor() {
+    this.init();
+  }
+
+  init() {
     const isGuestsDropdown = function (placeholder) {
       if (
         placeholder.innerHTML.split("<span")[0] === "Сколько гостей"
@@ -106,7 +110,7 @@ class Dropdown {
 }
 
 try {
-  Dropdown.init();
+  const dropdown = new Dropdown();
 } catch {
   console.log("There are no dropdowns")
 }

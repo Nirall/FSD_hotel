@@ -1,5 +1,9 @@
 class Registration {
-  static init() {
+  constructor() {
+    this.init();
+  }
+
+  init() {
     const inButt = document.querySelector(".js-navbar__in-btn");
     const regButt = document.querySelector(".js-navbar__reg-btn");
     const inForm = document.querySelector(".js-registration__in-form");
@@ -17,7 +21,7 @@ class Registration {
 }
 
 try {
-  Registration.init();
+  const registration = new Registration();
 } catch {
   console.log("It's not a registration page")
 }
