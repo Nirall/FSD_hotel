@@ -9,12 +9,14 @@ class Datepicker1f {
     inDateField_1f.datepicker({
       onSelect: (formattedDate) => {
         let resDate = "";
-        if (formattedDate.split(" - ").length > 1) {
-          let arrDates = formattedDate.toLowerCase().split(" - ");
-          arrDates = arrDates.map(val => val.match(/\d{2}\s[а-яА-Я]{3}/)[0]);
-          resDate = arrDates.join(" - ");
-        } else {
-          resDate = formattedDate.match(/\d{2}\s[а-яА-Я]{3}/)[0];
+        if (formattedDate) {
+          if (formattedDate.split(" - ").length > 1) {
+            let arrDates = formattedDate.toLowerCase().split(" - ");
+            arrDates = arrDates.map(val => val.match(/\d{2}\s[а-яА-Я]{3}/)[0]);
+            resDate = arrDates.join(" - ");
+          } else {
+            resDate = formattedDate.match(/\d{2}\s[а-яА-Я]{3}/)[0];
+          }
         }
         inDateField_1f.val(resDate);
       }
@@ -27,7 +29,9 @@ class Datepicker1f {
     inDateField_1f.datepicker({nextHtml: '<i class = "db-arrow material-icons">arrow_forward</i>'});
     let applyButt = $(".datepicker--button[data-action='today']");
     applyButt.html("Применить");
-    applyButt.on("click", () => datepickerApi_1f.hide());
+    applyButt.on("click", () => {
+      datepickerApi_1f ? datepickerApi_1f.hide() : null;
+    });
     $('.datepicker-1f__wrapper-input-field').on("click", () => datepickerApi_1f.show());
   }
 }
