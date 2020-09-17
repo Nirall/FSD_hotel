@@ -70,12 +70,23 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /images.*\.(png|jpe?g|gif|svg)$/i,
                 use: [
                         {
                             loader: "file-loader",
                             options: {
                                 name: "images/[name].[ext]",
+                            }
+                        },
+                ],
+            },
+            {
+                test: /favicons.*\.(svg|png|ico|xml|json)$/i,
+                use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                name: "assets/favicons/[name].[ext]",
                             }
                         },
                 ],
@@ -95,7 +106,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(ttf|woff|svg|otf|eot)$/i,
+                test: /fonts.*\.(ttf|woff|svg|otf|eot)$/i,
                 use: [
                         {
                             loader: "file-loader",

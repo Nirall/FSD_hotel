@@ -1,5 +1,3 @@
-import "./images/registration-bg.jpg";
-
 class Registration {
   static init() {
     const inButt = document.querySelector(".js-navbar__in-btn");
