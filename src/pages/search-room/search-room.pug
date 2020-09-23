@@ -6,7 +6,7 @@ include ../../blocks/apartment-form/apartment-form
 include ../../blocks/apartment-card/apartment-card
 
 block content
-    .search-room
+    main.search-room
         -
             const cards = [
                 ["images/room-840.jpg", "840", "", "9 900", 4, 65],
@@ -23,13 +23,13 @@ block content
             ]
         aside.search-room__left-col
             +apartment-form
-        main.search-room__right-col
+        article.search-room__right-col
             h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
-                .search-room__apartment-card
+                section.search-room__apartment-card
                     +apartment-card("images/room-888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
                 each val in cards
-                    .search-room__apartment-card
+                    section.search-room__apartment-card
                         +apartment-card(...val)(arrows = "none")
             .search-room__pages
                 button.search-room__button.search-room__button_current= 1

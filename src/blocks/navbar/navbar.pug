@@ -3,7 +3,8 @@ include ../button/button
 mixin navbar
     nav(class = "navbar js-navbar")
         .navbar__logo
-            img(height="40px" alt="логотип" src = "images/logo-toxin.png")
+            a(href="/" class = "navbar__reference")
+                img(height="40px" alt="логотип" src = "images/logo-toxin.png")
         .navbar__items
             .navbar__collapsed-menu
                 a(href="changeMe" class = "navbar__reference")
@@ -23,7 +24,7 @@ mixin navbar
                         ="Соглашения"
                         span.material-icons.navbar__symbol-expand= "expand_more"
             .navbar__buttons.js-navbar__buttons
-                .navbar__button.js-navbar__in-btn= "войти"
-                .navbar__button.navbar__button_color_violet.js-navbar__reg-btn= "зарегистрироваться"
+                button.navbar__button.js-navbar__in-btn= "войти"
+                button.navbar__button.navbar__button_color_violet.js-navbar__reg-btn= "зарегистрироваться"
                 a(href="changeMe" class = "navbar__reference")
                     .navbar__user-name= "Юлий Цезарь"

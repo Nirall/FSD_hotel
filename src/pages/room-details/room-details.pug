@@ -9,14 +9,14 @@ include ../../blocks/receipt/receipt
 block content
     - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
     - var text2 = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."
-    .room-details
+    main.room-details
         .room-details__fotos
             .room-details__fotos-left
             .room-details__fotos-right
                 .room-details__fotos-right-img1
                 .room-details__fotos-right-img2
         .room-details__info
-            main.room-details__info-left-column
+            article.room-details__info-left-column
                 section.room-details__info-apartment
                     h2.room-details__header= "Сведения о номере"
                     +info-apartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
@@ -34,8 +34,8 @@ block content
                         span.room-details__reviews-counter= "2 отзыва"
                     +visitor-review ("_active", "images/guest-1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)
                     +visitor-review ("", "images/guest-2.jpg", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
-                .room-details__additional
-                    section.room-details__rules
+                section.room-details__additional
+                    .room-details__rules
                         h2.room-details__header.room-details__rules-title= "Правила"
                         ul.room-details__rules-list
                             li.room-details__rules-list-item
@@ -44,7 +44,7 @@ block content
                                 div= "Без вечеринок и мероприятий"
                             li.room-details__rules-list-item
                                 div= "Время прибытия — после 13:00, а выезд до 12:00"
-                    section.room-details__cancel
+                    .room-details__cancel
                         h2.room-details__header.room-details__cancel-title= "Отмена"
                         = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
             aside.room-details__info-right-column
