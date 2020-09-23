@@ -6,7 +6,7 @@
   background: white;
   $root: &;
 
-  &_width-266px {
+  &_width_small {
     width: 266px;
 
     #{$root}__buttons {
@@ -24,7 +24,7 @@
     }
   }
 
-  &_shadow-none {
+  &_shadow_none {
     box-shadow: none;
   }
 

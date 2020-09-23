@@ -4,13 +4,13 @@ mixin dropdown(title, placeholder, ...args)
         var buttonsClass = "dropdown__buttons js-dropdown__buttons"
         var listClass = "dropdown__list js-dropdown__list"
 
-        if (attributes.width === "266px")
-            blockclass += " dropdown_width-266px"
+        if (attributes.width === "small")
+            blockclass += " dropdown_width_small"
 
         if (attributes.shadow === "none")
-            blockclass += " dropdown_shadow-none"
+            blockclass += " dropdown_shadow_none"
 
-        if (attributes.type === "without butts") {
+        if (attributes.buttons === "none") {
             listClass += " dropdown__list_bordered"
             buttonsClass += " dropdown__buttons_hidden"
         }

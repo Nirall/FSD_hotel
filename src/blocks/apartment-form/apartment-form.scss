@@ -15,16 +15,11 @@
   }
 
   &__title {
-    padding-bottom: 12px;
     font-size: 12px;
     line-height: 15px;
     font-weight: bold;
     text-transform: uppercase;
     color: $dark100;
-
-    &_padding-0 {
-      padding: 0;
-    }
   }
 
   &__slider-price {
@@ -38,13 +33,24 @@
     line-height: 12px;
   }
 
+  &__options-title {
+    padding-bottom: 12px;
+  }
+
   &__accessibility {
-    margin: 27px 0 24px 0;
+    margin: 27px 0 28px 0;
+  }
+
+  &__checkbox {
+    padding: 5px 0;
+  }
+
+  &__accessibility-title {
+    padding-bottom: 12px;
   }
 
   &__checkbox-description {
-    padding-top: 0;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     margin-left: 30px;
     font-size: 12px;
     line-height: 14px;

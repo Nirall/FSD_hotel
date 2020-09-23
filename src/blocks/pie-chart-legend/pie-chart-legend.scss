@@ -8,19 +8,19 @@
     border-radius: 50%;
     margin-right: 5px;
 
-    &_assessment-bad {
+    &_assessment_bad {
       background: #919191;
     }
 
-    &_assessment-good {
+    &_assessment_good {
       background: $green;
     }
 
-    &_assessment-great {
+    &_assessment_great {
       background: #FFE39C;
     }
 
-    &_assessment-normal {
+    &_assessment_normal {
       background: $purple;
     }
   }

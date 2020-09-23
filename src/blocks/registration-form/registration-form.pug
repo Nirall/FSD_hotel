@@ -10,8 +10,10 @@ mixin registration-form
             input(type="text" placeholder= "Имя").registration-form__input
             input(type="text" placeholder= "Фамилия").registration-form__input
             .registration-form__radio-buttons
-                +radio-button("gender", "Мужчина")
-                +radio-button("gender", "Женщина")
+                .registration-form__radio-button
+                    +radio-button("gender", "Мужчина")
+                .registration-form__radio-button
+                    +radio-button("gender", "Женщина")
             h3.registration-form__header= "Дата рождения"
             input(type="text" placeholder= "ДД.ММ.ГГГГ").registration-form__input
             .registration-form__service-input

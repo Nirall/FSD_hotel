@@ -26,9 +26,11 @@ block content
         main.search-room__right-col
             h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
-                +apartment-card("images/room-888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
+                .search-room__apartment-card
+                    +apartment-card("images/room-888.jpg", "888", "ЛЮКС", "9 990", 5, 145)
                 each val in cards
-                    +apartment-card(...val)(type = "common")
+                    .search-room__apartment-card
+                        +apartment-card(...val)(arrows = "none")
             .search-room__pages
                 button.search-room__button.search-room__button_current= 1
                 button.search-room__button= 2
