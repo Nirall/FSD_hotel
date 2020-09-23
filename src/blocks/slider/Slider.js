@@ -1,11 +1,11 @@
-class Nouislider {
+class Slider {
   constructor() {
     this.init();
   }
 
   init() {
-    const noUiSlider = require("./nouislider.js");
-    const slider = document.getElementById("slider");
+    const noUiSlider = require('./nouislider.js');
+    const slider = document.getElementById('slider');
     noUiSlider.create(slider, {
       start: [2000, 8000],
       connect: true,
@@ -16,20 +16,18 @@ class Nouislider {
       },
     });
 
-    slider.noUiSlider.on("update", () => {
+    slider.noUiSlider.on('update', () => {
       let min = slider.noUiSlider.get()[0]
         .match(/.+(?=\.00)/)[0]
         .replace(/(\d+)(\d{3}$)/, '$1 $2₽');
       let max = slider.noUiSlider.get()[1]
         .match(/.+(?=\.00)/)[0]
         .replace(/(\d+)(\d{3}$)/, '$1 $2₽');
-      document.getElementById("form-price").innerHTML = `${min} - ${max}`;
+      document.getElementById('form-price').innerHTML = `${min} - ${max}`;
     });
   }
 }
 
-try {
-  const nouislider = new Nouislider();
-} catch {
-  console.log("There is no uislider.")
+if (document.getElementById('slider')) {
+  const slider = new Slider();
 }

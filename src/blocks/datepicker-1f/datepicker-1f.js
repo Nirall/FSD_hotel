@@ -5,15 +5,15 @@ class Datepicker1f {
 
   init() {
     const datepickerApi_1f = $('.datepicker-1f .datepicker-1f__input-field').datepicker().data('datepicker');
-    const inDateField_1f = $(".datepicker-1f .datepicker-1f__input-field");
+    const inDateField_1f = $('.datepicker-1f .datepicker-1f__input-field');
     inDateField_1f.datepicker({
       onSelect: (formattedDate) => {
-        let resDate = "";
+        let resDate = '';
         if (formattedDate) {
-          if (formattedDate.split(" - ").length > 1) {
-            let arrDates = formattedDate.toLowerCase().split(" - ");
+          if (formattedDate.split(' - ').length > 1) {
+            let arrDates = formattedDate.toLowerCase().split(' - ');
             arrDates = arrDates.map(val => val.match(/\d{2}\s[а-яА-Я]{3}/)[0]);
-            resDate = arrDates.join(" - ");
+            resDate = arrDates.join(' - ');
           } else {
             resDate = formattedDate.match(/\d{2}\s[а-яА-Я]{3}/)[0];
           }
@@ -24,20 +24,18 @@ class Datepicker1f {
 
     inDateField_1f.datepicker({clearButton: true});
     inDateField_1f.datepicker({todayButton: true});
-    inDateField_1f.datepicker({dateFormat: "dd MM"});
+    inDateField_1f.datepicker({dateFormat: 'dd MM'});
     inDateField_1f.datepicker({prevHtml: '<i class = "db-arrow material-icons">arrow_back</i>'});
     inDateField_1f.datepicker({nextHtml: '<i class = "db-arrow material-icons">arrow_forward</i>'});
-    let applyButt = $(".datepicker--button[data-action='today']");
-    applyButt.html("Применить");
-    applyButt.on("click", () => {
+    let applyButt = $('.datepicker--button[data-action="today"]');
+    applyButt.html('Применить');
+    applyButt.on('click', () => {
       datepickerApi_1f ? datepickerApi_1f.hide() : null;
     });
-    $('.datepicker-1f__wrapper-input-field').on("click", () => datepickerApi_1f.show());
+    $('.datepicker-1f__wrapper-input-field').on('click', () => datepickerApi_1f.show());
   }
 }
 
-try {
+if ($('.js-datepicker-1f')) {
   const datepicker1f = new Datepicker1f();
-} catch {
-  console.log("there is no datepicker1f")
 }
