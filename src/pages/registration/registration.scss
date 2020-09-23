@@ -1,11 +1,11 @@
 .registration {
-  height: 684px;
+  height: 683px;
   background: center / cover no-repeat url("./images/registration-bg.jpg");
   margin: 0 auto;
 
   &__reg-form {
     width: 384px;
-    padding: 19px 0 0 4px;
+    padding: 19px 0 0 5px;
     margin: 0 auto;
 
     @media (max-width: 385px) {
@@ -20,7 +20,7 @@
 
   &__in-form {
     width: 382px;
-    padding: 162px 2px 0 0;
+    padding: 163px 0 0 1px;
     margin: 0 auto;
     display: none;
 

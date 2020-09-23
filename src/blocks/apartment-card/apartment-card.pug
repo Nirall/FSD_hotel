@@ -16,9 +16,9 @@ mixin apartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
         .apartment-card__info
             .apartment-card__info-part
                 span.apartment-card__info-number
-                    = "№"
-                    span.apartment-card__number= ` ${number}`
-                span.apartment-card__info-luxury= ` ${luxury}`
+                    = "№ "
+                    span.apartment-card__number= `${number} `
+                span.apartment-card__info-luxury= `${luxury}`
             .apartment-card__info-part
                 span.apartment-card__info-price= `${price}₽`
                 span.apartment-card__info-price-dimension= " в сутки"

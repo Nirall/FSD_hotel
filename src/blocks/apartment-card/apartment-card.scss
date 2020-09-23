@@ -30,22 +30,24 @@
   &__img-arrows {
     display: flex;
     justify-content: space-between;
-    padding-top: 53px;
+    padding-top: 54px;
   }
 
   &__img-arrow {
     width: 22px;
     height: 22px;
-    margin: 10px;
+    font-size: 22px;
+    margin: 11px;
     color: white;
   }
 
   &__img-spots {
-    padding: 24px 0 0 214px;
+    padding: 32px 0 0 214px;
+    display: flex;
   }
 
   &__img-spot {
-    display: inline-block;
+    margin-right: 4px;
     width: 7px;
     height: 7px;
     border: 1px solid white;
@@ -61,7 +63,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 21px 19px 0 20px;
+    margin: 21px 18px 0 20px;
     padding-bottom: 7px;
     border-bottom: 1px solid $dark10;
     font-weight: bold;
@@ -70,14 +72,17 @@
 
   &__info-number {
     color: $dark100;
+    font-family: Quicksand, Arial, sans-serif;
+    font-weight: bold;
   }
 
   &__number {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   &__info-luxury {
     color: $purple;
+    font-weight: 600;
     font-size: 12px;
   }
 
@@ -88,7 +93,7 @@
 
   &__rating {
     height: 40px;
-    margin: 8px 21px 0 19px;
+    margin: 8px 20px 0 20px;
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;

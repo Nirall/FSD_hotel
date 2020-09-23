@@ -1,6 +1,6 @@
 .in-form {
 	width: 380px;
-	padding: 40px 30px 30px 30px;
+	padding: 40px 29px 30px 29px;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -56,10 +56,14 @@
 
 	&__footer {
 		margin-top: 30px;
-		margin-bottom: 2px;
+		margin-bottom: 1px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		color: $dark100;
+	}
+
+	&__footer-text {
+		padding-bottom: 2px;
 	}
 }

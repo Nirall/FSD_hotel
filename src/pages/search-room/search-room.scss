@@ -63,7 +63,7 @@
 
   &__pages {
     margin-top: 31px;
-    margin-right: 18px;
+    margin-right: 16px;
     display: flex;
     justify-content: center;
   }
@@ -72,6 +72,8 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    font-family: Montserrat;
+    font-size: 12px;
     border: 0;
     background: white;
     color: $dark50;
@@ -80,11 +82,12 @@
   &__button_current {
     background: $primGrad;
     color: white;
-    font-weight: bold;
   }
 
   &__button_next {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    font-family: 'Material Icons';
+    font-size: 24px;
     color: white;
   }
 

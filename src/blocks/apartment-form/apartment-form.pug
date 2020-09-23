@@ -2,7 +2,7 @@ mixin apartment-form
     .apartment-form
         +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
         .apartment-form__dropdown-guests
-            +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(width = "266px")
+            +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(width = "266px" shadow = "none")
         .apartment-form__slider
             .apartment-form__slider-title
                 h3.apartment-form__title.apartment-form__title_padding-0= "диапазон цены"
@@ -20,7 +20,7 @@ mixin apartment-form
             p.apartment-form__checkbox-description!= "Ширина коридоров в номере <br> не менее 91 см."
             +checkbox-item("Помошник для инвалидов")(style = "bold")
             p.apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
-        +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px")
+        +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(type = "without butts" width = "266px" shadow = "none")
         .apartment-form__more-options
             .apartment-form__dropdown-title.js-apartment-form__dropdown-title
                 h3.apartment-form__title.apartment-form__title_padding-0= "дополнительные удобства"

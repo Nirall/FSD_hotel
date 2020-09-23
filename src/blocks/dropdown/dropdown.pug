@@ -7,6 +7,9 @@ mixin dropdown(title, placeholder, ...args)
         if (attributes.width === "266px")
             blockclass += " dropdown_width-266px"
 
+        if (attributes.shadow === "none")
+            blockclass += " dropdown_shadow-none"
+
         if (attributes.type === "without butts") {
             listClass += " dropdown__list_bordered"
             buttonsClass += " dropdown__buttons_hidden"

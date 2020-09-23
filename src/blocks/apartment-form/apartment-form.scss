@@ -1,17 +1,17 @@
 .apartment-form {
   &__dropdown-guests {
-    margin-top: 20px;
+    margin-top: 21px;
   }
 
   &__slider {
-    margin: 25px 0 31px 0;
+    margin: 25px 0 29px 0;
   }
 
   &__slider-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 21px;
+    margin-bottom: 19px;
   }
 
   &__title {
@@ -33,12 +33,13 @@
   }
 
   &__slider-price-description {
+    padding-top: 3px;
     font-size: 12px;
     line-height: 12px;
   }
 
   &__accessibility {
-    margin: 27px 0 25px 0;
+    margin: 27px 0 24px 0;
   }
 
   &__checkbox-description {

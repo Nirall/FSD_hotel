@@ -1,5 +1,4 @@
 .room-details {
-  //max-width: 1440px;
   margin: 0 auto;
   color: $dark75;
 
@@ -68,7 +67,7 @@
 
   &__info-apartment {
     width: 280px;
-    margin-left: 2px;
+    margin-left: 3px;
 
     @media (max-width: 750px) {
       margin: 0 auto;
@@ -77,7 +76,7 @@
 
   &__header {
     font-size: 19px;
-    line-height: 24px;
+    line-height: 23px;
     font-weight: bold;
     letter-spacing: -0.39px;
   }
@@ -96,7 +95,7 @@
   }
 
   &__pie-chart-title {
-    margin: 0 0 15px 5px;
+    margin: 0 0 17px 5px;
   }
 
   &__pie-chart-graph {
@@ -106,7 +105,7 @@
   }
 
   &__pie-chart-legend {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   &__reviews {
@@ -120,11 +119,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 13px 0 17px 2px;
+    margin: 13px 0 16px 2px;
   }
 
   &__reviews-counter {
     color: $dark50;
+    padding-top: 2px;
 
     @media (max-width: 450px) {
       display: none;
@@ -133,7 +133,7 @@
 
   &__additional {
     max-width: 712px;
-    margin: 13px 0 68px 3px;
+    margin: 13px 0 67px 3px;
     line-height: 24px;
     display: flex;
     justify-content: space-between;
@@ -154,7 +154,7 @@
   }
 
   &__rules-title {
-    margin: 0 0 11px 19px;
+    margin: 0 0 12px 19px;
 
     @media (max-width: 750px) {
       text-align: center;
@@ -197,7 +197,7 @@
   }
 
   &__cancel-title {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 
     @media (max-width: 750px) {
       text-align: center;

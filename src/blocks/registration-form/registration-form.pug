@@ -21,9 +21,9 @@ mixin registration-form
             .registration-form__toggle-button
                 +toggle-button
                 p.registration-form__toggle-button-text= "Получать спецпредложения"
-            button(type="submit").registration-form__button
+            button(type="submit").registration-form__button-submit
                 +button-with-arrow("ПЕРЕЙТИ К ОПЛАТЕ")
             .registration-form__footer
-                p= "Уже есть аккаунт на Toxin"
+                p.registration-form__footer-text= "Уже есть аккаунт на Toxin"
                 +button("войти")(size = "long")
 

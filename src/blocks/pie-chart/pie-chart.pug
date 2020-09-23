@@ -13,7 +13,7 @@ mixin pie-chart (normal= 0, good= 0, great= 0, bad= 0)
             var goodOffset = 25 - normal - 0.5
             var greatOffset = goodOffset - good - 0.5
             var badOffset = greatOffset - great - 0.5
-        svg(width="100%" height="100%" viewBox = "0 0 36 36")
+        svg(width="100%" height="100%" viewBox = "0 0 36.5 36.5")
             circle(cx="18" cy="18" r="16.23" fill="#fff")
             circle(cx="18" cy="18" r="16.23" fill="transparent" stroke="#BC9CFF" stroke-width=stWidth stroke-dasharray=`${normal} ${normalDashSpace}` stroke-dashoffset=normalOffset)
             circle(cx="18" cy="18" r="16.23" fill="transparent" stroke="#6FCF97" stroke-width=stWidth stroke-dasharray=`${good} ${goodDashSpace}` stroke-dashoffset=goodOffset)
