@@ -2,7 +2,7 @@ mixin apartment-card(img, number, luxury = "", price, stars = 0, reviews = 0)
     -
         var classMod = "apartment-card"
         if (attributes.arrows == "none")
-            classMod += " apartment-card_arrows_none"
+            classMod += " apartment-card_without-arrows"
     div(class = classMod)
         .apartment-card__img(style = `background: url(${img}) no-repeat;`)
             .apartment-card__img-arrows

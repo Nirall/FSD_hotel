@@ -22,27 +22,11 @@
 		.datepicker--content {
 			padding: 5px 10px 0;
 		}
-
-		#{$root}__title,
-		.datepicker-2f,
-		.dropdown,
-		.button-with-arrow,
-		.dropdown__list,
-		.dropdown__buttons {
-			width: 300px;
-		}
-
-		.dropdown__list-item {
-			width: 292px;
-		}
-
-		.dropdown__item {
-			width: 175px;
-		}
 	}
 
 	&__title {
 		margin-bottom: 20px;
+		width: 100%;
 		font-size: 24px;
 		line-height: 30px;
 		font-weight: bold;
@@ -55,10 +39,10 @@
 	}
 
 	&__button-with-arrow {
-		padding: 0;
 		border: 0;
 		background: 0;
 		margin-top: 31px;
+		width: 100%;
 	}
 }
 

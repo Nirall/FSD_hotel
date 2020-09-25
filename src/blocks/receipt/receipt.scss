@@ -11,22 +11,9 @@
     width: 320px;
     height: 480px;
     padding: 10px;
-    margin: 0 auto;
 
-    .datepicker-2f,
-    .dropdown,
-    .dropdown__list,
-    .dropdown__buttons,
-    .button-with-arrow {
+    .datepicker-2f {
       width: 300px;
-    }
-
-    .dropdown__list-item {
-      width: 298px;
-    }
-
-    .dropdown__item {
-      width: 175px;
     }
   }
 
@@ -128,7 +115,7 @@
 
   &__button-with-arrow {
     margin-top: 13px;
-    padding: 0;
+    width: 100%;
     border: 0;
     background: 0;
   }

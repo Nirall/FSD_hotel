@@ -5,17 +5,10 @@
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 	background: white;
-	$root: &;
 
 	@media (max-width: 385px) {
-		box-sizing: border-box;
 		width: 320px;
 		padding: 20px;
-
-		#{$root}__input,
-		.button-with-arrow {
-			width: 280px;
-		}
 	}
 
 	&__title {
@@ -48,7 +41,7 @@
 	}
 
 	&__button-with-arrow {
-		padding: 0;
+		width: 100%;
 		border: 0;
 		background: 0;
 		margin-top: 15px;

@@ -8,7 +8,7 @@
   border-radius: 4px;
   $root: &;
 
-  &_arrows_none {
+  &_without-arrows {
     #{$root}__img-arrows {
       visibility: hidden;
     }
@@ -52,10 +52,10 @@
     border: 1px solid white;
     border-radius: 50%;
     background: transparent;
-  }
 
-  &__img-spot_filled {
-    background: white;
+    &_filled {
+      background: white;
+    }
   }
 
   &__info {

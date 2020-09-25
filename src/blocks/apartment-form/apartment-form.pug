@@ -2,11 +2,11 @@ mixin apartment-form
     .apartment-form.js-apartment-form
         +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
         .apartment-form__dropdown-guests
-            +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(width = "small" shadow = "none")
+            +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(overlapping = "none" shadow = "none")
         .apartment-form__slider
             .apartment-form__slider-title
                 h3.apartment-form__title= "диапазон цены"
-                .apartment-form__slider-price(id = "form-price")= ""
+                .apartment-form__slider-price.js-apartment-form__slider-price= ""
             .slider(id = "slider")
             p.apartment-form__slider-price-description= "Стоимость за сутки пребывания в номере"
         .apartment-form__options
@@ -27,7 +27,7 @@ mixin apartment-form
             .apartment-form__checkbox
                 +checkbox-item("Помощник для инвалидов")(style = "bold")
             p.apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
-        +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(buttons = "none" width = "small" shadow = "none")
+        +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(buttons = "none" overlapping = "none" shadow = "none")
         .apartment-form__more-options
             .apartment-form__dropdown-title.js-apartment-form__dropdown-title
                 h3.apartment-form__title= "дополнительные удобства"
