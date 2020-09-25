@@ -1,12 +1,9 @@
+include ../socials/socials
+include ../copyright/copyright
+
 mixin footer-medium
     .footer-medium
         img(height="40px" alt="логотип" src = "images/logo-toxin.png").footer-medium__image
-        p.footer-medium__text.
-            Copyright &copy; 2018 Toxin отель. Все права зачищены.
-        .footer-medium__icons
-            a(href = "https://twitter.com/" target = "_blank" rel="noopener noreferrer")
-                img(src="images/tweeter-icon.png" alt = "твиттер").footer-small__icon
-            a(href = "https://facebook.com/" target = "_blank" rel="noopener noreferrer")
-                img(src="images/facebook-icon.png" alt = "фейсбук").footer-small__icon
-            a(href = "https://instagram.com/" target = "_blank" rel="noopener noreferrer")
-                img(src="images/instagram-icon.png" alt = "инстаграмм").footer-small__icon
+        .footer-medium__copyright
+            +copyright
+        +socials

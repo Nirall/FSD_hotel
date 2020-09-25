@@ -1,5 +1,5 @@
 .footer-medium {
-  padding: 120px 0 110px 0;
+  padding: 120px 0 119px 0;
   font-size: 14px;
   line-height: 17px;
   color: $dark75;
@@ -15,13 +15,8 @@
     display: flex;
   }
 
-  &__text {
+  &__copyright {
     margin: 21px 0 12px 0;
-    text-align: center;
-  }
-
-  &__icon {
-    margin: 10px;
   }
 }
 
