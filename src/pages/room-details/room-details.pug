@@ -38,12 +38,9 @@ block content
                     .room-details__rules
                         h2.room-details__header.room-details__rules-title= "Правила"
                         ul.room-details__rules-list
-                            li.room-details__rules-list-item
-                                div= "Нельзя с питомцами"
-                            li.room-details__rules-list-item
-                                div= "Без вечеринок и мероприятий"
-                            li.room-details__rules-list-item
-                                div= "Время прибытия — после 13:00, а выезд до 12:00"
+                            each val in ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
+                                li.room-details__rules-list-item
+                                    div= val
                     .room-details__cancel
                         h2.room-details__header.room-details__cancel-title= "Отмена"
                         = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"

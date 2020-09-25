@@ -11,12 +11,9 @@ mixin apartment-form
         .apartment-form__options
             .apartment-form__options-title
                 h3.apartment-form__title= "checkbox buttons"
-            .apartment-form__checkbox
-                +checkbox-item("Можно курить")
-            .apartment-form__checkbox
-                +checkbox-item("Можно с питомцами")
-            .apartment-form__checkbox
-                +checkbox-item("Можно пригласить гостей <br> (до 10 человек)")
+            each val in ["Можно курить", "Можно с питомцами", "Можно пригласить гостей <br> (до 10 человек)"]
+                .apartment-form__checkbox
+                    +checkbox-item(val)
         .apartment-form__accessibility
             .apartment-form__accessibility-title
                 h3.apartment-form__title= "доступность"
@@ -32,15 +29,6 @@ mixin apartment-form
                 h3.apartment-form__title= "дополнительные удобства"
                 span.material-icons.apartment-form__symbol-expand.js-apartment-form__symbol-expand= "expand_less"
             .apartment-form__checkboxes.js-apartment-form__checkboxes
-                .apartment-form__checkbox
-                    +checkbox-item("Завтрак")
-                .apartment-form__checkbox
-                    +checkbox-item("Письменный стол")
-                .apartment-form__checkbox
-                    +checkbox-item("Стул для кормления")
-                .apartment-form__checkbox
-                    +checkbox-item("Кроватка")
-                .apartment-form__checkbox
-                    +checkbox-item("Телевизор")
-                .apartment-form__checkbox
-                    +checkbox-item("Шампунь")
+                each val in ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
+                    .apartment-form__checkbox
+                        +checkbox-item(val)
