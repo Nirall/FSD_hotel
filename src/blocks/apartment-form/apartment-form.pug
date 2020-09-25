@@ -1,13 +1,12 @@
+include ../slider/slider
+
 mixin apartment-form
     .apartment-form.js-apartment-form
         +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
         .apartment-form__dropdown-guests
             +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(overlapping = "none" shadow = "none")
         .apartment-form__slider
-            .apartment-form__slider-title
-                h3.apartment-form__title= "диапазон цены"
-                .apartment-form__slider-price.js-apartment-form__slider-price= ""
-            .slider(id = "slider")
+            +slider
             p.apartment-form__slider-price-description= "Стоимость за сутки пребывания в номере"
         .apartment-form__options
             .apartment-form__options-title

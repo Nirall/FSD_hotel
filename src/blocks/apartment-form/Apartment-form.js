@@ -1,15 +1,16 @@
 class ApartmentForm {
-  constructor() {
+  constructor(elem) {
+    this.node = elem;
     this.init();
   }
 
   init() {
-    const dropdownWrapperList = document.getElementsByClassName('js-apartment-form__dropdown-title');
+    const dropdown = this.node.querySelector('.js-apartment-form__dropdown-title') || null;
+    const expandButt = this.node.querySelector('.js-apartment-form__symbol-expand') || null;
+    const checkboxes = this.node.querySelector('.js-apartment-form__checkboxes') || null;
 
-    for (let item of dropdownWrapperList) {
-      item.onclick = () => {
-        const expandButt = item.parentNode.querySelector('.js-apartment-form__symbol-expand');
-        const checkboxes = item.parentNode.querySelector('.js-apartment-form__checkboxes');
+    if (dropdown && expandButt && checkboxes) {
+      dropdown.onclick = () => {;
         checkboxes.classList.toggle('apartment-form__checkboxes_hidden');
         expandButt.classList.toggle('apartment-form__symbol-expand_rotated');
       }
@@ -17,6 +18,8 @@ class ApartmentForm {
   }
 }
 
-if (document.querySelector('.js-apartment-form')) {
-  const apartmentForm = new ApartmentForm();
+if (document.querySelectorAll('.js-apartment-form')) {
+  document.querySelectorAll('.js-apartment-form').forEach((elem) => {
+    new ApartmentForm(elem);
+  })
 }

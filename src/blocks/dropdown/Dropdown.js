@@ -1,114 +1,128 @@
 class Dropdown {
-  constructor() {
+  constructor(elem) {
+    this.node = elem;
     this.init();
   }
 
-  init() {
-    const isGuestsDropdown = function (placeholder) {
-      if (
-        placeholder.innerHTML.split('<span')[0] === 'Сколько гостей'
-        || placeholder.innerHTML.split(' ')[0] === 'Гостей'
-      ) {
-        return true;
-      }
+  findElements() {
+    this.inputField = this.node.querySelector('.js-dropdown__field') || null;
+    this.dropdownList = this.node.querySelector('.js-dropdown__list') || null;
+    this.minusBtnArr = this.node.querySelectorAll('.js-dropdown__minus') || null;
+    this.quantityArr = this.node.querySelectorAll('.js-dropdown__quantity') || null;
+    this.plusBtnArr = this.node.querySelectorAll('.js-dropdown__plus') || null;
+    this.blockBtns = this.node.querySelector('.js-dropdown__buttons') || null;
+    this.clearBtn = this.node.querySelector('.js-dropdown__clear') || null;
+    this.applyBtn = this.node.querySelector('.js-dropdown__apply') || null;
+  }
 
-      return false
+  typeCheck() {
+    if (
+      this.inputField.innerHTML.split('<span')[0] === 'Сколько гостей'
+      || this.inputField.innerHTML.split(' ')[0] === 'Гостей'
+    ) {
+        this.type = 'guests';
+    } else if (
+      this.inputField.innerHTML.split('<span')[0] == 'Выберите удобства'
+      || this.inputField.innerHTML.split(' ')[0] == 'Спален'
+    ) {
+      this.type = 'beds';
+    }
+  }
+
+  elemsCheck() {
+    if (this.type === 'guests') {
+      return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityArr
+        && this.plusBtnArr && this.clearBtn && this.applyBtn)
     }
 
-    const isBedsDropdown = function (placeholder) {
-      if (
-        placeholder.innerHTML.split('<span')[0] == 'Выберите удобства'
-        || placeholder.innerHTML.split(' ')[0] == 'Спален'
-      ) {
-        return true;
-      }
-
-      return false
+    if (this.type === 'beds') {
+      return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityArr && this.plusBtnArr)
     }
+  }
 
-    const placeholderChanger = function (quanList, placeholder) {
+  handlersProcessing() {
+    const placeholderChanger = () => {
       const expand = '<span class = "material-icons">expand_more</span>';
-      if (isGuestsDropdown(placeholder)) {
-        let quanPeople = parseInt(quanList.item(0).innerHTML) + parseInt(quanList.item(1).innerHTML);
-        let quanBaby = parseInt(quanList.item(2).innerHTML);
+      if (this.type === 'guests') {
+        let quanPeople = parseInt(this.quantityArr.item(0).innerHTML) + parseInt(this.quantityArr.item(1).innerHTML);
+        let quanBaby = parseInt(this.quantityArr.item(2).innerHTML);
         if (quanBaby !== 0) {
-          placeholder.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
+          this.inputField.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
         } else {
           if (quanPeople === 0) {
-            placeholder.innerHTML = 'Сколько гостей' + expand;
+            this.inputField.innerHTML = 'Сколько гостей' + expand;
           } else {
-            placeholder.innerHTML = `Гостей - ${quanPeople.toString()}` + expand;
+            this.inputField.innerHTML = `Гостей - ${quanPeople.toString()}` + expand;
           }
         }
-      } else if (isBedsDropdown(placeholder)) {
-        let quanRoom = parseInt(quanList.item(0).innerHTML);
-        let quanBed = parseInt(quanList.item(1).innerHTML);
+      }
+
+      if (this.type === 'beds') {
+        let quanRoom = parseInt(this.quantityArr.item(0).innerHTML);
+        let quanBed = parseInt(this.quantityArr.item(1).innerHTML);
         if (quanBed !== 0) {
-          placeholder.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...` + expand;
+          this.inputField.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...` + expand;
         } else {
           if (quanRoom === 0) {
-            placeholder.innerHTML = 'Выберите удобства' + expand;
+            this.inputField.innerHTML = 'Выберите удобства' + expand;
           } else {
-            placeholder.innerHTML = `Спален - ${quanRoom.toString()}, спать сидя ...` + expand;
+            this.inputField.innerHTML = `Спален - ${quanRoom.toString()}, спать сидя ...` + expand;
           }
         }
       }
     }
 
-    const listMinus = document.getElementsByClassName('js-dropdown__minus');
-    Array.from(listMinus, (item) => {
-      item.onclick = () => {
-        let content = item.nextSibling.innerHTML;
+    Array.from(this.minusBtnArr, (elem) => {
+      elem.onclick = () => {
+        let content = elem.nextSibling.innerHTML;
         if (content !== '0') {
           let newContent = parseInt(content) - 1;
-          item.nextSibling.innerHTML = newContent.toString();
+          elem.nextSibling.innerHTML = newContent.toString();
         }
       }
     });
 
-    const listPlus = document.getElementsByClassName('js-dropdown__plus');
-    Array.from(listPlus, (item) => {
-      item.onclick = () => {
-        let content = item.previousSibling.previousSibling.innerHTML;
+    Array.from(this.plusBtnArr, (elem) => {
+      elem.onclick = () => {
+        let content = elem.previousSibling.previousSibling.innerHTML;
         let newContent = parseInt(content) + 1;
-        item.previousSibling.previousSibling.innerHTML = newContent.toString();
-      }
+        elem.previousSibling.previousSibling.innerHTML = newContent.toString();
+      };
     });
 
-    const listClear = document.getElementsByClassName('js-dropdown__clear');
-    Array.from(listClear, (item) => {
-      item.onclick = () => {
-        item.parentNode.parentNode.querySelectorAll('.js-dropdown__quantity').forEach((quan) => quan.innerHTML = '0');
-      }
-    });
+    this.clearBtn.onclick = () => {
+      this.quantityArr.forEach((quan) => quan.innerHTML = '0');
+    }
 
-    const listApply = document.getElementsByClassName('js-dropdown__apply');
-    Array.from(listApply, (item) => {
-      let placeholder = item.parentNode.parentNode.querySelector('.js-dropdown__field');
-      let quanList = item.parentNode.parentNode.querySelectorAll('.js-dropdown__quantity');
-      item.onclick = () => {
-        placeholderChanger(quanList, placeholder);
-        item.parentNode.parentNode.querySelector('.js-dropdown__list').classList.remove('dropdown__list_activated');
-        item.parentNode.parentNode.querySelector('.dropdown__field_activated').classList.remove('dropdown__field_activated');
-        item.parentNode.parentNode.querySelector('.js-dropdown__buttons').classList.remove('dropdown__buttons_activated');
-      }
-    });
+    this.applyBtn.onclick = () => {
+      placeholderChanger();
+      this.dropdownList.classList.remove('dropdown__list_activated');
+      this.inputField.classList.remove('dropdown__field_activated');
+      this.blockBtns.classList.remove('dropdown__buttons_activated');
+    }
 
-    const listField = document.getElementsByClassName('js-dropdown__field');
-    Array.from(listField, (item) => {
-      item.onclick = () => {
-        let quanList = item.parentNode.querySelectorAll('.js-dropdown__quantity');
-        placeholderChanger(quanList, item);
-        item.parentNode.querySelector('.js-dropdown__list').classList.toggle('dropdown__list_activated');
-        item.classList.toggle('dropdown__field_activated');
-        if (!item.parentNode.querySelector('.js-dropdown__buttons').classList.contains('dropdown__buttons_hidden')) {
-          item.parentNode.querySelector('.js-dropdown__buttons').classList.toggle('dropdown__buttons_activated');
-        }
+    this.inputField.onclick = () => {
+      placeholderChanger();
+      this.dropdownList.classList.toggle('dropdown__list_activated');
+      this.inputField.classList.toggle('dropdown__field_activated');
+      this.quantityArr.forEach((quan) => quan.innerHTML = '0');
+      if (this.type === 'guests') {
+        this.blockBtns.classList.toggle('dropdown__buttons_activated');
       }
-    });
+    }
+  }
+
+  init() {
+    this.findElements();
+    this.typeCheck();
+    if (this.elemsCheck) {
+      this.handlersProcessing();
+    }
   }
 }
 
-if (document.querySelector('.js-dropdown')) {
-  const dropdown = new Dropdown();
+if (document.querySelectorAll('.js-dropdown')) {
+  document.querySelectorAll('.js-dropdown').forEach((elem) => {
+    new Dropdown(elem);
+  })
 }
