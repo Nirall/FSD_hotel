@@ -1,0 +1,35 @@
+.pagination {
+  &__pages {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-family: Montserrat;
+    font-size: 12px;
+    border: 0;
+    background: white;
+    color: $dark50;
+  }
+
+  &__button_current {
+    background: $primGrad;
+    color: white;
+  }
+
+  &__button_next {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: white;
+  }
+
+  &__pages-comment {
+    margin: 8px 0 0 0;
+    text-align: center;
+    color: $dark75;
+  }
+}

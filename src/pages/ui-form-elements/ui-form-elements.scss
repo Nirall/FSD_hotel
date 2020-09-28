@@ -1,96 +1,138 @@
-.ui-form-elements {
-  margin: 143px 140px 140px 140px;
-  display: flex;    
+.ui-form {
+  margin: 138px 140px 140px 141px;
+  display: flex;
 
   &__left-col {
+    margin-top: 4px;
     width: 320px;
   }
 
   &__text-field {
-    margin-bottom: 15px;
-  }
-  
-  &__title-text-field {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &_margin_enlarged {
+      margin: 0 2px 22px 0;
+    }
   }
 
-  .text-field_hover {
-    border: 1px solid $dark50;
+  &__input {
+		height: 44px;
+		width: 100%;
+    padding: 0 7px 3px 13px;
+		border-radius: 4px;
+		border: 1px solid $dark25;
+		color: $dark75;
+		cursor: pointer;
+    font: 14px/14px Montserrat;
+    letter-spacing: -0.15px;
+
+		&:hover, &:focus {
+			border-color: $dark50;
+		}
+
+		&::placeholder {
+      color: $dark25;
+      letter-spacing: 0;
+    }
+
+    &_hover {
+      border-color: $dark50
+    }
   }
-  
-  &__h3_grey {
-    color: $dark50;
-    font-weight: normal;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 6px;
+  }
+
+  &__header {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark100;
+
+    &_color_grey {
+      color: $dark50;
+      font-weight: normal;
+      letter-spacing: -0.15px;
+    }
+
+    &_margin_enlarged {
+      padding-bottom: 3px;
+    }
   }
 
   &__dropdown-guests {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   &__datepicker-2f {
-    margin: 35px 0 42px 0;        
+    margin: 40px 0 41px 0;
+  }
+
+  &__narrow-block {
+    margin-left: -1px;  //Только чтобы с макетом совпадало
+    width: 266px;
   }
 
   &__email {
-    width: 267px;
-    margin: 41px 0 97px 0;   
-  }
-
-  &__email-h3 {
-    margin-bottom: 4px;
+    margin: 43px 0 100px 0;
   }
 
   &__dropdown-beds {
     margin-bottom: 20px;
   }
 
-  &__more-options {
-    margin: 13px 0 0 0;
-    width: 266px;
+  &__expandable-checkboxes {
+    margin: 15px 0 0 0;
 
     &_collapsed {
-    margin: 50px 0 37px 0;
+    margin: 51px 0 39px 0;
     }
   }
 
   &__info-apartment {
-    margin-top: 13px;
+    margin-top: 14px;
   }
 
   &__middle-right-col {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;             
+    justify-content: left;
   }
 
   &__middle-col {
-    margin-left: 127px;
+    margin: 7px 0 0 126px;
   }
 
-  &__checkbox-buttons-h3 {
-    margin-bottom: 12px;
+  &__checkbox-buttons-title {
+    margin-bottom: 13px;
   }
 
   &__radio-buttons-block {
-    margin-top: 37px;
+    margin: 39px 0 41px 0;
   }
 
   &__radio-buttons {
-    margin-top: 13px;
+    margin-top: 14px;
     display: flex;
   }
 
-  &__toggle-buttons {
-    margin-top: 39px;
+  &__radio-button {
+    margin-right: 20px;
   }
 
+
   &__toggle-buttons-title {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
   }
 
   &__toggle-button {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
   }
@@ -100,7 +142,7 @@
   }
 
   &__like-buttons-block {
-    margin: 44px 0 0 0;
+    margin: 45px 0 0 0;
   }
 
   &__like-buttons-title {
@@ -116,14 +158,14 @@
   }
 
   &__rate-button {
-    margin-top: 40px;
+    margin-top: 43px;
   }
 
   &__stars-block {
     margin-top: 16px;
     display: flex;
   }
-  
+
   &__stars {
     margin-right: 20px;
   }
@@ -136,85 +178,64 @@
   }
 
   &__dropdown-guests-expanded {
-    margin-top: 197px;
+    margin-top: 190px;
   }
 
   &__rich-checkbox-buttons {
-    margin-top: 257px;
+    margin-top: 259px;
   }
 
   &__rich-checkbox-buttons-title {
-    margin-bottom: 11px;
+    margin-bottom: 13px;
   }
 
   &__right-col {
-    width: 267px;
-    margin: -30px 0 0 71px;
+    width: 320px;
+    margin: 0 0 0 72px;
   }
 
-  &__apartment-form-title {
-    padding-bottom: 8px;
+  &__slider {
+    width: 266px;
   }
 
   &__buttons {
-    margin-top: 44px;
+    margin-top: 46px;
   }
-  
+
   &__button_hover {
-    opacity: 0.5;
+    margin-left: 21px;
   }
 
   &__buttons-row {
-    margin: 16px 0 32px 0;
+    margin: 17px 0 30px 0;
     display: flex;
   }
 
-  &__buttons-row_last {
-    margin-bottom: 29px;
-  }
-
-  &__button-without-text{
-    color: $dark50;
-    margin: 0 22px 0 0;
-    cursor: pointer;
-
-    &:hover,
-    &_hover {
-      color: $purple;
-    }
-  }
-
   &__button-with-arrow {
-    margin: 1px 0 0 2px;
+    padding: 3px 0 0 1px;
+  }
+
+  &__pagination-block {
+    width: 240px;
+    margin-top: 41px;
+    padding-bottom: 43px;
   }
 
   &__pagination {
-    margin: 41px 0 0 2px;
-  }
-
-  &__pagination .search-room__pages {
-    margin: 16px 0 0 0px;
-    justify-content: left;
-  }
-
-  &__pagination .search-room__pages-comment {
-    margin-left: 5px;
-  }
-
-  &__dropdown-guests-expanded2 {
-    margin-top: 235px;
+    margin-top: 17px;
   }
 
   &__bullet-list {
-    margin: 257px 0 0 0;
+    margin: 259px 0 0 0;
+    width: 260px;
   }
 
-  &__rules-title {
-    margin-bottom: 7px;
+  &__bullet-list-title {
+    margin-bottom: 9px;
   }
 
   &__reviews {
     width: 710px;
-    margin: 158px 0 0 124px;
+    margin: 224px 0 0 124px;
   }
 }

@@ -1,0 +1,30 @@
+.expandable-checkboxes {
+  cursor: pointer;
+
+  &__dropdown-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 9px 10px 0;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark100;
+  }
+
+  &__symbol-expand_rotated {
+    transform: rotate(180deg);
+  }
+
+  &__checkbox {
+    padding: 5px 0;
+  }
+
+  &__checkboxes_hidden {
+    display: none;
+  }
+}

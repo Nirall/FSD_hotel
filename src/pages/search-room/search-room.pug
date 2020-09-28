@@ -4,6 +4,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox-item/checkbox-item
 include ../../blocks/apartment-form/apartment-form
 include ../../blocks/apartment-card/apartment-card
+include ../../blocks/pagination/pagination
 
 block content
     main.search-room
@@ -31,10 +32,5 @@ block content
                 each val in cards
                     section.search-room__apartment-card
                         +apartment-card(...val)(arrows = "none")
-            .search-room__pages
-                button.search-room__button.search-room__button_current= 1
-                each val in [2, 3, "...", 15]
-                    button.search-room__button= val
-                button.material-icons.search-room__button.search-room__button_next= "arrow_forward"
-            .search-room__pages-comment
-                = "1 – 12 из 100+ вариантов аренды"
+            .search-room__pagination
+                +pagination

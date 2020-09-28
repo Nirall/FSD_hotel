@@ -1,32 +1,31 @@
 .ui-cards {
   display: flex;
   flex-wrap: wrap;
-
-  &__apartments-finder {
-    margin-top: 149px;
-  }
+  padding: 151px 41px 140px 140px;
+  background: #F4F4F6;
 
   &__registration-form {
-    margin: 41px 0 0 140px;
-    position: static;
+    margin-top: 39px;
   }
-  
-  &__apartments-finder-check {
-    margin: 151px 0 0 37px;
+
+  &__middle-col {
+    margin-left: 40px;
   }
 
   &__in-form {
-    position: static;
     display: inline-block;
-    margin: 38px 0 0 37px;
+    margin-top: 40px;
+  }
+
+  &__right-col {
+    margin-left: 40px;
   }
 
   &__datepicker-2f {
-    margin: 151px 0 0 37px;
+    //margin: 151px 0 0 37px;
   }
 
   &__apartment-card {
-    margin-left: 33px;
     margin-top: 39px;
-  }    
+  }
 }

@@ -13,79 +13,117 @@
     margin: 20px 0;
   }
 
+  &__color-item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
   &__sq {
     width: 70px;
     height: 70px;
     border-radius: 6px;
 
-    &_dark100 {
+    &_color_dark100 {
       background: $dark100;
     }
 
-    &_dark75 {
+    &_color_dark75 {
       background: $dark75;
     }
 
-    &_dark50 {
+    &_color_dark50 {
       background: $dark50;
     }
 
-    &_dark25 {
+    &_color_dark25 {
       background: $dark25;
     }
 
-    &_dark05 {
+    &_color_dark05 {
       background: $dark05;
     }
 
-    &_purple {
+    &_color_purple {
       background: $purple;
     }
 
-    &_green {
+    &_color_green {
       background: $green;
     }
   }
 
   &__right-col {
-    margin: 94px 0 0 402px;
-  }
-
-  &__color-item-text {
-    color: $dark100;
-    margin-left: 40px;
-  }
-
-  &__color-item-title {
-    margin: 5px 0;
-  }
-
-  &__color-item-code {
-    font-weight: normal;
+    margin: 146px 0 0 402px;
   }
 
   &__type-item {
     display: flex;
     justify-content: flex-start;
-    margin: 50px 0;
+    margin-bottom: 50px;
 
-    &_body {
-      color: $dark50;
-      font: $font-body;
+    &_margin_decreased {
+      margin-bottom: 46px;
     }
   }
 
-  &__type-header {
-    text-align: right;
-    color: $dark25;
-    font-family: "Montserrat";
-    font-weight: normal;
-    margin-right: 30px;
-    width: 50px;
+  &__color-item-text {
+    color: $dark100;
+    font-family: Quicksand, Arial, sans-serif;
+    font-size: 19px;
+    margin-left: 40px;
   }
 
-  &__type-text {
-    white-space: pre-line;
+  &__header-1 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: -0.9px;
     color: $dark100;
+  }
+
+  &__header-2 {
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -0.75px;
+    color: $dark100;
+  }
+
+  &__header-3 {
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark100;
+  }
+
+  &__body-text {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Montserrat, Arial, sans-serif;
+    color: $dark75;
+  }
+
+  &__header-marker {
+    text-align: right;
+    color: $dark25;
+    font-family: Quicksand, Arial, sans-serif;
+    font-weight: normal;
+    margin-right: 31px;
+    width: 50px;
+
+    &_size_h1 {
+      font-size: 24px;
+    }
+
+    &_size_h2 {
+      font-size: 19px;
+    }
+
+    &_size_h3 {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }

@@ -1,25 +1,19 @@
 class UIFormElements {
-  static init() {
-    const DropdownElems = document.getElementsByClassName("js-ui-form-elements__dropdown_expanded");
-    const clickEvent = new Event("click");
+  constructor(elem) {
+    this.node = elem;
+    this.init();
+  }
 
-    Array.from(DropdownElems, (elem) => {
-      elem.querySelector(".js-dropdown__field").dispatchEvent(clickEvent);
-    });
-
-    const checkboxElems = document.getElementsByClassName("js-ui-form-elements__more-options_collapsed");
-    Array.from(checkboxElems, (elem) => {
-      const expandButt = elem.querySelector("span.material-icons");
-      const checkboxes = elem.querySelector(".apartment-form__checkboxes");
-      checkboxes.classList.toggle("apartment-form__checkboxes_disappear");
-      expandButt.classList.toggle("apartment-form__expand-butt_rotate");
-    });
+  init(elem) {
+    if (this.node.querySelector(".js-dropdown__field")) {
+      const clickEvent = new Event("click");
+      this.node.querySelector(".js-dropdown__field").dispatchEvent(clickEvent);
+    }
   }
 }
 
-try {
-  UIFormElements.init();
-} catch {
-  console.log("There is no UIFormElements");
-}
 
+if (document.querySelectorAll(".js-ui-form__dropdown_expanded")) {
+  dropdownElems = document.querySelectorAll(".js-ui-form__dropdown_expanded");
+  dropdownElems.forEach((elem) => new UIFormElements(elem));
+}

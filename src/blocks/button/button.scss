@@ -18,8 +18,36 @@
     border-color: #bb9cff81;
   }
 
+  &_hover {
+    border-color: #bb9cff81;
+  }
+
   &_size_long {
     padding: 13px 24px;
+  }
+
+  &_without-border {
+    border: 0;
+    padding: 0;
+
+    &_hover {
+      color: $dark75;
+    }
+  }
+
+  &_color_violet {
+    border: 0;
+    padding: 15px 19px;
+    background: $primGrad;
+    color: white;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_hover {
+      opacity: 0.5;
+    }
   }
 }
 

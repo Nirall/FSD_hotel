@@ -1,0 +1,9 @@
+mixin pagination
+  .pagination
+    .pagination__pages
+      button.pagination__button.pagination__button_current= 1
+      each val in [2, 3, "...", 15]
+        button.pagination__button= val
+      button.material-icons.pagination__button.pagination__button_next= "arrow_forward"
+    .pagination__pages-comment
+      = "1 – 12 из 100+ вариантов аренды"

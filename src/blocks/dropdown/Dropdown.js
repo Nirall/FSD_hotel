@@ -40,6 +40,28 @@ class Dropdown {
     }
   }
 
+  quantityCheck() {
+    const arr = [];
+    this.quantityArr.forEach((elem) => arr.push(elem.innerHTML !== "0"));
+
+    if (arr.every((elem) => elem === false)) {
+      this.clearBtn.innerHTML = " ";
+
+      this.minusBtnArr.forEach((elem) => {
+        elem.classList.add("dropdown__btn_disabled")
+      })
+    } else {
+      this.clearBtn.innerHTML = "очистить";
+      this.minusBtnArr.forEach((elem) => {
+        elem.classList.remove("dropdown__btn_disabled")
+      })
+    }
+  }
+
+  quantityReset() {
+    this.quantityArr.forEach((quan) => quan.innerHTML = '0');
+  }
+
   handlersProcessing() {
     const placeholderChanger = () => {
       const expand = '<span class = "material-icons">expand_more</span>';
@@ -75,10 +97,13 @@ class Dropdown {
     Array.from(this.minusBtnArr, (elem) => {
       elem.onclick = () => {
         let content = elem.nextSibling.innerHTML;
+
         if (content !== '0') {
           let newContent = parseInt(content) - 1;
           elem.nextSibling.innerHTML = newContent.toString();
         }
+
+        this.quantityCheck();
       }
     });
 
@@ -87,25 +112,30 @@ class Dropdown {
         let content = elem.previousSibling.previousSibling.innerHTML;
         let newContent = parseInt(content) + 1;
         elem.previousSibling.previousSibling.innerHTML = newContent.toString();
+        this.quantityCheck();
       };
     });
 
     this.clearBtn.onclick = () => {
-      this.quantityArr.forEach((quan) => quan.innerHTML = '0');
+      this.quantityReset();
+      this.quantityCheck();
     }
 
     this.applyBtn.onclick = () => {
       placeholderChanger();
+      this.quantityCheck();
       this.dropdownList.classList.remove('dropdown__list_activated');
       this.inputField.classList.remove('dropdown__field_activated');
       this.blockBtns.classList.remove('dropdown__buttons_activated');
+      this.quantityReset();
     }
 
     this.inputField.onclick = () => {
       placeholderChanger();
+      this.quantityCheck();
       this.dropdownList.classList.toggle('dropdown__list_activated');
       this.inputField.classList.toggle('dropdown__field_activated');
-      this.quantityArr.forEach((quan) => quan.innerHTML = '0');
+      this.quantityReset();
       if (this.type === 'guests') {
         this.blockBtns.classList.toggle('dropdown__buttons_activated');
       }

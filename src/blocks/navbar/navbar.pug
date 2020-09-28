@@ -1,6 +1,20 @@
 include ../button/button
 
 mixin navbar
+    -
+        var btnClass = "navbar__button"
+        var usernameClass = "navbar__user-name"
+        var itemClass = "navbar__item"
+
+        if (attributes.type === "without-buttons") {
+            btnClass += " navbar__button_hidden"
+            usernameClass += " navbar__user-name_displayed"
+        }
+
+        if (attributes.firstElem === "bolded") {
+            itemClass += " navbar__item_bolded"
+        }
+
     nav(class = "navbar js-navbar")
         .navbar__logo
             a(href="/" class = "navbar__reference")
@@ -8,7 +22,7 @@ mixin navbar
         .navbar__items
             .navbar__collapsed-menu
                 a(href="changeMe" class = "navbar__reference")
-                    .navbar__item= "О нас"
+                    div(class = itemClass)= "О нас"
                 span.material-icons.navbar__expand-btn.js-navbar__expand-btn= "more_horiz"
             .navbar__list.js-navbar__list
                 a(href="changeMe" class = "navbar__reference")
@@ -24,7 +38,7 @@ mixin navbar
                         ="Соглашения"
                         span.material-icons.navbar__symbol-expand= "expand_more"
             .navbar__buttons.js-navbar__buttons
-                button.navbar__button.js-navbar__in-btn= "войти"
-                button.navbar__button.navbar__button_color_violet.js-navbar__reg-btn= "зарегистрироваться"
+                button(class = btnClass).js-navbar__in-btn= "войти"
+                button(class = btnClass).navbar__button_color_violet.js-navbar__reg-btn= "зарегистрироваться"
                 a(href="changeMe" class = "navbar__reference")
-                    .navbar__user-name= "Юлий Цезарь"
+                    div(class = usernameClass)= "Юлий Цезарь"

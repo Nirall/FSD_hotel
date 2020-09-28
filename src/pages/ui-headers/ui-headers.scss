@@ -1,39 +1,24 @@
 .ui-headers {
-  background: #EFEFEF;
+  background: #F4F4F6;
+
   &__empty {
     height: 140px;
   }
 
   &__navbar {
-    position: relative;
-      
-    &_sign-in {
+
+    &_with-name {
       margin-top: 40px;
-
-      .navbar .button {
-        display: none;
-      }
-
-      .navbar__sign-in {
-        display: flex;
-      }
-
-      .navbar__buttons {
-        margin-right: 90px;
-      }
     }
   }
-    
+
   &__footer-large {
     margin-top: 40px;
   }
 
   &__footer-medium {
     margin-top: 40px;
-    
-    .footer-medium {
-      display: flex;
-      width: 768px;
-    }
+    display: flex;
+    justify-content: center;
   }
 }

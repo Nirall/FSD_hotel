@@ -1,0 +1,21 @@
+.bullet-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+  &__list-item {
+    display: flex;
+    margin: 5px 0;
+  }
+
+  &__list-item::before {
+    flex-shrink: 0;
+    display: inline-block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $dark25;
+    margin: 7px 10px 0 0;
+  }
+}

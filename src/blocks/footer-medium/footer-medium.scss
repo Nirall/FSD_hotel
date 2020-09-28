@@ -11,6 +11,11 @@
   justify-content: center;
   align-items: center;
 
+  &_displayed {
+    display: flex;
+    width: 768px;
+  }
+
   @media (max-width: 1200px) {
     display: flex;
   }

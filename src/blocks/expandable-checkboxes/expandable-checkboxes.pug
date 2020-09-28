@@ -1,0 +1,17 @@
+mixin expandable-checkboxes(title, items)
+  -
+    var symbolExpandClass = "expandable-checkboxes__symbol-expand js-expandable-checkboxes__symbol-expand"
+    var checkboxesClass = "expandable-checkboxes__checkboxes js-expandable-checkboxes__checkboxes"
+
+    if (attributes.type === "collapsed") {
+      symbolExpandClass += " expandable-checkboxes__symbol-expand_rotated"
+      checkboxesClass += " expandable-checkboxes__checkboxes_hidden"
+    }
+  .expandable-checkboxes.js-expandable-checkboxes
+    .expandable-checkboxes__dropdown-title.js-expandable-checkboxes__dropdown-title
+      h3.expandable-checkboxes__title= title
+      span(class = symbolExpandClass).material-icons= "expand_less"
+    div(class = checkboxesClass)
+      each val in items
+        .expandable-checkboxes__checkbox
+          +checkbox-item(val)

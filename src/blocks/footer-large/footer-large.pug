@@ -1,7 +1,12 @@
 include ../email/email
 
 mixin footer-large
-    .footer-large
+    -
+        var footerClass = "footer-large"
+        if (attributes.type === "without-border") {
+            footerClass += " footer-large_without-border"
+        }
+    div(class = footerClass)
         .footer-large__logo
             a(href="/" class = "footer-large__reference")
                 img(height="40px" alt="логотип" src = "images/logo-toxin.png").footer-large__image
@@ -26,4 +31,5 @@ mixin footer-large
             ul.footer-large__list.footer-large__list_width_big
                 li.footer-large__list-item.footer-large__list-item_bolded= "Подписка"
                 li.footer-large__list-item.footer-large__list-item_shifted= "Получайте специальные предложения и новости сервиса"
-            +email
+            .footer-large__email
+                +email

@@ -9,14 +9,14 @@ block content
     .ui-headers
         .ui-headers__empty
         .ui-headers__navbar
-            +navbar
-        .ui-headers__navbar.ui-headers__navbar_sign-in
-            +navbar(modifiers = "navbar_without-buttons")
+            +navbar(firstElem = "bolded")
+        .ui-headers__navbar.ui-headers__navbar_with-name
+            +navbar()(type = "without-buttons" firstElem = "bolded")
         .ui-headers__footer-large
-            +footer-large
+            +footer-large()(type = "without-border")
         .ui-headers__footer-small
             +footer-small
         .ui-headers__footer-medium
-            +footer-medium
-                    
-                    
+            +footer-medium()(type = "for ui-kit")
+        .ui-headers__empty
+

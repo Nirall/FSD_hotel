@@ -4,16 +4,14 @@ mixin dropdown(title, placeholder, ...args)
         var buttonsClass = "dropdown__buttons js-dropdown__buttons"
         var listClass = "dropdown__list js-dropdown__list"
 
-        if (attributes.overlapping === "none")
+        if (attributes.overlapping === "none") {
             blockclass += " dropdown_without-overlapping"
+            listClass += " dropdown__list_bordered"
+        }
+
 
         if (attributes.shadow === "none")
             blockclass += " dropdown_without-shadow"
-
-        if (attributes.buttons === "none") {
-            listClass += " dropdown__list_bordered"
-            buttonsClass += " dropdown__buttons_hidden"
-        }
 
     div(class = blockclass)
         h3.dropdown__title= title
@@ -25,9 +23,9 @@ mixin dropdown(title, placeholder, ...args)
                 li.dropdown__list-item
                     .dropdown__item= val
                     .dropdown__counter
-                        button(type="button").dropdown__btn.dropdown__minus.js-dropdown__minus!= "–"
+                        button(type="button").dropdown__btn.js-dropdown__minus!= "-"
                         span.dropdown__btn.dropdown__quantity.js-dropdown__quantity= "0"
-                        button(type="button").dropdown__btn.dropdown__plus.js-dropdown__plus= "+"
+                        button(type="button").dropdown__btn.js-dropdown__plus= "+"
             div(class = buttonsClass)
                 .dropdown__clear.js-dropdown__clear= "очистить"
                 .dropdown__apply.js-dropdown__apply= "применить"

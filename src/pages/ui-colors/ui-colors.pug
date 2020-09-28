@@ -8,20 +8,20 @@ block content
             - var codes = ["#1F2041", "#1F2041", "#1F2041", "#1F2041", "#1F2041", "#BC9CFF", "#6FCF97"]
             each item, index in sq__classes
                 .ui-colors__color-item
-                    div(class = "ui-colors__sq ui-colors__sq_" + item)
+                    div(class = "ui-colors__sq ui-colors__sq_color_" + item)
                     .ui-colors__color-item-text
-                        h2.ui-colors__color-item-title= titles[index]
-                        h2.ui-colors__color-item-code= codes[index]
+                        p.ui-colors__color-item-title= titles[index]
+                        p.ui-colors__color-item-code= codes[index]
         .ui-colors__right-col
             .ui-colors__type-item
-                h1.ui-colors__type-header= "H1"
-                h1.ui-colors__type-text!= "This one is the sub-section or&#10;widget title"
+                h1.ui-colors__header-marker.ui-colors__header-marker_size_h1= "H1"
+                h1.ui-colors__header-1!= "This one is the sub-section or<br>widget title"
             .ui-colors__type-item
-                h2.ui-colors__type-header= "H2"
-                h2.ui-colors__type-text!= "Next one is the item title inside&#10;widgets"
+                h2.ui-colors__header-marker.ui-colors__header-marker_size_h2= "H2"
+                h2.ui-colors__header-2!= "Next one is the item title inside<br>widgets"
+            .ui-colors__type-item.ui-colors__type-item_margin_decreased
+                h3.ui-colors__header-marker.ui-colors__header-marker_size_h3= "H3"
+                h3.ui-colors__header-3!= "This is a label or CTA text"
             .ui-colors__type-item
-                h3.ui-colors__type-header= "H3"
-                h3.ui-colors__type-text!= "This is a label or CTA text"
-            .ui-colors__type-item.ui-colors__type-item_body
-                p.ui-colors__type-header= "Body"
-                p.ui-colors__type-text!= "This is the body text which is used for most&#10;of the design, like paragraphs, lists, etc."
+                p.ui-colors__header-marker= "Body"
+                p.ui-colors__body-text!= "This is the body text which is used for most<br>of the design, like paragraphs, lists, etc."

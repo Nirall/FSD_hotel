@@ -1,4 +1,5 @@
 include ../slider/slider
+include ../expandable-checkboxes/expandable-checkboxes
 
 mixin apartment-form
     .apartment-form.js-apartment-form
@@ -25,10 +26,4 @@ mixin apartment-form
             p.apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
         +dropdown("УДОБСТВА НОМЕРА", "Выберите удобства", "СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ")(buttons = "none" overlapping = "none" shadow = "none")
         .apartment-form__more-options
-            .apartment-form__dropdown-title.js-apartment-form__dropdown-title
-                h3.apartment-form__title= "дополнительные удобства"
-                span.material-icons.apartment-form__symbol-expand.js-apartment-form__symbol-expand= "expand_less"
-            .apartment-form__checkboxes.js-apartment-form__checkboxes
-                each val in ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
-                    .apartment-form__checkbox
-                        +checkbox-item(val)
+            +expandable-checkboxes("дополнительные удобства", ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"])

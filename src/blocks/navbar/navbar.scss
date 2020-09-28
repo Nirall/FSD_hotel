@@ -126,6 +126,10 @@
       }
     }
 
+    &_hidden {
+      display: none;
+    }
+
     @media (max-width: 670px) {
       border: 0;
       justify-content: flex-start;
@@ -154,17 +158,25 @@
     &_visible_flex {
       display: flex;
     }
+
+    &_bolded {
+      font-weight: 600;
+      color: $dark100;
+    }
   }
 
   &__user-name {
-    width: 150px;
     height: 30px;
-    margin-left: 10px;
+    margin: 0 10px 0 9px;
     padding-left: 20px;
     border-left: 1px solid $dark10;
     color: $dark50;
     display: none;
     align-items: center;
+
+    &_displayed {
+      display: flex;
+    }
   }
 }
 

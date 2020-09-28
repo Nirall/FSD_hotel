@@ -46,22 +46,6 @@
 
   &__more-options {
     padding-top: 19px;
-    cursor: pointer;
-  }
-
-  &__dropdown-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 6px 9px 10px 0;
-  }
-
-  &__symbol-expand_rotated {
-    transform: rotate(180deg);
-  }
-
-  &__checkboxes_hidden {
-    display: none;
   }
 }
 
