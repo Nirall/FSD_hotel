@@ -1,10 +1,19 @@
-mixin info-apartment (icon, title, text)
+mixin info-apartment (data)
     -
         var classMod = "info-apartment"
         if (attributes.type == "with border")
             classMod += " info-apartment_bordered"
-    div(class = classMod)
-        span.material-icons.info-apartment__icon= icon
-        .info-apartment__text-block
-            .info-apartment__title= title
-            .info-apartment__text= text
+    .info-apartment
+        - var elemClass = ""
+        each val, index in data
+            -
+                if (index === 0) {
+                    elemClass = "info-apartment__elem"
+                } else {
+                    elemClass = "info-apartment__elem info-apartment__elem_bordered"
+                }
+            div(class = elemClass)
+                span.material-icons.info-apartment__icon= val.icon
+                .info-apartment__text-block
+                    .info-apartment__title= val.title
+                    .info-apartment__text= val.text

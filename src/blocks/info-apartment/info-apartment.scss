@@ -1,10 +1,11 @@
 .info-apartment {
-  display: flex;
-  align-items: center;
+  &__elem {
+    display: flex;
+    align-items: center;
 
-  &_bordered {
-    border-top: 1px solid $dark10;
-    border-bottom: 1px solid $dark10;
+    &_bordered {
+      border-top: 1px solid $dark10;
+    }
   }
 
   &__icon {

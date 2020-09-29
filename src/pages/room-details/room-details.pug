@@ -8,21 +8,26 @@ include ../../blocks/receipt/receipt
 include ../../blocks/bullet-list/bullet-list
 
 block content
-    - var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-    - var text2 = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."
+    -
+        var text1 = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+        var text2 = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."
     main.room-details
-        .room-details__fotos
-            .room-details__fotos-left
-            .room-details__fotos-right
-                .room-details__fotos-right-img1
-                .room-details__fotos-right-img2
+        .room-details__photos
+            .room-details__main-photo
+            .room-details__additional-photos
+                .room-details__additional-top-photo
+                .room-details__additional-bottom-photo
         .room-details__info
             article.room-details__info-left-column
                 section.room-details__info-apartment
                     h2.room-details__header= "Сведения о номере"
-                    +info-apartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                    +info-apartment("location_city", "Удобство", "Окно в каждой из спален")(type = "with border")
-                    +info-apartment("whatshot", "Уют", "Номер оснащен камином")
+                    -
+                        const info = [
+                            {icon: "insert_emoticon", title: "Комфорт", text: "Шумопоглощающие стены"},
+                            {icon: "location_city", title: "Удобство", text: "Окно в каждой из спален"},
+                            {icon: "whatshot", title: "Уют", text: "Номер оснащен камином"},
+                        ]
+                    +info-apartment(info)
                 section.room-details__pie-chart
                     h2.room-details__header.room-details__pie-chart-title= "Впечатления от номера"
                     .room-details__pie-chart-graph

@@ -2,32 +2,32 @@
   margin: 0 auto;
   color: $dark75;
 
-  &__fotos {
+  &__photos {
     display: flex;
     margin-bottom: 71px;
   }
 
-  &__fotos-left {
+  &__main-photo {
     flex-grow: 2.13;
     height: 485px;
-    background: center / cover no-repeat  url("./images/room-888a.jpg");
+    background: center/cover no-repeat  url("./images/room-888a.jpg");
   }
 
-  &__fotos-right-img1 {
-    height: 50%;
-    background: center / cover no-repeat  url("./images/room-888b.jpg");
-  }
-
-  &__fotos-right-img2 {
-    height: 50%;
-    background: center / cover no-repeat  url("./images/room-888c.jpg");
-  }
-
-  &__fotos-right {
+  &__additional-photos {
     flex-grow: 1;
     height: 485px;
     display: flex;
     flex-direction: column;
+  }
+
+  &__additional-top-photo {
+    height: 50%;
+    background: center/cover no-repeat  url("./images/room-888b.jpg");
+  }
+
+  &__additional-bottom-photo {
+    height: 50%;
+    background: center/cover no-repeat  url("./images/room-888c.jpg");
   }
 
   &__info {
