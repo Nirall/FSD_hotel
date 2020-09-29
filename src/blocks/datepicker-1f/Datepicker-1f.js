@@ -44,9 +44,4 @@ class Datepicker1f {
   }
 }
 
-
-if ($('.js-datepicker-1f')) {
-  $('.js-datepicker-1f').each((i, elem) => {
-    new Datepicker1f($(elem));
-  })
-}
+export default Datepicker1f;

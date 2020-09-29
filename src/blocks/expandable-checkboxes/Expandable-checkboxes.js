@@ -5,9 +5,9 @@ class ExpandableCheckboxes {
   }
 
   init() {
-    const dropdown = this.node.querySelector('.js-expandable-checkboxes__dropdown-title') || null;
-    const expandButt = this.node.querySelector('.js-expandable-checkboxes__symbol-expand') || null;
-    const checkboxes = this.node.querySelector('.js-expandable-checkboxes__checkboxes') || null;
+    const dropdown = this.node.querySelector('.js-expandable-checkboxes__dropdown-title');
+    const expandButt = this.node.querySelector('.js-expandable-checkboxes__symbol-expand');
+    const checkboxes = this.node.querySelector('.js-expandable-checkboxes__checkboxes');
 
     if (dropdown && expandButt && checkboxes) {
       dropdown.onclick = () => {;
@@ -18,8 +18,4 @@ class ExpandableCheckboxes {
   }
 }
 
-if (document.querySelectorAll('.js-expandable-checkboxes')) {
-  document.querySelectorAll('.js-expandable-checkboxes').forEach((elem) => {
-    new ExpandableCheckboxes(elem);
-  })
-}
+export default ExpandableCheckboxes;

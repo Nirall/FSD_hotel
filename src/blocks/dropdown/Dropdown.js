@@ -5,14 +5,14 @@ class Dropdown {
   }
 
   findElements() {
-    this.inputField = this.node.querySelector('.js-dropdown__field') || null;
-    this.dropdownList = this.node.querySelector('.js-dropdown__list') || null;
-    this.minusBtnArr = this.node.querySelectorAll('.js-dropdown__minus') || null;
-    this.quantityArr = this.node.querySelectorAll('.js-dropdown__quantity') || null;
-    this.plusBtnArr = this.node.querySelectorAll('.js-dropdown__plus') || null;
-    this.blockBtns = this.node.querySelector('.js-dropdown__buttons') || null;
-    this.clearBtn = this.node.querySelector('.js-dropdown__clear') || null;
-    this.applyBtn = this.node.querySelector('.js-dropdown__apply') || null;
+    this.inputField = this.node.querySelector('.js-dropdown__field');
+    this.dropdownList = this.node.querySelector('.js-dropdown__list');
+    this.minusBtnArr = this.node.querySelectorAll('.js-dropdown__minus');
+    this.quantityArr = this.node.querySelectorAll('.js-dropdown__quantity');
+    this.plusBtnArr = this.node.querySelectorAll('.js-dropdown__plus');
+    this.blockBtns = this.node.querySelector('.js-dropdown__buttons');
+    this.clearBtn = this.node.querySelector('.js-dropdown__clear');
+    this.applyBtn = this.node.querySelector('.js-dropdown__apply');
   }
 
   typeCheck() {
@@ -151,8 +151,4 @@ class Dropdown {
   }
 }
 
-if (document.querySelectorAll('.js-dropdown')) {
-  document.querySelectorAll('.js-dropdown').forEach((elem) => {
-    new Dropdown(elem);
-  })
-}
+export default Dropdown;

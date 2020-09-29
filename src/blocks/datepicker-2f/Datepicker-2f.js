@@ -40,8 +40,4 @@ class Datepicker2f {
   }
 }
 
-if ($('.js-datepicker-2f')) {
-  $('.js-datepicker-2f').each((i, elem) => {
-    new Datepicker2f($(elem));
-  })
-}
+export default Datepicker2f;

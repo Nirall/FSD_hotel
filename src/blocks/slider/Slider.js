@@ -35,8 +35,4 @@ class Slider {
   }
 }
 
-if (document.querySelectorAll('.js-slider')) {
-  document.querySelectorAll('.js-slider').forEach((elem) => {
-    new Slider(elem);
-  })
-}
+export default Slider;

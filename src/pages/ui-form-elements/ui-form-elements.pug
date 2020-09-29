@@ -56,8 +56,12 @@ block content
                 .ui-form__expandable-checkboxes
                     +expandable-checkboxes("EXPANDABLE CHECKBOX LIST", checkboxes)
                 .ui-form__info-apartment
-                    +info-apartment("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                    +info-apartment("location_city", "Удобство", "Окно в каждой из спален")(type = "with border")
+                    -
+                        const info = [
+                            {icon: "insert_emoticon", title: "Комфорт", text: "Шумопоглощающие стены"},
+                            {icon: "location_city", title: "Удобство", text: "Окно в каждой из спален"},
+                        ]
+                    +info-apartment(info)
         .ui-form__middle-right-col
             .ui-form__middle-col
                 .ui-form__checkbox-buttons
