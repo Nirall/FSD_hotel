@@ -1,0 +1,138 @@
+.footer {
+  &__top {
+    padding: 94px 130px 90px 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-top: 1px solid $dark25;
+    color: $dark50;
+
+    &_without-border {
+      border: 0;
+    }
+
+    &_hidden {
+      display: none;
+    }
+
+    @media (max-width: 1300px) {
+      padding: 94px 20px 90px 20px;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    padding: 6px 32px 0 0;
+    width: 294px;
+    line-height: 24px;
+
+    &_centered {
+      display: none;
+      padding: 0;
+      width: auto;
+    }
+
+    &_displayed {
+      display: inline-block;
+    }
+
+    @media (max-width: 1200px) {
+      display: inline-block;
+    }
+  }
+
+  &__logo-text {
+    margin-top: 10px;
+  }
+
+  &__subscribe {
+    padding-right: 10px;
+  }
+
+  &__list {
+    width: 195px;
+    line-height: 18px;
+    padding-inline-start: 0px;
+    list-style-type: none;
+
+    &_width_big {
+      width: 260px;
+      line-height: 24px;
+    }
+  }
+
+  &__list-item {
+    padding: 10px 0px;
+
+    &_bolded {
+      font-size: 12px;
+      padding-bottom: 11px;
+      line-height: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $dark100;
+    }
+
+    &_shifted {
+      padding: 7px 0 23px 0;
+    }
+  }
+
+  &__reference {
+    text-decoration: none;
+    color: $dark50;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  &__email {
+    width: 260px;
+  }
+
+  &__bottom {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px $dark05;
+    display: flex;
+    border-top: 1px solid $dark10;
+    justify-content: space-between;
+    padding: 10px 130px 17px 139px;
+
+    &_width_small {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 120px 0 119px 0;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 120px 0 119px 0;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__copyright {
+    margin-top: 13px;
+
+    &_with-bottom-margin {
+      margin: 14px 0 12px 0;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 14px 0 12px 0;
+    }
+  }
+}
+

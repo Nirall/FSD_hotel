@@ -1,0 +1,56 @@
+include ../email/email
+include ../socials/socials
+include ../copyright/copyright
+
+mixin footer
+    -
+        var footerTopClass = "footer__top"
+        if (attributes.type === "without-border") {
+            footerTopClass += " footer__top_without-border"
+        }
+
+        var footerBottomClass = "footer__bottom"
+        var logoBottomClass = "footer__logo footer__logo_centered"
+        var copyrightClass = "footer__copyright"
+        if (attributes.style === "for ui-kit") {
+            footerBottomClass += " footer__bottom_width_small"
+            logoBottomClass += " footer__logo_displayed"
+            footerTopClass += " footer__top_hidden"
+            copyrightClass += " footer__copyright_with-bottom-margin"
+        }
+
+    .footer
+        div(class = footerTopClass)
+            .footer__logo
+                a(href="/" class = "footer__reference")
+                    img(height="40px" alt="логотип" src = "images/logo-toxin.png").footer__image
+                p.footer__logo-text.
+                    Бронирование номеров в лучшем отеле 2019 года по версии ассоциации &#171;Отельные взгляды&#187;
+            ul.footer__list
+                li.footer__list-item.footer__list-item_bolded= "Навигация"
+                each val in ["О нас", "Новости", "Служба поддержки", "Услуги"]
+                    a(href="changeMe" class = "footer__reference")
+                        li.footer__list-item= val
+            ul.footer__list
+                li.footer__list-item.footer__list-item_bolded= "О нас"
+                each val in ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+                    a(href="changeMe" class = "footer__reference")
+                        li.footer__list-item= val
+            ul.footer__list
+                li.footer__list-item.footer__list-item_bolded= "Служба поддержки"
+                each val in ["Соглашения", "Сообщества", "Связь с нами"]
+                    a(href="changeMe" class = "footer__reference")
+                        li.footer__list-item= val
+            .footer__subscribe
+                ul.footer__list.footer__list_width_big
+                    li.footer__list-item.footer__list-item_bolded= "Подписка"
+                    li.footer__list-item.footer__list-item_shifted= "Получайте специальные предложения и новости сервиса"
+                .footer__email
+                    +email
+        div(class = footerBottomClass)
+            div(class = logoBottomClass)
+                a(href="/" class = "footer__reference")
+                    img(height="40px" alt="логотип" src = "images/logo-toxin.png").footer__image
+            .div(class = copyrightClass)
+                +copyright
+            +socials
