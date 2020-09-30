@@ -7,10 +7,6 @@
 	border-radius: 4px;
 	$root: &;
 
-	@media (max-width: 950px) {
-		margin: 230px auto;
-	}
-
 	@media (max-width: 385px) {
 		width: 320px;
 		padding: 20px 10px;

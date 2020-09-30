@@ -53,8 +53,8 @@
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',            
-            nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',            
+            prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
+            nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
             navTitles: {
                 //days: 'MM, <i>yyyy</i>',
                 days: 'MM <i>yyyy</i>',
@@ -2202,7 +2202,7 @@
         _onChangeRange: function (e) {
             var $target = $(e.target),
                 name = $target.attr('name');
-            
+
             this.d.timepickerIsActive = true;
 
             this[name] = $target.val();

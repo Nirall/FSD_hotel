@@ -1,9 +1,17 @@
 .ui-colors {
   display: flex;
 
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
+
   &__left-col {
     width: 280px;
     margin: 125px 0 0 150px;
+
+    @media (max-width: 1300px) {
+      margin: 100px auto;
+    }
   }
 
   &__color-item {
@@ -53,7 +61,11 @@
   }
 
   &__right-col {
-    margin: 146px 0 0 402px;
+    margin: 145px 0 0 402px;
+
+    @media (max-width: 1300px) {
+      margin: 100px auto;
+    }
   }
 
   &__type-item {
@@ -73,36 +85,36 @@
     margin-left: 40px;
   }
 
-  &__header-1 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 600;
-    letter-spacing: -0.9px;
-    color: $dark100;
-  }
-
-  &__header-2 {
-    font-size: 19px;
-    line-height: 24px;
-    font-weight: 600;
-    letter-spacing: -0.75px;
-    color: $dark100;
-  }
-
-  &__header-3 {
-    font-size: 12px;
-    line-height: 15px;
-    font-family: Montserrat, Arial, sans-serif;
+  &__text {
+    font-family: Quicksand, Arial, sans-serif;
+    letter-spacing: -0.04px;
     font-weight: bold;
-    text-transform: uppercase;
     color: $dark100;
-  }
 
-  &__body-text {
-    font-size: 14px;
-    line-height: 24px;
-    font-family: Montserrat, Arial, sans-serif;
-    color: $dark75;
+    &_size_large {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &_size_medium {
+      font-size: 19px;
+      line-height: 24px;
+    }
+
+    &_size_small {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    &_size_tiny {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: normal;
+      letter-spacing: 0.53px;
+      color: $dark75;
+    }
   }
 
   &__header-marker {
@@ -113,15 +125,15 @@
     margin-right: 31px;
     width: 50px;
 
-    &_size_h1 {
+    &_size_large  {
       font-size: 24px;
     }
 
-    &_size_h2 {
+    &_size_medium {
       font-size: 19px;
     }
 
-    &_size_h3 {
+    &_size_small {
       font-size: 12px;
       line-height: 15px;
     }

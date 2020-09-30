@@ -1,15 +1,20 @@
 .ui-cards {
   display: flex;
   flex-wrap: wrap;
-  padding: 151px 41px 140px 140px;
+  padding: 151px 0 140px 0;
+  justify-content: center;
   background: #F4F4F6;
+
+  &__left-col {
+    margin-bottom: 40px;
+  }
 
   &__registration-form {
     margin-top: 39px;
   }
 
   &__middle-col {
-    margin-left: 40px;
+    margin: 0 40px 40px 40px;
   }
 
   &__in-form {
@@ -18,11 +23,7 @@
   }
 
   &__right-col {
-    margin-left: 40px;
-  }
-
-  &__datepicker-2f {
-    //margin: 151px 0 0 37px;
+    width: 320px;
   }
 
   &__apartment-card {
