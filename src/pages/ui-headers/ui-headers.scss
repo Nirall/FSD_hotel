@@ -19,5 +19,9 @@
   &__footer_width_small {
     margin: 40px auto 0 auto;
     width: 768px;
+
+    @media(max-width: 800px) {
+      width: 100%;
+    }
   }
 }

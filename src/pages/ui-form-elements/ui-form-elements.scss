@@ -1,17 +1,33 @@
 .ui-form {
-  margin: 138px 140px 140px 141px;
-  display: flex;
+  margin: 138px 0 140px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-areas:  "a b c"
+                        "a d d";
+
+  @media(max-width: 1200px) {
+    grid-template-areas:  "a"
+                          "b"
+                          "c"
+                          "d";
+    justify-items: center;
+  }
 
   &__left-col {
     margin-top: 4px;
     width: 320px;
+    grid-area: a;
+
+    @media(max-width: 1200px) {
+      margin: 30px auto;
+    }
   }
 
   &__text-field {
     margin-bottom: 20px;
 
     &_margin_enlarged {
-      margin: 0 2px 22px 0;
+      margin: 0 0 22px 0;
     }
   }
 
@@ -98,14 +114,15 @@
     margin-top: 14px;
   }
 
-  &__middle-right-col {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-  }
 
   &__middle-col {
     margin: 7px 0 0 126px;
+    width: 320px;
+    grid-area: b;
+
+    @media(max-width: 1200px) {
+      margin: 30px auto;
+    }
   }
 
   &__checkbox-buttons-title {
@@ -191,7 +208,12 @@
 
   &__right-col {
     width: 320px;
-    margin: 0 0 0 72px;
+    margin-left: 72px;
+    grid-area: c;
+
+    @media(max-width: 1200px) {
+      margin: 30px auto;
+    }
   }
 
   &__slider {
@@ -235,7 +257,12 @@
   }
 
   &__reviews {
-    width: 710px;
+    max-width: 710px;
     margin: 224px 0 0 124px;
+    grid-area: d;
+
+    @media(max-width: 1200px) {
+      margin: 30px auto;
+    }
   }
 }
