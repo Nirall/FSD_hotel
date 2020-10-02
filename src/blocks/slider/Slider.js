@@ -5,7 +5,7 @@ class Slider {
   }
 
   init() {
-    const noUiSlider = require('./nouislider.js');
+    const noUiSlider = require('../../lib/nouislider/nouislider.js');
     const slider = this.node.querySelector('.js-slider__body');
     const price = this.node.querySelector('.js-slider__price');
 
