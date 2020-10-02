@@ -1,4 +1,4 @@
-include ../datepicker-2f/datepicker-2f
+include ../datepicker/datepicker
 include ../dropdown/dropdown
 include ../button-with-arrow/button-with-arrow
 
@@ -13,7 +13,7 @@ mixin receipt
                 .receipt__info-part
                     span.receipt__info-price= `9 990₽`
                     span.receipt__info-price-dimension= " в сутки"
-            +datepicker-2f("ПРИБЫТИЕ", "ВЫЕЗД")
+            +datepicker("ПРИБЫТИЕ", "ВЫЕЗД")(type = "two fields")
             .receipt__dropdown
                 +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
             .receipt__items

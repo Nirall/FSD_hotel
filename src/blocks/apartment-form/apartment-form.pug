@@ -1,9 +1,12 @@
 include ../slider/slider
+include ../dropdown/dropdown
+include ../datepicker/datepicker
+include ../checkbox-item/checkbox-item
 include ../expandable-checkboxes/expandable-checkboxes
 
 mixin apartment-form
     .apartment-form.js-apartment-form
-        +datepicker-1f("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
+        +datepicker("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
         .apartment-form__dropdown-guests
             +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(overlapping = "none" shadow = "none")
         .apartment-form__slider

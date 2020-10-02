@@ -1,0 +1,32 @@
+mixin datepicker(title1= "", title2= "")
+    -
+        var blockClass = "datepicker-block js-datepicker"
+        var wrapperInputClass = "datepicker-block__wrapper-input-field js-datepicker__wrapper-input-field"
+        var inputClass = "datepicker-block__input-field"
+        var inputColumnClass = "datepicker-block__input-column"
+
+        if (attributes.type === "two fields") {
+            blockClass += " js-datepicker-2f"
+            wrapperInputClass += " datepicker-block__wrapper-input-field_width_fixed"
+            inputClass += " datepicker-block__input-field_width_fixed"
+            inputColumnClass += " datepicker-block__input-column_width_fixed"
+        }
+    div(class = blockClass)
+        div(class = inputColumnClass)
+            h3.datepicker-block__title= title1
+            div(class = wrapperInputClass)
+                input(
+                    type="text" class = inputClass
+                    inline = "true" data-range="true" data-multiple-dates-separator = " - "
+                    clearButton = "true" placeholder="ДД.ММ.ГГГГ"
+                ).datepicker-here.js-datepicker__input-field
+                span.material-icons.datepicker-block__symbol-expand= "expand_more"
+        if attributes.type === "two fields"
+            div(class = inputColumnClass)
+                h3.datepicker-block__title= title2
+                div(class = wrapperInputClass)
+                    input(
+                        class = inputClass
+                        placeholder="ДД.ММ.ГГГГ"
+                    ).js-datepicker__out-date-field
+                    span.material-icons.datepicker-block__symbol-expand= "expand_more"
