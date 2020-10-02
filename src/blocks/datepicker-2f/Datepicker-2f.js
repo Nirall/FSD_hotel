@@ -17,17 +17,6 @@ class Datepicker2f {
       ? this.node.find($('.js-datepicker-2f__wrapper-input-field'))
       : null;
 
-    if (inDateField_2f) {
-      inDateField_2f.datepicker({clearButton: true});
-      inDateField_2f.datepicker({todayButton: true});
-      inDateField_2f.datepicker({prevHtml: '<i class = "db-arrow material-icons">arrow_back</i>'});
-      inDateField_2f.datepicker({nextHtml: '<i class = "db-arrow material-icons">arrow_forward</i>'});
-    }
-
-    const applyButt = $('.datepicker--button[data-action="today"]');
-    applyButt.on('click', () => datepickerApi_2f.hide());
-    applyButt.html('Применить');
-
     if (inDateField_2f && outDateField_2f && wrapperInput) {
       inDateField_2f.datepicker({
         onSelect: (formattedDate) => {
@@ -39,7 +28,14 @@ class Datepicker2f {
       });
 
       const datepickerApi_2f = inDateField_2f.datepicker().data('datepicker');
+      inDateField_2f.datepicker({clearButton: true});
+      inDateField_2f.datepicker({todayButton: true});
+      inDateField_2f.datepicker({prevHtml: '<i class = "db-arrow material-icons">arrow_back</i>'});
+      inDateField_2f.datepicker({nextHtml: '<i class = "db-arrow material-icons">arrow_forward</i>'});
       wrapperInput.on('click', () => datepickerApi_2f.show());
+      const applyButt = $('.datepicker--button[data-action="today"]');
+      applyButt.on('click', () => datepickerApi_2f.hide());
+      applyButt.html('Применить');
     }
   }
 }

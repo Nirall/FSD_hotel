@@ -699,13 +699,17 @@
 	text-transform: uppercase;
   font-family: Montserrat;
   font-weight: 600;
-	color: rgba(31, 32, 65, 0.5);
-
+  color: rgba(31, 32, 65, 0.5);
+}
+.datepicker--button:hover {
+  background: white;
+  font-weight: bold;
 }
 .datepicker--button[data-action = "today"] {
 	color: #BC9CFF;
-	text-align: right;
+  text-align: right;
 }
+
 .db-arrow {
   color: #BC9CFF;
 }
