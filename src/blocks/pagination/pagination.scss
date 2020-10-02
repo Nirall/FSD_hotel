@@ -13,18 +13,19 @@
     border: 0;
     background: white;
     color: $dark50;
-  }
+    cursor: pointer;
 
-  &__button_current {
-    background: $primGrad;
-    color: white;
-  }
+    &_color_violet {
+      background: $primGrad;
+      color: white;
+    }
 
-  &__button_next {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    font-family: 'Material Icons';
-    font-size: 24px;
-    color: white;
+    &_color_green {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      font-family: 'Material Icons';
+      font-size: 24px;
+      color: white;
+    }
   }
 
   &__pages-comment {

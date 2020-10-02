@@ -11,8 +11,8 @@ class Dropdown {
     this.quantityArr = this.node.querySelectorAll('.js-dropdown__quantity');
     this.plusBtnArr = this.node.querySelectorAll('.js-dropdown__plus');
     this.blockBtns = this.node.querySelector('.js-dropdown__buttons');
-    this.clearBtn = this.node.querySelector('.js-dropdown__clear');
-    this.applyBtn = this.node.querySelector('.js-dropdown__apply');
+    this.clearBtn = this.node.querySelector('.js-dropdown__clear-button');
+    this.applyBtn = this.node.querySelector('.js-dropdown__apply-button');
   }
 
   typeCheck() {
