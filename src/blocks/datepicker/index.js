@@ -3,7 +3,7 @@ import Datepicker from './Datepicker';
 const datepickers = $('.js-datepicker');
 
 if (datepickers) {
-  datepickers.each((i, elem) => {
+  datepickers.each((_, elem) => {
     new Datepicker($(elem));
   })
 }
