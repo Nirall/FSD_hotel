@@ -4,32 +4,37 @@ class Navbar {
     this.init();
   }
 
-  init() {
-    const expandButt = this.node.querySelector('.js-navbar__expand-btn');
-    const list = this.node.querySelector('.js-navbar__list');
-    const buttons = this.node.querySelector('.js-navbar__buttons');
-    const inButt = this.node.querySelector('.js-navbar__in-btn');
-    const regButt = this.node.querySelector('.js-navbar__reg-btn');
-    const inForm = document.querySelector('.js-registration__in-form');
-    const regForm = document.querySelector('.js-registration__reg-form');
+  handleExpandButtonClick() {
+    this.list.classList.toggle('navbar__item_visible_flex');
+    this.buttons.classList.toggle('navbar__item_visible_flex');
+  }
 
-    if (expandButt && list && buttons) {
-      expandButt.onclick = () => {
-        list.classList.toggle('navbar__item_visible_flex');
-        buttons.classList.toggle('navbar__item_visible_flex');
-      }
+  handleInButtonClick() {
+    this.regForm.classList.add('registration__reg-form_hidden');
+    this.inForm.classList.add('registration__in-form_displayed');
+  }
+
+  handleRegButtonClick() {
+    this.regForm.classList.remove('registration__reg-form_hidden');
+    this.inForm.classList.remove('registration__in-form_displayed');
+  }
+
+  init() {
+    this.expandButton = this.node.querySelector('.js-navbar__expand-btn');
+    this.list = this.node.querySelector('.js-navbar__list');
+    this.buttons = this.node.querySelector('.js-navbar__buttons');
+    this.inButton = this.node.querySelector('.js-navbar__in-btn');
+    this.regButton = this.node.querySelector('.js-navbar__reg-btn');
+    this.inForm = document.querySelector('.js-registration__in-form');
+    this.regForm = document.querySelector('.js-registration__reg-form');
+
+    if (this.expandButton && this.list && this.buttons) {
+      this.expandButton.onclick = this.handleExpandButtonClick.bind(this);
     }
 
-    if (inButt && regButt && inForm && regForm) {
-      inButt.onclick = () => {
-        regForm.classList.add('registration__reg-form_hidden');
-        inForm.classList.add('registration__in-form_displayed');
-      }
-
-      regButt.onclick = () => {
-        regForm.classList.remove('registration__reg-form_hidden');
-        inForm.classList.remove('registration__in-form_displayed')
-      }
+    if (this.inButton && this.regButton && this.inForm && this.regForm) {
+      this.inButton.onclick = this.handleInButtonClick.bind(this);
+      this.regButton.onclick = this.handleRegButtonClick.bind(this);
     }
   }
 }
