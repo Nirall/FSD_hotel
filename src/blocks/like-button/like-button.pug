@@ -1,8 +1,8 @@
 mixin like-button (modifier, quantity)
     -
-        let classMod = "like-button"
-        if (modifier == "_active") {
-            classMod += " like-button_activated"
+        let classMod = 'like-button'
+        if (modifier == '_active') {
+            classMod += ' like-button_activated'
         }
     div(class = classMod)
         if (modifier == "_active")

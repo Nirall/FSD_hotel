@@ -4,19 +4,19 @@ include ../copyright/copyright
 
 mixin footer
     -
-        var footerTopClass = "footer__top"
-        if (attributes.type === "without-border") {
-            footerTopClass += " footer__top_without-border"
+        var footerTopClass = 'footer__top'
+        if (attributes.type === 'without-border') {
+            footerTopClass += ' footer__top_without-border'
         }
 
-        var footerBottomClass = "footer__bottom"
-        var logoBottomClass = "footer__logo footer__logo_centered"
-        var copyrightClass = "footer__copyright"
-        if (attributes.style === "for ui-kit") {
-            footerBottomClass += " footer__bottom_width_small"
-            logoBottomClass += " footer__logo_displayed"
-            footerTopClass += " footer__top_hidden"
-            copyrightClass += " footer__copyright_with-bottom-margin"
+        var footerBottomClass = 'footer__bottom'
+        var logoBottomClass = 'footer__logo footer__logo_centered'
+        var copyrightClass = 'footer__copyright'
+        if (attributes.style === 'for ui-kit') {
+            footerBottomClass += ' footer__bottom_width_small'
+            logoBottomClass += ' footer__logo_displayed'
+            footerTopClass += ' footer__top_hidden'
+            copyrightClass += ' footer__copyright_with-bottom-margin'
         }
 
     .footer

@@ -1,12 +1,12 @@
 mixin info-apartment (data)
     .info-apartment
-        - var elemClass = ""
+        - var elemClass = ''
         each val, index in data
             -
                 if (index === 0) {
-                    elemClass = "info-apartment__elem"
+                    elemClass = 'info-apartment__elem'
                 } else {
-                    elemClass = "info-apartment__elem info-apartment__elem_bordered"
+                    elemClass = 'info-apartment__elem info-apartment__elem_bordered'
                 }
             div(class = elemClass)
                 span.material-icons.info-apartment__icon= val.icon

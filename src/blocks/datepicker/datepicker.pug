@@ -1,15 +1,14 @@
 mixin datepicker(title1= "", title2= "")
     -
-        var blockClass = "datepicker-block js-datepicker"
-        var wrapperInputClass = "datepicker-block__wrapper-input-field js-datepicker__wrapper-input-field"
-        var inputClass = "datepicker-block__input-field"
-        var inputColumnClass = "datepicker-block__input-column"
+        var blockClass = 'datepicker-block js-datepicker'
+        var wrapperInputClass = 'datepicker-block__wrapper-input-field js-datepicker__wrapper-input-field'
+        var inputClass = 'datepicker-block__input-field'
+        var inputColumnClass = 'datepicker-block__input-column'
 
-        if (attributes.type === "two fields") {
-            blockClass += " js-datepicker-2f"
-            wrapperInputClass += " datepicker-block__wrapper-input-field_width_fixed"
-            inputClass += " datepicker-block__input-field_width_fixed"
-            inputColumnClass += " datepicker-block__input-column_width_fixed"
+        if (attributes.type === 'two fields') {
+            wrapperInputClass += ' datepicker-block__wrapper-input-field_width_fixed'
+            inputClass += ' datepicker-block__input-field_width_fixed'
+            inputColumnClass += ' datepicker-block__input-column_width_fixed'
         }
     div(class = blockClass)
         div(class = inputColumnClass)

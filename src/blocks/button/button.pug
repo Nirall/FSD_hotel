@@ -1,22 +1,22 @@
 mixin button(text)
   -
-    var blockClass = "button"
-    if (attributes.size === "long")
-      blockClass += " button_size_long"
+    var blockClass = 'button'
+    if (attributes.size === 'long')
+      blockClass += ' button_size_long'
 
-    if (attributes.color === "violet")
-      blockClass += " button_color_violet"
+    if (attributes.color === 'violet')
+      blockClass += ' button_color_violet'
 
-    if (attributes.style === "without border")
-      blockClass += " button_without-border"
+    if (attributes.style === 'without border')
+      blockClass += ' button_without-border'
 
-    if (attributes.type === "hover") {
-      if (attributes.color === "violet") {
-        blockClass += " button_color_violet_hover"
-      } else if (attributes.style === "without border") {
-        blockClass += " button_without-border_hover"
+    if (attributes.type === 'hover') {
+      if (attributes.color === 'violet') {
+        blockClass += ' button_color_violet_hover'
+      } else if (attributes.style === 'without border') {
+        blockClass += ' button_without-border_hover'
       } else {
-        blockClass += " button_hover"
+        blockClass += ' button_hover'
       }
     }
 

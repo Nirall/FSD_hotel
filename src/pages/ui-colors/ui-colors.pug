@@ -3,9 +3,9 @@ extends ../ui-template
 block content
     .ui-colors
         .ui-colors__left-col
-            - var sq__classes = ["dark100", "dark75", "dark50", "dark25", "dark05", "purple", "green"]
-            - var titles = ["Dark Shade 100%", "Dark Shade 75%", "Dark Shade 50%", "Dark Shade 25%", "Dark Shade 5%", "Purple", "Green"]
-            - var codes = ["#1F2041", "#1F2041", "#1F2041", "#1F2041", "#1F2041", "#BC9CFF", "#6FCF97"]
+            - var sq__classes = ['dark100', 'dark75', 'dark50', 'dark25', 'dark05', 'purple', 'green']
+            - var titles = ['Dark Shade 100%', 'Dark Shade 75%', 'Dark Shade 50%', 'Dark Shade 25%', 'Dark Shade 5%', 'Purple', 'Green']
+            - var codes = ['#1F2041', '#1F2041', '#1F2041', '#1F2041', '#1F2041', '#BC9CFF', '#6FCF97']
             each item, index in sq__classes
                 .ui-colors__color-item
                     div(class = "ui-colors__sq ui-colors__sq_color_" + item)

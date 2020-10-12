@@ -2,17 +2,17 @@ include ../button/button
 
 mixin navbar
     -
-        var btnClass = "navbar__button"
-        var usernameClass = "navbar__user-name"
-        var itemClass = "navbar__item"
+        var btnClass = 'navbar__button'
+        var usernameClass = 'navbar__user-name'
+        var itemClass = 'navbar__item'
 
-        if (attributes.type === "without-buttons") {
-            btnClass += " navbar__button_hidden"
-            usernameClass += " navbar__user-name_displayed"
+        if (attributes.type === 'without-buttons') {
+            btnClass += ' navbar__button_hidden'
+            usernameClass += ' navbar__user-name_displayed'
         }
 
-        if (attributes.firstElem === "bolded") {
-            itemClass += " navbar__item_bolded"
+        if (attributes.firstElem === 'bolded') {
+            itemClass += ' navbar__item_bolded'
         }
 
     nav(class = "navbar js-navbar")

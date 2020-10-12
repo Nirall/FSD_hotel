@@ -1,17 +1,17 @@
 mixin dropdown(title, placeholder, ...args)
     -
-        var blockclass = "dropdown js-dropdown"
-        var buttonsClass = "dropdown__buttons js-dropdown__buttons"
-        var listClass = "dropdown__list js-dropdown__list"
+        var blockclass = 'dropdown js-dropdown'
+        var buttonsClass = 'dropdown__buttons js-dropdown__buttons'
+        var listClass = 'dropdown__list js-dropdown__list'
 
-        if (attributes.overlapping === "none") {
-            blockclass += " dropdown_without-overlapping"
-            listClass += " dropdown__list_bordered"
+        if (attributes.overlapping === 'none') {
+            blockclass += ' dropdown_without-overlapping'
+            listClass += ' dropdown__list_bordered'
         }
 
 
-        if (attributes.shadow === "none")
-            blockclass += " dropdown_without-shadow"
+        if (attributes.shadow === 'none')
+            blockclass += ' dropdown_without-shadow'
 
     div(class = blockclass)
         h3.dropdown__title= title
