@@ -1,4 +1,4 @@
-mixin dropdown(title, placeholder, ...args)
+mixin dropdown({ title, placeholder, items })
     -
         var blockclass = 'dropdown js-dropdown'
         var buttonsClass = 'dropdown__buttons js-dropdown__buttons'
@@ -9,7 +9,6 @@ mixin dropdown(title, placeholder, ...args)
             listClass += ' dropdown__list_bordered'
         }
 
-
         if (attributes.shadow === 'none')
             blockclass += ' dropdown_without-shadow'
 
@@ -19,7 +18,7 @@ mixin dropdown(title, placeholder, ...args)
             = placeholder
             span.material-icons.dropdown__symbol-expand= "expand_more"
         ul(class = listClass)
-            each val in args
+            each val in items
                 li.dropdown__list-item
                     .dropdown__item= val
                     .dropdown__counter

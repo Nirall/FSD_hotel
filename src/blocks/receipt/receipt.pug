@@ -15,7 +15,7 @@ mixin receipt
                     span.receipt__info-price-dimension= " в сутки"
             +datepicker("ПРИБЫТИЕ", "ВЫЕЗД")(type = "two fields")
             .receipt__dropdown
-                +dropdown("ГОСТИ", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")
+                +dropdown({ title: "ГОСТИ", placeholder: "Сколько гостей", items: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"] })
             .receipt__items
                 .receipt__item
                     span.receipt__item-text= "9 990₽ х 4 суток"

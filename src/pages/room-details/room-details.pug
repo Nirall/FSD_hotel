@@ -38,8 +38,8 @@ block content
                     .room-details__reviews-title
                         h2.room-details__header= "Отзывы посетителей номера"
                         span.room-details__reviews-counter= "2 отзыва"
-                    +visitor-review ("_active", "images/guest-1.jpg", "Мурад Сарафанов", "5 дней назад", "12", text1)
-                    +visitor-review ("", "images/guest-2.jpg", "Патрисия Стёклышкова", "Неделю назад", "2", text2)
+                    +visitor-review ({ modifier: "_active", img: "images/guest-1.jpg", name: "Мурад Сарафанов", date: "5 дней назад", quantity: "12", text: text1 })
+                    +visitor-review ({ modifier: "", img: "images/guest-2.jpg", name: "Патрисия Стёклышкова", date: "Неделю назад", quantity: "2", text: text2 })
                 section.room-details__additional
                     .room-details__rules
                         h2.room-details__header.room-details__rules-title= "Правила"

@@ -9,6 +9,6 @@ mixin apartments-finder
             .apartments-finder__datepicker
                 +datepicker("прибытие", "выезд")(type = "two fields")
             .apartments-finder__dropdown
-                +dropdown("гости", "Сколько гостей", "ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ")(shadow = "none")
+                +dropdown({ title: "гости", placeholder: "Сколько гостей", items: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"] })(shadow = "none")
             button(type="submit").apartments-finder__button-with-arrow
                 +button-with-arrow("подобрать номер")
