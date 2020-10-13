@@ -19,6 +19,14 @@ class Navbar {
     this.inForm.classList.remove('registration__in-form_displayed');
   }
 
+  elemsCheckCollapsedMenu() {
+    return this.expandButton && this.list && this.buttons;
+  }
+
+  elemsCheckForms() {
+    return this.inButton && this.regButton && this.inForm && this.regForm;
+  }
+
   init() {
     this.expandButton = this.node.querySelector('.js-navbar__expand-btn');
     this.list = this.node.querySelector('.js-navbar__list');
@@ -28,11 +36,11 @@ class Navbar {
     this.inForm = document.querySelector('.js-registration__in-form');
     this.regForm = document.querySelector('.js-registration__reg-form');
 
-    if (this.expandButton && this.list && this.buttons) {
+    if (this.elemsCheckCollapsedMenu()) {
       this.expandButton.onclick = this.handleExpandButtonClick.bind(this);
     }
 
-    if (this.inButton && this.regButton && this.inForm && this.regForm) {
+    if (this.elemsCheckForms()) {
       this.inButton.onclick = this.handleInButtonClick.bind(this);
       this.regButton.onclick = this.handleRegButtonClick.bind(this);
     }

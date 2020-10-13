@@ -16,11 +16,15 @@ class Slider {
       this.price.innerHTML = `${min} - ${max}`;
   }
 
+  elemsCheck() {
+    return noUiSlider && this.slider && this.price;
+  }
+
   init() {
     this.slider = this.node.querySelector('.js-slider__body');
     this.price = this.node.querySelector('.js-slider__price');
 
-    if (noUiSlider && this.slider && this.price) {
+    if (this.elemsCheck()) {
       noUiSlider.create(this.slider, {
         start: [2000, 8000],
         connect: true,

@@ -12,6 +12,14 @@ class Datepicker {
     this.datepickerApi.show();
   }
 
+  checkElems() {
+    return this.inDateField && this.wrapperInput;
+  }
+
+  checkElemsDoubleFieldType() {
+    return this.inDateField && this.outDateField && this.wrapperInput;
+  }
+
   init() {
     this.inDateField = this.node.find($('.js-datepicker__input-field'))[0]
       ? this.node.find($('.js-datepicker__input-field'))
@@ -36,7 +44,7 @@ class Datepicker {
       this.applyButt.html('Применить');
     }
 
-    if (this.inDateField && this.outDateField && this.wrapperInput) {
+    if (this.checkElemsDoubleFieldType()) {
       this.inDateField.datepicker({dateFormat: 'dd.mm.yyyy'});
       this.inDateField.datepicker({
         onSelect: (formattedDate) => {
@@ -47,7 +55,7 @@ class Datepicker {
         }
       });
       this.wrapperInput.on('click', this.handleWrapperInputClick.bind(this));
-    } else if (this.inDateField && this.wrapperInput) {
+    } else if (this.checkElems()) {
       this.inDateField.datepicker({dateFormat: 'dd MM'});
       this.inDateField.datepicker({
         onSelect: (formattedDate) => {

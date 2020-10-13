@@ -9,12 +9,16 @@ class ExpandableCheckboxes {
     this.expandButt.classList.toggle('expandable-checkboxes__symbol-expand_rotated');
   }
 
+  elemsCheck() {
+    return this.dropdown && this.expandButt && this.checkboxes;
+  }
+
   init() {
     this.dropdown = this.node.querySelector('.js-expandable-checkboxes__dropdown-title');
     this.expandButt = this.node.querySelector('.js-expandable-checkboxes__symbol-expand');
     this.checkboxes = this.node.querySelector('.js-expandable-checkboxes__checkboxes');
 
-    if (this.dropdown && this.expandButt && this.checkboxes) {
+    if (this.elemsCheck()) {
       this.dropdown.onclick = this.handleDropdownClick.bind(this);
     }
   }
