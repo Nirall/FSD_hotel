@@ -1,4 +1,5 @@
-const noUiSlider = require('../../lib/nouislider/nouislider.js');
+import noUiSlider from 'nouislider';
+import 'nouislider/distribute/nouislider.css';
 
 class Slider {
   constructor(elem) {
