@@ -17,9 +17,14 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin,
         new htmlPlugin({
-            template: "src/pages/landing-page/landing-page.pug",
+            template: "src/pages/home-page/home-page.pug",
             inject: false,
             filename: "index.html",
+        }),
+        new htmlPlugin({
+            template: "src/pages/landing-page/landing-page.pug",
+            inject: false,
+            filename: "landing-page.html",
         }),
         new htmlPlugin({
             template: "src/pages/search-room/search-room.pug",

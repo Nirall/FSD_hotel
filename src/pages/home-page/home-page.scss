@@ -1,0 +1,9 @@
+.home-page {
+  margin: 30px auto;
+  max-width: 300px;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}

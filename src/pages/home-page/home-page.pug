@@ -1,0 +1,13 @@
+extends ../ui-template
+
+block content
+    .home-page
+        h1.home-page__title= "Project pages"
+        -
+            var pages = ["landing-page", "search-room", "room-details", "registration", "ui-form-elements",
+                "ui-cards", "ui-colors", "ui-headers_and_footers"]
+        each page in pages
+            ul.home-page__pages
+                li.home-page__page
+                    a.home-page__reference(href= page + ".html")
+                        =page
