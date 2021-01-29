@@ -11,7 +11,7 @@
 Для публикации на GitHub Pages, к ссылке добавляйте путь до нужной страницы через папку 'dist'. Пример - "https://nirall.github.io/FSD_hotel/dist/room-details.html".
 ### Примеры страниц
 
-1. [Home page](https://nirall.github.io/FSD_hotel/dist
+1. [Home page](https://nirall.github.io/FSD_hotel/dist)
 2. [Landing page](https://nirall.github.io/FSD_hotel/dist/landing-page.html)
 3. [Search room](https://nirall.github.io/FSD_hotel/dist/search-room.html)
 4. [Room details](https://nirall.github.io/FSD_hotel/dist/room-details.html)
