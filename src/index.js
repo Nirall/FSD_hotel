@@ -3,5 +3,3 @@ function importAll(r) {
 }
 
 importAll(require.context("./", true, /\.(js|s?css|png|jpe?g|gif|svg)$/i));
-
-import "./lib/air-datepicker/air-datepicker.js";
