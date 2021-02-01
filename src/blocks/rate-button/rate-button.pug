@@ -1,0 +1,14 @@
+mixin rate-button(stars)
+  .rate-button.js-rate-button
+    if stars > 6
+        - stars = 5
+    if stars < 0
+        - stars = 0
+    - let n = 0
+    while n < stars
+        - n++
+        span.material-icons.rate-button__star= "star"
+    - let k = 5 - n
+        while k > 0
+            span.material-icons.rate-button__star= "star_border"
+            - k--
