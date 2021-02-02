@@ -1,19 +1,9 @@
 include ../rate-button/rate-button
+include ../carousel/carousel
 
 mixin apartment-card({img, number, luxury = "", price, stars = 0, reviews = 0})
-    -
-        var classMod = 'apartment-card'
-        if (attributes.arrows == 'none')
-            classMod += ' apartment-card_without-arrows'
-    div(class = classMod)
-        .apartment-card__img(style = `background: url(${img}) no-repeat;`)
-            .apartment-card__img-arrows
-                span.material-icons.apartment-card__img-arrow= "chevron_left"
-                span.material-icons.apartment-card__img-arrow= "chevron_right"
-            .apartment-card__img-spots
-                .apartment-card__img-spot.apartment-card__img-spot_filled
-                each val in [1, 2, 3]
-                    .apartment-card__img-spot
+    .apartment-card
+        +carousel(img)
         .apartment-card__info
             .apartment-card__info-part
                 span.apartment-card__info-number

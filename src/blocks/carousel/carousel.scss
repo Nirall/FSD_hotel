@@ -1,0 +1,64 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  &__img {
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+  }
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset -30px 0px 30px 0px rgba(0, 0, 0, 0.4),
+                inset 30px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    &_hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -11px;
+    width: 100%;
+    &_hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__arrow {
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    margin: 0 11px;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__spots {
+    position: absolute;
+    bottom: 15px;
+    right: 11px;
+    display: flex;
+  }
+
+  &__spot {
+    margin-right: 4px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: transparent;
+    &_filled {
+      background: white;
+    }
+  }
+}

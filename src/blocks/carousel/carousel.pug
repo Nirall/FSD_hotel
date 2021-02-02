@@ -1,0 +1,13 @@
+mixin carousel(images)
+  -
+    var dataImages = images;
+    if (images) {
+      var dataImages =  images.join(' ');
+    }
+  .carousel.js-carousel(data= dataImages)
+    img.carousel__img.js-carousel__img
+    .carousel__shadow.js-carousel__shadow.carousel__shadow_hidden
+    .carousel__arrows.js-carousel__arrows.carousel__arrows_hidden
+      span.material-icons.carousel__arrow.js-carousel__arrow-left= "chevron_left"
+      span.material-icons.carousel__arrow.js-carousel__arrow-right= "chevron_right"
+    .carousel__spots.js-carousel__spots

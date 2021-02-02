@@ -8,17 +8,17 @@ block content
     main.search-room
         -
             const cards = [
-                {img: 'images/room-840.jpg', number: '840', luxury: '', price: '9 900', stars: 4, reviews: 65},
-                {img: 'images/room-980.jpg', number: '980', luxury: 'ЛЮКС', price: '8 500', stars: 3, reviews: 35},
-                {img: 'images/room-856.jpg', number: '856', luxury: '', price: '7 300', stars: 5, reviews: 19},
-                {img: 'images/room-740.jpg', number: '740', luxury: '', price: '6 000', stars: 4, reviews: 44},
-                {img: 'images/room-982.jpg', number: '982', luxury: '', price: '5 800', stars: 3, reviews: 56},
-                {img: 'images/room-678.jpg', number: '678', luxury: '', price: '5 500', stars: 5, reviews: 45},
-                {img: 'images/room-450.jpg', number: '450', luxury: '', price: '5 300', stars: 4, reviews: 39},
-                {img: 'images/room-350.jpg', number: '350', luxury: '', price: '5 000', stars: 3, reviews: 77},
-                {img: 'images/room-666.jpg', number: '666', luxury: '', price: '5 000', stars: 5, reviews: 25},
-                {img: 'images/room-444.jpg', number: '444', luxury: '', price: '5 000', stars: 3, reviews: 15},
-                {img: 'images/room-352.jpg', number: '352', luxury: '', price: '5 000', stars: 3, reviews: 55},
+                {img: ['images/room-840.jpg'], number: '840', luxury: '', price: '9 900', stars: 4, reviews: 65},
+                {img: ['images/room-980.jpg'], number: '980', luxury: 'ЛЮКС', price: '8 500', stars: 3, reviews: 35},
+                {img: ['images/room-856.jpg'], number: '856', luxury: '', price: '7 300', stars: 5, reviews: 19},
+                {img: ['images/room-740.jpg'], number: '740', luxury: '', price: '6 000', stars: 4, reviews: 44},
+                {img: ['images/room-982.jpg'], number: '982', luxury: '', price: '5 800', stars: 3, reviews: 56},
+                {img: ['images/room-678.jpg'], number: '678', luxury: '', price: '5 500', stars: 5, reviews: 45},
+                {img: ['images/room-450.jpg'], number: '450', luxury: '', price: '5 300', stars: 4, reviews: 39},
+                {img: ['images/room-350.jpg'], number: '350', luxury: '', price: '5 000', stars: 3, reviews: 77},
+                {img: ['images/room-666.jpg'], number: '666', luxury: '', price: '5 000', stars: 5, reviews: 25},
+                {img: ['images/room-444.jpg'], number: '444', luxury: '', price: '5 000', stars: 3, reviews: 15},
+                {img: ['images/room-352.jpg'], number: '352', luxury: '', price: '5 000', stars: 3, reviews: 55},
             ]
         aside.search-room__left-col
             +apartment-form
@@ -26,9 +26,9 @@ block content
             h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
                 section.search-room__apartment-card
-                    +apartment-card({img: "images/room-888.jpg", number: "888", luxury: "ЛЮКС", price: "9 990", stars: 5, reviews: 145})
+                    +apartment-card({img: ["images/room-888_1.jpg", "images/room-888_2.jpg", "images/room-888_3.jpg"], number: "888", luxury: "ЛЮКС", price: "9 990", stars: 5, reviews: 145})
                 each val in cards
                     section.search-room__apartment-card
-                        +apartment-card(val)(arrows = "none")
+                        +apartment-card(val)
             .search-room__pagination
                 +pagination
