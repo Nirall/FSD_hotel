@@ -62,7 +62,7 @@ class Carousel {
 
   createSpots() {
     const spotsElem = this.node.querySelector('.js-carousel__spots');
-    this.images.forEach((val) => {
+    this.images.forEach(() => {
       const elem = document.createElement('div');
       elem.classList.add('carousel__spot');
       spotsElem.append(elem);

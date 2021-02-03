@@ -35,6 +35,10 @@
     border: 1px solid $purple;
   }
 
+  &__input:checked ~ &__label {
+    color: $dark75;
+  }
+
   &__input:checked + &__border &__spot {
     background: $purple;
   }
