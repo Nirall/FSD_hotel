@@ -1,4 +1,4 @@
-/*CUSTOMISE*/
+/*CUSTOMIZE*/
 
 .datepicker {
   font: 12px/15px 'Montserrat';
@@ -25,21 +25,39 @@
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   color: white;
 }
-.datepicker--cell.-selected- {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
 .datepicker--cell.-selected-.-focus- {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .datepicker--cell.-range-to-, .datepicker--cell.-range-from- {
+  position: relative;
   border-radius: 50%;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
+  transform-style: preserve-3d;
+}
+.datepicker--cell.-range-from-::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  margin-right: -1px;
+  transform: translateZ(-1px);
+  width: 20px;
+  height: 40px;
+  background: #e8e7fe;
+}
+.datepicker--cell.-range-to-::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  margin-left: -1px;
+  transform: translateZ(-1px);
+  width: 20px;
+  height: 40px;
+  background: #e8e7fe;
 }
 .datepicker--cell.-in-range- {
   background: #e8e7fe;
 }
-
 .datepicker--day-name {
   vertical-align: middle;
   color: #BC9CFF;
