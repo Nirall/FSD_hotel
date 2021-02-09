@@ -18,6 +18,7 @@ mixin datepicker(title1= "", title2= "")
                     type="text" class = inputClass
                     inline = "true" data-range="true" data-multiple-dates-separator = " - "
                     clearButton = "true" placeholder="ДД.ММ.ГГГГ"
+                    readonly
                 ).datepicker-here.js-datepicker__input-field
                 span.material-icons.datepicker-block__symbol-expand= "expand_more"
         if attributes.type === "two fields"
@@ -27,5 +28,6 @@ mixin datepicker(title1= "", title2= "")
                     input(
                         class = inputClass
                         placeholder="ДД.ММ.ГГГГ"
+                        readonly
                     ).js-datepicker__out-date-field
                     span.material-icons.datepicker-block__symbol-expand= "expand_more"
