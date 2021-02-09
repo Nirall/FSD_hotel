@@ -25,7 +25,7 @@ mixin navbar
                     div(class = itemClass)= "О нас"
                 span.material-icons.navbar__expand-btn.js-navbar__expand-btn= "more_horiz"
             .navbar__list.js-navbar__list
-                a(href="changeMe" class = "navbar__reference")
+                span(href="changeMe" class = "navbar__reference")
                     .navbar__item
                         ="Услуги"
                         span.material-icons.navbar__symbol-expand= "expand_more"
@@ -33,7 +33,7 @@ mixin navbar
                     .navbar__item= "Вакансии"
                 a(href="changeMe" class = "navbar__reference")
                     .navbar__item= "Новости"
-                a(href="changeMe" class = "navbar__reference")
+                span(href="changeMe" class = "navbar__reference")
                     .navbar__item
                         ="Соглашения"
                         span.material-icons.navbar__symbol-expand= "expand_more"
