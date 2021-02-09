@@ -1,118 +1,129 @@
 class Dropdown {
   constructor(elem) {
     this.node = elem;
+    this.isActive = false;
     this.init();
+  }
+
+  init(positions = 3) {
+    this.quantity = new Array(positions);
+    this.quantity.fill(0);
+    this.findElements();
+    this.checkType();
+    if (this.checkElements()) {
+      this.processHandlers();
+    }
   }
 
   findElements() {
     this.inputField = this.node.querySelector('.js-dropdown__field');
     this.dropdownList = this.node.querySelector('.js-dropdown__list');
-    this.minusBtnArr = this.node.querySelectorAll('.js-dropdown__minus');
-    this.quantityArr = this.node.querySelectorAll('.js-dropdown__quantity');
-    this.plusBtnArr = this.node.querySelectorAll('.js-dropdown__plus');
+    this.minusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__minus'));
+    this.quantityElemsArr = Array.from(this.node.querySelectorAll('.js-dropdown__quantity'));
+    this.plusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__plus'));
     this.blockBtns = this.node.querySelector('.js-dropdown__buttons');
     this.clearBtn = this.node.querySelector('.js-dropdown__clear-button');
     this.applyBtn = this.node.querySelector('.js-dropdown__apply-button');
   }
 
-  typeCheck() {
-    if (
-      this.inputField.innerHTML.split('<span')[0] === 'Сколько гостей'
-      || this.inputField.innerHTML.split(' ')[0] === 'Гостей'
-    ) {
-        this.type = 'guests';
-    } else if (
-      this.inputField.innerHTML.split('<span')[0] == 'Выберите удобства'
-      || this.inputField.innerHTML.split(' ')[0] == 'Спален'
-    ) {
+  checkType() {
+    const inputContent = this.inputField.innerHTML;
+    if (inputContent.includes('гостей')) {
+      this.type = 'guests';
+    } else if (inputContent.includes('удобства')) {
       this.type = 'beds';
     }
   }
 
-  elemsCheck() {
+  checkElements() {
     if (this.type === 'guests') {
-      return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityArr
+      return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityElemsArr
         && this.plusBtnArr && this.clearBtn && this.applyBtn)
     }
 
     if (this.type === 'beds') {
-      return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityArr && this.plusBtnArr)
+      return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityElemsArr && this.plusBtnArr)
     }
   }
 
-  quantityCheck() {
-    const arr = [];
-    this.quantityArr.forEach((elem) => arr.push(elem.innerHTML !== "0"));
-
-    if (arr.every((elem) => elem === false)) {
-      this.clearBtn.innerHTML = " ";
-
+  checkQuantity() {
+    if (this.quantity.every((elem) => elem === 0)) {
+      this.clearBtn.innerHTML = ' ';
       this.minusBtnArr.forEach((elem) => {
-        elem.classList.add("dropdown__btn_disabled")
+        elem.classList.add('dropdown__btn_disabled')
       });
     } else {
-      this.clearBtn.innerHTML = "очистить";
+      this.clearBtn.innerHTML = 'очистить';
       this.minusBtnArr.forEach((elem) => {
-        elem.classList.remove("dropdown__btn_disabled")
+        elem.classList.remove('dropdown__btn_disabled')
       });
     }
   }
 
-  quantityReset() {
-    this.quantityArr.forEach((quan) => quan.innerHTML = '0');
+  resetQuantity() {
+    this.quantity.fill(0);
+    this.quantityElemsArr.forEach((elem) => elem.innerHTML = '0');
   }
 
   handleMinusBtnClick(event) {
     const elem = event.currentTarget;
-    let content = elem.nextSibling.innerHTML;
+    const index = this.minusBtnArr.indexOf(elem);
 
-    if (content !== '0') {
-      let newContent = parseInt(content) - 1;
-      elem.nextSibling.innerHTML = newContent.toString();
+    if (this.quantity[index] !== 0) {
+      this.quantity[index] -= 1;
+      this.quantityElemsArr[index].innerHTML = this.quantity[index].toString();
     }
 
-    this.quantityCheck();
+    this.checkQuantity();
   }
 
   handlePlusBtnClick(event) {
     const elem = event.currentTarget;
-    let content = elem.previousSibling.previousSibling.innerHTML;
-    let newContent = parseInt(content) + 1;
-    elem.previousSibling.previousSibling.innerHTML = newContent.toString();
-    this.quantityCheck();
+    const index = this.plusBtnArr.indexOf(elem);
+    this.quantity[index] += 1;
+    this.quantityElemsArr[index].innerHTML = this.quantity[index].toString();
+    this.checkQuantity();
   }
 
   handleClearBtnClick() {
-    this.quantityReset();
-    this.quantityCheck();
+    this.resetQuantity();
+    this.checkQuantity();
   }
 
-  handleApplyBtnClick() {
-    this.placeholderChanger();
-    this.quantityCheck();
-    this.dropdownList.classList.remove('dropdown__list_activated');
-    this.inputField.classList.remove('dropdown__field_activated');
-    this.blockBtns.classList.remove('dropdown__buttons_activated');
-    this.quantityReset();
+  handleApplyBtnClick(e) {
+    this.changePlaceholder();
+    this.checkQuantity();
+    this.handleInputFieldClick(e)
   }
 
-  handleInputFieldClick() {
-    this.placeholderChanger();
-    this.quantityCheck();
+  handleInputFieldClick(e) {
+    e.stopPropagation();
+    this.changePlaceholder();
+    this.checkQuantity();
     this.dropdownList.classList.toggle('dropdown__list_activated');
     this.inputField.classList.toggle('dropdown__field_activated');
-    this.quantityReset();
 
     if (this.type === 'guests') {
       this.blockBtns.classList.toggle('dropdown__buttons_activated');
     }
+
+    this.isActive = !this.isActive;
+    this.isActive
+      ? document.addEventListener('click', this.handleDocumentClick.bind(this))
+      : document.removeEventListener('click', this.handleDocumentClick.bind(this));
   }
 
-  placeholderChanger() {
+  handleDocumentClick(e) {
+    if (this.isActive && !this.node.contains(e.target)) {
+      this.handleInputFieldClick(e);
+    }
+  }
+
+  changePlaceholder() {
     const expand = '<span class = "material-icons">expand_more</span>';
     if (this.type === 'guests') {
-      let quanPeople = parseInt(this.quantityArr.item(0).innerHTML) + parseInt(this.quantityArr.item(1).innerHTML);
-      let quanBaby = parseInt(this.quantityArr.item(2).innerHTML);
+      let quanPeople = parseInt(this.quantityElemsArr[0].innerHTML) + parseInt(this.quantityElemsArr[1].innerHTML);
+      let quanBaby = parseInt(this.quantityElemsArr[2].innerHTML);
       if (quanBaby !== 0) {
         this.inputField.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
       } else {
@@ -125,8 +136,8 @@ class Dropdown {
     }
 
     if (this.type === 'beds') {
-      let quanRoom = parseInt(this.quantityArr.item(0).innerHTML);
-      let quanBed = parseInt(this.quantityArr.item(1).innerHTML);
+      let quanRoom = parseInt(this.quantityElemsArr[0].innerHTML);
+      let quanBed = parseInt(this.quantityElemsArr[1].innerHTML);
       if (quanBed !== 0) {
         this.inputField.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...` + expand;
       } else {
@@ -139,7 +150,7 @@ class Dropdown {
     }
   }
 
-  handlersProcessing() {
+  processHandlers() {
     Array.from(this.minusBtnArr, (elem) => {
       elem.onclick = this.handleMinusBtnClick.bind(this);
     });
@@ -151,14 +162,6 @@ class Dropdown {
     this.clearBtn.onclick = this.handleClearBtnClick.bind(this);
     this.applyBtn.onclick = this.handleApplyBtnClick.bind(this);
     this.inputField.onclick = this.handleInputFieldClick.bind(this);
-  }
-
-  init() {
-    this.findElements();
-    this.typeCheck();
-    if (this.elemsCheck) {
-      this.handlersProcessing();
-    }
   }
 }
 
