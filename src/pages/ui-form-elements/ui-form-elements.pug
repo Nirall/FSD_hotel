@@ -19,7 +19,7 @@ include ../../blocks/bullet-list/bullet-list
 block content
     .ui-form
         .ui-form__left-col
-            .ui-form__text-field.ui-form__text-field_margin_enlarged
+            .ui-form__text-field.ui-form__text-field_margin_small
                 .ui-form__title
                     h3.ui-form__header= "text field"
                     h3.ui-form__header.ui-form__header_color_grey.ui-form__header_margin_enlarged= "default"
@@ -31,7 +31,7 @@ block content
                 input(type="text" value="This is pretty awesome").ui-form__input.ui-form__input_hover
             .ui-form__dropdown-guests
                 +dropdown({ title: "DROPDOWN", placeholder: "Сколько гостей", items: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"] })(shadow = "none")
-            .ui-form__text-field
+            .ui-form__text-field.ui-form__text-field_margin_medium
                 .ui-form__title
                     h3.ui-form__header= "masked text field"
                     h3.ui-form__header.ui-form__header_color_grey.ui-form__header_margin_enlarged= "default"
@@ -47,7 +47,7 @@ block content
                     +email
                 .ui-form__dropdown-beds
                     +dropdown({ title: "DROPDOWN", placeholder: "Выберите удобства", items: ["СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ"] })(overlapping = "none" shadow = "none")
-                .ui-form__dropdown-beds.js-ui-form__dropdown_expanded
+                .ui-form__dropdown-beds.ui-form__dropdown-beds_margin_enlarged.js-ui-form__dropdown_expanded
                     +dropdown({ title: "DROPDOWN", placeholder: "Выберите удобства", items: ["СПАЛЬНИ", "КРОВАТИ", "ВАННЫЕ КОМНАТЫ"] })(overlapping = "none")
                 .ui-form__expandable-checkboxes.ui-form__expandable-checkboxes_collapsed
                     - var checkboxes = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]
