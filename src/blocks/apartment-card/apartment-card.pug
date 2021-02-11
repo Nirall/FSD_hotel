@@ -4,20 +4,21 @@ include ../carousel/carousel
 mixin apartment-card({img, number, luxury = "", price, stars = 0, reviews = 0})
     .apartment-card
         +carousel(img)
-        .apartment-card__info
-            .apartment-card__info-part
-                span.apartment-card__info-number
-                    = "№ "
-                    span.apartment-card__number= `${number} `
-                span.apartment-card__info-luxury= `${luxury}`
-            .apartment-card__info-part
-                span.apartment-card__info-price= `${price}₽`
-                span.apartment-card__info-price-dimension= " в сутки"
-        .apartment-card__rating
-            +rate-button(stars)
-            .apartment-card__reviews
-                span.apartment-card__review-counter= reviews
-                span.apartment-card__review= " Отзывов"
+        .apartment-card__content
+            .apartment-card__info
+                .apartment-card__info-part
+                    span.apartment-card__info-number
+                        = "№ "
+                        span.apartment-card__number= `${number} `
+                    span.apartment-card__info-luxury= `${luxury}`
+                .apartment-card__info-part
+                    span.apartment-card__info-price= `${price}₽`
+                    span.apartment-card__info-price-dimension= " в сутки"
+            .apartment-card__rating
+                +rate-button(stars)
+                .apartment-card__reviews
+                    span.apartment-card__review-counter= reviews
+                    span.apartment-card__review= " Отзывов"
 
 
 

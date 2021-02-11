@@ -7,11 +7,16 @@
   border-radius: 4px;
   $root: &;
 
+  &__content {
+    margin-top: 21px;
+    padding: 0 19px;
+  }
+
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 21px 18px 0 20px;
+    // margin: 21px 18px 0 20px;
     padding-bottom: 7px;
     border-bottom: 1px solid $dark10;
     font-weight: bold;
@@ -41,7 +46,7 @@
 
   &__rating {
     height: 42px;
-    margin: 8px 20px 0 20px;
+    margin-top: 8px;
     padding-bottom: 12px;
     display: flex;
     justify-content: space-between;
