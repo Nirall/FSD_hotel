@@ -32,7 +32,7 @@ class Carousel {
     this.arrows = this.node.querySelector('.js-carousel__arrows');
     this.leftArrow = this.node.querySelector('.js-carousel__arrow-left');
     this.rightArrow = this.node.querySelector('.js-carousel__arrow-right');
-    this.shadow = this.node.querySelector('.js-carousel__shadow');
+    this.shadow = this.node.querySelector('.js-carousel__shadows');
   }
 
   handleArrowClick(direction) {
@@ -73,12 +73,12 @@ class Carousel {
   }
 
   handleCarouselMouseOver() {
-    this.shadow.classList.remove('carousel__shadow_hidden');
+    this.shadow.classList.remove('carousel__shadows_hidden');
     this.arrows.classList.remove('carousel__arrows_hidden');
   }
 
   handleCarouselMouseOut() {
-    this.shadow.classList.add('carousel__shadow_hidden');
+    this.shadow.classList.add('carousel__shadows_hidden');
     this.arrows.classList.add('carousel__arrows_hidden');
   }
 }

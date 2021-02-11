@@ -6,7 +6,9 @@ mixin carousel(images)
     }
   .carousel.js-carousel(data= dataImages)
     img.carousel__img.js-carousel__img
-    .carousel__shadow.js-carousel__shadow.carousel__shadow_hidden
+    .carousel__shadows.js-carousel__shadows.carousel__shadows_hidden
+      .carousel__shadow-left
+      .carousel__shadow-right
     .carousel__arrows.js-carousel__arrows.carousel__arrows_hidden
       span.material-icons.carousel__arrow.js-carousel__arrow-left= "chevron_left"
       span.material-icons.carousel__arrow.js-carousel__arrow-right= "chevron_right"
