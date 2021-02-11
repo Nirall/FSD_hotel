@@ -7,16 +7,6 @@
   border-radius: 4px;
   $root: &;
 
-  &_without-arrows {
-    #{$root}__img-arrows {
-      visibility: hidden;
-    }
-
-    #{$root}__img {
-      box-shadow: none;
-    }
-  }
-
   &__info {
     display: flex;
     justify-content: space-between;
