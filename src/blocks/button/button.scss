@@ -1,6 +1,30 @@
-.button {
-  border: 2px solid $purple;
+.button-wrapper-border {
   border-radius: 22px;
+  padding: 2px;
+  background: $primGrad;
+  cursor: pointer;
+  align-self: center;
+  
+  &:hover {
+    background: $primGradTrans;
+  }
+
+  &_hover {
+    background: $primGradTrans;
+  }
+
+  &_for_navbar {
+    @media (max-width: 670px) {
+      background: none;
+      padding: 0;
+    }
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.button {
   padding: 13px 17px;
   display: flex;
   font-size: 12px;
@@ -10,34 +34,11 @@
 	text-transform: uppercase;
   justify-content: center;
   align-items: center;
-  color: $purple;
   cursor: pointer;
+  color: $purple;
   background: white;
-
-  &:hover {
-    border-color: #bb9cff81;
-  }
-
-  &_hover {
-    border-color: #bb9cff81;
-  }
-
-  &_size_long {
-    padding: 13px 24px;
-  }
-
-  &_without-border {
-    border: 0;
-    padding: 0;
-
-    &:hover {
-      color: $dark75;
-    }
-
-    &_hover {
-      color: $dark75;
-    }
-  }
+  border: none;
+  border-radius: 20px;
 
   &_color_violet {
     border: 0;
@@ -53,6 +54,49 @@
       opacity: 0.5;
     }
   }
+
+  &_without-border {
+    padding: 0;
+
+    &:hover {
+      color: $dark75;
+    }
+
+    &_hover {
+      color: $dark75;
+    }
+  }
+
+  &_size_long {
+    padding: 13px 24px;
+  }
+
+  &_size_thin {
+    padding: 8px 18px;
+  }
+
+  &_size_medium {
+    padding: 10px 20px;
+  }
+
+  &_for_navbar {
+    @media (max-width: 670px) {
+      border: 0;
+      line-height: 26px;
+      justify-content: flex-start;
+      width: 180px;
+      background: white;
+      color: $dark50;
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: capitalize;
+      margin: 10px;
+      padding: 0;
+
+      &:hover {
+        color: $purple;
+        opacity: 1;
+      }
+    }
+  }
 }
-
-

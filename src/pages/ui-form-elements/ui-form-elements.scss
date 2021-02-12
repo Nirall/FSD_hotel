@@ -239,12 +239,21 @@
   }
 
   &__buttons-row {
-    margin: 17px 0 30px 0;
+    margin-top: 17px;
     display: flex;
+
+    &_margin_medium {
+      margin-top: 30px;
+    }
+
+    &_margin_big {
+      margin-top: 32px;
+    }
   }
 
   &__button-with-arrow {
-    padding: 3px 0 0 1px;
+    margin-top: 27px;
+    padding: 3px 0 0 1px; // для выравнивания с макетом
   }
 
   &__pagination-block {

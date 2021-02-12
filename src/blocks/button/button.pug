@@ -1,14 +1,25 @@
-mixin button(text)
+mixin button(text, jsClass = '')
   -
-    var blockClass = 'button'
+    var wrapperClass = 'button-wrapper-border'
+    var blockClass = 'button ' + jsClass
     if (attributes.size === 'long')
       blockClass += ' button_size_long'
 
-    if (attributes.color === 'violet')
-      blockClass += ' button_color_violet'
+    if (attributes.size === 'thin')
+      blockClass += ' button_size_thin'
 
-    if (attributes.style === 'without border')
+    if (attributes.size === 'medium')
+      blockClass += ' button_size_medium'
+
+    if (attributes.color === 'violet') {
+      blockClass += ' button_color_violet'
+      wrapperClass = ''
+    }
+
+    if (attributes.style === 'without border') {
       blockClass += ' button_without-border'
+      wrapperClass = ''
+    }
 
     if (attributes.type === 'hover') {
       if (attributes.color === 'violet') {
@@ -17,7 +28,14 @@ mixin button(text)
         blockClass += ' button_without-border_hover'
       } else {
         blockClass += ' button_hover'
+        wrapperClass += ' button-wrapper-border_hover'
       }
     }
 
-  button(class = blockClass)= text
+    if (attributes.forNavbar === true) {
+      blockClass += ' button_for_navbar'
+      wrapperClass += ' button-wrapper-border_for_navbar'
+    }
+
+  div(class = wrapperClass)
+    button(class = blockClass)= text

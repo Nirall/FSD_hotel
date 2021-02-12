@@ -2,7 +2,6 @@ include ../button/button
 
 mixin navbar
     -
-        var btnClass = 'navbar__button'
         var usernameClass = 'navbar__user-name'
         var itemClass = 'navbar__item'
 
@@ -38,7 +37,9 @@ mixin navbar
                         ="Соглашения"
                         span.material-icons.navbar__symbol-expand= "expand_more"
             .navbar__buttons.js-navbar__buttons
-                button(class = btnClass).js-navbar__in-btn= "войти"
-                button(class = btnClass).navbar__button_color_violet.js-navbar__reg-btn= "зарегистрироваться"
+                .navbar__button.navbar__button_margin_reduced
+                    +button("войти", "js-navbar__in-btn")(forNavbar=true size="thin")
+                .navbar__button
+                    +button("зарегистрироваться", "js-navbar__reg-btn")(color="violet" forNavbar=true size="medium")
                 a(href="changeMe" class = "navbar__reference")
                     div(class = usernameClass)= "Юлий Цезарь"
