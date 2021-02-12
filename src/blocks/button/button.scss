@@ -4,7 +4,7 @@
   background: $primGrad;
   cursor: pointer;
   align-self: center;
-  
+
   &:hover {
     background: $primGradTrans;
   }
@@ -13,14 +13,20 @@
     background: $primGradTrans;
   }
 
+
   &_for_navbar {
     @media (max-width: 670px) {
-      background: none;
       padding: 0;
-    }
-    &:hover {
       background: none;
+
+      &:hover {
+        background: none;
+      }
     }
+  }
+
+  &_color_violet {
+    background: none;
   }
 }
 

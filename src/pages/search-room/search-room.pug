@@ -26,7 +26,7 @@ block content
             h1.search-room__title= "Номера, которые мы для вас подобрали"
             .search-room__cards
                 section.search-room__apartment-card
-                    +apartment-card({img: ["images/room-888_1.jpg", "images/room-888_2.jpg", "images/room-888_3.jpg"], number: "888", luxury: "ЛЮКС", price: "9 990", stars: 5, reviews: 145})
+                    +apartment-card({img: ["images/room-888-1.jpg", "images/room-888-2.jpg", "images/room-888-3.jpg"], number: "888", luxury: "ЛЮКС", price: "9 990", stars: 5, reviews: 145})
                 each val in cards
                     section.search-room__apartment-card
                         +apartment-card(val)

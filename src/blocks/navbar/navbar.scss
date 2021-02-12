@@ -28,6 +28,7 @@
 
   &__expand-btn {
     display: none;
+    cursor: pointer;
 
     &:hover {
       color: $purple;
@@ -89,7 +90,7 @@
       z-index: 1;
     }
   }
-  
+
   &__button {
     margin-left: 20px;
     &_margin_reduced {
