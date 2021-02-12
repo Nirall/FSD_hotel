@@ -30,7 +30,10 @@
     content: '';
     width: 4px;
     height: 6px;
-    border: 2px solid $purple;
+    border-width: 2px;
+    border-image-slice: 1;
+    border-style: solid;
+    border-image-source: $primGrad;
     border-top: 0;
     border-left: 0;
     position: absolute;
