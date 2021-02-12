@@ -122,31 +122,77 @@ class Dropdown {
   changePlaceholder() {
     const expand = '<span class = "material-icons">expand_more</span>';
     if (this.type === 'guests') {
-      let quanPeople = parseInt(this.quantityElemsArr[0].innerHTML) + parseInt(this.quantityElemsArr[1].innerHTML);
-      let quanBaby = parseInt(this.quantityElemsArr[2].innerHTML);
-      if (quanBaby !== 0) {
-        this.inputField.innerHTML = `Гостей - ${quanPeople.toString()}, младенцев - ${quanBaby.toString()}` + expand;
-      } else {
-        if (quanPeople === 0) {
-          this.inputField.innerHTML = 'Сколько гостей' + expand;
-        } else {
-          this.inputField.innerHTML = `Гостей - ${quanPeople.toString()}` + expand;
-        }
+      const quanPeople = this.quantity[0] + this.quantity[1];
+      const quanBaby = this.quantity[2];
+      let guestText;
+      if (quanPeople === 1) {
+        guestText = "1 гость";
+      } else if (quanPeople <= 4) {
+        guestText = `${quanPeople} гостя`;
+      } else if (quanPeople > 4) {
+        guestText = `${quanPeople} гостей`;
       }
+
+      let babyText;
+      if (quanBaby === 1) {
+        babyText = "1 младенец";
+      } else if (quanBaby <= 4) {
+        babyText = `${quanBaby} младенца`;
+      } else if (quanBaby > 4) {
+        babyText = `${quanBaby} младенцев`;
+      }
+
+      let resultText = '';
+      if (quanBaby && quanPeople) {
+        resultText = `${guestText}, ${babyText}`;
+      } else if (quanPeople) {
+        resultText = `${guestText}`;
+      } else if (quanBaby) {
+        resultText = `${babyText}`;
+      } else {
+        resultText = 'Сколько гостей';
+      }
+
+      this.inputField.innerHTML = resultText + expand;
     }
 
+
     if (this.type === 'beds') {
-      let quanRoom = parseInt(this.quantityElemsArr[0].innerHTML);
-      let quanBed = parseInt(this.quantityElemsArr[1].innerHTML);
-      if (quanBed !== 0) {
-        this.inputField.innerHTML = `Спален - ${quanRoom.toString()}, кроватей - ${quanBed.toString()} ...` + expand;
-      } else {
-        if (quanRoom === 0) {
-          this.inputField.innerHTML = 'Выберите удобства' + expand;
-        } else {
-          this.inputField.innerHTML = `Спален - ${quanRoom.toString()}, спать сидя ...` + expand;
-        }
+      const quanRoom = this.quantity[0];
+      const quanBed = this.quantity[1];
+      const quanBath = this.quantity[2];
+      let roomtText;
+      if (quanRoom === 1) {
+        roomtText = "1 спальня";
+      } else if (quanRoom <= 4) {
+        roomtText = `${quanRoom} спальни`;
+      } else if (quanRoom > 4) {
+        roomtText = `${quanRoom} спален`;
       }
+
+      let bedText;
+      if (quanBed === 1) {
+        bedText = "1 кровать";
+      } else if (quanBed <= 4) {
+        bedText = `${quanBed} кровати`;
+      } else if (quanBed > 4) {
+        bedText = `${quanBed} кроватей`;
+      }
+
+      let resultText = '';
+      if (quanRoom && quanBed && quanBath) {
+        resultText = `${roomtText}, ${bedText}...`;
+      } else if (quanRoom && quanBed) {
+        resultText = `${roomtText}, ${bedText}`;
+      } else if (quanRoom) {
+        resultText = `${roomtText}`;
+      } else if (quanBed) {
+        resultText = `${bedText}`;
+      } else {
+        resultText = 'Выберите удобства';
+      }
+
+      this.inputField.innerHTML = resultText + expand ;
     }
   }
 
