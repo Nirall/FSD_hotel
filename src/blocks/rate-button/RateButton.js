@@ -4,14 +4,18 @@ class RateButton {
     this.init();
   }
 
-  init() {
+  init = () => {
     this.stars = Array.from(this.node.children);
+    this.bindEventListeners();
+  }
+
+  bindEventListeners = () => {
     this.stars.forEach((star) => {
-      star.onclick = this.handleStarClick.bind(this);
+      star.onclick = this.handleStarClick;
     });
   }
 
-  update(elem) {
+  update = (elem) => {
     const targetIndex = this.stars.indexOf(elem);
     this.stars.forEach((star, index) => {
       if (index <= targetIndex) {
@@ -22,7 +26,7 @@ class RateButton {
     });
   }
 
-  handleStarClick(event) {
+  handleStarClick = (event) => {
     this.update(event.target);
   }
 }
