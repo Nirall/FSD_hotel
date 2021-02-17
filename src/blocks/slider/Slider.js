@@ -7,7 +7,7 @@ class Slider {
     this.init();
   }
 
-  handleSliderUpdate() {
+  handleSliderUpdate = () => {
     let min = this.slider.noUiSlider.get()[0]
       .match(/.+(?=\.00)/)[0]
       .replace(/(\d+)(\d{3}$)/, '$1 $2₽');
@@ -17,11 +17,15 @@ class Slider {
       this.price.innerHTML = `${min} - ${max}`;
   }
 
-  elemsCheck() {
+  elemsCheck = () => {
     return noUiSlider && this.slider && this.price;
   }
 
-  init() {
+  bindEventListeners = () => {
+    this.slider.noUiSlider.on('update', this.handleSliderUpdate);
+  }
+
+  init = () => {
     this.slider = this.node.querySelector('.js-slider__body');
     this.price = this.node.querySelector('.js-slider__price');
 
@@ -36,7 +40,7 @@ class Slider {
         },
       });
 
-      this.slider.noUiSlider.on('update', this.handleSliderUpdate.bind(this));
+      this.bindEventListeners();
     } else {
       this.node.querySelector('.slider__title-text').innerHTML = 'Здесь могла быть Ваша реклама';
     }
