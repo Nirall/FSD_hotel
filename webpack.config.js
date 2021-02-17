@@ -68,6 +68,15 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['@babel/preset-env'],
+                    plugins: ['transform-class-properties']
+                }
+            },
+            {
                 test: /\.pug$/,
                 loader: "pug-loader",
                 options: {

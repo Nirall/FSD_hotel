@@ -1,33 +1,39 @@
 class Carousel {
   constructor(node, dataImages) {
     this.node = node;
-    this.currentIndex = 0;
-    this.images = [];
-    this.img = null;
-    this.arrows = null;
-    this.leftArrow = null;
-    this.rightArrow = null;
-    this.shadow = null;
-    this.spots = [];
     this.init(dataImages);
   }
 
-  init(dataImages) {
+  init = (dataImages) => {
+    this.currentIndex = 0;
+    this.spots = [];
     this.findElements();
     this.images = dataImages.split(' ');
-    if (this.images.length > 4) {
-      this.images = this.images.slice(0, 3);
-    };
-
     this.img.setAttribute('src', this.images[0]);
-    this.node.onmouseover = this.handleCarouselMouseOver.bind(this);
-    this.node.onmouseout = this.handleCarouselMouseOut.bind(this);
-    this.leftArrow.onclick = this.handleLeftArrowClick.bind(this);
-    this.rightArrow.onclick = this.handleRightArrowClick.bind(this);
     this.createSpots();
+    this.bindEventListeners();
   }
 
-  findElements() {
+  createSpots = () => {
+    const spotsElem = this.node.querySelector('.js-carousel__spots');
+    this.images.forEach(() => {
+      const elem = document.createElement('div');
+      elem.classList.add('carousel__spot');
+      spotsElem.append(elem);
+      this.spots.push(elem);
+    });
+
+    this.spots[0].classList.add('carousel__spot_filled');
+  }
+
+  bindEventListeners = () => {
+    this.node.addEventListener('mouseover', this.handleCarouselMouseOver);
+    this.node.addEventListener('mouseout', this.handleCarouselMouseOut);
+    this.leftArrow.addEventListener('click', this.handleLeftArrowClick);
+    this.rightArrow.addEventListener('click', this.handleRightArrowClick);
+  }
+
+  findElements = () => {
     this.img = this.node.querySelector('.js-carousel__img');
     this.arrows = this.node.querySelector('.js-carousel__arrows');
     this.leftArrow = this.node.querySelector('.js-carousel__arrow-left');
@@ -35,7 +41,7 @@ class Carousel {
     this.shadow = this.node.querySelector('.js-carousel__shadows');
   }
 
-  handleArrowClick(direction) {
+  handleArrowClick = (direction) => {
     if (direction === 'forward') {
       this.currentIndex < this.images.length - 1 ? this.currentIndex += 1 : this.currentIndex = 0;
     } else if (direction === 'backward') {
@@ -52,32 +58,20 @@ class Carousel {
     })
   }
 
-  handleLeftArrowClick() {
+  handleLeftArrowClick = () => {
     this.handleArrowClick('backward');
   }
 
-  handleRightArrowClick() {
+  handleRightArrowClick = () => {
     this.handleArrowClick('forward');
   }
 
-  createSpots() {
-    const spotsElem = this.node.querySelector('.js-carousel__spots');
-    this.images.forEach(() => {
-      const elem = document.createElement('div');
-      elem.classList.add('carousel__spot');
-      spotsElem.append(elem);
-      this.spots.push(elem);
-    });
-
-    this.spots[0].classList.add('carousel__spot_filled');
-  }
-
-  handleCarouselMouseOver() {
+  handleCarouselMouseOver = () => {
     this.shadow.classList.remove('carousel__shadows_hidden');
     this.arrows.classList.remove('carousel__arrows_hidden');
   }
 
-  handleCarouselMouseOut() {
+  handleCarouselMouseOut = () => {
     this.shadow.classList.add('carousel__shadows_hidden');
     this.arrows.classList.add('carousel__arrows_hidden');
   }
