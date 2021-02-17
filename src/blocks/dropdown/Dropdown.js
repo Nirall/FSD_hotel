@@ -5,17 +5,17 @@ class Dropdown {
     this.init();
   }
 
-  init(positions = 3) {
+  init = (positions = 3) => {
     this.quantity = new Array(positions);
     this.quantity.fill(0);
     this.findElements();
     this.checkType();
     if (this.checkElements()) {
-      this.processHandlers();
+      this.bindEventListeners();
     }
   }
 
-  findElements() {
+  findElements = () => {
     this.inputField = this.node.querySelector('.js-dropdown__field');
     this.dropdownList = this.node.querySelector('.js-dropdown__list');
     this.minusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__minus'));
@@ -26,7 +26,7 @@ class Dropdown {
     this.applyBtn = this.node.querySelector('.js-dropdown__apply-button');
   }
 
-  checkType() {
+  checkType = () => {
     const inputContent = this.inputField.innerHTML;
     if (inputContent.includes('гостей')) {
       this.type = 'guests';
@@ -35,7 +35,7 @@ class Dropdown {
     }
   }
 
-  checkElements() {
+  checkElements = () => {
     if (this.type === 'guests') {
       return (this.inputField && this.dropdownList && this.minusBtnArr && this.quantityElemsArr
         && this.plusBtnArr && this.clearBtn && this.applyBtn)
@@ -46,7 +46,7 @@ class Dropdown {
     }
   }
 
-  checkQuantity() {
+  checkQuantity = () => {
     if (this.quantity.every((elem) => elem === 0)) {
       this.clearBtn.innerHTML = ' ';
       this.minusBtnArr.forEach((elem) => {
@@ -60,12 +60,12 @@ class Dropdown {
     }
   }
 
-  resetQuantity() {
+  resetQuantity = () => {
     this.quantity.fill(0);
     this.quantityElemsArr.forEach((elem) => elem.innerHTML = '0');
   }
 
-  handleMinusBtnClick(event) {
+  handleMinusBtnClick = (event) => {
     const elem = event.currentTarget;
     const index = this.minusBtnArr.indexOf(elem);
 
@@ -77,7 +77,7 @@ class Dropdown {
     this.checkQuantity();
   }
 
-  handlePlusBtnClick(event) {
+  handlePlusBtnClick = (event) => {
     const elem = event.currentTarget;
     const index = this.plusBtnArr.indexOf(elem);
     this.quantity[index] += 1;
@@ -85,18 +85,18 @@ class Dropdown {
     this.checkQuantity();
   }
 
-  handleClearBtnClick() {
+  handleClearBtnClick = () => {
     this.resetQuantity();
     this.checkQuantity();
   }
 
-  handleApplyBtnClick(e) {
+  handleApplyBtnClick = (e) => {
     this.changePlaceholder();
     this.checkQuantity();
     this.handleInputFieldClick(e)
   }
 
-  handleInputFieldClick(e) {
+  handleInputFieldClick = (e) => {
     e.stopPropagation();
     this.changePlaceholder();
     this.checkQuantity();
@@ -109,17 +109,17 @@ class Dropdown {
 
     this.isActive = !this.isActive;
     this.isActive
-      ? document.addEventListener('click', this.handleDocumentClick.bind(this))
-      : document.removeEventListener('click', this.handleDocumentClick.bind(this));
+      ? document.addEventListener('click', this.handleDocumentClick)
+      : document.removeEventListener('click', this.handleDocumentClick);
   }
 
-  handleDocumentClick(e) {
+  handleDocumentClick = (e) => {
     if (this.isActive && !this.node.contains(e.target)) {
       this.handleInputFieldClick(e);
     }
   }
 
-  changePlaceholder() {
+  changePlaceholder = () => {
     const expand = '<span class = "material-icons">expand_more</span>';
     if (this.type === 'guests') {
       const quanPeople = this.quantity[0] + this.quantity[1];
@@ -196,18 +196,18 @@ class Dropdown {
     }
   }
 
-  processHandlers() {
+  bindEventListeners = () => {
     Array.from(this.minusBtnArr, (elem) => {
-      elem.onclick = this.handleMinusBtnClick.bind(this);
+      elem.addEventListener('click', this.handleMinusBtnClick);
     });
 
     Array.from(this.plusBtnArr, (elem) => {
-      elem.onclick = this.handlePlusBtnClick.bind(this);
+      elem.addEventListener('click', this.handlePlusBtnClick);
     });
 
-    this.clearBtn.onclick = this.handleClearBtnClick.bind(this);
-    this.applyBtn.onclick = this.handleApplyBtnClick.bind(this);
-    this.inputField.onclick = this.handleInputFieldClick.bind(this);
+    this.clearBtn.addEventListener('click', this.handleClearBtnClick);
+    this.applyBtn.addEventListener('click', this.handleApplyBtnClick);
+    this.inputField.addEventListener('click', this.handleInputFieldClick);
   }
 }
 
