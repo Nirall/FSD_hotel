@@ -41,7 +41,7 @@
     top: 50%;
     display: flex;
     justify-content: space-between;
-    margin-top: -11px;
+    transform: translateY(-11px);
     width: 100%;
 
     &_hidden {
