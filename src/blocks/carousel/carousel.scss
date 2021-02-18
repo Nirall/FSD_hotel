@@ -17,6 +17,7 @@
     top: 0;
     left: 0;
     border-radius: 4px 4px 0 0;
+
     &_hidden {
       visibility: hidden;
     }
@@ -42,6 +43,7 @@
     justify-content: space-between;
     margin-top: -11px;
     width: 100%;
+
     &_hidden {
       visibility: hidden;
     }
@@ -70,6 +72,7 @@
     border: 1px solid white;
     border-radius: 50%;
     background: transparent;
+
     &_filled {
       background: white;
     }
