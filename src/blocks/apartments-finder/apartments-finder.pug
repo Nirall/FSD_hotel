@@ -1,4 +1,4 @@
-include ../datepicker/datepicker
+include ../datepicker-block/datepicker-block
 include ../dropdown/dropdown
 include ../button-with-arrow/button-with-arrow
 
@@ -7,7 +7,7 @@ mixin apartments-finder
         form(action="changeme", method="post")
             h1.apartments-finder__title= "Найдём номера под ваши пожелания"
             .apartments-finder__datepicker
-                +datepicker("прибытие", "выезд")(type = "two fields")
+                +datepicker-block("прибытие", "выезд")(type = "two fields")
             .apartments-finder__dropdown
                 +dropdown({ title: "гости", placeholder: "Сколько гостей", items: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"] })(shadow = "none")
             button(type="submit").apartments-finder__button-with-arrow

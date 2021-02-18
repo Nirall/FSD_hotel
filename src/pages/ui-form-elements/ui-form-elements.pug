@@ -1,7 +1,7 @@
 extends ../ui-template
 
 include ../../blocks/dropdown/dropdown
-include ../../blocks/datepicker/datepicker
+include ../../blocks/datepicker-block/datepicker-block
 include ../../blocks/email/email
 include ../../blocks/checkbox-item/checkbox-item
 include ../../blocks/expandable-checkboxes/expandable-checkboxes
@@ -37,10 +37,10 @@ block content
                     h3.ui-form__header.ui-form__header_color_grey.ui-form__header_margin_enlarged= "default"
                 input(type="text" placeholder="ДД.ММ.ГГГГ").ui-form__input
             .ui-form__datepicker-2f
-                +datepicker("DATE DROPDOWN", "DATE DROPDOWN")(type = "two fields")
+                +datepicker-block("DATE DROPDOWN", "DATE DROPDOWN")(type = "two fields")
             .ui-form__narrow-block
                 .ui-form__datepicker-1f
-                    +datepicker("FILTER DATE DROPDOWN")
+                    +datepicker-block("FILTER DATE DROPDOWN")
                 .ui-form__email
                     .ui-form__title
                         h3.ui-form__header= "subscription text field"
