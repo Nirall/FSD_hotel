@@ -4,7 +4,13 @@
   }
 
   &__slider {
-    margin: 25px 0 29px 0;
+    margin-top: 25px;
+  }
+
+  &__slider-price-description {
+    padding-top: 3px;
+    font-size: 12px;
+    line-height: 12px;
   }
 
   &__title {
@@ -15,10 +21,8 @@
     color: $dark100;
   }
 
-  &__slider-price-description {
-    padding-top: 3px;
-    font-size: 12px;
-    line-height: 12px;
+  &__options {
+    margin-top: 29px;
   }
 
   &__options-title {
@@ -26,15 +30,15 @@
   }
 
   &__accessibility {
-    margin: 27px 0 28px 0;
-  }
-
-  &__checkbox {
-    padding: 5px 0;
+    margin-top: 27px;
   }
 
   &__accessibility-title {
     padding-bottom: 12px;
+  }
+
+  &__checkbox {
+    padding: 5px 0;
   }
 
   &__checkbox-description {
@@ -44,8 +48,12 @@
     line-height: 14px;
   }
 
+  &__dropdown-beds {
+    margin-top: 28px;
+  }
+
   &__more-options {
-    padding-top: 19px;
+    margin-top: 25px;
   }
 }
 
