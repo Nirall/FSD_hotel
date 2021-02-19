@@ -1,41 +1,41 @@
 mixin button(text, jsClass = '')
   -
-    var wrapperClass = 'button-wrapper-border'
-    var blockClass = 'button ' + jsClass
+    var borderClass = 'button__border'
+    var bodyClass = 'button__body ' + jsClass
     if (attributes.size === 'long')
-      blockClass += ' button_size_long'
+      bodyClass += ' button__body_size_long'
 
     if (attributes.size === 'thin')
-      blockClass += ' button_size_thin'
+      bodyClass += ' button__body_size_thin'
 
     if (attributes.size === 'medium')
-      blockClass += ' button_size_medium'
+      bodyClass += ' button__body_size_medium'
 
     if (attributes.color === 'violet') {
-      blockClass += ' button_color_violet'
-      wrapperClass = ''
+      bodyClass += ' button__body_color_violet'
+      borderClass = ''
     }
 
     if (attributes.style === 'without border') {
-      blockClass += ' button_without-border'
-      wrapperClass = ''
+      bodyClass += ' button__body_without-border'
+      borderClass = ''
     }
 
     if (attributes.type === 'hover') {
       if (attributes.color === 'violet') {
-        blockClass += ' button_color_violet_hover'
+        bodyClass += ' button__body_hover_opacity'
       } else if (attributes.style === 'without border') {
-        blockClass += ' button_without-border_hover'
+        bodyClass += ' button__body_hover_dark'
       } else {
-        blockClass += ' button_hover'
-        wrapperClass += ' button-wrapper-border_hover'
+        borderClass += ' button__border_hover'
       }
     }
 
     if (attributes.forNavbar === true) {
-      blockClass += ' button_for_navbar'
-      wrapperClass += ' button-wrapper-border_for_navbar'
+      bodyClass += ' button__body_for_navbar'
+      borderClass += ' button__border_for_navbar'
     }
 
-  div(class = wrapperClass)
-    button(class = blockClass)= text
+  .button
+    div(class = borderClass)
+      button(class = bodyClass)= text

@@ -1,108 +1,112 @@
-.button-wrapper-border {
-  border-radius: 22px;
-  padding: 2px;
-  background: $primGrad;
-  cursor: pointer;
-  align-self: center;
-
-  &:hover {
-    background: $primGradTrans;
-  }
-
-  &_hover {
-    background: $primGradTrans;
-  }
-
-
-  &_for_navbar {
-    @media (max-width: 670px) {
-      padding: 0;
-      background: none;
-
-      &:hover {
-        background: none;
-      }
-    }
-  }
-
-  &_color_violet {
-    background: none;
-  }
-}
-
 .button {
-  padding: 13px 17px;
-  display: flex;
-  font-size: 12px;
-  line-height: 14px;
-  font-family: Montserrat, Arial, sans-serif;
-  font-weight: 600;
-	text-transform: uppercase;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: $purple;
-  background: white;
-  border: none;
-  border-radius: 20px;
-
-  &_color_violet {
-    border: 0;
-    padding: 15px 19px;
+  &__border {
+    border-radius: 22px;
+    padding: 2px;
     background: $primGrad;
-    color: white;
+    cursor: pointer;
+    align-self: center;
 
     &:hover {
-      opacity: 0.5;
+      background: $primGradTrans;
     }
 
     &_hover {
-      opacity: 0.5;
+      background: $primGradTrans;
+    }
+
+    &_for_navbar {
+      @media (max-width: 670px) {
+        padding: 0;
+        background: none;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+
+    &_color_violet {
+      background: none;
     }
   }
 
-  &_without-border {
-    padding: 0;
+  &__body {
+    padding: 13px 17px;
+    display: flex;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $purple;
+    background: white;
+    border: none;
+    border-radius: 20px;
 
-    &:hover {
-      color: $dark75;
-    }
-
-    &_hover {
-      color: $dark75;
-    }
-  }
-
-  &_size_long {
-    padding: 13px 24px;
-  }
-
-  &_size_thin {
-    padding: 8px 18px;
-  }
-
-  &_size_medium {
-    padding: 10px 20px;
-  }
-
-  &_for_navbar {
-    @media (max-width: 670px) {
+    &_color_violet {
       border: 0;
-      line-height: 26px;
-      justify-content: flex-start;
-      width: 180px;
-      background: white;
-      color: $dark50;
-      font-size: 14px;
-      font-weight: normal;
-      text-transform: capitalize;
-      margin: 10px;
+      padding: 15px 19px;
+      background: $primGrad;
+      color: white;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &_hover_opacity {
+      opacity: 0.5;
+    }
+
+    &_without-border {
       padding: 0;
 
       &:hover {
-        color: $purple;
-        opacity: 1;
+        color: $dark75;
+      }
+    }
+
+    &_hover_dark {
+      color: $dark75;
+    }
+
+    &_size_long {
+      padding: 13px 24px;
+    }
+
+    &_size_thin {
+      padding: 8px 18px;
+    }
+
+    &_size_medium {
+      padding: 10px 20px;
+    }
+
+    &_for_navbar {
+      @media (max-width: 670px) {
+        border: 0;
+        line-height: 26px;
+        justify-content: flex-start;
+        width: 180px;
+        background: white;
+        color: $dark50;
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: capitalize;
+        margin: 10px;
+        padding: 0;
+
+        &:hover {
+          color: $purple;
+          opacity: 1;
+        }
       }
     }
   }
 }
+
+
+
