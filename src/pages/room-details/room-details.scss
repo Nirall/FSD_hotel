@@ -33,6 +33,7 @@
   &__info {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     @media (max-width: 1160px) {
       flex-direction: column;
