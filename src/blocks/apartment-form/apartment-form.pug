@@ -6,11 +6,13 @@ include ../expandable-checkboxes/expandable-checkboxes
 
 mixin apartment-form
     .apartment-form.js-apartment-form
-        +datepicker-block("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
+        .apartment-form__datepicker
+            +datepicker-block("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ")
         .apartment-form__dropdown-guests
             +dropdown({ title: "ГОСТИ", placeholder: "Сколько гостей", items: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"] })(overlapping = "none" shadow = "none")
         .apartment-form__slider
-            +slider
+            .apartment-form__slider-body
+                +slider
             p.apartment-form__slider-price-description= "Стоимость за сутки пребывания в номере"
         .apartment-form__options
             .apartment-form__options-title
@@ -21,10 +23,10 @@ mixin apartment-form
         .apartment-form__accessibility
             .apartment-form__accessibility-title
                 h3.apartment-form__title= "доступность"
-            .apartment-form__checkbox
+            .apartment-form__checkbox.apartment-form__checkbox_with_description
                 +checkbox-item("Широкий коридор")(style = "bold")
             p.apartment-form__checkbox-description!= "Ширина коридоров в номере <br> не менее 91 см."
-            .apartment-form__checkbox
+            .apartment-form__checkbox.apartment-form__checkbox_with_description
                 +checkbox-item("Помощник для инвалидов")(style = "bold")
             p.apartment-form__checkbox-description!= "На 1 этаже вас встретит специалист <br> и проводит до номера"
         .apartment-form__dropdown-beds

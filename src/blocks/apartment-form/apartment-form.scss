@@ -1,14 +1,21 @@
 .apartment-form {
+  &__datepicker {
+    margin-bottom: 21px;
+  }
+
   &__dropdown-guests {
-    margin-top: 21px;
+    margin-bottom: 25px;
   }
 
   &__slider {
-    margin-top: 25px;
+    margin-bottom: 32px;
+  }
+
+  &__slider-body {
+    margin-bottom: 3px;
   }
 
   &__slider-price-description {
-    padding-top: 3px;
     font-size: 12px;
     line-height: 12px;
   }
@@ -22,38 +29,37 @@
   }
 
   &__options {
-    margin-top: 29px;
+    margin-bottom: 32px;
   }
 
   &__options-title {
-    padding-bottom: 12px;
+    margin-bottom: 17px;
   }
 
   &__accessibility {
-    margin-top: 27px;
+    margin-bottom: 28px;
   }
 
   &__accessibility-title {
-    padding-bottom: 12px;
+    margin-bottom: 17px;
   }
 
   &__checkbox {
-    padding: 5px 0;
+    margin-bottom: 10px;
+
+    &_with_description {
+      margin-bottom: 5px;
+    }
   }
 
   &__checkbox-description {
-    margin-bottom: 4px;
-    margin-left: 30px;
+    margin: 0 0 9px 30px;
     font-size: 12px;
     line-height: 14px;
   }
 
   &__dropdown-beds {
-    margin-top: 28px;
-  }
-
-  &__more-options {
-    margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
 
