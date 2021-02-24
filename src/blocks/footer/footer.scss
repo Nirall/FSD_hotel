@@ -26,13 +26,13 @@
   }
 
   &__logo {
-    padding: 6px 32px 0 0;
+    margin: 6px 32px 0 0;
     width: 294px;
     line-height: 24px;
 
     &_centered {
       display: none;
-      padding: 0;
+      margin: 0;
       width: auto;
     }
 
