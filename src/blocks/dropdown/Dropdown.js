@@ -18,9 +18,9 @@ class Dropdown {
   findElements = () => {
     this.inputField = this.node.querySelector('.js-dropdown__field');
     this.dropdownList = this.node.querySelector('.js-dropdown__list');
-    this.minusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__minus'));
+    this.minusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__btn-minus'));
     this.quantityElemsArr = Array.from(this.node.querySelectorAll('.js-dropdown__quantity'));
-    this.plusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__plus'));
+    this.plusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__btn-plus'));
     this.blockBtns = this.node.querySelector('.js-dropdown__buttons');
     this.clearBtn = this.node.querySelector('.js-dropdown__clear-button');
     this.applyBtn = this.node.querySelector('.js-dropdown__apply-button');
@@ -50,12 +50,12 @@ class Dropdown {
     if (this.quantity.every((elem) => elem === 0)) {
       this.clearBtn.innerHTML = ' ';
       this.minusBtnArr.forEach((elem) => {
-        elem.classList.add('dropdown__btn_disabled')
+        elem.classList.add('dropdown__btn-minus_disabled')
       });
     } else {
       this.clearBtn.innerHTML = 'очистить';
       this.minusBtnArr.forEach((elem) => {
-        elem.classList.remove('dropdown__btn_disabled')
+        elem.classList.remove('dropdown__btn-minus_disabled')
       });
     }
   }
