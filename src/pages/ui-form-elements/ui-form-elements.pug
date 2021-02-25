@@ -15,6 +15,7 @@ include ../../blocks/slider/slider
 include ../../blocks/button/button
 include ../../blocks/pagination/pagination
 include ../../blocks/bullet-list/bullet-list
+include ../../blocks/rate-button/rate-button
 
 block content
     .ui-form
@@ -95,12 +96,9 @@ block content
                 h3.ui-form__header= "rate button"
                 .ui-form__stars-block
                     .ui-form__stars
-                        each val in [1, 2, 3, 4]
-                            span.material-icons.ui-form__star= "star"
-                        span.material-icons.ui-form__star= "star_border"
+                        +rate-button(4)
                     .ui-form__stars
-                        each val in [1, 2, 3, 4, 5]
-                            span.material-icons.ui-form__star= "star"
+                        +rate-button(5)
             .ui-form__dropdown-guests-expanded.js-ui-form__dropdown_expanded
                 +dropdown({ title: "DROPDOWN", placeholder: "Сколько гостей", items: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"] })
             .ui-form__rich-checkbox-buttons
