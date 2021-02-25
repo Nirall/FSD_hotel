@@ -30,6 +30,7 @@
 
   &__cards {
     display: flex;
+    margin-bottom: 28px;
     margin-right: 3px;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -66,6 +67,6 @@
   }
 
   &__pagination {
-    margin: 31px 19px 72px 0;
+    margin: 0 19px 73px 0;
   }
 }

@@ -4,6 +4,7 @@ mixin navbar
     -
         var usernameClass = 'navbar__user-name'
         var itemClass = 'navbar__item'
+        var btnClass = 'navbar__button'
 
         if (attributes.type === 'without-buttons') {
             btnClass += ' navbar__button_hidden'
@@ -37,9 +38,9 @@ mixin navbar
                         ="Соглашения"
                         span.material-icons.navbar__symbol-expand= "expand_more"
             .navbar__buttons.js-navbar__buttons
-                .navbar__button.navbar__button_margin_reduced
+                div(class= btnClass).navbar__button_margin_reduced
                     +button("войти", "js-navbar__in-btn")(forNavbar=true size="thin")
-                .navbar__button
+                div(class= btnClass)
                     +button("зарегистрироваться", "js-navbar__reg-btn")(color="violet" forNavbar=true size="medium")
                 a(href="changeMe" class = "navbar__reference")
                     div(class = usernameClass)= "Юлий Цезарь"
