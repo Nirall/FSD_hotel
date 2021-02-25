@@ -6,7 +6,7 @@ class ExpandableCheckboxes {
   }
 
   handleDropdownClick = () => {
-    this.checkboxes.classList.toggle('expandable-checkboxes__checkboxes_hidden');
+    this.checkboxes.classList.toggle('expandable-checkboxes__checkboxes_displayed');
     this.expandButt.classList.toggle('expandable-checkboxes__symbol-expand_rotated');
     this.isActive = !this.isActive;
     this.isActive

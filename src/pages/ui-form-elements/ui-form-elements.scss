@@ -110,12 +110,12 @@
     margin-bottom: 20px;
 
     &_margin_enlarged {
-      margin-bottom: 51px;
+      margin-bottom: 48px;
     }
   }
 
   &__expandable-checkboxes {
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 
     &_collapsed {
       margin-bottom: 39px;
@@ -133,11 +133,11 @@
   }
 
   &__checkbox-buttons {
-    margin-bottom: 39px;
+    margin-bottom: 44px;
   }
 
   &__checkbox-buttons-title {
-    margin-bottom: 13px;
+    margin-bottom: 18px;
   }
 
   &__radio-buttons-block {
@@ -189,7 +189,7 @@
   }
 
   &__rate-button {
-    margin-bottom: 190px;
+    margin-bottom: 193px;
   }
 
   &__stars-block {
@@ -213,7 +213,17 @@
   }
 
   &__rich-checkbox-buttons-title {
-    margin-bottom: 13px;
+    margin-bottom: 18px;
+  }
+
+  &__checkbox {
+    margin-bottom: 5px;
+  }
+
+  &__checkbox-description {
+    margin: 0 0 9px 30px;
+    font-size: 12px;
+    line-height: 14px;
   }
 
   &__right-col {
@@ -276,7 +286,7 @@
 
   &__reviews {
     max-width: 710px;
-    margin: 224px 0 0 124px;
+    margin: 219px 0 0 124px;
     grid-area: d;
 
     @media(max-width: 1200px) {

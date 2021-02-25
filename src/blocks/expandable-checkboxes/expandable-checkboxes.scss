@@ -24,7 +24,11 @@
     margin-bottom: 10px;
   }
 
-  &__checkboxes_hidden {
+  &__checkboxes {
     display: none;
+
+    &_displayed {
+      display: block;
+    }
   }
 }
