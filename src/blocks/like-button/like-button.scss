@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   $root: &;
+  cursor: pointer;
 
   &_activated {
     border: 1px solid $purple;
