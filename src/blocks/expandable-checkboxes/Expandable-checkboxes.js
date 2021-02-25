@@ -2,15 +2,26 @@ class ExpandableCheckboxes {
   constructor(elem) {
     this.node = elem;
     this.init();
+    this.isActive = false;
   }
 
   handleDropdownClick = () => {
     this.checkboxes.classList.toggle('expandable-checkboxes__checkboxes_hidden');
     this.expandButt.classList.toggle('expandable-checkboxes__symbol-expand_rotated');
+    this.isActive = !this.isActive;
+    this.isActive
+      ? document.addEventListener('click', this.handleDocumentClick)
+      : document.removeEventListener('click', this.handleDocumentClick);
   }
 
   elemsCheck = () => {
     return this.dropdown && this.expandButt && this.checkboxes;
+  }
+
+  handleDocumentClick = (e) => {
+    if (this.isActive && !this.node.contains(e.target)) {
+      this.handleDropdownClick();
+    }
   }
 
   init = () => {

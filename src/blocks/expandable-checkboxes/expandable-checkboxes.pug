@@ -10,8 +10,8 @@ mixin expandable-checkboxes({ title, items })
   .expandable-checkboxes.js-expandable-checkboxes
     .expandable-checkboxes__dropdown-title.js-expandable-checkboxes__dropdown-title
       h3.expandable-checkboxes__title= title
-      span(class = symbolExpandClass).material-icons= "expand_less"
-    div(class = checkboxesClass)
+      span(class = symbolExpandClass).material-icons.expandable-checkboxes__symbol-expand_rotated= "expand_less"
+    div(class = checkboxesClass).expandable-checkboxes__checkboxes_hidden
       each val in items
         .expandable-checkboxes__checkbox
           +checkbox-item(val)
