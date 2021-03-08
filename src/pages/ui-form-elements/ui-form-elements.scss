@@ -74,6 +74,10 @@
     text-transform: uppercase;
     color: $dark100;
 
+    &_compact{
+      letter-spacing: -0.5px;
+    }
+
     &_color_grey {
       color: $dark50;
       font-weight: normal;
@@ -159,7 +163,6 @@
 
   &__toggle-buttons-title {
     margin-bottom: 15px;
-    letter-spacing: -0.5px;
   }
 
   &__toggle-button {
