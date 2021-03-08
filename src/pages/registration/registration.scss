@@ -1,7 +1,9 @@
 .registration {
-  height: 683px;
-  background: center / cover no-repeat url("./images/registration-bg.jpg");
-  margin: 0 auto;
+  &__content {
+    height: 683px;
+    background: center / cover no-repeat url("./images/registration-bg.jpg");
+    margin: 0 auto;
+  }
 
   &__reg-form {
     width: 384px;

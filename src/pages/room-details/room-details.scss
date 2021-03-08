@@ -1,6 +1,8 @@
 .room-details {
-  margin: 0 auto;
-  color: $dark75;
+  &__content {
+    margin: 0 auto;
+    color: $dark75;
+  }
 
   &__photos {
     display: flex;

@@ -1,16 +1,18 @@
 .ui-form {
-  margin: 138px 0 140px 0;
-  display: grid;
-  justify-content: center;
-  grid-template-areas:  "a b c"
-                        "a d d";
+  &__content {
+    margin: 138px 0 140px 0;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:  "a b c"
+                          "a d d";
 
-  @media(max-width: 1200px) {
-    grid-template-areas:  "a"
-                          "b"
-                          "c"
-                          "d";
-    justify-items: center;
+    @media(max-width: 1200px) {
+      grid-template-areas:  "a"
+                            "b"
+                            "c"
+                            "d";
+      justify-items: center;
+    }
   }
 
   &__left-col {

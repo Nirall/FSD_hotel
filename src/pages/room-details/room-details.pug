@@ -12,44 +12,44 @@ block content
         var text1 = 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
         var text2 = 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.'
     main.room-details
-        .room-details__photos
-            .room-details__main-photo
-            .room-details__additional-photos
-                .room-details__additional-top-photo
-                .room-details__additional-bottom-photo
-        .room-details__info
-            article.room-details__info-left-column
-                section.room-details__info-apartment
-                    h2.room-details__header= "Сведения о номере"
-                    -
-                        const info = [
-                            {icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'},
-                            {icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'},
-                            {icon: 'whatshot', title: 'Уют', text: 'Номер оснащен камином'},
-                        ]
-                    +info-apartment(info)
-                section.room-details__pie-chart
-                    .room-details__pie-chart-title
-                        h2.room-details__header= "Впечатления от номера"
-                    .room-details__pie-chart-graph
-                        +pie-chart(25, 25, 50)
-                        .room-details__pie-chart-legend
-                            +pie-chart-legend
-                section.room-details__reviews
-                    .room-details__reviews-title
-                        h2.room-details__header= "Отзывы посетителей номера"
-                        span.room-details__reviews-counter= "2 отзыва"
-                    +visitor-review ({ modifier: "_active", img: "images/guest-1.jpg", name: "Мурад Сарафанов", date: "5 дней назад", quantity: "12", text: text1 })
-                    +visitor-review ({ modifier: "", img: "images/guest-2.jpg", name: "Патрисия Стёклышкова", date: "Неделю назад", quantity: "2", text: text2 })
-                section.room-details__additional
-                    .room-details__rules
-                        .room-details__rules-title
-                            h2.room-details__header= "Правила"
-                        +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-                    .room-details__cancel
-                        .room-details__cancel-title
-                            h2.room-details__header= "Отмена"
-                        = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
-            aside.room-details__info-right-column
-                +receipt
-
+        .room-details__content
+            .room-details__photos
+                .room-details__main-photo
+                .room-details__additional-photos
+                    .room-details__additional-top-photo
+                    .room-details__additional-bottom-photo
+            .room-details__info
+                article.room-details__info-left-column
+                    section.room-details__info-apartment
+                        h2.room-details__header= "Сведения о номере"
+                        -
+                            const info = [
+                                {icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'},
+                                {icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'},
+                                {icon: 'whatshot', title: 'Уют', text: 'Номер оснащен камином'},
+                            ]
+                        +info-apartment(info)
+                    section.room-details__pie-chart
+                        .room-details__pie-chart-title
+                            h2.room-details__header= "Впечатления от номера"
+                        .room-details__pie-chart-graph
+                            +pie-chart(25, 25, 50)
+                            .room-details__pie-chart-legend
+                                +pie-chart-legend
+                    section.room-details__reviews
+                        .room-details__reviews-title
+                            h2.room-details__header= "Отзывы посетителей номера"
+                            span.room-details__reviews-counter= "2 отзыва"
+                        +visitor-review ({ modifier: "_active", img: "images/guest-1.jpg", name: "Мурад Сарафанов", date: "5 дней назад", quantity: "12", text: text1 })
+                        +visitor-review ({ modifier: "", img: "images/guest-2.jpg", name: "Патрисия Стёклышкова", date: "Неделю назад", quantity: "2", text: text2 })
+                    section.room-details__additional
+                        .room-details__rules
+                            .room-details__rules-title
+                                h2.room-details__header= "Правила"
+                            +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+                        .room-details__cancel
+                            .room-details__cancel-title
+                                h2.room-details__header= "Отмена"
+                            = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги"
+                aside.room-details__info-right-column
+                    +receipt

@@ -1,24 +1,21 @@
 .landing-page {
-	margin: 0 auto;
-	max-width: 100%;
-	height: 829px;
-	background: center/cover no-repeat  url("./images/landing-page-bg.jpg");
-	padding: 70px 130px 0 140px;
-
-	@media (max-width: 1300px) {
-		padding: 70px 20px 0 20px;
-	}
-
-	@media (max-width: 420px) {
-		padding: 70px 0 0 0;
-	}
-
 	&__content {
+		margin: 0 auto;
+		height: 829px;
 		width: 100%;
-		height: 100%;
+		background: center/cover no-repeat  url("./images/landing-page-bg.jpg");
+		padding: 70px 130px 0 140px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
+		@media (max-width: 1300px) {
+			padding: 70px 20px 0 20px;
+		}
+
+		@media (max-width: 420px) {
+			padding: 70px 0 0 0;
+		}
 	}
 
 	&__phrase-of-day {
@@ -35,5 +32,3 @@
 		}
 	}
 }
-
-
