@@ -22,9 +22,9 @@ mixin dropdown({ title, placeholder, items })
                 li.dropdown__list-item
                     .dropdown__item= val
                     .dropdown__counter
-                        button(type="button").dropdown__btn-minus.js-dropdown__btn-minus!= "-"
+                        button(type="button").dropdown__btn.dropdown__btn_minus.js-dropdown__btn_minus!= "-"
                         span.dropdown__quantity.js-dropdown__quantity= "0"
-                        button(type="button").dropdown__btn-plus.js-dropdown__btn-plus= "+"
+                        button(type="button").dropdown__btn.dropdown__btn_plus.js-dropdown__btn_plus= "+"
             div(class = buttonsClass)
                 .dropdown__clear-button.js-dropdown__clear-button= "очистить"
                 .dropdown__apply-button.js-dropdown__apply-button= "применить"

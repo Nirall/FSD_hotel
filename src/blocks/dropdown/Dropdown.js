@@ -18,9 +18,9 @@ class Dropdown {
   findElements = () => {
     this.inputField = this.node.querySelector('.js-dropdown__field');
     this.dropdownList = this.node.querySelector('.js-dropdown__list');
-    this.minusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__btn-minus'));
+    this.minusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__btn_minus'));
     this.quantityElemsArr = Array.from(this.node.querySelectorAll('.js-dropdown__quantity'));
-    this.plusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__btn-plus'));
+    this.plusBtnArr = Array.from(this.node.querySelectorAll('.js-dropdown__btn_plus'));
     this.blockBtns = this.node.querySelector('.js-dropdown__buttons');
     this.clearBtn = this.node.querySelector('.js-dropdown__clear-button');
     this.applyBtn = this.node.querySelector('.js-dropdown__apply-button');
