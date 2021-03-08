@@ -36,8 +36,8 @@ class Carousel {
   findElements = () => {
     this.img = this.node.querySelector('.js-carousel__img');
     this.arrows = this.node.querySelector('.js-carousel__arrows');
-    this.leftArrow = this.node.querySelector('.js-carousel__arrow-left');
-    this.rightArrow = this.node.querySelector('.js-carousel__arrow-right');
+    this.leftArrow = this.node.querySelector('.js-carousel__arrow_left');
+    this.rightArrow = this.node.querySelector('.js-carousel__arrow_right');
     this.shadow = this.node.querySelector('.js-carousel__shadows');
   }
 
