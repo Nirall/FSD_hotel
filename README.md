@@ -8,15 +8,15 @@
 
 Сборка билда "npm run build".
 
-Для публикации на GitHub Pages, к ссылке добавляйте путь до нужной страницы через папку 'dist'. Пример - "https://nirall.github.io/FSD_hotel/dist/room-details.html".
+Для публикации на GitHub Pages, к ссылке добавляйте путь до нужной страницы через папку 'dist'. Демостраница - "https://nirall.github.io/FDS_hotel_deploy".
 ### Примеры страниц
 
-1. [Home page](https://nirall.github.io/FSD_hotel/dist)
-2. [Landing page](https://nirall.github.io/FSD_hotel/dist/landing-page.html)
-3. [Search room](https://nirall.github.io/FSD_hotel/dist/search-room.html)
-4. [Room details](https://nirall.github.io/FSD_hotel/dist/room-details.html)
-5. [Registration](https://nirall.github.io/FSD_hotel/dist/registration.html)
-6. [UI-kit Colors&Types](https://nirall.github.io/FSD_hotel/dist/ui-colors.html)
-7. [UI-kit Form elements](https://nirall.github.io/FSD_hotel/dist/ui-form-elements.html)
-8. [UI-kit Form cards](https://nirall.github.io/FSD_hotel/dist/ui-cards.html)
-9. [UI-kit Headers & Footers](https://nirall.github.io/FSD_hotel/dist/ui-headers_and_footers.html)
+1. [Home page](https://nirall.github.io/FSD_hotel/dist
+2. [Landing page](https://nirall.github.io/FDS_hotel_deploy/landing-page.html)
+3. [Search room](https://nirall.github.io/FDS_hotel_deploy/search-room.html)
+4. [Room details](https://nirall.github.io/FDS_hotel_deploy/room-details.html)
+5. [Registration](https://nirall.github.io/FDS_hotel_deploy/registration.html)
+6. [UI-kit Colors&Types](https://nirall.github.io/FDS_hotel_deploy/ui-colors.html)
+7. [UI-kit Form elements](https://nirall.github.io/FDS_hotel_deploy/ui-form-elements.html)
+8. [UI-kit Form cards](https://nirall.github.io/FDS_hotel_deploy/ui-cards.html)
+9. [UI-kit Headers & Footers](https://nirall.github.io/FDS_hotel_deploy/ui-headers_and_footers.html)
